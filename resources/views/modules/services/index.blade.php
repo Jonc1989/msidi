@@ -94,7 +94,7 @@
 
 <div class="col-md-12 clear-pads blue-bg-shape">
         <div class="container clear-pads border-bottom-gray">
-                <div class="col-md-12 clear-pads">
+                <div class="col-md-12 clear-pads industries-items">
                         <div class="col-lg-3 clear-pads industries">
                                 <div class="industries-wrap">
                                         <div class="count circle">

@@ -1,11 +1,11 @@
 <div class="col-md-12">
         <div class="container clear-pads">
-                <div class="title center title">Technologies we know</div>
+                <div class="title center title">Technologies <span class="bold">we know</span> </div>
                 <div class="center short-text">Continuous investment in new platforms and technology learning,
                         as well as best practices will ensure quality and efficiency.</div>
 
 
-                <div class="col-md-12 clear-pads">
+                <div class="col-md-12 clear-pads technology-wrap">
                         <div class="col-md-3 clear-pads technology">
                                 <div class="icon-net icon"></div>
                                 <div class="name">.NET</div>

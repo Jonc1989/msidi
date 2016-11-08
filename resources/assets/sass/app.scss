@@ -27,7 +27,7 @@
 @font-face {
   font-family: 'Montserrat-Light';
   src: url('../fonts/montserrat/Montserrat-Light.otf');
-  src: url('../fonts/montserrat/Montserrat-Regular.otf');
+  src: url('../fonts/montserrat/Montserrat-Light.otf');
   src: url('../fonts/montserrat/fs/montserrat-light-webfont.eot?#iefix') format('embedded-opentype');
   src: url('../fonts/montserrat/fs/montserrat-light-webfont.svg#webfont') format('svg');
   src: url('../fonts/montserrat/fs/montserrat-light-webfont.ttf');
@@ -108,6 +108,7 @@ ul, menu, dir {
   margin-bottom: 70px;
   //min-width: 500px;
   max-width: 850px;
+  font-size: 16px;
 }
 .slider-container{
   height: 990px;
@@ -229,11 +230,17 @@ ul, menu, dir {
 .icon-outsorce{
   background: url(../images/icon4.png) center center no-repeat;
 }
+.industries-items{
+  margin-bottom: 45px;
+}
 .industries-wrap .icon{
   width: 73px;
   height: 73px;
   display: inline-block;
   margin-bottom: 80px;
+}
+.name{
+  font-size: 18px;
 }
 .count{
   position: absolute;
@@ -253,11 +260,24 @@ ul, menu, dir {
   height: 60px;
 }
 .more{
-  width: 200px;
+  //width: 200px;
   display: inline-block;
+}
+.more a{
+  display: table;
+  color: black;
+}
+.more-txt, .more-btn{
+  display: table-cell;
+  vertical-align: middle;
 }
 .more-txt, .more-btn, .brochure-txt, .brochure-icon, .brochure-icon .icon, .cover{
   display: inline-block;
+}
+.more-txt{
+  font-size: 24px;
+  padding: 0 25px;
+  //font-family: 'Montserrat-Regular';
 }
  .more-btn{
    border-radius: 50%;
@@ -269,10 +289,15 @@ ul, menu, dir {
 .border-bottom-gray{
   border-bottom: 1px solid #e3e3e3;
   padding-bottom: 100px;
+  margin-bottom: 90px;
 }
 .border-bottom-blue{
   border-bottom: 1px solid #5589ff;
   padding-bottom: 100px;
+}
+.technology-wrap{
+  margin-top: 20px;
+  margin-bottom: 100px;
 }
 .technology{
   height: 140px;
