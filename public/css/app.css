@@ -5882,6 +5882,12 @@ ul, menu, dir {
   line-height: 1;
   font-family: 'Montserrat-UltraLight'; }
 
+.service-title {
+  font-size: 21px; }
+
+.service-type {
+  padding-left: 0px; }
+
 .short-text {
   margin: 0 auto;
   margin-bottom: 70px;
@@ -5925,7 +5931,8 @@ ul, menu, dir {
 
 .monitor, .light-bulb, .magnifier, .lifebelt {
   width: 70px;
-  height: 70px; }
+  height: 70px;
+  margin-bottom: 25px; }
 
 .monitor {
   background: url(../images/monitor.png) center center no-repeat; }
@@ -5942,7 +5949,9 @@ ul, menu, dir {
 .title-divider {
   width: 40px;
   height: 2px;
-  background: #02f19c; }
+  background: #02f19c;
+  margin-top: 24px;
+  margin-bottom: 24px; }
 
 .project-count {
   display: inline-block;
@@ -5958,6 +5967,10 @@ ul, menu, dir {
 
 .technology, .industries {
   text-align: center; }
+
+#industries-top {
+  margin-top: 75px;
+  margin-bottom: 50px; }
 
 .industries {
   width: 295px;
@@ -6025,6 +6038,10 @@ ul, menu, dir {
 
 .border-bottom-gray {
   border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 100px; }
+
+.border-bottom-blue {
+  border-bottom: 1px solid #5589ff;
   padding-bottom: 100px; }
 
 .technology {

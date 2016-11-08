@@ -11,10 +11,10 @@
                                 personalized product development.
                         </div>
                 </div>
-                <div class="col-md-12">
-                        <div class="col-md-3 clear-pads">
+                <div class="col-md-12 clear-pads border-bottom-blue">
+                        <div class="col-md-3 service-type">
                                 <div class="monitor"></div>
-                                <div>Custom software development</div>
+                                <div class="service-title">Custom software development</div>
                                 <div class="title-divider"></div>
                                 <div class="services-list">
                                         <ul>
@@ -28,9 +28,9 @@
                                 </div>
                         </div>
 
-                        <div class="col-md-3 clear-pads">
+                        <div class="col-md-3 service-type">
                                 <div class="light-bulb"></div>
-                                <div>User Experience design</div>
+                                <div class="service-title">User Experience <br>design</div>
                                 <div class="title-divider"></div>
                                 <div class="services-list">
                                         <ul>
@@ -44,9 +44,9 @@
                                 </div>
                         </div>
 
-                        <div class="col-md-3 clear-pads">
+                        <div class="col-md-3 service-type">
                                 <div class="magnifier"></div>
-                                <div>Re-engineering and software testing</div>
+                                <div class="service-title">Re-engineering <br>and software testing</div>
                                 <div class="title-divider"></div>
                                 <div class="services-list">
                                         <ul>
@@ -60,9 +60,9 @@
                                 </div>
                         </div>
 
-                        <div class="col-md-3 clear-pads">
+                        <div class="col-md-3 service-type">
                                 <div class="lifebelt"></div>
-                                <div>Software maintenance and support</div>
+                                <div class="service-title">Software maintenance <br>and support</div>
                                 <div class="title-divider"></div>
                                 <div class="services-list">
                                         <ul>
@@ -77,7 +77,7 @@
                         </div>
                 </div>
 
-                <div class="col-md-12 center">
+                <div id="industries-top" class="col-md-12 center">
                         <div class="project-count-wrap">
                                 <div class="project-count">8</div>
                                 <div class="project-text">
@@ -85,9 +85,9 @@
                                         <div class="">created</div>
                                 </div>
                         </div>
-
+                        <div class="col-md-12 title">Industries we <span class="bold">worked in</span></div>
                 </div>
-                <div class="col-md-12 center title">Industries we <span class="bold">worked in</span></div>
+
 
         </div>
 </div>
