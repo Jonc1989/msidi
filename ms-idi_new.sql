@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Dumping data for table ms-idi_new.categories: ~1 rows (approximately)
+-- Dumping data for table ms-idi_new.categories: ~0 rows (approximately)
 DELETE FROM `categories`;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
 INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
@@ -66,6 +66,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `name` varchar(50) DEFAULT NULL,
   `content` text,
   `image` text,
+  `url` text,
   `category_id` int(10) unsigned DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -75,8 +76,8 @@ CREATE TABLE IF NOT EXISTS `posts` (
 -- Dumping data for table ms-idi_new.posts: ~1 rows (approximately)
 DELETE FROM `posts`;
 /*!40000 ALTER TABLE `posts` DISABLE KEYS */;
-INSERT INTO `posts` (`id`, `name`, `content`, `image`, `category_id`, `created_at`, `updated_at`) VALUES
-	(1, 'Exigen', 'Exigen', NULL, 1, '2016-11-07 19:57:53', '2016-11-07 19:57:53');
+INSERT INTO `posts` (`id`, `name`, `content`, `image`, `url`, `category_id`, `created_at`, `updated_at`) VALUES
+	(1, 'Exigen', 'Exigen', '../images/case-studies/opal-transfer.png', NULL, 1, '2016-11-07 19:57:53', '2016-11-08 23:50:03');
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
