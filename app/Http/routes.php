@@ -10,7 +10,7 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/', function (\App\Modules\Common\Models\Categories $categories) {
 
-        \Log::info( $categories->with('posts')->get());
+        //\Log::info( $categories->with('posts')->get());
         return view('master');
     });
 

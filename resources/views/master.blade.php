@@ -29,7 +29,7 @@
         @include('modules.case_studies.index')
         @include('modules.company.index')
         @include('modules.career.index')
-
+        @include('layouts.footer')
 
 
 

@@ -1,4 +1,4 @@
-<div class="col-md-12 clear-pads">
+<div id="slider" class="col-md-12 clear-pads">
     <div class="col-md-12 clear-pads slider-container blue-bg">
 
 

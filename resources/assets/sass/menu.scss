@@ -1,4 +1,25 @@
-.navbar-default{
-  background-color: transparent;
-  border-color: transparent;
+@media (min-width: 768px) {
+  .navbar-default{
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 1;
+  }
+  .navbar {
+    border-radius: 0px;
+    margin-bottom: 0px;
+  }
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    border: none;
+  }
+  .navbar-default .navbar-nav > li > a{
+    color: white;
+    font-size: 16px;
+
+  }
+  .navbar-nav > li > a{
+    padding-top: 63px;
+  }
+  .navbar-brand{
+    padding-top: 41px;
+  }
 }

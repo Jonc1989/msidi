@@ -1,0 +1,53 @@
+.bx-wrapper .bx-viewport {
+  box-shadow: none;
+  border: none;
+  left: 0px;
+  background: #506df9;
+}
+@media (min-width: 768px) {
+  #slider{
+    margin-top: -100px;
+  }
+}
+
+  /*-------------------------------------------*/
+.city{
+  position: absolute;
+  bottom: -1000px;
+  left: 0px;
+  height: 900px;
+  width: 100%;
+  background: url(../images/amber/City.png) bottom center no-repeat;
+}
+.inner-bg.active .city {
+  bottom: 0px;
+}
+.amber-bg{
+  //background: url(../images/amber_bg.png) center center no-repeat;
+  background: url(../images/amber/amber-bgg.png) center center no-repeat;
+  padding-top: 320px;
+}
+.amber-text{
+  padding-left: 315px;
+}
+.inner-bg .amber-text{
+  left: 2500px;
+  opacity: 0;
+}
+.inner-bg.active .amber-text{
+  left: 0px;
+  opacity: 1;
+
+}
+.mac{
+  background: url(../images/amber/iMac.png) center center no-repeat;
+  width: 760px;
+  height: 620px;
+}
+.inner-bg .mac{
+  left: 2500px;
+  //opacity: 0;
+}
+.inner-bg.active .mac{
+  left: 0px;
+}

@@ -32,7 +32,7 @@ $(document).ready(function(){
         }
 
     });
-
+    setTimeout(function () {
     slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
-
+    },500);
 });

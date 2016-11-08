@@ -5730,9 +5730,76 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.navbar-default {
-  background-color: transparent;
-  border-color: transparent; }
+@media (min-width: 768px) {
+  .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 1; }
+  .navbar {
+    border-radius: 0px;
+    margin-bottom: 0px; }
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: none; }
+  .navbar-default .navbar-nav > li > a {
+    color: white;
+    font-size: 16px; }
+  .navbar-nav > li > a {
+    padding-top: 63px; }
+  .navbar-brand {
+    padding-top: 41px; } }
+
+.bx-wrapper .bx-viewport {
+  box-shadow: none;
+  border: none;
+  left: 0px;
+  background: #506df9; }
+
+@media (min-width: 768px) {
+  #slider {
+    margin-top: -100px; } }
+
+/*-------------------------------------------*/
+.city {
+  position: absolute;
+  bottom: -1000px;
+  left: 0px;
+  height: 900px;
+  width: 100%;
+  background: url(../images/amber/City.png) bottom center no-repeat; }
+
+.inner-bg.active .city {
+  bottom: 0px; }
+
+.amber-bg {
+  background: url(../images/amber/amber-bgg.png) center center no-repeat;
+  padding-top: 320px; }
+
+.amber-text {
+  padding-left: 315px; }
+
+.inner-bg .amber-text {
+  left: 2500px;
+  opacity: 0; }
+
+.inner-bg.active .amber-text {
+  left: 0px;
+  opacity: 1; }
+
+.mac {
+  background: url(../images/amber/iMac.png) center center no-repeat;
+  width: 760px;
+  height: 620px; }
+
+.inner-bg .mac {
+  left: 2500px; }
+
+.inner-bg.active .mac {
+  left: 0px; }
+
+.footer {
+  height: 255px;
+  width: 100%;
+  background: #4c4c53; }
 
 @font-face {
   font-family: 'Montserrat-Bold';
@@ -5784,7 +5851,7 @@ body {
   padding: 0;
   width: 100%;
   font-weight: 100;
-  font-family: 'Montserrat-Regular'; }
+  font-family: 'Montserrat-Light'; }
 
 @media (min-width: 1400px) {
   .container {
@@ -5796,16 +5863,24 @@ ul, menu, dir {
   -webkit-padding-start: 0px; }
 
 .bold {
-  font-weight: bold; }
+  font-weight: bold;
+  font-family: 'Montserrat-Regular'; }
+
+.white {
+  color: white; }
 
 .clear-pads {
   padding-left: 0px !important;
   padding-right: 0px !important; }
 
+.clear-margs {
+  margin: 0 !important; }
+
 .title {
   font-size: 48px;
   margin-bottom: 45px;
-  line-height: 1; }
+  line-height: 1;
+  font-family: 'Montserrat-UltraLight'; }
 
 .short-text {
   margin: 0 auto;
@@ -5829,8 +5904,7 @@ ul, menu, dir {
   position: relative; }
 
 .amber-container, .ecolines-container, .bx-wrapper, .bx-viewport {
-  height: 950px !important;
-  background: #506df9; }
+  height: 950px !important; }
 
 .inner-bg {
   position: relative;
@@ -5838,40 +5912,6 @@ ul, menu, dir {
   left: 0px;
   height: 900px;
   width: 100%; }
-
-.city {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 900px;
-  width: 100%;
-  background: url(../images/amber/City.png) bottom center no-repeat; }
-
-.amber-bg {
-  background: url(../images/amber/amber-bgg.png) center center no-repeat;
-  padding-top: 320px; }
-
-.amber-text {
-  padding-left: 315px; }
-
-.inner-bg .amber-text {
-  left: -500px;
-  opacity: 0; }
-
-.inner-bg.active .amber-text {
-  left: 0px;
-  opacity: 1; }
-
-.mac {
-  background: url(../images/amber/iMac.png) center center no-repeat;
-  width: 760px;
-  height: 620px; }
-
-.inner-bg .mac {
-  top: 1000px; }
-
-.inner-bg.active .mac {
-  top: 0px; }
 
 .ecolines-bg {
   background: url(../images/ecolines_bg.png) center center no-repeat; }
@@ -6142,7 +6182,40 @@ ul, menu, dir {
 .edgar {
   background: url(../images/company/edgar.png) center center no-repeat; }
 
-.amber-text, .mac {
-  transition: all  .4s ease-out; }
+#career table {
+  width: 100%; }
+
+#vacansy a {
+  font-size: 24px;
+  color: #212121;
+  font-family: "Montserrat-Light";
+  outline: none;
+  text-decoration: none;
+  height: 70px; }
+
+.vacansy {
+  border-bottom: 1px solid #e3e3e3; }
+
+.plus, .minus {
+  height: 70px;
+  width: 22px;
+  float: right;
+  display: inline-block; }
+
+.carrer-name {
+  display: inline-block;
+  line-height: 70px; }
+
+.plus {
+  background: url(../images/plus.png) center center no-repeat;
+  background-size: 22px 22px; }
+
+.minus {
+  background: url(../images/minus.png) center center no-repeat;
+  background-size: 22px 2px;
+  display: none; }
+
+.amber-text, .mac, .city {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
 /*# sourceMappingURL=app.css.map */

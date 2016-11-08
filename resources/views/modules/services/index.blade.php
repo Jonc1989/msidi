@@ -1,7 +1,7 @@
-<div class="col-md-12 clear-pads blue-bg">
+<div class="col-md-12 clear-pads blue-bg services white">
         <div class="container clear-pads">
                 <div class="col-md-12">
-                        <div class="title center title">Explore variety of our services</div>
+                        <div class="title center title">Explore <span class="bold">variety</span> of our services</div>
                         <div class="center short-text">
                                 MS-IDI provide individual software
                                 solutions for business and private
