@@ -1,0 +1,452 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "menu";
+@import "slider";
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('../fonts/montserrat/Montserrat-Bold.otf');
+  src: url('../fonts/montserrat/montserrat-bold-webfont.eot');
+  src: url('../fonts/montserrat/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/montserrat/montserrat-bold-webfont.svg#webfont') format('svg');
+  src: url('../fonts/montserrat/montserrat-bold-webfont.ttf');
+  src: url('../fonts/montserrat/montserrat-bold-webfont.woff') format('woff');
+
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraBold';
+  src: url('../fonts/montserrat/Montserrat-ExtraBold.otf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Hairline';
+  src: url('../fonts/montserrat/Montserrat-Hairline.otf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('../fonts/montserrat/Montserrat-Light.otf');
+  src: url('../fonts/montserrat/Montserrat-Regular.otf');
+  src: url('../fonts/montserrat/fs/montserrat-light-webfont.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/montserrat/fs/montserrat-light-webfont.svg#webfont') format('svg');
+  src: url('../fonts/montserrat/fs/montserrat-light-webfont.ttf');
+  src: url('../fonts/montserrat/fs/montserrat-light-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../fonts/montserrat/Montserrat-Regular.otf');
+  src: url('../fonts/montserrat/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/montserrat/montserrat-regular-webfont.svg#webfont') format('svg');
+  src: url('../fonts/montserrat/montserrat-regular-webfont.ttf');
+  src: url('../fonts/montserrat/montserrat-regular-webfont.woff') format('woff');
+
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('../fonts/montserrat/Montserrat-SemiBold.otf');
+}
+
+@font-face {
+  font-family: 'Montserrat-UltraLight';
+  src: url('../fonts/montserrat/Montserrat-UltraLight.otf');
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-weight: 100;
+  font-family: 'Montserrat-Regular';
+}
+@media (min-width: 1400px){
+  .container {
+    width: 1240px;
+  }
+}
+
+ul, menu, dir {
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-padding-start: 0px;
+}
+.bold{
+  font-weight: bold;
+}
+.clear-pads{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.title{
+  font-size: 48px;
+  margin-bottom: 45px;
+  line-height: 1;
+}
+.short-text{
+  margin: 0 auto;
+  margin-bottom: 70px;
+  //min-width: 500px;
+  max-width: 850px;
+}
+.slider-container{
+  height: 990px;
+
+}
+.bxslider ul li{
+ overflow: hidden;
+}
+.blue-bg{
+  background: #506df9;
+}
+.blue-bg-shape{
+  background: url(../images/blue-bg.png) top center no-repeat;
+  background-size: contain;
+}
+.amber-container{
+  position: relative;
+}
+.amber-container, .ecolines-container, .bx-wrapper, .bx-viewport{
+  height: 950px !important;
+  background: #506df9;
+}
+.inner-bg{
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: 900px;
+  width: 100%;
+}
+.city{
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ height: 900px;
+ width: 100%;
+  background: url(../images/amber/City.png) bottom center no-repeat;
+}
+
+.amber-bg{
+  //background: url(../images/amber_bg.png) center center no-repeat;
+  background: url(../images/amber/amber-bgg.png) center center no-repeat;
+  padding-top: 320px;
+
+}
+.amber-text{
+ padding-left: 315px;
+
+}
+.inner-bg .amber-text{
+  left: -500px;
+  opacity: 0;
+}
+.inner-bg.active .amber-text{
+  left: 0px;
+  opacity: 1;
+
+}
+ .mac{
+   background: url(../images/amber/iMac.png) center center no-repeat;
+   width: 760px;
+   height: 620px;
+ }
+.inner-bg .mac{
+  top: 1000px;
+  //opacity: 0;
+}
+.inner-bg.active .mac{
+  top: 0px;
+}
+
+.ecolines-bg{
+  background: url(../images/ecolines_bg.png) center center no-repeat;
+}
+.center{
+  width: 100%;
+  text-align: center;
+}
+.services-list ul{
+  -webkit-padding-start: 16px;
+}
+.monitor, .light-bulb, .magnifier, .lifebelt{
+  width: 70px;
+  height: 70px;
+}
+.monitor{
+  background: url(../images/monitor.png) center center no-repeat;
+}
+.light-bulb{
+  background: url(../images/light.png) center center no-repeat;
+}
+.magnifier{
+  background: url(../images/magnifier.png) center center no-repeat;
+}
+.lifebelt{
+  background: url(../images/lifebuoy.png) center center no-repeat;
+}
+.title-divider{
+  //content: '';
+  //position: absolute;
+  //bottom: 0px;
+  //left: 0px;
+  width: 40px;
+  height: 2px;
+  background: #02f19c;
+}
+.project-count{
+  display: inline-block;
+  height: 74px;
+  width: 52px;
+  background: url(../images/base.png) center center no-repeat;
+  font-size: 60px;
+  line-height: 1.3;
+  color: #506df9;
+}
+.project-text{
+  display: inline-block;
+}
+ .technology, .industries{
+
+   text-align: center;
+ }
+.industries{
+  width: 295px;
+  height: 295px;
+  border-right: 1px solid #ebebeb;
+  //border-bottom-right-radius: 3px;
+  border-bottom: 1px solid #ebebeb;
+  border-radius: 8px;
+  background: url(../images/ellipses.png) center center;
+  background-repeat: no-repeat;
+
+}
+.industries:not(:last-of-type) /*, .technology:not(:last-of-type)*/{
+  margin-right: 20px;
+}
+.industries-wrap{
+  width: 100%;
+  height: 100%;
+  padding-top: 90px;
+  position: relative;
+}
+.icon-erp{
+  background: url(../images/icon.png) center center no-repeat;
+}
+.icon-finances{
+  background: url(../images/icon2.png) center center no-repeat;
+}
+.icon-logistics{
+  background: url(../images/icon3.png) center center no-repeat;
+}
+.icon-outsorce{
+  background: url(../images/icon4.png) center center no-repeat;
+}
+.industries-wrap .icon{
+  width: 73px;
+  height: 73px;
+  display: inline-block;
+  margin-bottom: 80px;
+}
+.count{
+  position: absolute;
+  top: -30px;
+  right: 20px;
+
+  background: #02f19c;
+  border-radius: 50%;
+  display: table;
+}
+.num{
+  display: table-cell;
+  vertical-align: middle;
+}
+.circle{
+  width: 60px;
+  height: 60px;
+}
+.more{
+  width: 200px;
+  display: inline-block;
+}
+.more-txt, .more-btn, .brochure-txt, .brochure-icon, .brochure-icon .icon, .cover{
+  display: inline-block;
+}
+ .more-btn{
+   border-radius: 50%;
+   background: url(../images/more.png) center center no-repeat;
+   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+   box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+ }
+.border-bottom-gray{
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 100px;
+}
+.technology{
+  height: 140px;
+  border-right: 1px solid #e1e1e1;
+  padding-top: 10px;
+}
+.technology .icon{
+ width: 77px;
+ height: 50px;
+ display: inline-block;
+ margin-bottom: 35px;
+}
+.icon-net{
+ background: url(../images/net.png) center center no-repeat;
+}
+.icon-open{
+ background: url(../images/open.png) center center no-repeat;
+}
+.icon-ui{
+ background: url(../images/ui.png) center center no-repeat;
+}
+.icon-mobile{
+ background: url(../images/mobile.png) center center no-repeat;
+}
+.green{
+  //padding-top: 250px;
+  background: url(../images/green.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.partner-wrap{
+  height: 375px;
+  position: relative;
+  width: 255px;
+  font-family: 'Montserrat-Hairline';
+  border-right: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  border-radius: 8px;
+  text-align: center;
+  padding-top: 60px;
+  color: #02f19c;
+  overflow: hidden;
+}
+.partner{
+  width: 100%;
+  height: 100%;
+}
+.roof:before{
+  content: '';
+  width: 195px;
+  height: 230px;
+  position: absolute;
+  top: 0px;
+  left: -100px;
+  background: white;
+  transform: skewX(-44deg);
+  -webkit-transform: skewX(-44deg);
+  -moz-transform: skewX(-44deg);
+  -o-transform: skewX(-44deg);
+  -ms-transform: skewX(-44deg);
+
+}
+.roof:after{
+ content: '';
+  width: 189px;
+ height: 230px;
+ position: absolute;
+ top: 0px;
+ left: 0px;
+  background: url(../images/Line.png) center center no-repeat;
+}
+.partner-wrap:not(:last-of-type){
+  margin-right: 55px;
+}
+.years{
+  width: 140px;
+  display: inline-block;
+}
+.year{
+  font-size: 115px;
+  line-height: 1;
+}
+.year-txt{
+  margin-bottom: 50px;
+  text-align: left;
+  padding-left: 7px;
+}
+.partner .image{
+  width: 180px;
+  height: 60px;
+  display: inline-block;
+}
+.exigen{
+  background: url(../images/Exigen.png) center center no-repeat;
+}
+.brochure{
+  display: inline-block;
+  width: 250px;
+}
+.brochure-txt, .brochure-icon, .brochure-icon .icon{
+  vertical-align: middle;
+}
+.brochure-icon{
+  background: #506df9;
+  border-radius: 50%;
+  padding-top: 15px;
+}
+.brochure-icon .icon{
+  background: url(../images/brochure-icon.png) center center no-repeat;
+  width: 26px;
+  height: 26px;
+}
+.case-studies{
+  height: 285px;
+  text-align: center;
+}
+.case-studies .image{
+  width: 200px;
+  height: 200px;
+}
+.case-studies .cover{
+  height: 200px;
+  width: 200px;
+}
+.portfolio-title{
+  font-weight: bold;
+}
+.opal-transfer-image{
+  background: url(../images/case-studies/opal-transfer.png) center center no-repeat;
+}
+.light-blue{
+  padding-top: 100px;
+  background: url(../images/light-blue.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-bottom: 100px;
+}
+.valery, .nicolay, .edgar{
+  width: 281px;
+  height: 281px;
+  border-radius: 50%;
+  border: 28px solid white;
+}
+.team{
+  border-radius: 50%;
+  border: 28px solid #e5fcff;
+  width: 337px;
+  height: 337px;
+}
+.valery{
+  background: url(../images/company/valery.png) center center no-repeat;
+}
+.nicolay{
+  background: url(../images/company/nicolay.png) center center no-repeat;
+}
+.edgar{
+  background: url(../images/company/edgar.png) center center no-repeat;
+}
+
+.amber-text, .mac {
+ -webkit-transition: all .4s ease-out;
+ -moz-transition: all .4s ease-out;
+ -o-transition: all .4s ease-out;
+ transition: all  .4s ease-out;
+}

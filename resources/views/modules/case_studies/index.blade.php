@@ -1,0 +1,111 @@
+
+<div class="container clear-pads">
+        <div class="col-md-12">
+            <div class="title center title">Case studies</div>
+            <div class="center short-text">
+                We have realized and introduced a number of
+                unique and innovative projects that we are proud of and happy to share with you.
+            </div>
+
+            <div class="col-md-12 brochure-wrap center">
+                <div class="brochure">
+                    <a href="">
+                        <div class="brochure-txt">PDF brochure (En)</div>
+                        <div class="brochure-icon circle"><div class="icon"></div></div>
+                    </a>
+                </div>
+
+                <div class="brochure">
+                    <a href="">
+                        <div class="brochure-txt">PDF brochure (De)</div>
+                        <div class="brochure-icon circle"><div class="icon"></div></div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-12">
+            <div class="col-md-4 case-studies">
+                <div class="cover">
+                    <div class="image opal-transfer-image exigen-image">
+                        <div >111</div>
+                        <div >111</div>
+                        <div >111</div>
+                    </div>
+                </div>
+                <div class="portfolio-title">Exigen</div>
+                <div class="category">Partnership</div>
+
+            </div>
+            <div class="col-md-4 case-studies">
+                <div class="cover">
+                    <div class="image opal-transfer-image">
+                        <div >111</div>
+                        <div >111</div>
+                        <div >111</div>
+                    </div>
+                </div>
+                <div class="portfolio-title">Opal transfer</div>
+                <div class="category">Partnership</div>
+            </div>
+            <div class="col-md-4 case-studies">
+                <div class="cover">
+                    <div class="image opal-transfer-image">
+                        <div >111</div>
+                        <div >111</div>
+                        <div >111</div>
+                    </div>
+                </div>
+                <div class="portfolio-title">Opal online</div>
+                <div class="category">Partnership</div>
+            </div>
+
+            <div class="col-md-4 case-studies">
+                <div class="cover">
+                    <div class="image opal-transfer-image exigen-image">
+                        <div >111</div>
+                        <div >111</div>
+                        <div >111</div>
+                    </div>
+                </div>
+                <div class="portfolio-title">Exigen</div>
+                <div class="category">Partnership</div>
+
+            </div>
+            <div class="col-md-4 case-studies">
+                <div class="cover">
+                    <div class="image opal-transfer-image">
+                        <div >111</div>
+                        <div >111</div>
+                        <div >111</div>
+                    </div>
+                </div>
+                <div class="portfolio-title">Opal transfer</div>
+                <div class="category">Partnership</div>
+            </div>
+            <div class="col-md-4 case-studies">
+                <div class="cover">
+                    <div class="image opal-transfer-image">
+                        <div >111</div>
+                        <div >111</div>
+                        <div >111</div>
+                    </div>
+                </div>
+                <div class="portfolio-title">Opal online</div>
+                <div class="category">Partnership</div>
+            </div>
+        </div>
+
+    <div class="col-md-12 center">
+        <div class="more">
+            <a href="">
+                <div class="more-txt">See more</div>
+                <div class="more-btn circle"></div>
+            </a>
+        </div>
+    </div>
+
+
+</div>
