@@ -69,9 +69,7 @@
         </script>
         <div style='overflow:hidden;height:405px;width:100%;'>
                 <div id='gmap_canvas' style='height:405px;width:100%;'></div>
-                <div><small>
-                                <a href="http://embedgooglemaps.com">embed google maps</a></small></div><div><small><a href="https://freedirectorysubmissionsites.com/">high PR</a></small>
-                </div>
+
 
                 <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
         </div>
@@ -86,10 +84,12 @@
                                 marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(56.526248,27.357412599999975)});
                                 infowindow = new google.maps.InfoWindow({content:'<strong> </strong><br>Rēzekne, Maskavas 22<br>'});
                                 google.maps.event.addListener(marker, 'click', function(){
-                                        infowindow.open(map,marker);});
-                                infowindow.open(map,marker);
+                                        infowindow.open(map,marker);
+                                });
+                                //infowindow.open(map,marker);
                 }
                 google.maps.event.addDomListener(window, 'load', init_map);
+
         </script>
 
 

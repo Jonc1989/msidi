@@ -1,5 +1,4 @@
-
-<div class="container clear-pads">
+<div class="container clear-pads" ng-controller="CaseStudiesController">
         <div class="col-md-12">
             <div class="title center title">Case studies</div>
             <div class="center short-text">
@@ -27,6 +26,40 @@
 
 
         <div class="col-md-12">
+            <div class="col-md-4 case-studies" ng-repeat="item in caseStudies">
+                <div class="cover">
+                    <div class="image opal-transfer-image2 exigen-image" style="    background: url({{ item.image }}) center center no-repeat;">
+                        <div >111</div>
+                        <div >111</div>
+                        <div >111</div>
+                    </div>
+                </div>
+                <div class="portfolio-title" ng-bind="item.content">Exigen</div>
+                <div class="category" ng-bind="item.categories.name">Partnership</div>
+            </div>
+            <!--<div class="col-md-4 case-studies">
+                <div class="cover">
+                    <div class="image opal-transfer-image">
+                        <div >111</div>
+                        <div >111</div>
+                        <div >111</div>
+                    </div>
+                </div>
+                <div class="portfolio-title">Opal transfer</div>
+                <div class="category">Partnership</div>
+            </div>
+            <div class="col-md-4 case-studies">
+                <div class="cover">
+                    <div class="image opal-transfer-image">
+                        <div >111</div>
+                        <div >111</div>
+                        <div >111</div>
+                    </div>
+                </div>
+                <div class="portfolio-title">Opal online</div>
+                <div class="category">Partnership</div>
+            </div>
+
             <div class="col-md-4 case-studies">
                 <div class="cover">
                     <div class="image opal-transfer-image exigen-image">
@@ -60,47 +93,12 @@
                 </div>
                 <div class="portfolio-title">Opal online</div>
                 <div class="category">Partnership</div>
-            </div>
-
-            <div class="col-md-4 case-studies">
-                <div class="cover">
-                    <div class="image opal-transfer-image exigen-image">
-                        <div >111</div>
-                        <div >111</div>
-                        <div >111</div>
-                    </div>
-                </div>
-                <div class="portfolio-title">Exigen</div>
-                <div class="category">Partnership</div>
-
-            </div>
-            <div class="col-md-4 case-studies">
-                <div class="cover">
-                    <div class="image opal-transfer-image">
-                        <div >111</div>
-                        <div >111</div>
-                        <div >111</div>
-                    </div>
-                </div>
-                <div class="portfolio-title">Opal transfer</div>
-                <div class="category">Partnership</div>
-            </div>
-            <div class="col-md-4 case-studies">
-                <div class="cover">
-                    <div class="image opal-transfer-image">
-                        <div >111</div>
-                        <div >111</div>
-                        <div >111</div>
-                    </div>
-                </div>
-                <div class="portfolio-title">Opal online</div>
-                <div class="category">Partnership</div>
-            </div>
+            </div>-->
         </div>
 
     <div class="col-md-12 center">
         <div class="more">
-            <a href="">
+            <a href="/case-studies">
                 <div class="more-txt">See more</div>
                 <div class="more-btn circle"></div>
             </a>

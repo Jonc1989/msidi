@@ -1,6 +1,6 @@
-// var app = angular.module( 'app', [
-//    
-// ] );
+var app = angular.module( 'app', [
+   'caseStudies'
+] );
 
 $(document).ready(function(){
     var slider = $('.bxslider').bxSlider({
