@@ -64,7 +64,7 @@ body {
   width: 100%;
   font-weight: 100;
   font-family: 'Montserrat-Light';
-  //font-size: 16px;
+  font-size: 16px;
 }
 @media (min-width: 1400px){
   .container {
@@ -150,6 +150,7 @@ ul, menu, dir {
 }
 .services-list ul{
   -webkit-padding-start: 16px;
+  font-size: 14px;
 }
 .monitor, .light-bulb, .magnifier, .lifebelt{
   width: 70px;
@@ -477,7 +478,6 @@ ul, menu, dir {
 .contact-info{
   margin-top: 20px;
   margin-bottom: 65px;
-  font-size: 16px;
 }
 .pin, .pin2, .email, .phone, .fax{
   position: relative;
@@ -545,6 +545,18 @@ ul, menu, dir {
 }
 #career table{
   width: 100%;
+}
+.soc-icons{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 45px;
+}
+.soc-icons a:not(:last-of-type){
+  margin-right: 40px;
+}
+.footer-info{
+  color: white;
+  text-align: center;
 }
 #vacansy a{
   font-size: 24px;
