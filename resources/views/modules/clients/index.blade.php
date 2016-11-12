@@ -1,6 +1,6 @@
-<div id="clients" class="col-md-12 clear-pads ">
+<div id="clients" class="col-md-12 col-sm-12 col-xs-12 clear-pads ">
     <div class="green">
-        <div class="title center">What clients say about us?</div>
+        <div class="title center">What clients <span class="bold">say about us</span>?</div>
 
         <div class="center short-text">
             MS-IDI works with companies in many different
@@ -19,14 +19,14 @@
 
 
 
-    <div class="title center title">Companies who trust us</div>
+    <div class="title center title">Companies who <span class="bold">trust us</span></div>
 
     <div class="center short-text">
       Our business clients and partners.
     </div>
 
     <div class="container clear-pads border-bottom-gray">
-        <div class="col-md-12 clear-pads">
+        <div class="col-md-12 col-sm-12 col-xs-12 clear-pads">
 
             <div class="col-md-3 partner-wrap">
                 <div class="roof"></div>

@@ -1,6 +1,6 @@
-<div class="col-md-12 clear-pads blue-bg services white">
+<div class="col-md-12 col-sm-12 col-xs-12 clear-pads blue-bg services white">
         <div class="container clear-pads">
-                <div class="col-md-12">
+                <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="title center title">Explore <span class="bold">variety</span> of our services</div>
                         <div class="center short-text">
                                 MS-IDI provide individual software
@@ -11,8 +11,8 @@
                                 personalized product development.
                         </div>
                 </div>
-                <div class="col-md-12 clear-pads border-bottom-blue">
-                        <div class="col-md-3 service-type">
+                <div class="col-md-12 col-sm-12 col-xs-12 clear-pads border-bottom-blue">
+                        <div class="col-md-3 col-md-3 col-xs-6 service-type">
                                 <div class="monitor"></div>
                                 <div class="service-title">Custom software development</div>
                                 <div class="title-divider"></div>
@@ -28,7 +28,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-md-3 service-type">
+                        <div class="col-md-3 col-md-3 col-xs-6 service-type">
                                 <div class="light-bulb"></div>
                                 <div class="service-title">User Experience <br>design</div>
                                 <div class="title-divider"></div>
@@ -44,7 +44,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-md-3 service-type">
+                        <div class="col-md-3 col-md-3 col-xs-6 service-type">
                                 <div class="magnifier"></div>
                                 <div class="service-title">Re-engineering <br>and software testing</div>
                                 <div class="title-divider"></div>
@@ -60,7 +60,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-md-3 service-type">
+                        <div class="col-md-3 col-md-3 col-xs-6 service-type">
                                 <div class="lifebelt"></div>
                                 <div class="service-title">Software maintenance <br>and support</div>
                                 <div class="title-divider"></div>
@@ -77,10 +77,11 @@
                         </div>
                 </div>
 
-                <div id="industries-top" class="col-md-12 center">
+                <div id="industries-top" class="col-md-12 col-sm-12 col-xs-12 center">
                         <div class="project-count-wrap">
                                 <div class="project-count">8</div>
                                 <div class="project-text">
+
                                         <div class="">Projects</div>
                                         <div class="">created</div>
                                 </div>
@@ -92,7 +93,7 @@
         </div>
 </div>
 
-<div class="col-md-12 clear-pads blue-bg-shape">
+<div class="col-md-12 col-sm-12 col-xs-12 clear-pads blue-bg-shape">
         <div class="container clear-pads border-bottom-gray">
                 <div class="col-md-12 clear-pads industries-items">
                         <div class="col-lg-3 clear-pads industries">

@@ -1,4 +1,4 @@
-<div class="col-md-12">
+<div class="col-md-12 col-sm-12 col-xs-12">
         <div class="container clear-pads">
                 <div class="title center title">Technologies <span class="bold">we know</span> </div>
                 <div class="center short-text">Continuous investment in new platforms and technology learning,

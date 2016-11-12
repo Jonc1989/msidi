@@ -1,4 +1,4 @@
-<div class="col-md-12" id="career">
+<div class="col-md-12 col-sm-12 col-xs-12" id="career">
         <div class="container">
                 <div class="title center">Start your career with us</div>
 
@@ -69,7 +69,7 @@
                 <div class="col-md-12">
                         <form id="vacansy-form">
                                 <div class="col-md-6">
-                                        <select class="form-control">
+                                        <select class="form-control contact-form-input">
                                                 <option value="">Choose your position</option>
                                                 <option value="marketing_manager">Marketing manager</option>
                                                 <option value="game_marketing_manager">Computer game marketing manager</option>
@@ -78,13 +78,16 @@
                                         </select>
                                 </div>
                                 <div class="col-md-6">
-                                        <input class="form-control" type="text" placeholder="Email address">
+                                        <input class="form-control contact-form-input" type="text" placeholder="Email address">
                                 </div>
 
                                 <div class="col-md-12">
-                                        <textarea rows="10" class="form-control" placeholder="Message"></textarea>
+                                        <textarea rows="10" class="form-control contact-form-input" placeholder="Message"></textarea>
                                 </div>
-                                <input class="form-control" type="submit" value="Send message">
+                                <button class="form-control send" type="submit" value="">
+                                        Send message
+                                        <div class="more-btn circle"></div>
+                                </button>
                         </form>
                 </div>
         </div>

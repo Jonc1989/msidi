@@ -64,6 +64,7 @@ body {
   width: 100%;
   font-weight: 100;
   font-family: 'Montserrat-Light';
+  //font-size: 16px;
 }
 @media (min-width: 1400px){
   .container {
@@ -178,6 +179,9 @@ ul, menu, dir {
   margin-top: 24px;
   margin-bottom: 24px;
 }
+.project-count-wrap{
+  margin-bottom: 50px;
+}
 .project-count{
   display: inline-block;
   height: 74px;
@@ -189,6 +193,10 @@ ul, menu, dir {
 }
 .project-text{
   display: inline-block;
+  vertical-align: top;
+  margin-top: 12px;
+  font-size: 18px;
+  padding-left: 20px;
 }
  .technology, .industries{
 
@@ -323,7 +331,7 @@ ul, menu, dir {
  background: url(../images/mobile.png) center center no-repeat;
 }
 .green{
-  //padding-top: 250px;
+  padding-top: 250px;
   background: url(../images/green.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -393,6 +401,9 @@ ul, menu, dir {
 .exigen{
   background: url(../images/Exigen.png) center center no-repeat;
 }
+.brochure-wrap{
+  margin-bottom: 75px;
+}
 .brochure{
   display: inline-block;
   width: 250px;
@@ -410,9 +421,15 @@ ul, menu, dir {
   width: 26px;
   height: 26px;
 }
+.case-studies-wrap{
+  margin-bottom: 75px;
+  text-align: center;
+}
 .case-studies{
   height: 285px;
   text-align: center;
+  float: none;
+  display: inline-block;
 }
 .case-studies .image{
   width: 200px;
@@ -434,6 +451,7 @@ ul, menu, dir {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   padding-bottom: 100px;
+  margin-bottom: 30px;
 }
 .valery, .nicolay, .edgar{
   width: 281px;
@@ -455,6 +473,75 @@ ul, menu, dir {
 }
 .edgar{
   background: url(../images/company/edgar.png) center center no-repeat;
+}
+.contact-info{
+  margin-top: 20px;
+  margin-bottom: 65px;
+  font-size: 16px;
+}
+.pin, .pin2, .email, .phone, .fax{
+  position: relative;
+}
+.pin, .pin2, .email, .phone, .fax{
+  padding-left: 30px;
+}
+.pin:before{
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0px;
+  background: url( ../images/pin.png) center center no-repeat;
+  height: 17px;
+  width: 12px;
+}
+.email:before{
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: url( ../images/email.png) center center no-repeat;
+  height: 12px;
+  width: 17px;
+}
+.phone:before{
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  background: url( ../images/phone.png) center center no-repeat;
+  height: 15px;
+  width: 15px;
+}
+.fax:before{
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -2px;
+  background: url( ../images/fax.png) center center no-repeat;
+  height: 19px;
+  width: 19px;
+}
+.contact-form-input{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+.send{
+  height: 62px;
+  padding: 0px;
+  width: initial;
+  margin: 0 auto;
+  margin-top: 30px;
+  border: none;
+}
+#company, #career{
+  padding-bottom: 65px;
+}
+#company form{
+  margin-bottom: 100px;
+}
+.form-control{
+  border-radius: 0px;
 }
 #career table{
   width: 100%;

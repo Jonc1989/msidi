@@ -1,4 +1,4 @@
-<div class="col-md-12 clear-pads">
+<div id="company" class="col-md-12 col-sm-12 col-xs-12 clear-pads">
         <div class="light-blue">
 
                 <div class="container ">
@@ -34,32 +34,37 @@
 
         <div class="container">
                 <div class="title center">Let's get in touch</div>
-                <div class="col-md-offset-2 col-md-8">
+                <div class="col-md-offset-2 col-md-8 contact-info">
                         <div class="col-md-6 right">
-                                <div class="col-md-12">SIA MS-IDI Maskavas iela 22,</div>
-                                <div class="col-md-12">Rēzekne, LV-4604, Latvija</div>
+                                <div class="pin">SIA MS-IDI Maskavas iela 22,</div>
+                                <div class="pin2">Rēzekne, LV-4604, Latvija</div>
                         </div>
                         <div class="col-md-6">
-                                <div class="col-md-12">Email: info@ms-idi.eu</div>
+                                <div class="email">Email: info@ms-idi.eu</div>
+                                <div class="phone">Telephone: +371 278257 77</div>
+                                <div class="fax">Fax: +371 64605888</div>
                         </div>
                 </div>
 
                 <div class="col-md-12">
                         <form id="contact-form">
-                                <div class="col-md-4">
+                                <div class="col-md-4 contact-form-input">
                                         <input class="form-control" type="text" placeholder="Your name">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 contact-form-input">
                                         <input class="form-control" type="text" placeholder="Email address">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 contact-form-input">
                                         <input class="form-control" type="text" placeholder="Subject">
                                 </div>
 
-                                <div class="col-md-12">
+                                <div class="col-md-12 contact-form-input">
                                         <textarea rows="10" class="form-control" placeholder="Message"></textarea>
                                 </div>
-                                <input class="form-control" type="submit" value="Send message">
+                                <button class="form-control send" type="submit" value="">
+                                        Send
+                                        <div class="more-btn circle"></div>
+                                </button>
                         </form>
                 </div>
         </div>

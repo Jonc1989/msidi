@@ -1,6 +1,6 @@
 <div class="container clear-pads" ng-controller="CaseStudiesController">
-        <div class="col-md-12">
-            <div class="title center title">Case studies</div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="title center title">Case <span class="bold">studies</span></div>
             <div class="center short-text">
                 We have realized and introduced a number of
                 unique and innovative projects that we are proud of and happy to share with you.
@@ -25,13 +25,11 @@
         </div>
 
 
-        <div class="col-md-12">
+        <div class="col-md-12 col-sm-12 col-xs-12 case-studies-wrap">
             <div class="col-md-4 case-studies" ng-repeat="item in caseStudies">
                 <div class="cover">
                     <div class="image opal-transfer-image2 exigen-image" style="    background: url({{ item.image }}) center center no-repeat;">
-                        <div >111</div>
-                        <div >111</div>
-                        <div >111</div>
+
                     </div>
                 </div>
                 <div class="portfolio-title" ng-bind="item.content">Exigen</div>
@@ -96,7 +94,7 @@
             </div>-->
         </div>
 
-    <div class="col-md-12 center">
+    <div class="col-md-12 col-sm-12 col-xs-12 center">
         <div class="more">
             <a href="/case-studies">
                 <div class="more-txt">See more</div>
