@@ -1,5 +1,5 @@
-<div id="clients" class="col-md-12 col-sm-12 col-xs-12 clear-pads ">
-    <div class="green">
+<div id="clients" class="col-md-12 col-sm-12 col-xs-12 clear-pads " ng-controller="ClientsController">
+    <div class="col-md-12 col-sm-12 col-xs-12 clear-pads green">
         <div class="title center">What clients <span class="bold">say about us</span>?</div>
 
         <div class="center short-text">
@@ -12,7 +12,13 @@
         </div>
 
 
-        <div style="height: 500px;">Slider</div>
+        <div class="col-md-12 clear-pads" style="height: 500px;">
+            <ul class="client-slider">
+                <li>@include('modules.clients.slider.btg')</li>
+                <li>@include('modules.clients.slider.opal')</li>
+                <li>@include('modules.clients.slider.rta')</li>
+            </ul>
+        </div>
     </div>
 
 

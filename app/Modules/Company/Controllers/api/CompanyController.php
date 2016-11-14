@@ -1,7 +1,7 @@
-<?php namespace App\Modules\Company\Controllers;
+<?php namespace App\Modules\Company\Controllers\api;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Mail;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -77,5 +77,17 @@ class CompanyController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function send()
+    {
+
+        $mail = config( 'mail' )
+
+        Mail::send('emails.reminder', ['user' => 'Jānis'], function ($m) {
+            $m->from('janis.mozais@ms-idi.eu', 'MS-IDI Contact form');
+
+            $m->to($user->email, $user->name)->subject('Your Reminder!');
+        });
     }
 }

@@ -1,4 +1,4 @@
-<div id="company" class="col-md-12 col-sm-12 col-xs-12 clear-pads">
+<div id="company" class="col-md-12 col-sm-12 col-xs-12 clear-pads" ng-controller="CompanyController">
         <div class="light-blue">
 
                 <div class="container ">
@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="col-md-12">
-                        <form id="contact-form">
+                        <form id="contact-form" ng-submit="send()">
                                 <div class="col-md-4 contact-form-input">
                                         <input class="form-control" type="text" placeholder="Your name">
                                 </div>

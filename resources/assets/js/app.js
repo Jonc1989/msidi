@@ -1,5 +1,7 @@
 var app = angular.module( 'app', [
-   'caseStudies'
+   'caseStudies',
+    'clients',
+    'company'
 ] );
 
 $(document).ready(function(){

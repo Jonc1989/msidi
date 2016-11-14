@@ -111,13 +111,21 @@ ul, menu, dir {
   max-width: 850px;
   font-size: 16px;
 }
-.slider-container{
-  height: 990px;
+#slider{
+  .slider-container{
+    height: 990px;
 
+  }
+  .bxslider ul li{
+    overflow: hidden;
+  }
+  .amber-container, .ecolines-container, .bx-wrapper, .bx-viewport{
+    height: 950px !important;
+    //background: #506df9;
+  }
 }
-.bxslider ul li{
- overflow: hidden;
-}
+
+
 .blue-bg{
   background: #506df9;
 }
@@ -128,10 +136,7 @@ ul, menu, dir {
 .amber-container{
   position: relative;
 }
-.amber-container, .ecolines-container, .bx-wrapper, .bx-viewport{
-  height: 950px !important;
-  //background: #506df9;
-}
+
 .inner-bg{
   position: relative;
   top: 0px;
@@ -336,6 +341,7 @@ ul, menu, dir {
   background: url(../images/green.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  padding-bottom: 250px;
 }
 .partner-wrap{
   height: 375px;
@@ -481,9 +487,8 @@ ul, menu, dir {
 }
 .pin, .pin2, .email, .phone, .fax{
   position: relative;
-}
-.pin, .pin2, .email, .phone, .fax{
   padding-left: 30px;
+  margin-bottom: 8px;
 }
 .pin:before{
   content: '';
