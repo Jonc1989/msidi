@@ -466,22 +466,29 @@ img{border:0}
   margin-right: 55px;
 }
 .years{
-  width: 140px;
+  width: 100%;
+
   display: inline-block;
 }
 .year{
   font-size: 115px;
   line-height: 1;
+  margin-left: -400px;
 }
 .year-txt{
   margin-bottom: 50px;
   text-align: left;
-  padding-left: 7px;
+  padding-left: 50px;
+  margin-left: -400px;
 }
 .partner .image{
   width: 180px;
   height: 60px;
+  margin-left: -400px;
   display: inline-block;
+}
+.partner .image.active, .year.active, .year-txt.active{
+  margin-left: 0px;
 }
 .exigen{
   background: url(../images/Exigen.png) center center no-repeat;
@@ -679,7 +686,12 @@ img{border:0}
   background-size: 22px 2px;
   display: none;
 }
-
+.year{
+  -webkit-transition: all .4s cubic-bezier(0.465, 0.615, 0.370, 1.235);
+  -moz-transition: all .4s cubic-bezier(0.465, 0.615, 0.370, 1.235);
+  -o-transition: all .4s cubic-bezier(0.465, 0.615, 0.370, 1.235);
+  transition: all  .4s cubic-bezier( 0.465, 0.615, 0.370, 1.15 );
+}
 .amber-text, .mac {
  -webkit-transition: all .4s cubic-bezier(0.465, 0.615, 0.370, 1.235);
   -moz-transition: all .4s cubic-bezier(0.465, 0.615, 0.370, 1.235);
@@ -691,4 +703,11 @@ img{border:0}
   //-moz-transition: all .4s cubic-bezier(0.465, 0.615, 0.630, 1.140);
   //-o-transition: all .4s cubic-bezier(0.465, 0.615, 0.630, 1.140);
   transition: all  .4s cubic-bezier( 0.175, 0.885, 0.32, 1.05 );
+}
+
+.year, .year-txt, .image.active {
+  -webkit-transition: all 1s cubic-bezier(0.000, 1.025, 0.580, 1.000);
+  -moz-transition: all 1s cubic-bezier(0.000, 1.025, 0.580, 1.000);;
+  -o-transition: all 1s cubic-bezier(0.000, 1.025, 0.580, 1.000);;
+  transition: all  1s cubic-bezier(0.000, 1.025, 0.580, 1.000);
 }

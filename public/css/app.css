@@ -5827,9 +5827,9 @@ button.close {
   width: 820px;
   height: 415px;
   background: white;
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  transition: all  .2s; }
   #clients .client-slide .client-name, #clients .client-slide .client-position, #clients .client-slide .client-description {
-    opacity: .7; }
+    opacity: .5; }
 
 #clients .client-slide.active {
   margin-top: 0px;
@@ -5876,6 +5876,18 @@ button.close {
 
 #clients .client-position, #clients .client-description {
   font-size: 14px; }
+
+#clients .bx-wrapper .bx-controls-direction a {
+  width: 67px;
+  height: 67px; }
+
+#clients .bx-wrapper .bx-prev {
+  left: -31px;
+  background: url(../images/arrow-left.png) center center no-repeat; }
+
+#clients .bx-wrapper .bx-next {
+  right: -31px;
+  background: url(../images/arrow-right.png) center center no-repeat; }
 
 .footer {
   height: 255px;
@@ -6294,22 +6306,28 @@ img {
   margin-right: 55px; }
 
 .years {
-  width: 140px;
+  width: 100%;
   display: inline-block; }
 
 .year {
   font-size: 115px;
-  line-height: 1; }
+  line-height: 1;
+  margin-left: -400px; }
 
 .year-txt {
   margin-bottom: 50px;
   text-align: left;
-  padding-left: 7px; }
+  padding-left: 50px;
+  margin-left: -400px; }
 
 .partner .image {
   width: 180px;
   height: 60px;
+  margin-left: -400px;
   display: inline-block; }
+
+.partner .image.active, .year.active, .year-txt.active {
+  margin-left: 0px; }
 
 .exigen {
   background: url(../images/Exigen.png) center center no-repeat; }
@@ -6506,10 +6524,16 @@ img {
   background-size: 22px 2px;
   display: none; }
 
+.year {
+  transition: all 0.4s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
+
 .amber-text, .mac {
   transition: all 0.4s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
 
 .city {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.05); }
+
+.year, .year-txt, .image.active {
+  transition: all 1s cubic-bezier(0, 1.025, 0.58, 1); }
 
 /*# sourceMappingURL=app.css.map */

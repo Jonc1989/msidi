@@ -10,11 +10,11 @@ $(document).ready(function(){
         moveSlides: 1,
         easing: 'ease-out',
         speed: 500,
-        pager: !0,
+        pager: !1,
         infiniteLoop: !0,
         controls: !1,
         hideControlOnEnd: !0,
-        auto: false,
+        auto: true,
         tickerHover: true,
         touchEnabled: true,
         onSliderLoad: function () {
@@ -41,6 +41,30 @@ $(document).ready(function(){
     $('.navbar-nav > li > a').hover(function () {
         $( this ).toggleClass( 'hover' );
     });
+
+    var scroll = $(window).scrollTop();
+    console.log( scroll);
+    console.log( $(document).height());
+
+    if (scroll > $(document).height()) {
+        $(".year").addClass("active");
+        $(".year-txt").addClass("active");
+        $('.partner .image').addClass( 'active' );
+    }
+
+    $(window).on('scroll',function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= $(document).height()) {
+            $(".year").addClass("active");
+            $(".year-txt").addClass("active");
+            $('.partner .image').addClass( 'active' );
+        }
+        // else {
+        //     $(".years").removeClass("darkHeader");
+        // }
+    });
+
 });
 var caseStudies = angular.module('caseStudies', [
 
@@ -94,6 +118,35 @@ caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
         }
     };
     return CaseStudiesService;
+}]);
+company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
+{
+    var CompanyService = {
+
+        sendMain: function( message )
+        {
+            var deferred = $q.defer();
+            $http.post( '/api/company/send', message )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CompanyService;
 }]);
 company.controller( 'CompanyController', [ '$scope', 'CompanyService', function ( $scope, CompanyService ){
 
@@ -168,35 +221,6 @@ company.controller( 'CompanyController', [ '$scope', 'CompanyService', function 
 
 
 }]);
-company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
-{
-    var CompanyService = {
-
-        sendMain: function( message )
-        {
-            var deferred = $q.defer();
-            $http.post( '/api/company/send', message )
-                .success( function( response )
-                {
-                    deferred.resolve( response );
-                } )
-                .error( function( response, status )
-                {
-                    if (status === 422)
-                    {
-                        deferred.resolve({errors: response});
-                    } else
-                    {
-                        deferred.reject();
-                    }
-                } );
-
-            return deferred.promise;
-
-        }
-    };
-    return CompanyService;
-}]);
 caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
 
     $scope.clients = [];
@@ -208,7 +232,8 @@ caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
             minSlides: 1,
             moveSlides: 1,
             slideMargin: 20,
-            pager: !0,
+            speed: 500,
+            pager: !1,
             infiniteLoop: !0,
             controls: !0,
             hideControlOnEnd: !0,

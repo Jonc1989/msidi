@@ -10,11 +10,11 @@ $(document).ready(function(){
         moveSlides: 1,
         easing: 'ease-out',
         speed: 500,
-        pager: !0,
+        pager: !1,
         infiniteLoop: !0,
         controls: !1,
         hideControlOnEnd: !0,
-        auto: false,
+        auto: true,
         tickerHover: true,
         touchEnabled: true,
         onSliderLoad: function () {
@@ -41,4 +41,28 @@ $(document).ready(function(){
     $('.navbar-nav > li > a').hover(function () {
         $( this ).toggleClass( 'hover' );
     });
+
+    var scroll = $(window).scrollTop();
+    console.log( scroll);
+    console.log( $(document).height());
+
+    if (scroll > $(document).height()) {
+        $(".year").addClass("active");
+        $(".year-txt").addClass("active");
+        $('.partner .image').addClass( 'active' );
+    }
+
+    $(window).on('scroll',function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= $(document).height()) {
+            $(".year").addClass("active");
+            $(".year-txt").addClass("active");
+            $('.partner .image').addClass( 'active' );
+        }
+        // else {
+        //     $(".years").removeClass("darkHeader");
+        // }
+    });
+
 });

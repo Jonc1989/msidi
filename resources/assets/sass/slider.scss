@@ -74,12 +74,12 @@
     background: white;
 
 
-    -webkit-transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    -moz-transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    -o-transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition: all  .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all  .2s;
     .client-name, .client-position, .client-description{
-      opacity: .7;
+      opacity: .5;
     }
 
   }
@@ -132,8 +132,19 @@
   .client-position, .client-description{
     font-size: 14px;
   }
+  .bx-wrapper .bx-controls-direction a {
 
-
+    width: 67px;
+    height: 67px;
+  }
+  .bx-wrapper .bx-prev {
+    left: -31px;
+    background: url(../images/arrow-left.png) center center no-repeat;
+  }
+  .bx-wrapper .bx-next {
+    right: -31px;
+    background: url(../images/arrow-right.png) center center no-repeat;
+  }
 
 
 }
