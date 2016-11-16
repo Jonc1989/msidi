@@ -9,12 +9,12 @@ $(document).ready(function(){
         minSlides: 1,
         moveSlides: 1,
         easing: 'ease-out',
-        speed: 1000,
-        pager: !1,
+        speed: 500,
+        pager: !0,
         infiniteLoop: !0,
         controls: !1,
         hideControlOnEnd: !0,
-        auto: true,
+        auto: false,
         tickerHover: true,
         touchEnabled: true,
         onSliderLoad: function () {
@@ -22,7 +22,7 @@ $(document).ready(function(){
         },
         onSlideBefore: function (e) {
             setTimeout(function () {
-                $(e).find('.inner-bg').removeClass('active');
+                $('.inner-bg').removeClass('active');
             },497);
 
         },
@@ -34,19 +34,38 @@ $(document).ready(function(){
         }
 
     });
-    setTimeout(function () {
+    //setTimeout(function () {
     slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
-    },500);
+    //},500);
+
+    $('.navbar-nav > li > a').hover(function () {
+        $( this ).toggleClass( 'hover' );
+    });
 });
 var caseStudies = angular.module('caseStudies', [
-
-]);
-var clients = angular.module('clients', [
 
 ]);
 var company = angular.module('company', [
 
 ]);
+var clients = angular.module('clients', [
+
+]);
+caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', function ( $scope, CaseStudiesService){
+
+    $scope.caseStudies = [];
+
+    this.$onInit = function () {
+        $scope.getData();
+    };
+
+    $scope.getData = function(){
+        CaseStudiesService.all().then(function(response)
+        {
+            $scope.caseStudies = response;
+        });
+    };
+}]);
 caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
 {
     var CaseStudiesService = {
@@ -76,21 +95,107 @@ caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
     };
     return CaseStudiesService;
 }]);
-caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', function ( $scope, CaseStudiesService){
+company.controller( 'CompanyController', [ '$scope', 'CompanyService', function ( $scope, CompanyService ){
 
-    $scope.caseStudies = [];
 
+    $scope.contactForm = {};
+
+    $scope.message = {
+        cfsender: $scope.cfsender,
+        cfemail: $scope.cfemail,
+        cfsubject: $scope.cfsubject,
+        cftext: $scope.cftext
+    };
+    
+    $scope.loading = true;
+    
     this.$onInit = function () {
-        $scope.getData();
+
     };
 
-    $scope.getData = function(){
-        CaseStudiesService.all().then(function(response)
-        {
-            $scope.caseStudies = response;
-            console.log(response)
-        });
+    $scope.setFormScope = function( form )
+    {
+        $scope.contactForm = form;
     };
+
+    $scope.send = function () { 
+        if(
+            //!$scope.loading &&
+            !$scope.contactForm.$invalid ){
+            //$scope.loading = true;
+
+            for (var property in $scope.message) {
+
+
+                        var $field = $( '[name="' + property + '"]' );
+                        if( $field )
+                        {
+                            $field.closest( '.form-group' )
+                                .removeClass( 'has-error' );
+                        }
+
+            }
+
+
+            CompanyService.sendMain( $scope.message ).then(function (response) {
+                //$scope.loading = false;
+
+                    $scope.cfsender = '';
+                    $scope.cfemail = '';
+                    $scope.cfsubject = '';
+                    $scope.cftext = '';
+
+            });
+        }else{
+            for (var property in $scope.message) { console.log( property);
+
+                    console.log( $scope.contactForm[property] )
+                    if( $scope.contactForm[property].$invalid ){ console.log( $scope.contactForm[property].$invalid );
+                        var $field = $( '[name="' + property + '"]' );
+                        if( $field )
+                        {
+                            $field.closest( '.form-group' )
+                                .addClass( 'has-error' );
+                        }
+                    }
+
+            }
+
+        }
+        
+    };
+
+
+
+}]);
+company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
+{
+    var CompanyService = {
+
+        sendMain: function( message )
+        {
+            var deferred = $q.defer();
+            $http.post( '/api/company/send', message )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CompanyService;
 }]);
 caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
 
@@ -135,48 +240,5 @@ caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
     };
 
 
-}]);
-company.controller( 'CompanyController', [ '$scope', 'CompanyService', function ( $scope, CompanyService ){
-
-
-    this.$onInit = function () {
-        
-    };
-
-    $scope.send = function () {
-        CompanyService.sendMain().then(function (response) {
-            console.log( response );
-        });
-    }
-
-}]);
-company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
-{
-    var CompanyService = {
-
-        sendMain: function(  )
-        {
-            var deferred = $q.defer();
-            $http.get( '/api/company/send' )
-                .success( function( response )
-                {
-                    deferred.resolve( response );
-                } )
-                .error( function( response, status )
-                {
-                    if (status === 422)
-                    {
-                        deferred.resolve({errors: response});
-                    } else
-                    {
-                        deferred.reject();
-                    }
-                } );
-
-            return deferred.promise;
-
-        }
-    };
-    return CompanyService;
 }]);
 //# sourceMappingURL=all.js.map

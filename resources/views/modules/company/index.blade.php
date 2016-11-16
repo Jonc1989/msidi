@@ -47,23 +47,52 @@
                 </div>
 
                 <div class="col-md-12">
-                        <form id="contact-form" ng-submit="send()">
-                                <div class="col-md-4 contact-form-input">
-                                        <input class="form-control" type="text" placeholder="Your name">
-                                </div>
-                                <div class="col-md-4 contact-form-input">
-                                        <input class="form-control" type="text" placeholder="Email address">
-                                </div>
-                                <div class="col-md-4 contact-form-input">
-                                        <input class="form-control" type="text" placeholder="Subject">
+                        <form name="contactForm" id="contact-form" ng-submit="send()"  novalidate ng-init="setFormScope( this )">
+                                <div class="col-md-4 contact-form-input form-group">
+                                        <input class="form-control"
+                                               id="cfsender"
+                                               name="cfsender"
+                                               ng-blur="blurByKey( 'cfsender' )"
+                                               required
+                                               ng-model="cfsender"
+                                               type="text"
+                                               placeholder="Your name">
+                                        <div ng-show="showErrorByKey( 'cfsender' )">Required</div>
                                 </div>
 
-                                <div class="col-md-12 contact-form-input">
-                                        <textarea rows="10" class="form-control" placeholder="Message"></textarea>
+                                <div class="col-md-4 contact-form-input form-group">
+                                        <input class="form-control"
+                                               id="cfemail"
+                                               name="cfemail"
+                                               required
+                                               type="text"
+                                               ng-model="cfemail"
+                                               placeholder="Email address">
+                                </div>
+                                <div class="col-md-4 contact-form-input form-group">
+                                        <input class="form-control"
+                                               type="text"
+                                               id="cfsubject"
+                                               name="cfsubject"
+                                               required
+                                               ng-model="cfsubject"
+                                               placeholder="Subject">
+                                </div>
+
+                                <div class="col-md-12 contact-form-input form-group">
+                                        <textarea rows="10" class="form-control"
+                                                  id="cftext"
+                                                  name="cftext"
+                                                  required
+                                                  ng-model="cftext"
+                                                  placeholder="Message">
+                                        </textarea>
                                 </div>
                                 <button class="form-control send" type="submit" value="">
-                                        Send
+                                        <div class="more-txt">Send message</div>
                                         <div class="more-btn circle"></div>
+                                        <div class="more-btn-pressed circle"></div>
+                                        <div class="more-btn-hover circle"></div>
                                 </button>
                         </form>
                 </div>

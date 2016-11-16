@@ -24,15 +24,19 @@
   left: 0px;
   height: 900px;
   width: 100%;
+
   background: url(../images/amber/City.png) bottom center no-repeat;
 }
 .inner-bg.active .city {
-  bottom: 0px;
+  bottom: -5px;
 }
 .amber-bg{
   //background: url(../images/amber_bg.png) center center no-repeat;
   background: url(../images/amber/amber-bgg.png) center center no-repeat;
   padding-top: 320px;
+}
+.amber-container{
+  overflow: hidden;
 }
 .amber-text{
   padding-left: 315px;
@@ -53,10 +57,11 @@
 }
 .inner-bg .mac{
   left: 2500px;
-  //opacity: 0;
+  opacity: 0;
 }
 .inner-bg.active .mac{
   left: 0px;
+  opacity: 1;
 }
 
 #clients{
@@ -68,12 +73,23 @@
     height: 415px;
     background: white;
 
+
+    -webkit-transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all  .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    .client-name, .client-position, .client-description{
+      opacity: .7;
+    }
+
   }
   .client-slide.active{
     margin-top: 0px;
     opacity: 1;
     height: 465px;
-
+    .client-name, .client-position, .client-description{
+      opacity: 1;
+    }
   }
   .client-slide-wrap{
     text-align: center;
@@ -98,7 +114,9 @@
   .client-slider li, .client-slide.active, .client-slide{
     border-radius: 10px;
   }
-
+  .bx-wrapper .bx-viewport{
+    background: #02f19c;;
+  }
   .bx-viewport{
     overflow: visible !important;
     border-radius: 10px;
@@ -114,4 +132,8 @@
   .client-position, .client-description{
     font-size: 14px;
   }
+
+
+
+
 }

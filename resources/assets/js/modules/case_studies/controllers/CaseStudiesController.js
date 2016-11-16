@@ -10,7 +10,6 @@ caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService
         CaseStudiesService.all().then(function(response)
         {
             $scope.caseStudies = response;
-            console.log(response)
         });
     };
 }]);

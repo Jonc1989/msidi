@@ -85,8 +85,10 @@
                                         <textarea rows="10" class="form-control contact-form-input" placeholder="Message"></textarea>
                                 </div>
                                 <button class="form-control send" type="submit" value="">
-                                        Send message
+                                        <div class="more-txt">Send message</div>
                                         <div class="more-btn circle"></div>
+                                        <div class="more-btn-pressed circle"></div>
+                                        <div class="more-btn-hover circle"></div>
                                 </button>
                         </form>
                 </div>

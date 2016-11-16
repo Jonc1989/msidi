@@ -33,6 +33,8 @@
                                 <a href="">
                                         <div class="more-txt">Learn more</div>
                                         <div class="more-btn circle"></div>
+                                        <div class="more-btn-pressed circle"></div>
+                                        <div class="more-btn-hover circle"></div>
                                 </a>
                         </div>
                 </div>

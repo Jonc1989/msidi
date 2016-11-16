@@ -5740,11 +5740,30 @@ button.close {
     margin-bottom: 0px; }
   .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border: none; }
-  .navbar-default .navbar-nav > li > a {
+  .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: white;
     font-size: 16px; }
   .navbar-nav > li > a {
     padding-top: 63px; }
+  .navbar-nav > li > a:after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: transparent;
+    width: 0;
+    position: absolute;
+    margin: -5px auto 0;
+    transition: all .2s ease-out; }
+  .navbar-nav > li > a:hover:after {
+    background-color: white;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 90%;
+    width: calc(100% - 30px);
+    margin: 7px auto 0;
+    transition: all .2s ease-out; }
   .navbar-brand {
     padding-top: 41px; } }
 
@@ -5770,11 +5789,14 @@ button.close {
   background: url(../images/amber/City.png) bottom center no-repeat; }
 
 .inner-bg.active .city {
-  bottom: 0px; }
+  bottom: -5px; }
 
 .amber-bg {
   background: url(../images/amber/amber-bgg.png) center center no-repeat;
   padding-top: 320px; }
+
+.amber-container {
+  overflow: hidden; }
 
 .amber-text {
   padding-left: 315px; }
@@ -5793,21 +5815,28 @@ button.close {
   height: 620px; }
 
 .inner-bg .mac {
-  left: 2500px; }
+  left: 2500px;
+  opacity: 0; }
 
 .inner-bg.active .mac {
-  left: 0px; }
+  left: 0px;
+  opacity: 1; }
 
 #clients .client-slide {
   margin-top: 25px;
   width: 820px;
   height: 415px;
-  background: white; }
+  background: white;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  #clients .client-slide .client-name, #clients .client-slide .client-position, #clients .client-slide .client-description {
+    opacity: .7; }
 
 #clients .client-slide.active {
   margin-top: 0px;
   opacity: 1;
   height: 465px; }
+  #clients .client-slide.active .client-name, #clients .client-slide.active .client-position, #clients .client-slide.active .client-description {
+    opacity: 1; }
 
 #clients .client-slide-wrap {
   text-align: center;
@@ -5830,6 +5859,9 @@ button.close {
 #clients .client-slider li, #clients .client-slide.active, #clients .client-slide {
   border-radius: 10px; }
 
+#clients .bx-wrapper .bx-viewport {
+  background: #02f19c; }
+
 #clients .bx-viewport {
   overflow: visible !important;
   border-radius: 10px; }
@@ -5849,6 +5881,21 @@ button.close {
   height: 255px;
   width: 100%;
   background: #4c4c53; }
+
+button {
+  border-image-width: 0;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-top-color: transparent; }
+
+button.form-control {
+  box-shadow: none; }
+
+button.form-control:focus {
+  border-color: transparent;
+  outline: 0;
+  box-shadow: none; }
 
 @font-face {
   font-family: 'Montserrat-Bold';
@@ -5911,6 +5958,9 @@ ul, menu, dir {
   -webkit-margin-before: 0px;
   -webkit-margin-after: 0px;
   -webkit-padding-start: 0px; }
+
+img {
+  border: 0; }
 
 .bold {
   font-weight: bold;
@@ -6086,31 +6136,76 @@ ul, menu, dir {
   vertical-align: middle; }
 
 .circle {
-  width: 60px;
-  height: 60px; }
+  width: 67px;
+  height: 67px; }
+
+.more-txt {
+  display: table-cell;
+  vertical-align: middle; }
+
+#vacansy-form .more-btn-pressed, #vacansy-form .more-btn-hover, #contact-form .more-btn-pressed, #contact-form .more-btn-hover {
+  display: none; }
+
+#vacansy-form .more-btn-pressed, #contact-form .more-btn-pressed {
+  background: url(../images/more-pressed.png);
+  background-repeat: no-repeat;
+  background-position-x: 2px;
+  background-position-y: 2px; }
+
+#vacansy-form .more-btn-hover, #contact-form .more-btn-hover {
+  background: url(../images/more-hover.png) center center no-repeat; }
+
+#vacansy-form .more-btn, #contact-form .more-btn {
+  background: url(../images/more.png) center center no-repeat;
+  vertical-align: middle;
+  display: table-cell; }
+
+#vacansy-form button:hover .more-btn, #contact-form button:hover .more-btn {
+  display: none; }
+
+#vacansy-form button:hover .more-btn-hover, #contact-form button:hover .more-btn-hover {
+  display: table-cell; }
+
+#vacansy-form button:active .more-btn-hover, #vacansy-form button:active .more-btn, #contact-form button:active .more-btn-hover, #contact-form button:active .more-btn {
+  display: none; }
+
+#vacansy-form button:active .more-btn-pressed, #contact-form button:active .more-btn-pressed {
+  display: table-cell; }
 
 .more {
   display: inline-block; }
+  .more .more-btn-pressed, .more .more-btn-hover {
+    display: none; }
+  .more .more-btn-pressed {
+    background: url(../images/more-pressed.png);
+    background-repeat: no-repeat;
+    background-position-x: 2px;
+    background-position-y: 2px; }
+  .more .more-btn-hover {
+    background: url(../images/more-hover.png) center center no-repeat; }
+  .more .more-btn {
+    background: url(../images/more.png) center center no-repeat;
+    vertical-align: middle;
+    display: table-cell; }
+  .more a:hover .more-btn {
+    display: none; }
+  .more a:hover .more-btn-hover {
+    display: table-cell; }
+  .more a:active .more-btn-hover, .more a:active .more-btn {
+    display: none; }
+  .more a:active .more-btn-pressed {
+    display: table-cell; }
 
 .more a {
   display: table;
   color: black; }
 
-.more-txt, .more-btn {
-  display: table-cell;
-  vertical-align: middle; }
-
-.more-txt, .more-btn, .brochure-txt, .brochure-icon, .brochure-icon .icon, .cover {
+.brochure-txt, .brochure-icon, .brochure-icon .icon, .cover {
   display: inline-block; }
 
 .more-txt {
   font-size: 24px;
   padding: 0 25px; }
-
-.more-btn {
-  border-radius: 50%;
-  background: url(../images/more.png) center center no-repeat;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); }
 
 .border-bottom-gray {
   border-bottom: 1px solid #e3e3e3;
@@ -6342,6 +6437,9 @@ ul, menu, dir {
   padding-right: 10px;
   margin-bottom: 20px; }
 
+.contact-form-input:last-of-type {
+  margin-bottom: 50px; }
+
 .send {
   height: 62px;
   padding: 0px;
@@ -6350,7 +6448,8 @@ ul, menu, dir {
   margin-top: 30px;
   border: none; }
 
-#company, #career {
+#career {
+  padding-top: 65px;
   padding-bottom: 65px; }
 
 #company form {
@@ -6385,6 +6484,9 @@ ul, menu, dir {
 .vacansy {
   border-bottom: 1px solid #e3e3e3; }
 
+.vacansy:last-of-type {
+  margin-bottom: 100px; }
+
 .plus, .minus {
   height: 70px;
   width: 22px;
@@ -6404,7 +6506,10 @@ ul, menu, dir {
   background-size: 22px 2px;
   display: none; }
 
-.amber-text, .mac, .city {
-  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+.amber-text, .mac {
+  transition: all 0.4s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
+
+.city {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.05); }
 
 /*# sourceMappingURL=app.css.map */

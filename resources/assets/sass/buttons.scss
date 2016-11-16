@@ -1,0 +1,16 @@
+button{
+  border-image-width: 0;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+
+}
+button.form-control{
+   box-shadow: none;
+}
+button.form-control:focus {
+  border-color: transparent;
+  outline: 0;
+  box-shadow: none;
+}

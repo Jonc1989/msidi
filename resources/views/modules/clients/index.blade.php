@@ -12,7 +12,7 @@
         </div>
 
 
-        <div class="col-md-12 clear-pads" style="height: 500px;">
+        <div class="col-md-12 clear-pads" style="height: 500px; overflow: hidden;">
             <ul class="client-slider">
                 <li>@include('modules.clients.slider.btg')</li>
                 <li>@include('modules.clients.slider.opal')</li>

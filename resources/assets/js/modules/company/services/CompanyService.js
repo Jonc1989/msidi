@@ -2,10 +2,10 @@ company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
 {
     var CompanyService = {
 
-        sendMain: function(  )
+        sendMain: function( message )
         {
             var deferred = $q.defer();
-            $http.get( '/api/company/send' )
+            $http.post( '/api/company/send', message )
                 .success( function( response )
                 {
                     deferred.resolve( response );

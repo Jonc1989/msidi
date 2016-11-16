@@ -15,12 +15,12 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">SERVICES</a></li>
-                <li><a href="#">TECHNOLOGY</a></li>
-                <li><a href="#">CLIENTS</a></li>
-                <li><a href="#">CASE STUDIES</a></li>
-                <li><a href="#">COMPANY</a></li>
-                <li><a href="#">CAREER</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#technology">TECHNOLOGY</a></li>
+                <li><a href="#clients">CLIENTS</a></li>
+                <li><a href="#case-studies">CASE STUDIES</a></li>
+                <li><a href="#company">COMPANY</a></li>
+                <li><a href="#career">CAREER</a></li>
             </ul>
         </div>
     </div>
