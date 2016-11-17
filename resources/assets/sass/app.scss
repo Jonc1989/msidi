@@ -3,6 +3,8 @@
 @import "slider";
 @import "footer";
 @import "buttons";
+@import "mixins";
+
 @font-face {
   font-family: 'Montserrat-Bold';
   src: url('../fonts/montserrat/Montserrat-Bold.otf');
@@ -433,6 +435,27 @@ img{border:0}
   padding-top: 60px;
   color: #02f19c;
   overflow: hidden;
+
+}
+.partner-col{
+  .opal{
+    background: url(../images/logo/opal.png) center bottom no-repeat;
+  }
+  .ecolines{
+    background: url(../images/logo/ecolines.png) center bottom no-repeat;
+  }
+  .rn{
+    background: url(../images/logo/rn.png) center bottom no-repeat;
+  }
+  .rta{
+    background: url(../images/logo/rta.png) center bottom no-repeat;
+  }
+
+
+  .opal,  .ecolines,  .rn,  .rta{
+    width: 255px;
+    height: 135px;
+  }
 }
 .partner{
   width: 100%;
@@ -476,15 +499,15 @@ img{border:0}
   margin-left: -400px;
 }
 .year-txt{
-  margin-bottom: 50px;
+  margin-bottom: 45px;
   text-align: left;
-  padding-left: 50px;
+  padding-left: 52px;
   margin-left: -400px;
 }
 .partner .image{
   width: 180px;
-  height: 60px;
-  margin-left: -400px;
+  height: 75px;
+  margin-left: -500px;
   display: inline-block;
 }
 .partner .image.active, .year.active, .year-txt.active{
@@ -492,6 +515,15 @@ img{border:0}
 }
 .exigen{
   background: url(../images/Exigen.png) center center no-repeat;
+}
+.kleintech{
+  background: url(../images/Kleintech.png) center center no-repeat;
+}
+.btg{
+  background: url(../images/BTG.png) center center no-repeat;
+}
+.dzc{
+  background: url(../images/dzc.png) center center no-repeat;
 }
 .brochure-wrap{
   margin-bottom: 75px;
@@ -505,7 +537,7 @@ img{border:0}
 }
 .brochure-icon{
   background: #506df9;
-  border-radius: 50%;
+  @include border-radius( 50% );
   padding-top: 15px;
 }
 .brochure-icon .icon{
@@ -526,6 +558,27 @@ img{border:0}
 .case-studies .image{
   width: 200px;
   height: 200px;
+  display: table;
+  @include border-radius( 50% );
+  overflow: hidden;
+
+  .hover{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 255, .5);
+    text-align: center;
+    vertical-align: middle;
+    @include border-radius( 50% );
+    @include move( 0px, -2px );
+    display: none;
+  }
+}
+.case-studies .image:hover{
+  background-size: 150% auto !important;
+  @include animate( background-size, 4s, cubic-bezier(0.000, 1.025, 0.580, 1.000) );
+  .hover{
+    display: table-cell;
+  }
 }
 .case-studies .cover{
   height: 200px;
@@ -536,6 +589,9 @@ img{border:0}
 }
 .opal-transfer-image{
   background: url(../images/case-studies/opal-transfer.png) center center no-repeat;
+}
+#clients:before{
+ 
 }
 .light-blue{
   padding-top: 100px;
@@ -663,6 +719,29 @@ img{border:0}
 }
 .vacansy{
   border-bottom: 1px solid #e3e3e3;
+  th{
+    height: 40px;
+    vertical-align: top;
+  }
+  td{
+    line-height: 1.6;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  tr:not( :last-of-type ){
+    td:after{
+      content: "";
+      height: 2px;
+      background-color: #02f19c;
+      width: 30px;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+    }
+  }
+
+
 }
 .vacansy:last-of-type{
   margin-bottom: 100px;
@@ -676,6 +755,7 @@ img{border:0}
 .carrer-name{
   display: inline-block;
   line-height: 70px;
+  color: #000;
 }
 .plus{
   background: url(../images/plus.png) center center no-repeat;
@@ -705,9 +785,15 @@ img{border:0}
   transition: all  .4s cubic-bezier( 0.175, 0.885, 0.32, 1.05 );
 }
 
-.year, .year-txt, .image.active {
+.year{
   -webkit-transition: all 1s cubic-bezier(0.000, 1.025, 0.580, 1.000);
   -moz-transition: all 1s cubic-bezier(0.000, 1.025, 0.580, 1.000);;
   -o-transition: all 1s cubic-bezier(0.000, 1.025, 0.580, 1.000);;
   transition: all  1s cubic-bezier(0.000, 1.025, 0.580, 1.000);
+}
+.year-txt{
+  @include animate( all, 1.5s, cubic-bezier(0.000, 1.025, 0.580, 1.000) );
+}
+.image.active {
+  @include animate( all, 1.3s, cubic-bezier(0.000, 1.025, 0.580, 1.000) );
 }

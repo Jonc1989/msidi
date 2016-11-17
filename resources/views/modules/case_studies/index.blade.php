@@ -27,14 +27,24 @@
 
         <div class="col-md-12 col-sm-12 col-xs-12 case-studies-wrap">
             <div class="col-md-4 case-studies" ng-repeat="item in caseStudies">
-                <div class="cover">
-                    <div class="image opal-transfer-image2 exigen-image" style="    background: url({{ item.image }}) center center no-repeat;">
-
+                <a href="">
+                    <div class="cover">
+                        <div class="image opal-transfer-image2 exigen-image" style="    background: url({{ item.image }}) center center no-repeat;">
+                            <div class="hover">
+                                <img src="/images/eye.png">
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="portfolio-title" ng-bind="item.content">Exigen</div>
-                <div class="category" ng-bind="item.categories.name">Partnership</div>
+                    <div class="portfolio-title" ng-bind="item.content">Exigen</div>
+                    <div class="category" ng-bind="item.categories.name">Partnership</div>
+                </a>
+
             </div>
+
+
+
+
+
             <!--<div class="col-md-4 case-studies">
                 <div class="cover">
                     <div class="image opal-transfer-image">

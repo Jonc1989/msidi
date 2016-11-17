@@ -32,55 +32,68 @@
     </div>
 
     <div class="container clear-pads border-bottom-gray">
-        <div class="col-md-12 col-sm-12 col-xs-12 clear-pads">
+        <div class="col-md-12 col-sm-12 col-xs-12 clear-pads partnerz">
 
-            <div class="col-md-3 partner-wrap">
-                <div class="roof"></div>
-                <div class=" partner">
-                    <div class="years">
-                        <div class="year">04</div>
-                        <div class="year-txt">years</div>
+            <div class="col-md-3 partner-col">
+                <div class="partner-wrap">
+                    <div class="roof"></div>
+                    <div class=" partner">
+                        <div class="years">
+                            <div class="year">04</div>
+                            <div class="year-txt">years</div>
+                        </div>
+
+                        <div class="image exigen"></div>
                     </div>
-
-                    <div class="image exigen"></div>
                 </div>
+                <div class="opal"></div>
+
             </div>
 
 
-            <div class="col-md-3 partner-wrap">
-                <div class="roof"></div>
-                <div class=" partner">
-                    <div class="years">
-                        <div class="year">02</div>
-                        <div class="year-txt">years</div>
-                    </div>
+            <div class="col-md-3 partner-col">
+                <div class="partner-wrap">
+                    <div class="roof"></div>
+                    <div class=" partner">
+                        <div class="years">
+                            <div class="year">02</div>
+                            <div class="year-txt">years</div>
+                        </div>
 
-                    <div class="image exigen"></div>
+                        <div class="image kleintech"></div>
+                    </div>
                 </div>
+                <div class="ecolines"></div>
             </div>
 
-            <div class="col-md-3 partner-wrap">
-                <div class="roof"></div>
-                <div class=" partner">
-                    <div class="years">
-                        <div class="year">01</div>
-                        <div class="year-txt">years</div>
-                    </div>
+            <div class="col-md-3 partner-col">
+                <div class="partner-wrap">
+                    <div class="roof"></div>
+                    <div class=" partner">
+                        <div class="years">
+                            <div class="year">01</div>
+                            <div class="year-txt">years</div>
+                        </div>
 
-                    <div class="image exigen"></div>
+                        <div class="image btg"></div>
+                    </div>
                 </div>
+                <div class="rn"></div>
             </div>
 
-            <div class="col-md-3 partner-wrap">
-                <div class="roof"></div>
-                <div class=" partner">
-                    <div class="years">
-                        <div class="year">01</div>
-                        <div class="year-txt">years</div>
-                    </div>
+            <div class="col-md-3 partner-col">
+                <div class="partner-wrap">
+                    <div class="roof"></div>
+                    <div class=" partner">
+                        <div class="years">
+                            <div class="year">01</div>
+                            <div class="year-txt">years</div>
+                        </div>
 
-                    <div class="image exigen"></div>
+                        <div class="image dzc"></div>
+                    </div>
                 </div>
+                <div class="rta"></div>
             </div>
         </div>
     </div>
