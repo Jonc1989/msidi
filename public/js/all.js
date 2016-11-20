@@ -288,6 +288,10 @@ company.controller( 'CompanyController', [ '$scope', 'CompanyService', function 
         $scope.contactForm = form;
     };
 
+    $scope.removeErrors = function(){
+        $('#company .form-group' ).removeClass( 'has-error' );
+    };
+
     $scope.send = function () { 
         if(
             //!$scope.loading &&
@@ -317,11 +321,11 @@ company.controller( 'CompanyController', [ '$scope', 'CompanyService', function 
 
             });
         }else{
-            for (var property in $scope.message) { console.log( property);
+            $scope.removeErrors();
+            for (var property in $scope.message) {
 
-                    console.log( $scope.contactForm[property] )
-                    if( $scope.contactForm[property].$invalid ){ console.log( $scope.contactForm[property].$invalid );
-                        var $field = $( '[name="' + property + '"]' );
+                    if( $scope.contactForm[property].$invalid ){
+                        var $field = $( '[name="' + property + '"]' ); console.log($field);
                         if( $field )
                         {
                             $field.closest( '.form-group' )
