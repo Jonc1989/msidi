@@ -1,4 +1,4 @@
-<div class="col-md-12 col-sm-12 col-xs-12" id="career">
+<div class="col-md-12 col-sm-12 col-xs-12" id="career" ng-controller="CareerController">
         <div class="container">
                 <div class="title center">Start your career with us</div>
 
@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="col-md-12">
-                        <form id="vacansy-form">
+                        <form name="careerForm" id="vacansy-form" ng-submit="send()"  novalidate ng-init="setFormScope( this )">
                                 <div class="col-md-6">
                                         <select class="form-control contact-form-input">
                                                 <option value="">Choose your position</option>

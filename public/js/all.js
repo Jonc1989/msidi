@@ -1,7 +1,8 @@
 var app = angular.module( 'app', [
    'caseStudies',
     'clients',
-    'company'
+    'company',
+    'career'
 ] );
 
 $(document).ready(function(){
@@ -91,15 +92,90 @@ $(window).load(function () {
     });
 
 });
-var caseStudies = angular.module('caseStudies', [
+var career = angular.module('career', [
 
 ]);
-var company = angular.module('company', [
+var caseStudies = angular.module('caseStudies', [
 
 ]);
 var clients = angular.module('clients', [
 
 ]);
+var company = angular.module('company', [
+
+]);
+career.controller( 'CareerController', [ '$scope', function ( $scope ){
+
+
+    $scope.careerForm = {};
+
+    $scope.message = {
+        cfposition: $scope.cfposition,
+        cfemail: $scope.cfemail,
+        cftext: $scope.cftext
+    };
+
+    $scope.loading = true;
+
+    this.$onInit = function () {
+
+    };
+
+    $scope.setFormScope = function( form )
+    {
+        $scope.careerForm = form;
+    };
+
+    // $scope.send = function () {
+    //     if(
+    //         //!$scope.loading &&
+    //         !$scope.careerForm.$invalid ){
+    //         //$scope.loading = true;
+    //
+    //         for (var property in $scope.message) {
+    //
+    //
+    //             var $field = $( '[name="' + property + '"]' );
+    //             if( $field )
+    //             {
+    //                 $field.closest( '.form-group' )
+    //                     .removeClass( 'has-error' );
+    //             }
+    //
+    //         }
+    //
+    //
+    //         CompanyService.sendMain( $scope.message ).then(function (response) {
+    //             //$scope.loading = false;
+    //
+    //             $scope.cfsender = '';
+    //             $scope.cfemail = '';
+    //             $scope.cfsubject = '';
+    //             $scope.cftext = '';
+    //
+    //         });
+    //     }else{
+    //         for (var property in $scope.message) { console.log( property);
+    //
+    //             console.log( $scope.careerForm[property] )
+    //             if( $scope.careerForm[property].$invalid ){ console.log( $scope.careerForm[property].$invalid );
+    //                 var $field = $( '[name="' + property + '"]' );
+    //                 if( $field )
+    //                 {
+    //                     $field.closest( '.form-group' )
+    //                         .addClass( 'has-error' );
+    //                 }
+    //             }
+    //
+    //         }
+    //
+    //     }
+    //
+    // };
+
+
+
+}]);
 caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', function ( $scope, CaseStudiesService){
 
     $scope.caseStudies = [];
@@ -144,6 +220,51 @@ caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
     };
     return CaseStudiesService;
 }]);
+caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
+
+    $scope.clients = [];
+
+    this.$onInit = function () {
+
+        var slider = $('.client-slider').bxSlider({
+            slideWidth: 820,
+            minSlides: 1,
+            moveSlides: 1,
+            slideMargin: 20,
+            speed: 500,
+            pager: !1,
+            infiniteLoop: !0,
+            controls: !0,
+            hideControlOnEnd: !0,
+            auto: false,
+            tickerHover: true,
+            touchEnabled: true,
+            onSliderLoad: function () {
+
+            },
+            onSlideBefore: function (e) {
+                //setTimeout(function () {
+                    //$(e).removeClass('active');
+                    $('.client-slide').removeClass('active');
+                //},497);
+
+            },
+            onSlideAfter: function (e) { console.log( e);
+                //setTimeout(function () {
+                    $(e).find('.client-slide').addClass('active');
+                //},500);
+
+            }
+
+        });
+       // setTimeout(function () {
+            slider.getCurrentSlideElement().find('.client-slide').addClass('active');
+       // },500);
+
+    };
+
+
+}]);
 company.controller( 'CompanyController', [ '$scope', 'CompanyService', function ( $scope, CompanyService ){
 
 
@@ -159,7 +280,7 @@ company.controller( 'CompanyController', [ '$scope', 'CompanyService', function 
     $scope.loading = true;
     
     this.$onInit = function () {
-
+        $scope.init_map();
     };
 
     $scope.setFormScope = function( form )
@@ -214,7 +335,20 @@ company.controller( 'CompanyController', [ '$scope', 'CompanyService', function 
         
     };
 
-
+    $scope.init_map = function (){
+        var myOptions = {
+            zoom:14,
+            center:new google.maps.LatLng(56.526248,27.357412599999975),
+            mapTypeId: google.maps.MapTypeId.ROADMAP};
+        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+        marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(56.526248,27.357412599999975)});
+        infowindow = new google.maps.InfoWindow({content:'<strong> </strong><br>Rēzekne, Maskavas 22<br>'});
+        google.maps.event.addListener(marker, 'click', function(){
+            infowindow.open(map,marker);
+        });
+        //infowindow.open(map,marker);
+        //google.maps.event.addDomListener(window, 'load', init_map);
+    }
 
 }]);
 company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
@@ -245,50 +379,5 @@ company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
         }
     };
     return CompanyService;
-}]);
-caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
-
-    $scope.clients = [];
-
-    this.$onInit = function () {
-
-        var slider = $('.client-slider').bxSlider({
-            slideWidth: 820,
-            minSlides: 1,
-            moveSlides: 1,
-            slideMargin: 20,
-            speed: 500,
-            pager: !1,
-            infiniteLoop: !0,
-            controls: !0,
-            hideControlOnEnd: !0,
-            auto: false,
-            tickerHover: true,
-            touchEnabled: true,
-            onSliderLoad: function () {
-
-            },
-            onSlideBefore: function (e) {
-                //setTimeout(function () {
-                    //$(e).removeClass('active');
-                    $('.client-slide').removeClass('active');
-                //},497);
-
-            },
-            onSlideAfter: function (e) { console.log( e);
-                //setTimeout(function () {
-                    $(e).find('.client-slide').addClass('active');
-                //},500);
-
-            }
-
-        });
-       // setTimeout(function () {
-            slider.getCurrentSlideElement().find('.client-slide').addClass('active');
-       // },500);
-
-    };
-
-
 }]);
 //# sourceMappingURL=all.js.map

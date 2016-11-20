@@ -13,7 +13,7 @@ company.controller( 'CompanyController', [ '$scope', 'CompanyService', function 
     $scope.loading = true;
     
     this.$onInit = function () {
-
+        $scope.init_map();
     };
 
     $scope.setFormScope = function( form )
@@ -68,6 +68,19 @@ company.controller( 'CompanyController', [ '$scope', 'CompanyService', function 
         
     };
 
-
+    $scope.init_map = function (){
+        var myOptions = {
+            zoom:14,
+            center:new google.maps.LatLng(56.526248,27.357412599999975),
+            mapTypeId: google.maps.MapTypeId.ROADMAP};
+        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+        marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(56.526248,27.357412599999975)});
+        infowindow = new google.maps.InfoWindow({content:'<strong> </strong><br>Rēzekne, Maskavas 22<br>'});
+        google.maps.event.addListener(marker, 'click', function(){
+            infowindow.open(map,marker);
+        });
+        //infowindow.open(map,marker);
+        //google.maps.event.addDomListener(window, 'load', init_map);
+    }
 
 }]);

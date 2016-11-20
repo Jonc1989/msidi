@@ -98,35 +98,11 @@
                 </div>
         </div>
 
-        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'>
 
-        </script>
+
         <div style='overflow:hidden;height:405px;width:100%;'>
                 <div id='gmap_canvas' style='height:405px;width:100%;'></div>
-
-
                 <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
         </div>
 
-        <script type='text/javascript'>
-                function init_map(){
-                        var myOptions = {
-                                zoom:14,
-                                center:new google.maps.LatLng(56.526248,27.357412599999975),
-                                mapTypeId: google.maps.MapTypeId.ROADMAP};
-                                map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-                                marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(56.526248,27.357412599999975)});
-                                infowindow = new google.maps.InfoWindow({content:'<strong> </strong><br>Rēzekne, Maskavas 22<br>'});
-                                google.maps.event.addListener(marker, 'click', function(){
-                                        infowindow.open(map,marker);
-                                });
-                                //infowindow.open(map,marker);
-                }
-                google.maps.event.addDomListener(window, 'load', init_map);
-
-        </script>
-
-
-
-        <div class="col-md-12">Map</div>
 </div>
