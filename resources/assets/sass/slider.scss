@@ -30,10 +30,19 @@
 .inner-bg.active .city {
   bottom: -5px;
 }
+.inner-bg.active.leaving .city {
+  bottom: -1000px;
+}
 .amber-bg{
-  //background: url(../images/amber_bg.png) center center no-repeat;
   background: url(../images/amber/amber-bgg.png) center center no-repeat;
+  background-position-x: 10000px;
   padding-top: 320px;
+}
+.ecolines-container{
+  background: url(../images/amber/amber-bgg.png) center top no-repeat;
+}
+.amber-bg.active {
+  background-position-x: 0px;
 }
 .amber-container{
   overflow: hidden;
@@ -48,7 +57,9 @@
 .inner-bg.active .amber-text{
   left: 0px;
   opacity: 1;
-
+}
+.inner-bg.active.leaving .amber-text{
+  opacity: 0;
 }
 .mac{
   background: url(../images/amber/iMac.png) center center no-repeat;
@@ -63,7 +74,15 @@
   left: 0px;
   opacity: 1;
 }
+.inner-bg.active.leaving .mac{
+  opacity: 0;
+}
 
+
+
+.ecolines-bg{
+  background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;
+}
 #clients{
   //max-width: 820px;
 

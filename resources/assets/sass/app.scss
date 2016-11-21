@@ -148,9 +148,7 @@ img{border:0}
 }
 
 
-.ecolines-bg{
-  background: url(../images/ecolines_bg.png) center center no-repeat;
-}
+
 .center{
   width: 100%;
   text-align: center;
@@ -772,7 +770,7 @@ img{border:0}
   -o-transition: all .4s cubic-bezier(0.465, 0.615, 0.370, 1.235);
   transition: all  .4s cubic-bezier( 0.465, 0.615, 0.370, 1.15 );
 }
-.amber-text, .mac {
+.amber-text, .mac, .amber-bg {
  -webkit-transition: all .4s cubic-bezier(0.465, 0.615, 0.370, 1.235);
   -moz-transition: all .4s cubic-bezier(0.465, 0.615, 0.370, 1.235);
  -o-transition: all .4s cubic-bezier(0.465, 0.615, 0.370, 1.235);

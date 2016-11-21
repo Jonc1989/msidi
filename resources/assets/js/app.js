@@ -10,9 +10,11 @@ $(document).ready(function(){
         minSlides: 1,
         moveSlides: 1,
         easing: 'ease-out',
-        speed: 500,
-        pager: !1,
-        infiniteLoop: !0,
+        speed: 0,
+        pager: !0,
+        pause: 4000,
+        infiniteLoop: true,
+        useCSS: false,
         controls: !1,
         hideControlOnEnd: !0,
         auto: true,
@@ -22,15 +24,19 @@ $(document).ready(function(){
 
         },
         onSlideBefore: function (e) {
-            setTimeout(function () {
+            //setTimeout(function () {
                 $('.inner-bg').removeClass('active');
-            },497);
+            $('.inner-bg').removeClass('leaving');
+            //},497);
 
         },
         onSlideAfter: function (e) {
             setTimeout(function () {
                 $(e).find('.inner-bg').addClass('active');
-            },500);
+            },50);
+            setTimeout(function () {
+                $(e).find('.inner-bg').addClass('leaving');
+            },3500);
 
         }
 

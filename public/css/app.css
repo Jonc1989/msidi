@@ -5791,9 +5791,19 @@ button.close {
 .inner-bg.active .city {
   bottom: -5px; }
 
+.inner-bg.active.leaving .city {
+  bottom: -1000px; }
+
 .amber-bg {
   background: url(../images/amber/amber-bgg.png) center center no-repeat;
+  background-position-x: 10000px;
   padding-top: 320px; }
+
+.ecolines-container {
+  background: url(../images/amber/amber-bgg.png) center top no-repeat; }
+
+.amber-bg.active {
+  background-position-x: 0px; }
 
 .amber-container {
   overflow: hidden; }
@@ -5809,6 +5819,9 @@ button.close {
   left: 0px;
   opacity: 1; }
 
+.inner-bg.active.leaving .amber-text {
+  opacity: 0; }
+
 .mac {
   background: url(../images/amber/iMac.png) center center no-repeat;
   width: 760px;
@@ -5821,6 +5834,12 @@ button.close {
 .inner-bg.active .mac {
   left: 0px;
   opacity: 1; }
+
+.inner-bg.active.leaving .mac {
+  opacity: 0; }
+
+.ecolines-bg {
+  background: url(../images/ecolines/ecolines-bg.png) center center no-repeat; }
 
 #clients .client-slide {
   margin-top: 25px;
@@ -6031,9 +6050,6 @@ img {
   left: 0px;
   height: 900px;
   width: 100%; }
-
-.ecolines-bg {
-  background: url(../images/ecolines_bg.png) center center no-repeat; }
 
 .center {
   width: 100%;
@@ -6590,7 +6606,7 @@ img {
 .year {
   transition: all 0.4s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
 
-.amber-text, .mac {
+.amber-text, .mac, .amber-bg {
   transition: all 0.4s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
 
 .city {
