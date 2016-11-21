@@ -104,27 +104,27 @@ var career = angular.module('career', [
 var caseStudies = angular.module('caseStudies', [
 
 ]);
-var company = angular.module('company', [
-
-]);
 var clients = angular.module('clients', [
 
 ]);
-career.controller( 'CareerController', [ '$scope', function ( $scope ){
+var company = angular.module('company', [
+
+]);
+career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $scope, CareerService ){
 
 
     $scope.careerForm = {};
 
-    $scope.message = {
-        cfposition: $scope.cfposition,
-        cfemail: $scope.cfemail,
-        cftext: $scope.cftext
+    $scope.vacancy = {
+        position: '',
+        email: '',
+        message: ''
     };
 
     $scope.loading = true;
 
-    this.$onInit = function () {
-
+    $scope.removeErrors = function(){
+        $('#career .form-group' ).removeClass( 'has-error' );
     };
 
     $scope.setFormScope = function( form )
@@ -132,56 +132,63 @@ career.controller( 'CareerController', [ '$scope', function ( $scope ){
         $scope.careerForm = form;
     };
 
-    // $scope.send = function () {
-    //     if(
-    //         //!$scope.loading &&
-    //         !$scope.careerForm.$invalid ){
-    //         //$scope.loading = true;
-    //
-    //         for (var property in $scope.message) {
-    //
-    //
-    //             var $field = $( '[name="' + property + '"]' );
-    //             if( $field )
-    //             {
-    //                 $field.closest( '.form-group' )
-    //                     .removeClass( 'has-error' );
-    //             }
-    //
-    //         }
-    //
-    //
-    //         CompanyService.sendMain( $scope.message ).then(function (response) {
-    //             //$scope.loading = false;
-    //
-    //             $scope.cfsender = '';
-    //             $scope.cfemail = '';
-    //             $scope.cfsubject = '';
-    //             $scope.cftext = '';
-    //
-    //         });
-    //     }else{
-    //         for (var property in $scope.message) { console.log( property);
-    //
-    //             console.log( $scope.careerForm[property] )
-    //             if( $scope.careerForm[property].$invalid ){ console.log( $scope.careerForm[property].$invalid );
-    //                 var $field = $( '[name="' + property + '"]' );
-    //                 if( $field )
-    //                 {
-    //                     $field.closest( '.form-group' )
-    //                         .addClass( 'has-error' );
-    //                 }
-    //             }
-    //
-    //         }
-    //
-    //     }
-    //
-    // };
+     $scope.send = function () { console.log($scope.careerForm);
+        if( !$scope.careerForm.$invalid ){
+            CareerService.sendMail( $scope.vacancy ).then(function (response) {
+                $scope.vacancy = {
+                    position: '',
+                    email: '',
+                    message: ''
+                };
+            });
+        }else{
+            $scope.removeErrors();
+            for (var property in $scope.vacancy) {
+                if( $scope.careerForm[property].$invalid ){ 
+                    var $field = $( '[name="' + property + '"]' );
+                    if( $field ) {
+                        $field.closest( '.form-group' ) .addClass( 'has-error' );
+                    }
+                }
+            }
+        }
+     };
 
-
+    $scope.toggleMe = function ( event ) { console.log(event)
+        $( event.target ).parent().find('.plus').toggleClass( 'open' );
+    };
 
 }]);
+career.service( 'CareerService', ['$http', '$q', function( $http, $q )
+{
+    var CareerService = {
+
+        sendMail: function( message )
+        {
+            var deferred = $q.defer();
+            $http.post( '/api/career/send', message )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CareerService;
+}]);
+
 caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', function ( $scope, CaseStudiesService){
 
     $scope.caseStudies = [];
@@ -225,6 +232,51 @@ caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
         }
     };
     return CaseStudiesService;
+}]);
+caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
+
+    $scope.clients = [];
+
+    this.$onInit = function () {
+
+        var slider = $('.client-slider').bxSlider({
+            slideWidth: 820,
+            minSlides: 1,
+            moveSlides: 1,
+            slideMargin: 20,
+            speed: 500,
+            pager: !1,
+            infiniteLoop: !0,
+            controls: !0,
+            hideControlOnEnd: !0,
+            auto: false,
+            tickerHover: true,
+            touchEnabled: true,
+            onSliderLoad: function () {
+
+            },
+            onSlideBefore: function (e) {
+                //setTimeout(function () {
+                    //$(e).removeClass('active');
+                    $('.client-slide').removeClass('active');
+                //},497);
+
+            },
+            onSlideAfter: function (e) { console.log( e);
+                //setTimeout(function () {
+                    $(e).find('.client-slide').addClass('active');
+                //},500);
+
+            }
+
+        });
+       // setTimeout(function () {
+            slider.getCurrentSlideElement().find('.client-slide').addClass('active');
+       // },500);
+
+    };
+
+
 }]);
 company.controller( 'CompanyController', [ '$scope', 'CompanyService', function ( $scope, CompanyService ){
 
@@ -344,50 +396,5 @@ company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
         }
     };
     return CompanyService;
-}]);
-caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
-
-    $scope.clients = [];
-
-    this.$onInit = function () {
-
-        var slider = $('.client-slider').bxSlider({
-            slideWidth: 820,
-            minSlides: 1,
-            moveSlides: 1,
-            slideMargin: 20,
-            speed: 500,
-            pager: !1,
-            infiniteLoop: !0,
-            controls: !0,
-            hideControlOnEnd: !0,
-            auto: false,
-            tickerHover: true,
-            touchEnabled: true,
-            onSliderLoad: function () {
-
-            },
-            onSlideBefore: function (e) {
-                //setTimeout(function () {
-                    //$(e).removeClass('active');
-                    $('.client-slide').removeClass('active');
-                //},497);
-
-            },
-            onSlideAfter: function (e) { console.log( e);
-                //setTimeout(function () {
-                    $(e).find('.client-slide').addClass('active');
-                //},500);
-
-            }
-
-        });
-       // setTimeout(function () {
-            slider.getCurrentSlideElement().find('.client-slide').addClass('active');
-       // },500);
-
-    };
-
-
 }]);
 //# sourceMappingURL=all.js.map

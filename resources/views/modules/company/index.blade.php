@@ -9,18 +9,18 @@
                         </div>
 
                         <div class="col-md-12">
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
                                         <div class="team">
                                                 <div class="valery"></div>
                                         </div>
 
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
                                         <div class="team">
                                                 <div class="nicolay"></div>
                                         </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-12 col-xs-12">
                                         <div class="team">
                                                 <div class="edgar"></div>
                                         </div>
@@ -57,7 +57,6 @@
                                                ng-model="cfsender"
                                                type="text"
                                                placeholder="Your name">
-                                        <div ng-show="showErrorByKey( 'cfsender' )">Required</div>
                                 </div>
 
                                 <div class="col-md-4 contact-form-input form-group">

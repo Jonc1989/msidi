@@ -5,11 +5,11 @@
 
                 <div class="col-md-12 clear-pads">
                         <div class="col-md-12 clear-pads vacansy">
-                                <a class="" data-toggle="collapse" href="#marketing_manager" aria-expanded="false" aria-controls="marketing_manager">
+                                <a class="" ng-click="toggleMe( $event )" data-toggle="collapse" href="#marketing_manager" aria-expanded="false" aria-controls="marketing_manager">
 
                                         <div class="carrer-name">Marketing manager</div>
-                                        <div class="minus"></div>
-                                        <div class="plus"></div>
+
+                                        <div class="plus" ></div>
                                 </a>
                                 <div class="collapse" id="marketing_manager">
                                         <table>
@@ -36,10 +36,10 @@
                         </div>
 
                         <div class="col-md-12 clear-pads vacansy">
-                        <a class="" data-toggle="collapse" href="#game_marketing_manager" aria-expanded="false" aria-controls="game_marketing_manager">
+                        <a class="" ng-click="toggleMe( $event )" data-toggle="collapse" href="#game_marketing_manager" aria-expanded="false" aria-controls="game_marketing_manager">
                                 <div class="carrer-name">Computer game marketing manager</div>
-                                <div class="minus"></div>
-                                <div class="plus"></div>
+                                <!--<div class="minus"></div>-->
+                                <div class="plus" ></div>
                         </a>
                                 <div class="collapse" id="game_marketing_manager">
                                         <table>
@@ -68,8 +68,10 @@
 
                 <div class="col-md-12">
                         <form name="careerForm" id="vacansy-form" ng-submit="send()"  novalidate ng-init="setFormScope( this )">
-                                <div class="col-md-6">
-                                        <select class="form-control contact-form-input">
+                                <div class="col-md-6 form-group contact-form-input">
+                                        <select class="form-control "
+                                                required
+                                                ng-model="vacancy.position" name="position">
                                                 <option value="">Choose your position</option>
                                                 <option value="marketing_manager">Marketing manager</option>
                                                 <option value="game_marketing_manager">Computer game marketing manager</option>
@@ -77,12 +79,22 @@
                                                 <option value="sale">Sales manager</option>
                                         </select>
                                 </div>
-                                <div class="col-md-6">
-                                        <input class="form-control contact-form-input" type="text" placeholder="Email address">
+                                <div class="col-md-6 form-group contact-form-input">
+                                        <input class="form-control"
+                                               name="email"
+                                               ng-model="vacancy.email"
+                                               type="text"
+                                               required
+                                               placeholder="Email address">
                                 </div>
 
-                                <div class="col-md-12">
-                                        <textarea rows="10" class="form-control contact-form-input" placeholder="Message"></textarea>
+                                <div class="col-md-12 form-group contact-form-input">
+                                        <textarea rows="10"
+                                                  class="form-control"
+                                                  name="message"
+                                                  required
+                                                  ng-model="vacancy.message"
+                                                  placeholder="Message"></textarea>
                                 </div>
                                 <button class="form-control send" type="submit" value="">
                                         <div class="more-txt">Send message</div>

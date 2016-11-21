@@ -1,18 +1,18 @@
-career.controller( 'CareerController', [ '$scope', function ( $scope ){
+career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $scope, CareerService ){
 
 
     $scope.careerForm = {};
 
-    $scope.message = {
-        cfposition: $scope.cfposition,
-        cfemail: $scope.cfemail,
-        cftext: $scope.cftext
+    $scope.vacancy = {
+        position: '',
+        email: '',
+        message: ''
     };
 
     $scope.loading = true;
 
-    this.$onInit = function () {
-
+    $scope.removeErrors = function(){
+        $('#career .form-group' ).removeClass( 'has-error' );
     };
 
     $scope.setFormScope = function( form )
@@ -20,53 +20,30 @@ career.controller( 'CareerController', [ '$scope', function ( $scope ){
         $scope.careerForm = form;
     };
 
-    // $scope.send = function () {
-    //     if(
-    //         //!$scope.loading &&
-    //         !$scope.careerForm.$invalid ){
-    //         //$scope.loading = true;
-    //
-    //         for (var property in $scope.message) {
-    //
-    //
-    //             var $field = $( '[name="' + property + '"]' );
-    //             if( $field )
-    //             {
-    //                 $field.closest( '.form-group' )
-    //                     .removeClass( 'has-error' );
-    //             }
-    //
-    //         }
-    //
-    //
-    //         CompanyService.sendMain( $scope.message ).then(function (response) {
-    //             //$scope.loading = false;
-    //
-    //             $scope.cfsender = '';
-    //             $scope.cfemail = '';
-    //             $scope.cfsubject = '';
-    //             $scope.cftext = '';
-    //
-    //         });
-    //     }else{
-    //         for (var property in $scope.message) { console.log( property);
-    //
-    //             console.log( $scope.careerForm[property] )
-    //             if( $scope.careerForm[property].$invalid ){ console.log( $scope.careerForm[property].$invalid );
-    //                 var $field = $( '[name="' + property + '"]' );
-    //                 if( $field )
-    //                 {
-    //                     $field.closest( '.form-group' )
-    //                         .addClass( 'has-error' );
-    //                 }
-    //             }
-    //
-    //         }
-    //
-    //     }
-    //
-    // };
+     $scope.send = function () { console.log($scope.careerForm);
+        if( !$scope.careerForm.$invalid ){
+            CareerService.sendMail( $scope.vacancy ).then(function (response) {
+                $scope.vacancy = {
+                    position: '',
+                    email: '',
+                    message: ''
+                };
+            });
+        }else{
+            $scope.removeErrors();
+            for (var property in $scope.vacancy) {
+                if( $scope.careerForm[property].$invalid ){ 
+                    var $field = $( '[name="' + property + '"]' );
+                    if( $field ) {
+                        $field.closest( '.form-group' ) .addClass( 'has-error' );
+                    }
+                }
+            }
+        }
+     };
 
-
+    $scope.toggleMe = function ( event ) { console.log(event)
+        $( event.target ).parent().find('.plus').toggleClass( 'open' );
+    };
 
 }]);
