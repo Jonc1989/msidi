@@ -5841,6 +5841,12 @@ button.close {
 .ecolines-bg {
   background: url(../images/ecolines/ecolines-bg.png) center center no-repeat; }
 
+.custom-software-bg {
+  background: url(../images/custom-software/custom-software.png) center center no-repeat; }
+
+.opal-bg {
+  background: url(../images/opal/opal.png) center center no-repeat; }
+
 #clients .client-slide {
   margin-top: 25px;
   width: 820px;
