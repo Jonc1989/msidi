@@ -2,7 +2,8 @@ var app = angular.module( 'app', [
    'caseStudies',
     'clients',
     'company',
-    'career'
+    'career',
+    'slider'
 ] );
 
 $(document).ready(function(){
@@ -45,9 +46,9 @@ $(document).ready(function(){
     slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
     //},500);
 
-    $('.navbar-nav > li > a').hover(function () {
-        $( this ).toggleClass( 'hover' );
-    });
+    // $('.navbar-nav > li > a').hover(function () {
+    //     $( this ).toggleClass( 'hover' );
+    // });
 
 
 
@@ -101,10 +102,10 @@ $(window).load(function () {
 var career = angular.module('career', [
 
 ]);
-var caseStudies = angular.module('caseStudies', [
+var clients = angular.module('clients', [
 
 ]);
-var clients = angular.module('clients', [
+var caseStudies = angular.module('caseStudies', [
 
 ]);
 var company = angular.module('company', [
@@ -159,80 +160,6 @@ career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $
     };
 
 }]);
-career.service( 'CareerService', ['$http', '$q', function( $http, $q )
-{
-    var CareerService = {
-
-        sendMail: function( message )
-        {
-            var deferred = $q.defer();
-            $http.post( '/api/career/send', message )
-                .success( function( response )
-                {
-                    deferred.resolve( response );
-                } )
-                .error( function( response, status )
-                {
-                    if (status === 422)
-                    {
-                        deferred.resolve({errors: response});
-                    } else
-                    {
-                        deferred.reject();
-                    }
-                } );
-
-            return deferred.promise;
-
-        }
-    };
-    return CareerService;
-}]);
-
-caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', function ( $scope, CaseStudiesService){
-
-    $scope.caseStudies = [];
-
-    this.$onInit = function () {
-        $scope.getData();
-    };
-
-    $scope.getData = function(){
-        CaseStudiesService.all().then(function(response)
-        {
-            $scope.caseStudies = response;
-        });
-    };
-}]);
-caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
-{
-    var CaseStudiesService = {
-
-        all: function(  )
-        {
-            var deferred = $q.defer();
-            $http.get( '/api/case-studies/' )
-                .success( function( response )
-                {
-                    deferred.resolve( response );
-                } )
-                .error( function( response, status )
-                {
-                    if (status === 422)
-                    {
-                        deferred.resolve({errors: response});
-                    } else
-                    {
-                        deferred.reject();
-                    }
-                } );
-
-            return deferred.promise;
-
-        }
-    };
-    return CaseStudiesService;
-}]);
 caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
 
     $scope.clients = [];
@@ -277,6 +204,82 @@ caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
     };
 
 
+}]);
+career.service( 'CareerService', ['$http', '$q', function( $http, $q )
+{
+    var CareerService = {
+
+        sendMail: function( message )
+        {
+            var deferred = $q.defer();
+            $http.post( '/api/career/send', message )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CareerService;
+}]);
+
+caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', function ( $scope, CaseStudiesService){
+
+    $scope.caseStudies = [];
+
+    this.$onInit = function () {
+        $scope.getData();
+    };
+
+    $scope.getData = function(){
+        CaseStudiesService.all( 6 ).then(function(response)
+        {
+            $scope.caseStudies = response;
+        });
+    };
+
+
+}]);
+caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
+{
+    var CaseStudiesService = {
+
+        all: function( count )
+        {
+            var deferred = $q.defer();
+            $http.get( '/api/case-studies', {params:{ count: count }} )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CaseStudiesService;
 }]);
 company.controller( 'CompanyController', [ '$scope', 'CompanyService', function ( $scope, CompanyService ){
 
@@ -397,4 +400,7 @@ company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
     };
     return CompanyService;
 }]);
+var slider = angular.module('slider', [
+
+]);
 //# sourceMappingURL=all.js.map

@@ -19,6 +19,6 @@ class Controller extends BaseController
     
     public function main()
     {
-        return view('master');
+        return view('layouts.main');
     }
 }

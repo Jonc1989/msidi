@@ -7,9 +7,11 @@ caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService
     };
 
     $scope.getData = function(){
-        CaseStudiesService.all().then(function(response)
+        CaseStudiesService.all( 6 ).then(function(response)
         {
             $scope.caseStudies = response;
         });
     };
+
+
 }]);

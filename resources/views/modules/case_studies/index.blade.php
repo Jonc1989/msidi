@@ -27,21 +27,24 @@
 
         <div class="col-md-12 col-sm-12 col-xs-12 case-studies-wrap">
             <div class="col-md-4 case-studies" ng-repeat="item in caseStudies">
-                <a href="">
-                    <div class="cover">
-                        <div class="image" style="    background: url({{ item.image }}) center center no-repeat;">
+                <div class="studie">
+                    <a href="">
+                        <div class="cover">
+                            <div class="image" style="    background: url({{ item.image }}) center center no-repeat;">
+
+                            </div>
 
                         </div>
-
-                    </div>
-                    <div class="white-layer">
-                        <div class="hover">
-                            <img src="/images/eye.png">
+                        <div class="white-layer">
+                            <div class="hover">
+                                <img src="/images/eye.png">
+                            </div>
                         </div>
-                    </div>
-                    <div class="portfolio-title" ng-bind="item.content">Exigen</div>
-                    <div class="category" ng-bind="item.categories.name">Partnership</div>
-                </a>
+                        <div class="portfolio-title" ng-bind="item.content">Exigen</div>
+                        <div class="category" ng-bind="item.categories.name">Partnership</div>
+                    </a>
+                </div>
+
 
             </div>
 

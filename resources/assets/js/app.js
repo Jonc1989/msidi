@@ -2,7 +2,8 @@ var app = angular.module( 'app', [
    'caseStudies',
     'clients',
     'company',
-    'career'
+    'career',
+    'slider'
 ] );
 
 $(document).ready(function(){
@@ -45,9 +46,9 @@ $(document).ready(function(){
     slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
     //},500);
 
-    $('.navbar-nav > li > a').hover(function () {
-        $( this ).toggleClass( 'hover' );
-    });
+    // $('.navbar-nav > li > a').hover(function () {
+    //     $( this ).toggleClass( 'hover' );
+    // });
 
 
 

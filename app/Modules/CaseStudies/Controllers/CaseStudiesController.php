@@ -18,6 +18,9 @@ class CaseStudiesController extends Controller
     {
         $this->posts = $posts;
         $this->categories = $categories;
+
+        \Blade::setEscapedContentTags( '<%%', '%%>' );
+        \Blade::setContentTags( '<%', '%>' );
     }
 
     /**
@@ -27,7 +30,7 @@ class CaseStudiesController extends Controller
      */
     public function index()
     {
-        return 'Hallo';
+        return view('modules.case_studies.all');
     }
 
     /**

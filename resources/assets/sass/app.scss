@@ -567,6 +567,11 @@ img{border:0}
   display: inline-block;
   z-index: 1;
 }
+.studie{
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+}
 .case-studies .cover{
   height: 200px;
   width: 200px;
@@ -580,7 +585,7 @@ img{border:0}
   background: url(../images/circle.png) center center no-repeat;
   position: absolute;
   top: 0px;
-  left: 25%;
+  left: 0px;
 }
 .hover{
   width: 200px;
@@ -818,6 +823,7 @@ img{border:0}
   background: url(../images/minus.png) center center no-repeat;
   background-size: 22px 2px;
 }
+
 .case-studies .image{
   -webkit-transition: all .4s;
   -moz-transition: all .4s;

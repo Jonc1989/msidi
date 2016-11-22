@@ -9,20 +9,16 @@
         <link rel="stylesheet" href="css/app.css">
     </head>
     <body>
+
+
+
+
+
         @include('layouts.navbar')
-        @include('modules.slider.index')
-        @include('modules.services.index')
-        @include('modules.technology.index')
-        @include('modules.clients.index')
-        @include('modules.case_studies.index')
-        @include('modules.company.index')
-        @include('modules.career.index')
+
+        @yield('content')
+
         @include('layouts.footer')
-
-        <div class="container">
-            @yield('content')
-        </div>
-
 
 
 

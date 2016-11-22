@@ -6419,6 +6419,11 @@ img {
   display: inline-block;
   z-index: 1; }
 
+.studie {
+  width: 200px;
+  margin: 0 auto;
+  position: relative; }
+
 .case-studies .cover {
   height: 200px;
   width: 200px;
@@ -6432,7 +6437,7 @@ img {
   background: url(../images/circle.png) center center no-repeat;
   position: absolute;
   top: 0px;
-  left: 25%; }
+  left: 0px; }
 
 .hover {
   width: 200px;
