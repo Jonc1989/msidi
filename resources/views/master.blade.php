@@ -11,25 +11,18 @@
     <body>
         @include('layouts.navbar')
         @include('modules.slider.index')
-
         @include('modules.services.index')
-
-
-        <div class="container">
-
-            @include('modules.technology.index')
-
-
-
-
-            @yield('content')
-
-        </div>
+        @include('modules.technology.index')
         @include('modules.clients.index')
         @include('modules.case_studies.index')
         @include('modules.company.index')
         @include('modules.career.index')
         @include('layouts.footer')
+
+        <div class="container">
+            @yield('content')
+        </div>
+
 
 
 

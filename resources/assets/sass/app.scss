@@ -393,8 +393,10 @@ img{border:0}
 }
 .technology{
   height: 140px;
-  border-right: 1px solid #e1e1e1;
   padding-top: 10px;
+}
+.technology:not(:last-of-type){
+  border-right: 1px solid #e1e1e1;
 }
 .technology .icon{
  width: 77px;
@@ -414,6 +416,13 @@ img{border:0}
 .icon-mobile{
  background: url(../images/mobile.png) center center no-repeat;
 }
+.holder{
+  position: absolute;
+  max-width: 270px;
+  max-height: 280px;
+  top: 100px;
+  left: 5%;
+}
 .green{
   padding-top: 250px;
   background: url(../images/green.png);
@@ -421,6 +430,10 @@ img{border:0}
   background-size: 100% 100%;
   padding-bottom: 250px;
 }
+.pen_holder{
+
+}
+
 .partner-wrap{
   height: 375px;
   position: relative;
@@ -553,13 +566,19 @@ img{border:0}
   float: none;
   display: inline-block;
 }
+.case-studies .cover{
+  height: 200px;
+  width: 200px;
+  @include border-radius( 50% );
+  overflow: hidden;
+}
 .case-studies .image{
   width: 200px;
   height: 200px;
   display: table;
   @include border-radius( 50% );
   overflow: hidden;
-
+  @include animate( background-size, 4s, cubic-bezier(0.000, 1.025, 0.580, 1.000) );
   .hover{
     width: 100%;
     height: 100%;
@@ -571,23 +590,38 @@ img{border:0}
     display: none;
   }
 }
-.case-studies .image:hover{
-  background-size: 150% auto !important;
-  @include animate( background-size, 4s, cubic-bezier(0.000, 1.025, 0.580, 1.000) );
-  .hover{
-    display: table-cell;
+.case-studies:hover{
+  .cover{
+    height: 200px !important;
+    width: 200px !important;
+    @include border-radius( 50% );
+    overflow: hidden;
+    .image{
+      //background-size: 150% auto !important;
+      transform: scale(1.5);
+      -moz-transform: scale(1.5);
+      -webkit-transform: scale(1.5);
+      -o-transform: scale(1.5);
+      -ms-transform: scale(1.5); /* IE 9 */
+      -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand')"; /* IE8 */
+      filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand'); /* IE6 and 7 */
+      .hover{
+        display: table-cell;
+      }
+    }
+
   }
+
+
 }
-.case-studies .cover{
-  height: 200px;
-  width: 200px;
-}
+
 .portfolio-title{
   font-weight: bold;
 }
 .opal-transfer-image{
   background: url(../images/case-studies/opal-transfer.png) center center no-repeat;
 }
+
 #clients:before{
  
 }

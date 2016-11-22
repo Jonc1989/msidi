@@ -29,7 +29,8 @@
             <div class="col-md-4 case-studies" ng-repeat="item in caseStudies">
                 <a href="">
                     <div class="cover">
-                        <div class="image opal-transfer-image2 exigen-image" style="    background: url({{ item.image }}) center center no-repeat;">
+                        <div class="image" style="    background: url({{ item.image }}) center center no-repeat;">
+
                             <div class="hover">
                                 <img src="/images/eye.png">
                             </div>

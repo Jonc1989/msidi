@@ -6256,8 +6256,10 @@ img {
 
 .technology {
   height: 140px;
-  border-right: 1px solid #e1e1e1;
   padding-top: 10px; }
+
+.technology:not(:last-of-type) {
+  border-right: 1px solid #e1e1e1; }
 
 .technology .icon {
   width: 77px;
@@ -6276,6 +6278,13 @@ img {
 
 .icon-mobile {
   background: url(../images/mobile.png) center center no-repeat; }
+
+.holder {
+  position: absolute;
+  max-width: 270px;
+  max-height: 280px;
+  top: 100px;
+  left: 5%; }
 
 .green {
   padding-top: 250px;
@@ -6409,12 +6418,19 @@ img {
   float: none;
   display: inline-block; }
 
+.case-studies .cover {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden; }
+
 .case-studies .image {
   width: 200px;
   height: 200px;
   display: table;
   border-radius: 50%;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: background-size 4s cubic-bezier(0, 1.025, 0.58, 1); }
   .case-studies .image .hover {
     width: 100%;
     height: 100%;
@@ -6428,15 +6444,24 @@ img {
     -moz-transform: translate(0px, -2px);
     display: none; }
 
-.case-studies .image:hover {
-  background-size: 150% auto !important;
-  transition: background-size 4s cubic-bezier(0, 1.025, 0.58, 1); }
-  .case-studies .image:hover .hover {
-    display: table-cell; }
-
-.case-studies .cover {
-  height: 200px;
-  width: 200px; }
+.case-studies:hover .cover {
+  height: 200px !important;
+  width: 200px !important;
+  border-radius: 50%;
+  overflow: hidden; }
+  .case-studies:hover .cover .image {
+    transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    /* IE 9 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand')";
+    /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand');
+    /* IE6 and 7 */ }
+    .case-studies:hover .cover .image .hover {
+      display: table-cell; }
 
 .portfolio-title {
   font-weight: bold; }
