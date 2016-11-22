@@ -549,7 +549,7 @@ img{border:0}
 .brochure-icon{
   background: #506df9;
   @include border-radius( 50% );
-  padding-top: 15px;
+  padding-top: 19px;
 }
 .brochure-icon .icon{
   background: url(../images/brochure-icon.png) center center no-repeat;
@@ -565,30 +565,51 @@ img{border:0}
   text-align: center;
   float: none;
   display: inline-block;
+  z-index: 1;
 }
 .case-studies .cover{
   height: 200px;
   width: 200px;
   @include border-radius( 50% );
   overflow: hidden;
+  z-index: -2;
+}
+.white-layer{
+  width: 200px;
+  height: 200px;
+  background: url(../images/circle.png) center center no-repeat;
+  position: absolute;
+  top: 0px;
+  left: 25%;
+}
+.hover{
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 0, 255, .5);
+  border-radius: 50%;
+  display: none;
+  img{
+    padding-top: 90px;
+  }
 }
 .case-studies .image{
   width: 200px;
   height: 200px;
-  display: table;
+  background-size: cover;
+  //display: table;
   @include border-radius( 50% );
   overflow: hidden;
-  @include animate( background-size, 4s, cubic-bezier(0.000, 1.025, 0.580, 1.000) );
-  .hover{
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 255, .5);
-    text-align: center;
-    vertical-align: middle;
-    @include border-radius( 50% );
-    @include move( 0px, -2px );
-    display: none;
-  }
+  z-index: -3;
+  //.hover{
+  //  width: 100%;
+  //  height: 100%;
+  //  background: rgba(0, 0, 255, .5);
+  //  text-align: center;
+  //  vertical-align: middle;
+  //  @include border-radius( 50% );
+  //  @include move( 0px, -2px );
+  //  display: none;
+  //}
 }
 .case-studies:hover{
   .cover{
@@ -598,21 +619,18 @@ img{border:0}
     overflow: hidden;
     .image{
       //background-size: 150% auto !important;
-      transform: scale(1.5);
-      -moz-transform: scale(1.5);
-      -webkit-transform: scale(1.5);
-      -o-transform: scale(1.5);
-      -ms-transform: scale(1.5); /* IE 9 */
+      transform: scale(1.3);
+      -moz-transform: scale(1.3);
+      -webkit-transform: scale(1.3);
+      -o-transform: scale(1.3);
+      -ms-transform: scale(1.3); /* IE 9 */
       -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand')"; /* IE8 */
       filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand'); /* IE6 and 7 */
-      .hover{
-        display: table-cell;
-      }
     }
-
   }
-
-
+  .hover{
+     display: block;
+   }
 }
 
 .portfolio-title{

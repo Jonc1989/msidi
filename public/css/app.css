@@ -6401,7 +6401,7 @@ img {
 .brochure-icon {
   background: #506df9;
   border-radius: 50%;
-  padding-top: 15px; }
+  padding-top: 19px; }
 
 .brochure-icon .icon {
   background: url(../images/brochure-icon.png) center center no-repeat;
@@ -6416,33 +6416,40 @@ img {
   height: 285px;
   text-align: center;
   float: none;
-  display: inline-block; }
+  display: inline-block;
+  z-index: 1; }
 
 .case-studies .cover {
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: -2; }
+
+.white-layer {
+  width: 200px;
+  height: 200px;
+  background: url(../images/circle.png) center center no-repeat;
+  position: absolute;
+  top: 0px;
+  left: 25%; }
+
+.hover {
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 0, 255, 0.5);
+  border-radius: 50%;
+  display: none; }
+  .hover img {
+    padding-top: 90px; }
 
 .case-studies .image {
   width: 200px;
   height: 200px;
-  display: table;
+  background-size: cover;
   border-radius: 50%;
   overflow: hidden;
-  transition: background-size 4s cubic-bezier(0, 1.025, 0.58, 1); }
-  .case-studies .image .hover {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 255, 0.5);
-    text-align: center;
-    vertical-align: middle;
-    border-radius: 50%;
-    transform: translate(0px, -2px);
-    -webkit-transform: translate(0px, -2px);
-    -o-transform: translate(0px, -2px);
-    -moz-transform: translate(0px, -2px);
-    display: none; }
+  z-index: -3; }
 
 .case-studies:hover .cover {
   height: 200px !important;
@@ -6450,18 +6457,19 @@ img {
   border-radius: 50%;
   overflow: hidden; }
   .case-studies:hover .cover .image {
-    transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -o-transform: scale(1.5);
-    -ms-transform: scale(1.5);
+    transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -ms-transform: scale(1.3);
     /* IE 9 */
     -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand')";
     /* IE8 */
     filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.5, M12=0, M21=0, M22=1.5, SizingMethod='auto expand');
     /* IE6 and 7 */ }
-    .case-studies:hover .cover .image .hover {
-      display: table-cell; }
+
+.case-studies:hover .hover {
+  display: block; }
 
 .portfolio-title {
   font-weight: bold; }

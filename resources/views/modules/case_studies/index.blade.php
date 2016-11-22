@@ -31,9 +31,12 @@
                     <div class="cover">
                         <div class="image" style="    background: url({{ item.image }}) center center no-repeat;">
 
-                            <div class="hover">
-                                <img src="/images/eye.png">
-                            </div>
+                        </div>
+
+                    </div>
+                    <div class="white-layer">
+                        <div class="hover">
+                            <img src="/images/eye.png">
                         </div>
                     </div>
                     <div class="portfolio-title" ng-bind="item.content">Exigen</div>
