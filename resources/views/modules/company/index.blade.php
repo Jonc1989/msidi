@@ -54,7 +54,7 @@
                                                name="cfsender"
                                                ng-blur="blurByKey( 'cfsender' )"
                                                required
-                                               ng-model="cfsender"
+                                               ng-model="message.cfsender"
                                                type="text"
                                                placeholder="Your name">
                                 </div>
@@ -64,8 +64,8 @@
                                                id="cfemail"
                                                name="cfemail"
                                                required
-                                               type="text"
-                                               ng-model="cfemail"
+                                               type="email"
+                                               ng-model="message.cfemail"
                                                placeholder="Email address">
                                 </div>
                                 <div class="col-md-4 contact-form-input form-group">
@@ -74,7 +74,7 @@
                                                id="cfsubject"
                                                name="cfsubject"
                                                required
-                                               ng-model="cfsubject"
+                                               ng-model="message.cfsubject"
                                                placeholder="Subject">
                                 </div>
 
@@ -83,7 +83,7 @@
                                                   id="cftext"
                                                   name="cftext"
                                                   required
-                                                  ng-model="cftext"
+                                                  ng-model="message.cftext"
                                                   placeholder="Message">
                                         </textarea>
                                 </div>

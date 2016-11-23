@@ -5772,8 +5772,10 @@ button.close {
   border: none;
   left: 0px; }
 
-#slider .bx-wrapper .bx-viewport {
-  background: #506df9; }
+#slider {
+  opacity: 0; }
+  #slider .bx-wrapper .bx-viewport {
+    background: #506df9; }
 
 @media (min-width: 768px) {
   #slider {
@@ -5799,8 +5801,20 @@ button.close {
   background-position-x: 10000px;
   padding-top: 320px; }
 
-.ecolines-container {
-  background: url(../images/amber/amber-bgg.png) center top no-repeat; }
+.custom-software-bg {
+  padding-top: 250px;
+  background-position: 0px -1000px;
+  background: url(../images/custom-software/custom-software.png);
+  background-repeat: no-repeat; }
+
+.custom-software-bg.active {
+  background-position: 0px 0px; }
+
+.opal-bg {
+  background: url(../images/opal/opal.png) center center no-repeat; }
+
+.custom-software-container {
+  background: url(../images/amber/amber-bgg.png) center center no-repeat; }
 
 .amber-bg.active {
   background-position-x: 0px; }
@@ -5808,24 +5822,30 @@ button.close {
 .amber-container {
   overflow: hidden; }
 
-.amber-text {
+.text-from-right {
   padding-left: 315px; }
 
-.inner-bg .amber-text {
+.inner-bg .text-from-right {
   left: 2500px;
   opacity: 0; }
 
-.inner-bg.active .amber-text {
+.inner-bg.active .text-from-right {
   left: 0px;
   opacity: 1; }
 
-.inner-bg.active.leaving .amber-text {
+.inner-bg.active.leaving .text-from-right {
   opacity: 0; }
 
 .mac {
   background: url(../images/amber/iMac.png) center center no-repeat;
   width: 760px;
   height: 620px; }
+
+.laptop {
+  background: url(../images/custom-software/laptop.png) center center no-repeat;
+  width: 1311px;
+  height: 583px;
+  position: absolute; }
 
 .inner-bg .mac {
   left: 2500px;
@@ -5838,14 +5858,34 @@ button.close {
 .inner-bg.active.leaving .mac {
   opacity: 0; }
 
+.inner-bg .laptop {
+  right: -1000px;
+  opacity: 0;
+  bottom: 0px; }
+
+.inner-bg.active .laptop {
+  right: 5%;
+  opacity: 1; }
+
+.inner-bg.active.leaving .laptop {
+  opacity: 0; }
+
+.rocket {
+  position: absolute;
+  bottom: -10000px;
+  right: 30%;
+  height: 457px;
+  width: 255px;
+  background: url(../images/custom-software/rocket.png) center center no-repeat; }
+
+.inner-bg.active .rocket {
+  bottom: 100px; }
+
+.inner-bg.active.leaving .rocket {
+  bottom: 2000px; }
+
 .ecolines-bg {
   background: url(../images/ecolines/ecolines-bg.png) center center no-repeat; }
-
-.custom-software-bg {
-  background: url(../images/custom-software/custom-software.png) center center no-repeat; }
-
-.opal-bg {
-  background: url(../images/opal/opal.png) center center no-repeat; }
 
 #clients .client-slide {
   margin-top: 25px;
@@ -6052,8 +6092,6 @@ img {
 
 .inner-bg {
   position: relative;
-  top: 0px;
-  left: 0px;
   height: 900px;
   width: 100%; }
 
@@ -6652,14 +6690,17 @@ img {
 .case-studies .image {
   transition: all  .4s; }
 
+.custom-software-bg {
+  transition: all .5s; }
+
 .year {
   transition: all 0.4s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
 
-.amber-text, .mac, .amber-bg {
-  transition: all 0.4s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
+.text-from-right, .mac, .amber-bg, .laptop, .rocket {
+  transition: all 0.5s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
 
 .city {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.05); }
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.05); }
 
 .year {
   transition: all 1s cubic-bezier(0, 1.025, 0.58, 1); }

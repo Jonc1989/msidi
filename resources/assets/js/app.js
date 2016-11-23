@@ -7,69 +7,14 @@ var app = angular.module( 'app', [
 ] );
 
 $(document).ready(function(){
-    var slider = $('.bxslider').bxSlider({
-        minSlides: 1,
-        moveSlides: 1,
-        easing: 'ease-out',
-        speed: 0,
-        pager: !0,
-        pause: 4000,
-        infiniteLoop: true,
-        useCSS: false,
-        controls: !1,
-        hideControlOnEnd: !0,
-        auto: true,
-        tickerHover: true,
-        touchEnabled: true,
-        onSliderLoad: function () {
 
-        },
-        onSlideBefore: function (e) {
-            //setTimeout(function () {
-                $('.inner-bg').removeClass('active');
-            $('.inner-bg').removeClass('leaving');
-            //},497);
-
-        },
-        onSlideAfter: function (e) {
-            setTimeout(function () {
-                $(e).find('.inner-bg').addClass('active');
-            },50);
-            setTimeout(function () {
-                $(e).find('.inner-bg').addClass('leaving');
-            },3500);
-
-        }
-
-    });
-    //setTimeout(function () {
-    slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
-    //},500);
-
-    // $('.navbar-nav > li > a').hover(function () {
-    //     $( this ).toggleClass( 'hover' );
-    // });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    $(".nav li > a").click(function(e) {
+        e.preventDefault();
+        var top = $(this).attr("href");
+        $("html, body").animate({
+            scrollTop: $(top).offset().top
+        }, 1500)
+    })
 
 });
 $(window).load(function () {

@@ -4,10 +4,10 @@ company.controller( 'CompanyController', [ '$scope', 'CompanyService', function 
     $scope.contactForm = {};
 
     $scope.message = {
-        cfsender: $scope.cfsender,
-        cfemail: $scope.cfemail,
-        cfsubject: $scope.cfsubject,
-        cftext: $scope.cftext
+        cfsender: '',
+        cfemail: '',
+        cfsubject: '',
+        cftext: ''
     };
     
     $scope.loading = true;
@@ -30,27 +30,16 @@ company.controller( 'CompanyController', [ '$scope', 'CompanyService', function 
             //!$scope.loading &&
             !$scope.contactForm.$invalid ){
             //$scope.loading = true;
-
-            for (var property in $scope.message) {
-
-
-                        var $field = $( '[name="' + property + '"]' );
-                        if( $field )
-                        {
-                            $field.closest( '.form-group' )
-                                .removeClass( 'has-error' );
-                        }
-
-            }
-
-
-            CompanyService.sendMain( $scope.message ).then(function (response) {
+            
+            CompanyService.sendMail( $scope.message ).then(function (response) {
                 //$scope.loading = false;
 
-                    $scope.cfsender = '';
-                    $scope.cfemail = '';
-                    $scope.cfsubject = '';
-                    $scope.cftext = '';
+                $scope.message = {
+                    cfsender: '',
+                    cfemail: '',
+                    cfsubject: '',
+                    cftext: ''
+                };
 
             });
         }else{

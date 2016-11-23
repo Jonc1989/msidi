@@ -2,7 +2,7 @@
 
     <div class="inner-bg amber-bg">
         <div class="city"></div>
-        <div class="col-md-6 amber-text white">
+        <div class="col-md-6 text-from-right white">
             <div class="title clear-margs" >Amber</div>
             <div class="title">housing</div>
             <div>

@@ -13,11 +13,11 @@ class CareerController extends Controller
     {
         $position     = Input::get('position');
         $email      = Input::get('email');
-        $message    = Input::get('message');
+        $text    = Input::get('message');
 
         $mail = config( 'mail' );
 
-        Mail::send('modules.career.email', [ 'position' => $position, 'email' => $email, 'message' => $message ], 
+        Mail::send('modules.career.email', [ 'position' => $position, 'email' => $email, 'text' => $text ],
             function ( $m ) use( $mail ) {
             $m->from( $mail[ 'from' ][ 'address' ], $mail[ 'from' ][ 'name' ] );
             $m->to( $mail[ 'from' ][ 'address' ], 'Vacansy form' )->subject( 'Vacansy request' );

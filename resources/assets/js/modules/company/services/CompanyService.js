@@ -2,7 +2,7 @@ company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
 {
     var CompanyService = {
 
-        sendMain: function( message )
+        sendMail: function( message )
         {
             var deferred = $q.defer();
             $http.post( '/api/company/send', message )

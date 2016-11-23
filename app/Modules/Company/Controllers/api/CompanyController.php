@@ -82,16 +82,16 @@ class CompanyController extends Controller
 
     public function send()
     {
-//        $sender     = Input::get('sender');
-//        $email      = Input::get('email');
-//        $subject    = Input::get('subject');
-//        $text       = Input::get('text');
-//
-//        $mail = config( 'mail' );
-//
-//        Mail::send('modules.company.email', [ 'user' => $sender, 'email' => $email, 'text' => $text ], function ( $m ) use( $subject, $mail ) {
-//            $m->from( $mail[ 'from' ][ 'address' ], $mail[ 'from' ][ 'name' ] );
-//            $m->to( $mail[ 'from' ][ 'address' ], 'Contact form' )->subject( $subject );
-//        });
+        $sender     = Input::get('cfsender');
+        $email      = Input::get('cfemail');
+        $subject    = Input::get('cfsubject');
+        $text       = Input::get('cftext');
+        
+        $mail = config( 'mail' );
+
+        Mail::send('modules.company.email', [ 'user' => $sender, 'email' => $email, 'text' => $text ], function ( $m ) use( $subject, $mail ) {
+            $m->from( $mail[ 'from' ][ 'address' ], $mail[ 'from' ][ 'name' ] );
+            $m->to( $mail[ 'from' ][ 'address' ], 'Contact form' )->subject( $subject );
+        });
     }
 }

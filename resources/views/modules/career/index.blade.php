@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="col-md-12">
-                        <form name="careerForm" id="vacansy-form" ng-submit="send()"  novalidate ng-init="setFormScope( this )">
+                        <form name="careerForm" id="vacansy-form" ng-submit="send()" novalidate ng-init="setFormScope( this )">
                                 <div class="col-md-6 form-group contact-form-input">
                                         <select class="form-control "
                                                 required
@@ -83,7 +83,7 @@
                                         <input class="form-control"
                                                name="email"
                                                ng-model="vacancy.email"
-                                               type="text"
+                                               type="email"
                                                required
                                                placeholder="Email address">
                                 </div>
