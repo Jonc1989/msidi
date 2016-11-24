@@ -11,9 +11,10 @@
             </div>
         </div>
 
-        <div class="col-md-6 laptop clear-pads">
 
-        </div>
+        <div class="col-md-offset-2 col-md-8 clouds"></div>
+        <div class="col-md-offset-6 col-md-3 data"></div>
+        <div class="col-md-offset-3 col-md-8 laptop clear-pads"></div>
         <div class="rocket"></div>
     </div>
 

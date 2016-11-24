@@ -45,12 +45,17 @@
   background: url(../images/custom-software/custom-software.png);
   background-repeat: no-repeat;
 }
+.ecolines-container{
+  background: url(../images/custom-software/custom-software.png);
+  background-repeat: no-repeat;
+  .inner-bg{
+    overflow: hidden;
+  }
+}
 .custom-software-bg.active{
   background-position: 0px 0px;
 }
-.opal-bg{
-  background: url(../images/opal/opal.png) center center no-repeat;
-}
+
 .custom-software-container{
   background: url(../images/amber/amber-bgg.png) center center no-repeat;
 }
@@ -81,11 +86,23 @@
   height: 620px;
 }
 .laptop{
-  background: url(../images/custom-software/laptop.png) center center no-repeat;
-  width: 1311px;
-  height: 583px;
+  background: url(../images/custom-software/laptop.png) bottom center no-repeat;
+  height: 557px;
+  background-size: contain;
   position: absolute;
-
+}
+.clouds{
+  background: url(../images/custom-software/clouds.png) center center no-repeat;
+  height: 358px;
+  position: absolute;
+  bottom: -10000px;
+}
+.data{
+  background: url(../images/custom-software/data.png) top left no-repeat;
+  height: 187px;
+  position: absolute;
+  left: 5000px;
+  opacity: 0;
 }
 .inner-bg .mac{
   left: 2500px;
@@ -99,15 +116,22 @@
   opacity: 0;
 }
 .inner-bg .laptop{
-  right: -1000px;
-  opacity: 0;  bottom: 0px;
+  left: 5000px;
+  opacity: 0;
+  bottom: 0px;
 }
 .inner-bg.active .laptop{
-  right: 5%;
+  left: 0px;
   opacity: 1;
-
 }
 .inner-bg.active.leaving .laptop{
+  opacity: 0;
+}
+.inner-bg.active .data{
+  left: 0px;
+  opacity: 1;
+}
+.inner-bg.active.leaving .data{
   opacity: 0;
 }
 .rocket{
@@ -116,6 +140,7 @@
   right: 30%;
   height: 457px;
   width: 255px;
+  //z-index: 3;
   background: url(../images/custom-software/rocket.png) center center no-repeat;
 }
 .inner-bg.active .rocket{
@@ -124,8 +149,173 @@
 .inner-bg.active.leaving .rocket{
   bottom: 2000px;
 }
-.ecolines-bg{
+.inner-bg.active .clouds{
+  bottom: 0px;
+}
+.inner-bg.active.leaving .clouds{
+  bottom: -2000px;
+}
+
+.inner-bg .ecolines-bg{
   background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;
+  left: -10000px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+}
+.sky{
+  background: url(../images/ecolines/sky.png) center 90% no-repeat;
+  padding-top: 270px;
+  width: 100%;
+  height: 90%;
+  height: calc(100% - 190px);
+  position: absolute;
+  top: 1000px;
+  overflow: hidden;
+  .title{
+    text-align: center;
+  }
+  .ecolines-slide-text{
+    max-width: 680px;
+    margin: 0 auto;
+  }
+}
+.inner-bg.active .sky{
+  top: 0px;
+}
+
+.trees{
+  background: url(../images/ecolines/trees.png) center bottom no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+}
+.highway{
+  width: 100%;
+  height: 190px;
+  position: absolute;
+  bottom: 0px;
+}
+.road{
+  background: url(../images/ecolines/road.png) top center no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  right: -5000px;
+}
+.bus{
+  background: url(../images/ecolines/bus.png) center center no-repeat;
+  height: 135px;
+  background-size: contain;
+  position: absolute;
+  top: -85px;
+  left: -5000px;
+}
+.opal-container{
+  background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;
+  overflow: hidden;
+  .inner-bg{
+    padding-top: 240px;
+    .opal-bg{
+      background: url(../images/opal/opal.png) center center no-repeat;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+    }
+  }
+  .phones{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+
+    .nexus{
+      height: 595px;
+      background: url(../images/opal/nexus.png) right bottom no-repeat;
+      background-size: contain;
+      position: absolute;
+      bottom: 0px;
+      left: -5000px;
+    }
+    .iphone{
+      position: absolute;
+      bottom: 0px;
+      height: 565px;
+      right: -5000px;
+      background: url(../images/opal/iphone.png) left bottom no-repeat;
+      background-size: contain;
+    }
+  }
+  .london{
+    background: url(../images/opal/london.png) center top no-repeat;
+    background-size: contain;
+    width: 90%;
+    height: 1000px;
+    bottom: -1000px;
+    position: absolute;
+    right: 0px;
+
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  }
+}
+.inner-bg.active{
+  .road{
+    right: 0px;
+  }
+  .bus{
+    left: 0px;
+  }
+  .nexus{
+    left: 30%;
+  }
+  .iphone{
+    right: 15%;
+  }
+  .london{
+    bottom: -600px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  }
+}
+.inner-bg.active.leaving{
+  .road{
+    opacity: 0;
+  }
+  .bus{
+    left: 2000px;
+  }
+  .sky{
+    top: 1000px;
+  }
+  .nexus{
+    left: -5000px;
+  }
+  .iphone{
+    right: -5000px;
+  }
+  .london{
+    bottom: -1000px;
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  }
+}
+
+.inner-bg.active .ecolines-bg{
+  background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;
+  left: 0px;
 }
 
 

@@ -31,7 +31,7 @@
                     <div class="studie">
                         <a href="">
                             <div class="cover">
-                                <div class="image" style="    background: url({{ item.image }}) center center no-repeat;">
+                                <div class="image" ng-style="{'background':'url({{ item.image }}) center center no-repeat'}">
 
                                 </div>
 
