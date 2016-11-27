@@ -1,5 +1,5 @@
 
-<div class="col-md-12 footer">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer">
     <div class="row soc-icons">
         <a href="">
             <img src="http://ms-idi.eu/wp-content/themes/serio/images/social/round/FB.png">

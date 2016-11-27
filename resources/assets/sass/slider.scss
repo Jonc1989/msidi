@@ -28,22 +28,75 @@
 
   background: url(../images/amber/City.png) bottom center no-repeat;
 }
-.inner-bg.active .city {
-  bottom: -5px;
+.notebook{
+  background: url(../images/design/Notebook.png) center center no-repeat;
+  background-size: contain;
+  height: 348px;
+  position: absolute;
+  left: -1000px;
+  bottom: -54px;
+  opacity: 0;
 }
-.inner-bg.active.leaving .city {
-  bottom: -1000px;
+.keyboard{
+  background: url(../images/design/keyboard.png) center center no-repeat;
+  height: 245px;
+  margin-left: 1000px;
+  @include background-size(contain);
+}
+.overflow-hidden{
+  overflow: hidden;
+  height: 245px;
+}
+.mouse{
+  background: url(../images/design/mouse.png) left center no-repeat;
+  height: 120px;
+  margin-left: 1000px;
+  @include background-size(contain);
+}
+.pens{
+  background: url(../images/pen_holder.png) right center no-repeat;
+  height: 150px;
+  position: absolute;
+  bottom: -115px;
+  left: 1000px;
+  opacity: 0;
+  @include background-size(contain);
+}
+.computer-wrap{
+  height: 260px;
+}
+.mac2{
+  background: url(../images/design/iMac2.png) right top no-repeat;
+  height: 397px;
+  width: 110%;
+  right: -1000px;
+  top: -165px;
+  position: absolute;
+  @include background-size(contain);
 }
 .amber-bg{
   background: url(../images/amber/amber-bgg.png) center center no-repeat;
   background-position-x: 10000px;
   padding-top: 320px;
 }
+.design-bg{
+    background: url(../images/design/design.png) center center no-repeat;
+  left: -10000px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+}
+
+
 .custom-software-bg{
-  padding-top: 250px;
   background-position: 0px -1000px;
   background: url(../images/custom-software/custom-software.png);
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -1000px;
 }
 .ecolines-container{
   background: url(../images/custom-software/custom-software.png);
@@ -55,36 +108,44 @@
 .custom-software-bg.active{
   background-position: 0px 0px;
 }
-
 .custom-software-container{
+  .inner-bg{
+    padding-top: 250px;
+  }
   background: url(../images/amber/amber-bgg.png) center center no-repeat;
 }
-
 .amber-bg.active {
   background-position-x: 0px;
 }
 .amber-container{
   overflow: hidden;
 }
-.text-from-right{
-  padding-left: 315px;
+//.text-from-right{
+//  padding-left: 315px;
+//}
+.text-from-left{
+  opacity: 0;
+  height: 100%;
+  .title{
+    margin-left: -1000px;
+  }
+  .title:first-of-type{
+    margin-bottom: 0px;
+  }
+  .text{
+    width: 100%;
+    margin-left: -1000px;
+  }
 }
 .inner-bg .text-from-right{
   left: 2500px;
   opacity: 0;
 }
-.inner-bg.active .text-from-right{
-  left: 0px;
-  opacity: 1;
-}
-.inner-bg.active.leaving .text-from-right{
-  opacity: 0;
-}
 .mac{
-  background: url(../images/amber/iMac.png) center center no-repeat;
+  background: url(../images/amber/iMac.png) center bottom no-repeat;
   @include background-size(contain);
+  height: 620px;
 }
-
 .laptop{
   background: url(../images/custom-software/laptop.png) bottom center no-repeat;
   height: 557px;
@@ -108,31 +169,10 @@
   left: 2500px;
   opacity: 0;
 }
-.inner-bg.active .mac{
-  left: 0px;
-  opacity: 1;
-}
-.inner-bg.active.leaving .mac{
-  opacity: 0;
-}
 .inner-bg .laptop{
   left: 5000px;
   opacity: 0;
   bottom: 0px;
-}
-.inner-bg.active .laptop{
-  left: 0px;
-  opacity: 1;
-}
-.inner-bg.active.leaving .laptop{
-  opacity: 0;
-}
-.inner-bg.active .data{
-  left: 0px;
-  opacity: 1;
-}
-.inner-bg.active.leaving .data{
-  opacity: 0;
 }
 .rocket{
   position: absolute;
@@ -140,22 +180,8 @@
   right: 30%;
   height: 457px;
   width: 255px;
-  //z-index: 3;
   background: url(../images/custom-software/rocket.png) center center no-repeat;
 }
-.inner-bg.active .rocket{
-  bottom: 100px;
-}
-.inner-bg.active.leaving .rocket{
-  bottom: 2000px;
-}
-.inner-bg.active .clouds{
-  bottom: 0px;
-}
-.inner-bg.active.leaving .clouds{
-  bottom: -2000px;
-}
-
 .inner-bg .ecolines-bg{
   background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;
   left: -10000px;
@@ -181,10 +207,6 @@
     margin: 0 auto;
   }
 }
-.inner-bg.active .sky{
-  top: 0px;
-}
-
 .trees{
   background: url(../images/ecolines/trees.png) center bottom no-repeat;
   width: 100%;
@@ -214,6 +236,12 @@
   top: -85px;
   left: -5000px;
 }
+.design-container{
+  .inner-bg{
+    padding-top: 320px;
+  }
+  background: url(../images/opal/opal.png) center center no-repeat;
+}
 .opal-container{
   background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;
   overflow: hidden;
@@ -224,7 +252,7 @@
       width: 100%;
       height: 100%;
       position: absolute;
-      top: 0px;
+      top: -5000px;
     }
   }
   .phones{
@@ -266,6 +294,28 @@
   }
 }
 .inner-bg.active{
+  .opal-bg{
+    top: 0px;
+  }
+  .city {
+    bottom: -5px;
+  }
+  .text-from-right{
+    left: 0px;
+    opacity: 1;
+  }
+  .mac{
+    left: 0px;
+    opacity: 1;
+
+  }
+  .laptop{
+    left: 0px;
+    opacity: 1;
+  }
+  .sky{
+    top: 0px;
+  }
   .road{
     right: 0px;
   }
@@ -286,8 +336,66 @@
     -o-transform: rotate(0deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
   }
+  .data{
+    left: 0px;
+    opacity: 1;
+  }
+  .rocket{
+    bottom: 100px;
+  }
+  .clouds{
+    bottom: 0px;
+  }
+  .design-bg{
+    left: 0px;
+  }
+  .text-from-left{
+    opacity: 1;
+    .title{
+      margin-left: 0px;
+    }
+    .text{
+      margin-left: 0px;
+    }
+  }
+  .notebook{
+    left: 0px;
+    opacity: 1;
+  }
+  .mac2 {
+    right: 0px;
+  }
+  .keyboard{
+    margin-left: 80px;
+  }
+  .mouse {
+    margin-left: 0px;
+  }
+  .pens {
+    left: 0px;
+    opacity: 1;
+  }
+  .custom-software-bg{
+    top: 0px;
+  }
+
 }
 .inner-bg.active.leaving{
+  .mac2 {
+    opacity: 0;
+  }
+  .city {
+    bottom: -1000px;
+  }
+  .text-from-right{
+    opacity: 0;
+  }
+  .mac{
+    opacity: 0;
+  }
+  .laptop{
+    opacity: 0;
+  }
   .road{
     opacity: 0;
   }
@@ -311,12 +419,23 @@
     -o-transform: rotate(60deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   }
+  .data{
+    opacity: 0;
+  }
+  .rocket{
+    bottom: 2000px;
+  }
+  .clouds{
+    bottom: -2000px;
+  }
 }
 
 .inner-bg.active .ecolines-bg{
   background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;
   left: 0px;
 }
+
+
 
 
 #clients{

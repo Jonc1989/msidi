@@ -15,7 +15,11 @@
 
 
 
-
+        @if( \Request::path() == '/' )
+            @include('layouts.navbar')
+        @else
+            @include('layouts.navbar2')
+        @endif
 
         @yield('content')
 

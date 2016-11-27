@@ -1,9 +1,29 @@
-@media (min-width: 1390px) {
-  .mac{
-    //  width: 760px;
-    height: 620px;
-  }
+@media (min-width: 1400px) {
   .industries {
     width: 295px;
+  }
+}
+@media (max-width: 1399px) {
+    .industries:not(:last-of-type){
+      margin-right: 0px;
+      padding-right: 10px;
+    }
+  .industries{
+    height: 280px;
+  }
+  .industries-wrap .icon {
+    margin-bottom: 65px;
+  }
+}
+@media (max-width: 1370px) {
+  .mac{
+    height: 500px;
+  }
+
+}
+@media (min-width: 1200px){
+  .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: white;
+    font-size: 16px;
   }
 }

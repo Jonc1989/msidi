@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
-    @include('layouts.navbar')
+
 @include('modules.slider.index')
 @include('modules.services.index')
 @include('modules.technology.index')

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container clear-pads">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand"><img src="/images/logo.png"></a>
+                <a href="<?=  url('/') ?>" class="navbar-brand"><img class="logo" src="/images/logo.png"></a>
 
             </div>
 

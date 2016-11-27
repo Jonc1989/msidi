@@ -5742,7 +5742,7 @@ button.close {
     border: none; }
   .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: white;
-    font-size: 16px; }
+    font-size: 14px; }
   .navbar-nav > li > a {
     padding-top: 63px; }
   .navbar-nav > li > a:after {
@@ -5790,22 +5790,73 @@ button.close {
   width: 100%;
   background: url(../images/amber/City.png) bottom center no-repeat; }
 
-.inner-bg.active .city {
-  bottom: -5px; }
+.notebook {
+  background: url(../images/design/Notebook.png) center center no-repeat;
+  background-size: contain;
+  height: 348px;
+  position: absolute;
+  left: -1000px;
+  bottom: -54px;
+  opacity: 0; }
 
-.inner-bg.active.leaving .city {
-  bottom: -1000px; }
+.keyboard {
+  background: url(../images/design/keyboard.png) center center no-repeat;
+  height: 245px;
+  margin-left: 1000px;
+  background-size: contain; }
+
+.overflow-hidden {
+  overflow: hidden;
+  height: 245px; }
+
+.mouse {
+  background: url(../images/design/mouse.png) left center no-repeat;
+  height: 120px;
+  margin-left: 1000px;
+  background-size: contain; }
+
+.pens {
+  background: url(../images/pen_holder.png) right center no-repeat;
+  height: 150px;
+  position: absolute;
+  bottom: -115px;
+  left: 1000px;
+  opacity: 0;
+  background-size: contain; }
+
+.computer-wrap {
+  height: 260px; }
+
+.mac2 {
+  background: url(../images/design/iMac2.png) right top no-repeat;
+  height: 397px;
+  width: 110%;
+  right: -1000px;
+  top: -165px;
+  position: absolute;
+  background-size: contain; }
 
 .amber-bg {
   background: url(../images/amber/amber-bgg.png) center center no-repeat;
   background-position-x: 10000px;
   padding-top: 320px; }
 
+.design-bg {
+  background: url(../images/design/design.png) center center no-repeat;
+  left: -10000px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px; }
+
 .custom-software-bg {
-  padding-top: 250px;
   background-position: 0px -1000px;
   background: url(../images/custom-software/custom-software.png);
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -1000px; }
 
 .ecolines-container {
   background: url(../images/custom-software/custom-software.png);
@@ -5818,6 +5869,8 @@ button.close {
 
 .custom-software-container {
   background: url(../images/amber/amber-bgg.png) center center no-repeat; }
+  .custom-software-container .inner-bg {
+    padding-top: 250px; }
 
 .amber-bg.active {
   background-position-x: 0px; }
@@ -5825,23 +5878,25 @@ button.close {
 .amber-container {
   overflow: hidden; }
 
-.text-from-right {
-  padding-left: 315px; }
+.text-from-left {
+  opacity: 0;
+  height: 100%; }
+  .text-from-left .title {
+    margin-left: -1000px; }
+  .text-from-left .title:first-of-type {
+    margin-bottom: 0px; }
+  .text-from-left .text {
+    width: 100%;
+    margin-left: -1000px; }
 
 .inner-bg .text-from-right {
   left: 2500px;
   opacity: 0; }
 
-.inner-bg.active .text-from-right {
-  left: 0px;
-  opacity: 1; }
-
-.inner-bg.active.leaving .text-from-right {
-  opacity: 0; }
-
 .mac {
-  background: url(../images/amber/iMac.png) center center no-repeat;
-  background-size: contain; }
+  background: url(../images/amber/iMac.png) center bottom no-repeat;
+  background-size: contain;
+  height: 620px; }
 
 .laptop {
   background: url(../images/custom-software/laptop.png) bottom center no-repeat;
@@ -5866,31 +5921,10 @@ button.close {
   left: 2500px;
   opacity: 0; }
 
-.inner-bg.active .mac {
-  left: 0px;
-  opacity: 1; }
-
-.inner-bg.active.leaving .mac {
-  opacity: 0; }
-
 .inner-bg .laptop {
   left: 5000px;
   opacity: 0;
   bottom: 0px; }
-
-.inner-bg.active .laptop {
-  left: 0px;
-  opacity: 1; }
-
-.inner-bg.active.leaving .laptop {
-  opacity: 0; }
-
-.inner-bg.active .data {
-  left: 0px;
-  opacity: 1; }
-
-.inner-bg.active.leaving .data {
-  opacity: 0; }
 
 .rocket {
   position: absolute;
@@ -5899,18 +5933,6 @@ button.close {
   height: 457px;
   width: 255px;
   background: url(../images/custom-software/rocket.png) center center no-repeat; }
-
-.inner-bg.active .rocket {
-  bottom: 100px; }
-
-.inner-bg.active.leaving .rocket {
-  bottom: 2000px; }
-
-.inner-bg.active .clouds {
-  bottom: 0px; }
-
-.inner-bg.active.leaving .clouds {
-  bottom: -2000px; }
 
 .inner-bg .ecolines-bg {
   background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;
@@ -5934,9 +5956,6 @@ button.close {
   .sky .ecolines-slide-text {
     max-width: 680px;
     margin: 0 auto; }
-
-.inner-bg.active .sky {
-  top: 0px; }
 
 .trees {
   background: url(../images/ecolines/trees.png) center bottom no-repeat;
@@ -5967,6 +5986,11 @@ button.close {
   top: -85px;
   left: -5000px; }
 
+.design-container {
+  background: url(../images/opal/opal.png) center center no-repeat; }
+  .design-container .inner-bg {
+    padding-top: 320px; }
+
 .opal-container {
   background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;
   overflow: hidden; }
@@ -5977,7 +6001,7 @@ button.close {
       width: 100%;
       height: 100%;
       position: absolute;
-      top: 0px; }
+      top: -5000px; }
   .opal-container .phones {
     position: absolute;
     bottom: 0px;
@@ -6010,6 +6034,27 @@ button.close {
     -o-transform: rotate(60deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); }
 
+.inner-bg.active .opal-bg {
+  top: 0px; }
+
+.inner-bg.active .city {
+  bottom: -5px; }
+
+.inner-bg.active .text-from-right {
+  left: 0px;
+  opacity: 1; }
+
+.inner-bg.active .mac {
+  left: 0px;
+  opacity: 1; }
+
+.inner-bg.active .laptop {
+  left: 0px;
+  opacity: 1; }
+
+.inner-bg.active .sky {
+  top: 0px; }
+
 .inner-bg.active .road {
   right: 0px; }
 
@@ -6029,6 +6074,61 @@ button.close {
   -ms-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0); }
+
+.inner-bg.active .data {
+  left: 0px;
+  opacity: 1; }
+
+.inner-bg.active .rocket {
+  bottom: 100px; }
+
+.inner-bg.active .clouds {
+  bottom: 0px; }
+
+.inner-bg.active .design-bg {
+  left: 0px; }
+
+.inner-bg.active .text-from-left {
+  opacity: 1; }
+  .inner-bg.active .text-from-left .title {
+    margin-left: 0px; }
+  .inner-bg.active .text-from-left .text {
+    margin-left: 0px; }
+
+.inner-bg.active .notebook {
+  left: 0px;
+  opacity: 1; }
+
+.inner-bg.active .mac2 {
+  right: 0px; }
+
+.inner-bg.active .keyboard {
+  margin-left: 80px; }
+
+.inner-bg.active .mouse {
+  margin-left: 0px; }
+
+.inner-bg.active .pens {
+  left: 0px;
+  opacity: 1; }
+
+.inner-bg.active .custom-software-bg {
+  top: 0px; }
+
+.inner-bg.active.leaving .mac2 {
+  opacity: 0; }
+
+.inner-bg.active.leaving .city {
+  bottom: -1000px; }
+
+.inner-bg.active.leaving .text-from-right {
+  opacity: 0; }
+
+.inner-bg.active.leaving .mac {
+  opacity: 0; }
+
+.inner-bg.active.leaving .laptop {
+  opacity: 0; }
 
 .inner-bg.active.leaving .road {
   opacity: 0; }
@@ -6052,6 +6152,15 @@ button.close {
   -ms-transform: rotate(60deg);
   -o-transform: rotate(60deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); }
+
+.inner-bg.active.leaving .data {
+  opacity: 0; }
+
+.inner-bg.active.leaving .rocket {
+  bottom: 2000px; }
+
+.inner-bg.active.leaving .clouds {
+  bottom: -2000px; }
 
 .inner-bg.active .ecolines-bg {
   background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;
@@ -6144,12 +6253,6 @@ button.form-control:focus {
   outline: 0;
   box-shadow: none; }
 
-@media (min-width: 1390px) {
-  .mac {
-    height: 620px; }
-  .industries {
-    width: 295px; } }
-
 @font-face {
   font-family: 'Montserrat-Bold';
   src: url("../fonts/montserrat/Montserrat-Bold.otf");
@@ -6221,6 +6324,9 @@ img {
 
 .white {
   color: white; }
+
+.container-fluid {
+  padding: 0px; }
 
 .clear-pads {
   padding-left: 0px !important;
@@ -6331,12 +6437,8 @@ img {
 
 .industries {
   height: 295px;
-  border-right: 1px solid #ebebeb;
-  border-bottom: 1px solid #ebebeb;
-  border-radius: 8px;
-  background: url(../images/ellipses.png) center center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+  padding-left: 0px;
+  padding-right: 0px; }
 
 .industries:not(:last-of-type) {
   margin-right: 20px; }
@@ -6345,7 +6447,13 @@ img {
   width: 100%;
   height: 100%;
   padding-top: 90px;
-  position: relative; }
+  position: relative;
+  border-right: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  border-radius: 8px;
+  background: url(../images/ellipses.png) center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .industries-wrap:hover .circle {
   box-shadow: 2px 2px 6px 0px rgba(46, 74, 117, 0.75);
@@ -6874,14 +6982,14 @@ img {
 .case-studies .image {
   transition: all  .4s; }
 
-.custom-software-bg {
+.custom-software-bg, .amber-bg, .design-bg, .opal-bg, .ecolines-bg {
   transition: all .5s; }
 
 .year {
   transition: all 0.4s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
 
-.text-from-right, .mac, .amber-bg, .laptop, .rocket, .clouds, .data, .ecolines-bg, .sky, .city, .road, .bus,
-.london, .iphone, .nexus {
+.text-from-right, .mac, .laptop, .rocket, .clouds, .data, .sky, .city, .road, .bus,
+.london, .iphone, .nexus, .text-from-left .title, .notebook, .text, .mac2, .keyboard, .mouse, .pens {
   transition: all 0.5s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
 
 .sky .title, .sky .ecolines-slide-text {
@@ -6898,5 +7006,34 @@ img {
 
 .image.active {
   transition: all 1.3s cubic-bezier(0, 1.025, 0.58, 1); }
+
+@media (min-width: 1400px) {
+  .industries {
+    width: 295px; } }
+
+@media (max-width: 1399px) {
+  .industries:not(:last-of-type) {
+    margin-right: 0px;
+    padding-right: 10px; }
+  .industries {
+    height: 280px; }
+  .industries-wrap .icon {
+    margin-bottom: 65px; } }
+
+@media (max-width: 1370px) {
+  .mac {
+    height: 500px; } }
+
+@media (min-width: 1200px) {
+  .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: white;
+    font-size: 16px; } }
+
+@media (max-width: 991px) {
+  .nav > li > a {
+    padding-right: 10px;
+    padding-left: 10px; }
+  .amber-bg {
+    padding-top: 150px; } }
 
 /*# sourceMappingURL=app.css.map */

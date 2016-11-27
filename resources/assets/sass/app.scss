@@ -4,8 +4,7 @@
 @import "slider";
 @import "footer";
 @import "buttons";
-@import "medium";
-@import "small";
+
 @import "animations";
 
 @font-face {
@@ -76,7 +75,6 @@ body {
     width: 1240px;
   }
 }
-
 ul, menu, dir {
   -webkit-margin-before: 0px;
   -webkit-margin-after: 0px;
@@ -89,6 +87,9 @@ img{border:0}
 }
 .white{
   color: white;
+}
+.container-fluid{
+  padding: 0px;
 }
 .clear-pads{
   padding-left: 0px !important;
@@ -216,16 +217,9 @@ img{border:0}
    margin-bottom: 50px;
  }
 .industries{
-  //width: 295px;
   height: 295px;
-  border-right: 1px solid #ebebeb;
-  //border-bottom-right-radius: 3px;
-  border-bottom: 1px solid #ebebeb;
-  border-radius: 8px;
-  background: url(../images/ellipses.png) center center;
-  background-repeat: no-repeat;
-  @include background-size(cover);
-
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .industries:not(:last-of-type) /*, .technology:not(:last-of-type)*/{
   margin-right: 20px;
@@ -235,6 +229,13 @@ img{border:0}
   height: 100%;
   padding-top: 90px;
   position: relative;
+  border-right: 1px solid #ebebeb;
+  //border-bottom-right-radius: 3px;
+  border-bottom: 1px solid #ebebeb;
+  border-radius: 8px;
+  background: url(../images/ellipses.png) center center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
 }
 .industries-wrap:hover{
   .circle{
@@ -846,7 +847,7 @@ img{border:0}
   -o-transition: all .4s;
   transition: all  .4s;
 }
-.custom-software-bg {
+.custom-software-bg, .amber-bg, .design-bg, .opal-bg, .ecolines-bg {
   transition: all .5s;
 }
 .year{
@@ -855,8 +856,8 @@ img{border:0}
   -o-transition: all .4s cubic-bezier(0.465, 0.615, 0.370, 1.235);
   transition: all  .4s cubic-bezier( 0.465, 0.615, 0.370, 1.15 );
 }
-.text-from-right, .mac, .amber-bg, .laptop, .rocket, .clouds, .data, .ecolines-bg, .sky, .city, .road, .bus,
- .london, .iphone, .nexus{
+.text-from-right, .mac, .laptop, .rocket, .clouds, .data, .sky, .city, .road, .bus,
+ .london, .iphone, .nexus, .text-from-left .title, .notebook, .text, .mac2, .keyboard, .mouse, .pens{
  -webkit-transition: all .5s cubic-bezier(0.465, 0.615, 0.370, 1.235);
   -moz-transition: all .5s cubic-bezier(0.465, 0.615, 0.370, 1.235);
  -o-transition: all .5s cubic-bezier(0.465, 0.615, 0.370, 1.235);
@@ -880,3 +881,5 @@ img{border:0}
 .image.active {
   @include animate( all, 1.3s, cubic-bezier(0.000, 1.025, 0.580, 1.000) );
 }
+@import "medium";
+@import "small";

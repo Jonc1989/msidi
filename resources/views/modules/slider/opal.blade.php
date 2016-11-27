@@ -2,10 +2,10 @@
 
     <div class="inner-bg">
         <div class="opal-bg"></div>
-        <div class="col-md-6 text-from-right white">
+        <div class="col-lg-4 col-lg-offset-2 text-from-right white">
             <div class="title clear-margs" >Opal</div>
             <div class="title">Transfer</div>
-            <div>
+            <div class="col-md-9 clear-pads">
                 You can send money abroad in 4 different ways.
                 If you enjoy the convenience of new technology,
                 then online transfers or our mobile app could suit you perfectly.

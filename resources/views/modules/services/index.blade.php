@@ -96,7 +96,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12 clear-pads blue-bg-shape">
         <div class="container clear-pads border-bottom-gray">
                 <div class="col-md-12 clear-pads industries-items">
-                        <div class="col-lg-3 col-md-4 clear-pads industries">
+                        <div class="col-lg-3 col-md-3 col-sm-6 industries">
                                 <div class="industries-wrap">
                                         <div class="count circle">
                                                 <div class="num">3</div>
@@ -106,7 +106,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-4 clear-pads industries">
+                        <div class="col-lg-3 col-md-3 col-sm-6 industries">
                                 <div class="industries-wrap">
                                         <div class="count circle">
                                                 <div class="num">3</div>
@@ -116,7 +116,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-4 clear-pads industries">
+                        <div class="col-lg-3 col-md-3 col-sm-6 industries">
                                 <div class="industries-wrap">
                                         <div class="count circle">
                                                 <div class="num">3</div>
@@ -126,7 +126,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-4 clear-pads industries">
+                        <div class="col-lg-3 col-md-3 col-sm-6 industries">
                                 <div class="industries-wrap">
                                         <div class="count circle">
                                                 <div class="num">3</div>

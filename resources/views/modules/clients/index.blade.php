@@ -38,7 +38,7 @@
     <div class="container clear-pads border-bottom-gray">
         <div class="col-md-12 col-sm-12 col-xs-12 clear-pads partnerz">
 
-            <div class="col-md-3 partner-col">
+            <div class="col-md-3 col-sm-6 partner-col">
                 <div class="partner-wrap">
                     <div class="roof"></div>
                     <div class=" partner">
@@ -55,7 +55,7 @@
             </div>
 
 
-            <div class="col-md-3 partner-col">
+            <div class="col-md-3 col-sm-6 partner-col">
                 <div class="partner-wrap">
                     <div class="roof"></div>
                     <div class=" partner">
@@ -70,7 +70,7 @@
                 <div class="ecolines"></div>
             </div>
 
-            <div class="col-md-3 partner-col">
+            <div class="col-md-3 col-sm-6 partner-col">
                 <div class="partner-wrap">
                     <div class="roof"></div>
                     <div class=" partner">
@@ -85,7 +85,7 @@
                 <div class="rn"></div>
             </div>
 
-            <div class="col-md-3 partner-col">
+            <div class="col-md-3 col-sm-6 partner-col">
                 <div class="partner-wrap">
                     <div class="roof"></div>
                     <div class=" partner">

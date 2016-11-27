@@ -19,6 +19,7 @@ class Controller extends BaseController
     
     public function main()
     {
+        \Log::info( \Request::path() );
         return view('layouts.main');
     }
 }

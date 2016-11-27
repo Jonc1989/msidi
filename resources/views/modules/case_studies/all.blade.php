@@ -1,5 +1,5 @@
 @extends('master')
-@include('layouts.navbar2')
+
 @section('content')
     <div class="container clear-pads all-case-stadies" ng-controller="CaseStudiesController">
         <div class="col-md-12 col-sm-12 col-xs-12">
