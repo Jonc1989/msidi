@@ -12,7 +12,7 @@
                         </div>
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12 clear-pads border-bottom-blue">
-                        <div class="col-md-3 col-md-3 col-xs-6 service-type">
+                        <div class="col-md-3 col-md-3 col-xs-12 service-type">
                                 <div class="monitor"></div>
                                 <div class="service-title">Custom software development</div>
                                 <div class="title-divider"></div>
@@ -28,7 +28,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-md-3 col-md-3 col-xs-6 service-type">
+                        <div class="col-md-3 col-md-3 col-xs-12 service-type">
                                 <div class="light-bulb"></div>
                                 <div class="service-title">User Experience <br>design</div>
                                 <div class="title-divider"></div>
@@ -44,7 +44,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-md-3 col-md-3 col-xs-6 service-type">
+                        <div class="col-md-3 col-md-3 col-xs-12 service-type">
                                 <div class="magnifier"></div>
                                 <div class="service-title">Re-engineering <br>and software testing</div>
                                 <div class="title-divider"></div>
@@ -60,7 +60,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-md-3 col-md-3 col-xs-6 service-type">
+                        <div class="col-md-3 col-md-3 col-xs-12 service-type">
                                 <div class="lifebelt"></div>
                                 <div class="service-title">Software maintenance <br>and support</div>
                                 <div class="title-divider"></div>
@@ -96,7 +96,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12 clear-pads blue-bg-shape">
         <div class="container clear-pads border-bottom-gray">
                 <div class="col-md-12 clear-pads industries-items">
-                        <div class="col-lg-3 col-md-3 col-sm-6 industries">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 industries">
                                 <div class="industries-wrap">
                                         <div class="count circle">
                                                 <div class="num">3</div>
@@ -106,7 +106,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-6 industries">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 industries">
                                 <div class="industries-wrap">
                                         <div class="count circle">
                                                 <div class="num">3</div>
@@ -116,7 +116,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-6 industries">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 industries">
                                 <div class="industries-wrap">
                                         <div class="count circle">
                                                 <div class="num">3</div>
@@ -126,7 +126,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-6 industries">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 industries">
                                 <div class="industries-wrap">
                                         <div class="count circle">
                                                 <div class="num">3</div>
