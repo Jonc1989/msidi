@@ -6,9 +6,20 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
         $scope.initSlider();
     };
 
+    $scope.makeActive = function (e) {
+        $(e).find('.inner-bg').addClass('active');
+    };
+
+    $scope.makeInActive = function (e) {
+        $(e).find('.inner-bg').addClass('leaving');
+    }
+
+
     $scope.initSlider = function () {
 
         $(document).ready(function(){
+
+
 
             $scope.slider = $('.bxslider').bxSlider({
                 minSlides: 1,
@@ -21,7 +32,7 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 useCSS: false,
                 controls: !1,
                 hideControlOnEnd: !0,
-                auto: true,
+                auto: false,
                 tickerHover: true,
                 touchEnabled: true,
                 onSliderLoad: function (currentIndex) {
@@ -35,19 +46,16 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
 
                 },
                 onSlideAfter: function (e) {
-                    setTimeout(function () {
-                        $(e).find('.inner-bg').addClass('active');
-                    },50);
-                    setTimeout(function () {
-                        $(e).find('.inner-bg').addClass('leaving');
-                    },3000);
+                    setTimeout($scope.makeActive( e ), 50);
+
+                    //setTimeout( $scope.makeInActive( e ), 3000);
 
                 }
 
             });
             $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
             setTimeout(function () {
-                $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('leaving');
+                //$scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('leaving');
             },3000);
 
         });

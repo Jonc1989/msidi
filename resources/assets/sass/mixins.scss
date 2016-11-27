@@ -16,3 +16,9 @@
   -o-transform: translate($x, $y);
   -moz-transform: translate($x, $y);
 }
+@mixin background-size( $val ){
+  -webkit-background-size: $val;
+  -moz-background-size: $val;
+  -o-background-size: $val;
+  background-size: $val;
+}

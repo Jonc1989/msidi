@@ -1,4 +1,5 @@
-caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', function ( $scope, CaseStudiesService){
+caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
+    function ( $scope, CaseStudiesService, $animate){
 
     $scope.caseStudies = [];
 
@@ -6,10 +7,23 @@ caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService
         $scope.getData();
     };
 
+    $scope.visible = 'all';
+
+    $scope.filter = function ( category ) {
+        $scope.visible = category;
+    };
+
+    $scope.showPosts = function ( category ) {
+        return $scope.visible === 'all' || $scope.visible === category;
+    };
+    
+
+
     $scope.getData = function(){
         CaseStudiesService.all( 6 ).then(function(response)
-        {
+        {console.log(response);
             $scope.caseStudies = response;
+            
         });
     };
 

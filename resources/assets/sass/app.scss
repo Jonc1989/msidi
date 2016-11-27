@@ -1,9 +1,12 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "mixins";
 @import "menu";
 @import "slider";
 @import "footer";
 @import "buttons";
-@import "mixins";
+@import "medium";
+@import "small";
+@import "animations";
 
 @font-face {
   font-family: 'Montserrat-Bold';
@@ -204,7 +207,7 @@ img{border:0}
   font-size: 18px;
   padding-left: 20px;
 }
- .technology, .industries{
+ .technology, .industries, .categories{
 
    text-align: center;
  }
@@ -213,7 +216,7 @@ img{border:0}
    margin-bottom: 50px;
  }
 .industries{
-  width: 295px;
+  //width: 295px;
   height: 295px;
   border-right: 1px solid #ebebeb;
   //border-bottom-right-radius: 3px;
@@ -221,6 +224,7 @@ img{border:0}
   border-radius: 8px;
   background: url(../images/ellipses.png) center center;
   background-repeat: no-repeat;
+  @include background-size(cover);
 
 }
 .industries:not(:last-of-type) /*, .technology:not(:last-of-type)*/{
@@ -232,6 +236,16 @@ img{border:0}
   padding-top: 90px;
   position: relative;
 }
+.industries-wrap:hover{
+  .circle{
+    -webkit-box-shadow: 2px 2px 6px 0px rgba(46,74,117,0.75);
+    -moz-box-shadow: 2px 2px 6px 0px rgba(46,74,117,0.75);
+    box-shadow: 2px 2px 6px 0px rgba(46,74,117,0.75);
+    margin-top: 2px;
+    margin-right: -2px;
+  }
+}
+
 .icon-erp{
   background: url(../images/icon.png) center center no-repeat;
 }
@@ -823,7 +837,9 @@ img{border:0}
   background: url(../images/minus.png) center center no-repeat;
   background-size: 22px 2px;
 }
-
+.category-wrap, .category{
+  display: inline-block;
+}
 .case-studies .image{
   -webkit-transition: all .4s;
   -moz-transition: all .4s;
@@ -839,7 +855,8 @@ img{border:0}
   -o-transition: all .4s cubic-bezier(0.465, 0.615, 0.370, 1.235);
   transition: all  .4s cubic-bezier( 0.465, 0.615, 0.370, 1.15 );
 }
-.text-from-right, .mac, .amber-bg, .laptop, .rocket, .clouds, .data, .ecolines-bg, .sky, .city, .road, .bus, .london, .iphone, .nexus{
+.text-from-right, .mac, .amber-bg, .laptop, .rocket, .clouds, .data, .ecolines-bg, .sky, .city, .road, .bus,
+ .london, .iphone, .nexus{
  -webkit-transition: all .5s cubic-bezier(0.465, 0.615, 0.370, 1.235);
   -moz-transition: all .5s cubic-bezier(0.465, 0.615, 0.370, 1.235);
  -o-transition: all .5s cubic-bezier(0.465, 0.615, 0.370, 1.235);

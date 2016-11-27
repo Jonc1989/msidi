@@ -82,9 +82,9 @@
 }
 .mac{
   background: url(../images/amber/iMac.png) center center no-repeat;
-  width: 760px;
-  height: 620px;
+  @include background-size(contain);
 }
+
 .laptop{
   background: url(../images/custom-software/laptop.png) bottom center no-repeat;
   height: 557px;

@@ -1,4 +1,5 @@
 var app = angular.module( 'app', [
+    'ngAnimate',
    'caseStudies',
     'clients',
     'company',
@@ -8,7 +9,7 @@ var app = angular.module( 'app', [
 
 $(document).ready(function(){
 
-    $(".nav li > a").click(function(e) {
+    $(".home li > a").click(function(e) {
         e.preventDefault();
         var top = $(this).attr("href");
         $("html, body").animate({
@@ -17,37 +18,11 @@ $(document).ready(function(){
     })
 
 });
-$(window).load(function () {
-    var scroll = $(window).scrollTop();
-    var height = $(window).height();
-    var partners = $('#clients .partnerz' ).offset().top;
-    var partnersHeight = $('#clients .partnerz' ).height();
-    var breakpoint = ( scroll + ( height / 2 ));
 
-    if ( breakpoint > ( partners - 100 ) &&  breakpoint < ( partners + partnersHeight + 100 ) ) {
-        $(".year").addClass("active");
-        $(".year-txt").addClass("active");
-        $('.partner .image').addClass( 'active' );
-    }
-
-
-    $(window).on('scroll',function() {
-        var currentScroll = $(window).scrollTop();
-        var currentBreakpoint = ( currentScroll + ( height / 2 ));
-
-        if ( currentBreakpoint > ( partners - 100 ) &&  currentBreakpoint < ( partners + partnersHeight + 100 ) ){
-            
-            $(".year").addClass("active");
-            $(".year-txt").addClass("active");
-            $('.partner .image').addClass( 'active' );
-        }
-    });
-
-});
-var caseStudies = angular.module('caseStudies', [
+var career = angular.module('career', [
 
 ]);
-var career = angular.module('career', [
+var caseStudies = angular.module('caseStudies', [
 
 ]);
 var clients = angular.module('clients', [
@@ -59,52 +34,6 @@ var company = angular.module('company', [
 var slider = angular.module('slider', [
 
 ]);
-caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', function ( $scope, CaseStudiesService){
-
-    $scope.caseStudies = [];
-
-    this.$onInit = function () {
-        $scope.getData();
-    };
-
-    $scope.getData = function(){
-        CaseStudiesService.all( 6 ).then(function(response)
-        {
-            $scope.caseStudies = response;
-        });
-    };
-
-
-}]);
-caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
-{
-    var CaseStudiesService = {
-
-        all: function( count )
-        {
-            var deferred = $q.defer();
-            $http.get( '/api/case-studies', {params:{ count: count }} )
-                .success( function( response )
-                {
-                    deferred.resolve( response );
-                } )
-                .error( function( response, status )
-                {
-                    if (status === 422)
-                    {
-                        deferred.resolve({errors: response});
-                    } else
-                    {
-                        deferred.reject();
-                    }
-                } );
-
-            return deferred.promise;
-
-        }
-    };
-    return CaseStudiesService;
-}]);
 career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $scope, CareerService ){
 
 
@@ -184,6 +113,66 @@ career.service( 'CareerService', ['$http', '$q', function( $http, $q )
     return CareerService;
 }]);
 
+caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
+    function ( $scope, CaseStudiesService, $animate){
+
+    $scope.caseStudies = [];
+
+    this.$onInit = function () {
+        $scope.getData();
+    };
+
+    $scope.visible = 'all';
+
+    $scope.filter = function ( category ) {
+        $scope.visible = category;
+    };
+
+    $scope.showPosts = function ( category ) {
+        return $scope.visible === 'all' || $scope.visible === category;
+    };
+    
+
+
+    $scope.getData = function(){
+        CaseStudiesService.all( 6 ).then(function(response)
+        {console.log(response);
+            $scope.caseStudies = response;
+            
+        });
+    };
+
+
+}]);
+caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
+{
+    var CaseStudiesService = {
+
+        all: function( count )
+        {
+            var deferred = $q.defer();
+            $http.get( '/api/case-studies', {params:{ count: count }} )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CaseStudiesService;
+}]);
 caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
 
     $scope.clients = [];
@@ -226,6 +215,34 @@ caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
        // },500);
 
     };
+
+    $(window).load(function () {
+        var scroll = $(window).scrollTop();
+        var height = $(window).height();
+        var partners = $('#clients .partnerz' ).offset().top;
+        var partnersHeight = $('#clients .partnerz' ).height();
+        var breakpoint = ( scroll + ( height / 2 ));
+
+        if ( breakpoint > ( partners - 100 ) &&  breakpoint < ( partners + partnersHeight + 100 ) ) {
+            $(".year").addClass("active");
+            $(".year-txt").addClass("active");
+            $('.partner .image').addClass( 'active' );
+        }
+
+
+        $(window).on('scroll',function() {
+            var currentScroll = $(window).scrollTop();
+            var currentBreakpoint = ( currentScroll + ( height / 2 ));
+
+            if ( currentBreakpoint > ( partners - 100 ) &&  currentBreakpoint < ( partners + partnersHeight + 100 ) ){
+
+                $(".year").addClass("active");
+                $(".year-txt").addClass("active");
+                $('.partner .image').addClass( 'active' );
+            }
+        });
+
+    });
 
 
 }]);
@@ -345,9 +362,20 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
         $scope.initSlider();
     };
 
+    $scope.makeActive = function (e) {
+        $(e).find('.inner-bg').addClass('active');
+    };
+
+    $scope.makeInActive = function (e) {
+        $(e).find('.inner-bg').addClass('leaving');
+    }
+
+
     $scope.initSlider = function () {
 
         $(document).ready(function(){
+
+
 
             $scope.slider = $('.bxslider').bxSlider({
                 minSlides: 1,
@@ -360,7 +388,7 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 useCSS: false,
                 controls: !1,
                 hideControlOnEnd: !0,
-                auto: true,
+                auto: false,
                 tickerHover: true,
                 touchEnabled: true,
                 onSliderLoad: function (currentIndex) {
@@ -374,19 +402,16 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
 
                 },
                 onSlideAfter: function (e) {
-                    setTimeout(function () {
-                        $(e).find('.inner-bg').addClass('active');
-                    },50);
-                    setTimeout(function () {
-                        $(e).find('.inner-bg').addClass('leaving');
-                    },3000);
+                    setTimeout($scope.makeActive( e ), 50);
+
+                    //setTimeout( $scope.makeInActive( e ), 3000);
 
                 }
 
             });
             $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
             setTimeout(function () {
-                $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('leaving');
+                //$scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('leaving');
             },3000);
 
         });
