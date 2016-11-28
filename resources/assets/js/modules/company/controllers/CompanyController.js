@@ -65,6 +65,7 @@ company.controller( 'CompanyController', [ '$scope', 'CompanyService', function 
         var myOptions = {
             zoom:14,
             center:new google.maps.LatLng(56.526248,27.357412599999975),
+            scrollwheel: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP};
         map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
         marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(56.526248,27.357412599999975)});
