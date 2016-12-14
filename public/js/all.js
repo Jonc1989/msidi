@@ -34,6 +34,36 @@ var company = angular.module('company', [
 var slider = angular.module('slider', [
 
 ]);
+career.service( 'CareerService', ['$http', '$q', function( $http, $q )
+{
+    var CareerService = {
+
+        sendMail: function( message )
+        {
+            var deferred = $q.defer();
+            $http.post( '/api/career/send', message )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CareerService;
+}]);
+
 career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $scope, CareerService ){
 
 
@@ -83,36 +113,6 @@ career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $
     };
 
 }]);
-career.service( 'CareerService', ['$http', '$q', function( $http, $q )
-{
-    var CareerService = {
-
-        sendMail: function( message )
-        {
-            var deferred = $q.defer();
-            $http.post( '/api/career/send', message )
-                .success( function( response )
-                {
-                    deferred.resolve( response );
-                } )
-                .error( function( response, status )
-                {
-                    if (status === 422)
-                    {
-                        deferred.resolve({errors: response});
-                    } else
-                    {
-                        deferred.reject();
-                    }
-                } );
-
-            return deferred.promise;
-
-        }
-    };
-    return CareerService;
-}]);
-
 caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
     function ( $scope, CaseStudiesService, $animate){
 
@@ -373,7 +373,7 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
 
     $scope.initSlider = function () {
 
-        $(document).ready(function(){
+        $(window).load(function () {
 
 
 

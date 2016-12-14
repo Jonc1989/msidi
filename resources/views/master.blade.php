@@ -31,10 +31,16 @@
         <script src="<?=  url('/') ?>/js/vendor/jquery-2.2.4.min.js"></script>
         <script src="<?=  url('/') ?>/js/vendor/bootstrap.min.js"></script>
         <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-
+        <script src="<?=  url('/') ?>/js/vendor/countUp.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-animate.js"></script>
         <script src="<?=  url('/') ?>/js/vendor/jquery.bxslider.min.js"></script>
         <script src="<?=  url('/') ?>/js/all.js"></script>
+        <script>
+            $(window).load(function () {
+                var counter = new countUp('project-count', 1, 8, 0, 2)
+                counter.start();
+            });
+        </script>
     </body>
 </html>
