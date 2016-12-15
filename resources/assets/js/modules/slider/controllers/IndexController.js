@@ -17,7 +17,7 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
 
     $scope.initSlider = function () {
 
-        $(document).ready(function(){
+        $(window).load(function () {
 
 
 

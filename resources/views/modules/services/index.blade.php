@@ -79,7 +79,7 @@
 
                 <div id="industries-top" class="col-md-12 col-sm-12 col-xs-12 center">
                         <div class="project-count-wrap">
-                                <div class="project-count">8</div>
+                                <div class="project-count" id="project-count"></div>
                                 <div class="project-text">
 
                                         <div class="">Projects</div>

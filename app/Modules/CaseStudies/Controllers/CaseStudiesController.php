@@ -88,14 +88,13 @@ class CaseStudiesController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function exigen()
     {
-        //
+        return view( 'modules.case_studies.exigen' );
+    }
+
+    public function opalOnline()
+    {
+        return view( 'modules.case_studies.opal-online' );
     }
 }

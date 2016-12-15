@@ -34,6 +34,39 @@ var company = angular.module('company', [
 var slider = angular.module('slider', [
 
 ]);
+var slider = angular.module('slider', [
+
+]);
+career.service( 'CareerService', ['$http', '$q', function( $http, $q )
+{
+    var CareerService = {
+
+        sendMail: function( message )
+        {
+            var deferred = $q.defer();
+            $http.post( '/api/career/send', message )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CareerService;
+}]);
+
 career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $scope, CareerService ){
 
 
@@ -83,14 +116,45 @@ career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $
     };
 
 }]);
-career.service( 'CareerService', ['$http', '$q', function( $http, $q )
-{
-    var CareerService = {
+caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
+    function ( $scope, CaseStudiesService, $animate){
 
-        sendMail: function( message )
+    $scope.caseStudies = [];
+
+    this.$onInit = function () {
+        $scope.getData();
+    };
+
+    $scope.visible = 'all';
+
+    $scope.filter = function ( category ) {
+        $scope.visible = category;
+    };
+
+    $scope.showPosts = function ( category ) {
+        return $scope.visible === 'all' || $scope.visible === category;
+    };
+
+
+
+    $scope.getData = function(){
+        CaseStudiesService.all( 6 ).then(function(response)
+        {console.log(response);
+            $scope.caseStudies = response;
+
+        });
+    };
+
+
+}]);
+caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
+{
+    var CaseStudiesService = {
+
+        all: function( count )
         {
             var deferred = $q.defer();
-            $http.post( '/api/career/send', message )
+            $http.get( '/api/case-studies', {params:{ count: count }} )
                 .success( function( response )
                 {
                     deferred.resolve( response );
@@ -110,7 +174,7 @@ career.service( 'CareerService', ['$http', '$q', function( $http, $q )
 
         }
     };
-    return CareerService;
+    return CaseStudiesService;
 }]);
 
 caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
@@ -131,14 +195,14 @@ caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService
     $scope.showPosts = function ( category ) {
         return $scope.visible === 'all' || $scope.visible === category;
     };
-    
+
 
 
     $scope.getData = function(){
         CaseStudiesService.all( 6 ).then(function(response)
         {console.log(response);
             $scope.caseStudies = response;
-            
+
         });
     };
 
@@ -257,9 +321,9 @@ company.controller( 'CompanyController', [ '$scope', 'CompanyService', function 
         cfsubject: '',
         cftext: ''
     };
-    
+
     $scope.loading = true;
-    
+
     this.$onInit = function () {
         $scope.init_map();
     };
@@ -273,12 +337,12 @@ company.controller( 'CompanyController', [ '$scope', 'CompanyService', function 
         $('#company .form-group' ).removeClass( 'has-error' );
     };
 
-    $scope.send = function () { 
+    $scope.send = function () {
         if(
             //!$scope.loading &&
             !$scope.contactForm.$invalid ){
             //$scope.loading = true;
-            
+
             CompanyService.sendMail( $scope.message ).then(function (response) {
                 //$scope.loading = false;
 
@@ -306,7 +370,7 @@ company.controller( 'CompanyController', [ '$scope', 'CompanyService', function 
             }
 
         }
-        
+
     };
 
     $scope.init_map = function (){
@@ -314,6 +378,20 @@ company.controller( 'CompanyController', [ '$scope', 'CompanyService', function 
             zoom:14,
             center:new google.maps.LatLng(56.526248,27.357412599999975),
             scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP};
+        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+        marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(56.526248,27.357412599999975)});
+        infowindow = new google.maps.InfoWindow({content:'<strong> </strong><br>Rēzekne, Maskavas 22<br>'});
+        google.maps.event.addListener(marker, 'click', function(){
+            infowindow.open(map,marker);
+        });
+        //infowindow.open(map,marker);
+        //google.maps.event.addDomListener(window, 'load', init_map);
+    }
+    $scope.init_map = function (){
+        var myOptions = {
+            zoom:14,
+            center:new google.maps.LatLng(56.526248,27.357412599999975),
             mapTypeId: google.maps.MapTypeId.ROADMAP};
         map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
         marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(56.526248,27.357412599999975)});
@@ -420,6 +498,114 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
     };
     
     
+
+}]);
+company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
+{
+    var CompanyService = {
+
+        sendMail: function( message )
+        {
+            var deferred = $q.defer();
+            $http.post( '/api/company/send', message )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CompanyService;
+}]);
+company.controller( 'CompanyController', [ '$scope', 'CompanyService', function ( $scope, CompanyService ){
+
+
+    $scope.contactForm = {};
+
+    $scope.message = {
+        cfsender: '',
+        cfemail: '',
+        cfsubject: '',
+        cftext: ''
+    };
+    
+    $scope.loading = true;
+    
+    this.$onInit = function () {
+        $scope.init_map();
+    };
+
+    $scope.setFormScope = function( form )
+    {
+        $scope.contactForm = form;
+    };
+
+    $scope.removeErrors = function(){
+        $('#company .form-group' ).removeClass( 'has-error' );
+    };
+
+    $scope.send = function () { 
+        if(
+            //!$scope.loading &&
+            !$scope.contactForm.$invalid ){
+            //$scope.loading = true;
+            
+            CompanyService.sendMail( $scope.message ).then(function (response) {
+                //$scope.loading = false;
+
+                $scope.message = {
+                    cfsender: '',
+                    cfemail: '',
+                    cfsubject: '',
+                    cftext: ''
+                };
+
+            });
+        }else{
+            $scope.removeErrors();
+            for (var property in $scope.message) {
+
+                    if( $scope.contactForm[property].$invalid ){
+                        var $field = $( '[name="' + property + '"]' ); console.log($field);
+                        if( $field )
+                        {
+                            $field.closest( '.form-group' )
+                                .addClass( 'has-error' );
+                        }
+                    }
+
+            }
+
+        }
+        
+    };
+
+    $scope.init_map = function (){
+        var myOptions = {
+            zoom:14,
+            center:new google.maps.LatLng(56.526248,27.357412599999975),
+            mapTypeId: google.maps.MapTypeId.ROADMAP};
+        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+        marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(56.526248,27.357412599999975)});
+        infowindow = new google.maps.InfoWindow({content:'<strong> </strong><br>Rēzekne, Maskavas 22<br>'});
+        google.maps.event.addListener(marker, 'click', function(){
+            infowindow.open(map,marker);
+        });
+        //infowindow.open(map,marker);
+        //google.maps.event.addDomListener(window, 'load', init_map);
+    }
 
 }]);
 //# sourceMappingURL=all.js.map

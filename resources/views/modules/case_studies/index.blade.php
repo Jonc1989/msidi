@@ -29,7 +29,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12 case-studies-wrap">
                 <div class="col-md-4 case-studies" ng-repeat="item in caseStudies">
                     <div class="studie">
-                        <a href="">
+                        <a href="{{ item.url }}">
                             <div class="cover">
                                 <div class="image" ng-style="{'background':'url({{ item.image }}) center center no-repeat'}">
 
