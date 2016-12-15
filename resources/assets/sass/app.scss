@@ -120,18 +120,21 @@ img{border:0}
 }
 #slider{
   .slider-container{
-    height: 990px;
+    height: 950px;
 
   }
   .bxslider ul li{
     overflow: hidden;
   }
-  .amber-container, .ecolines-container, .bx-wrapper, .bx-viewport{
-    height: 950px !important;
+  .amber-container,  .bx-wrapper, .bx-viewport{
+    height: 950px;
     //background: #506df9;
   }
-}
 
+}
+.ecolines-container{
+  height: 950px;
+}
 
 .blue-bg{
   background: #506df9;

@@ -5,7 +5,7 @@
 
 }
 #slider{
-  opacity: 0;
+  //opacity: 0;
   .bx-wrapper .bx-viewport {
 
     background: #506df9;
@@ -66,6 +66,7 @@
   height: 260px;
 }
 .mac2{
+  opacity: 0;
   background: url(../images/design/iMac2.png) right top no-repeat;
   height: 397px;
   width: 110%;
@@ -107,6 +108,11 @@
 }
 .custom-software-bg.active{
   background-position: 0px 0px;
+}
+.amber-container{
+  //background: url(../images/design/design.png) center top no-repeat;
+
+
 }
 .custom-software-container{
   .inner-bg{
@@ -153,7 +159,8 @@
   position: absolute;
 }
 .clouds{
-  background: url(../images/custom-software/clouds.png) center center no-repeat;
+  background: url(../images/custom-software/clouds.png) center bottom no-repeat;
+  background-size: contain;
   height: 358px;
   position: absolute;
   bottom: -10000px;
@@ -363,6 +370,7 @@
     opacity: 1;
   }
   .mac2 {
+    opacity: 1;
     right: 0px;
   }
   .keyboard{

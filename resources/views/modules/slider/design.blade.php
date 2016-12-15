@@ -2,8 +2,8 @@
 
     <div class="inner-bg">
         <div class="design-bg"></div>
-        <div class="col-md-5 text-from-left white">
-            <div class="col-md-offset-4 col-md-8">
+        <div class="col-lg-6 col-md-6 text-from-left white">
+            <div class="col-lg-offset-4 col-lg-8 col-md-offset-3 col-md-9">
                 <div class="title" >Product design</div>
                 <div class="title">& Development</div>
                 <div class="text">
@@ -16,7 +16,7 @@
         </div>
 
 
-        <div class="col-md-7 clear-pads">
+        <div class="col-lg-6 col-md-6 clear-pads">
             <div class="col-md-12 clear-pads computer-wrap">
                 <div class="col-md-12 clear-pads mac2"></div>
             </div>

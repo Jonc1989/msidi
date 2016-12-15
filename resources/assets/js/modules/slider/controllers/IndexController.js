@@ -36,7 +36,7 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 tickerHover: true,
                 touchEnabled: true,
                 onSliderLoad: function (currentIndex) {
-                    $( '#slider' ).css( 'opacity', 1 );
+                    //$( '#slider' ).css( 'opacity', 1 );
                 },
                 onSlideBefore: function (e) {
                     //setTimeout(function () {

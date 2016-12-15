@@ -5775,10 +5775,8 @@ button.close {
   border: none;
   left: 0px; }
 
-#slider {
-  opacity: 0; }
-  #slider .bx-wrapper .bx-viewport {
-    background: #506df9; }
+#slider .bx-wrapper .bx-viewport {
+  background: #506df9; }
 
 @media (min-width: 768px) {
   #slider {
@@ -5831,6 +5829,7 @@ button.close {
   height: 260px; }
 
 .mac2 {
+  opacity: 0;
   background: url(../images/design/iMac2.png) right top no-repeat;
   height: 397px;
   width: 110%;
@@ -5908,7 +5907,8 @@ button.close {
   position: absolute; }
 
 .clouds {
-  background: url(../images/custom-software/clouds.png) center center no-repeat;
+  background: url(../images/custom-software/clouds.png) center bottom no-repeat;
+  background-size: contain;
   height: 358px;
   position: absolute;
   bottom: -10000px; }
@@ -6103,6 +6103,7 @@ button.close {
   opacity: 1; }
 
 .inner-bg.active .mac2 {
+  opacity: 1;
   right: 0px; }
 
 .inner-bg.active .keyboard {
@@ -6469,13 +6470,16 @@ img {
   font-size: 16px; }
 
 #slider .slider-container {
-  height: 990px; }
+  height: 950px; }
 
 #slider .bxslider ul li {
   overflow: hidden; }
 
-#slider .amber-container, #slider .ecolines-container, #slider .bx-wrapper, #slider .bx-viewport {
-  height: 950px !important; }
+#slider .amber-container, #slider .bx-wrapper, #slider .bx-viewport {
+  height: 950px; }
+
+.ecolines-container {
+  height: 950px; }
 
 .blue-bg {
   background: #506df9; }
@@ -7137,7 +7141,27 @@ img {
 
 @media (max-width: 1370px) {
   .mac {
-    height: 500px; } }
+    height: 500px; }
+  .amber-bg {
+    padding-top: 200px; }
+  .sky {
+    padding-top: 160px; }
+  #slider .slider-container {
+    height: 750px; }
+  #slider .amber-container, #slider, #slider .bx-wrapper, #slider .bx-viewport {
+    height: 750px; }
+  .inner-bg, .ecolines-container {
+    height: 700px; }
+  .opal-container .london {
+    height: 950px; }
+  .opal-container .inner-bg {
+    padding-top: 175px; }
+  .custom-software-container .inner-bg {
+    padding-top: 180px; }
+  .design-container .inner-bg {
+    padding-top: 190px; }
+  .mac2 {
+    top: -40px; } }
 
 @media (min-width: 1200px) {
   .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
