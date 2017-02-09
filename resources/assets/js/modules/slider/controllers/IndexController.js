@@ -32,7 +32,7 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 useCSS: false,
                 controls: !0,
                 hideControlOnEnd: !0,
-                auto: true,
+                auto: false,
                 tickerHover: true,
                 touchEnabled: true,
                 onSliderLoad: function (currentIndex) {
@@ -53,6 +53,13 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 }
 
             });
+            
+            // $('.bx-prev').click( function () {
+            //     $scope.slider.startAuto();
+            // });
+            // $('.bx-next').click( function () {
+            //     $scope.slider.startAuto();
+            // });
             $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
             setTimeout(function () {
                 //$scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('leaving');

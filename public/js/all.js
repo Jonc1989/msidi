@@ -22,10 +22,10 @@ $(document).ready(function(){
 var career = angular.module('career', [
 
 ]);
-var caseStudies = angular.module('caseStudies', [
+var clients = angular.module('clients', [
 
 ]);
-var clients = angular.module('clients', [
+var caseStudies = angular.module('caseStudies', [
 
 ]);
 var company = angular.module('company', [
@@ -113,66 +113,6 @@ career.service( 'CareerService', ['$http', '$q', function( $http, $q )
     return CareerService;
 }]);
 
-caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
-{
-    var CaseStudiesService = {
-
-        all: function( count )
-        {
-            var deferred = $q.defer();
-            $http.get( '/api/case-studies', {params:{ count: count }} )
-                .success( function( response )
-                {
-                    deferred.resolve( response );
-                } )
-                .error( function( response, status )
-                {
-                    if (status === 422)
-                    {
-                        deferred.resolve({errors: response});
-                    } else
-                    {
-                        deferred.reject();
-                    }
-                } );
-
-            return deferred.promise;
-
-        }
-    };
-    return CaseStudiesService;
-}]);
-caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
-    function ( $scope, CaseStudiesService, $animate){
-
-    $scope.caseStudies = [];
-
-    this.$onInit = function () {
-        $scope.getData();
-    };
-
-    $scope.visible = 'all';
-
-    $scope.filter = function ( category ) {
-        $scope.visible = category;
-    };
-
-    $scope.showPosts = function ( category ) {
-        return $scope.visible === 'all' || $scope.visible === category;
-    };
-    
-
-
-    $scope.getData = function(){
-        CaseStudiesService.all( 6 ).then(function(response)
-        {console.log(response);
-            $scope.caseStudies = response;
-            
-        });
-    };
-
-
-}]);
 caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
 
     $scope.clients = [];
@@ -245,6 +185,66 @@ caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
     });
 
 
+}]);
+caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
+    function ( $scope, CaseStudiesService, $animate){
+
+    $scope.caseStudies = [];
+
+    this.$onInit = function () {
+        $scope.getData();
+    };
+
+    $scope.visible = 'all';
+
+    $scope.filter = function ( category ) {
+        $scope.visible = category;
+    };
+
+    $scope.showPosts = function ( category ) {
+        return $scope.visible === 'all' || $scope.visible === category;
+    };
+    
+
+
+    $scope.getData = function(){
+        CaseStudiesService.all( 6 ).then(function(response)
+        {console.log(response);
+            $scope.caseStudies = response;
+            
+        });
+    };
+
+
+}]);
+caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
+{
+    var CaseStudiesService = {
+
+        all: function( count )
+        {
+            var deferred = $q.defer();
+            $http.get( '/api/case-studies', {params:{ count: count }} )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CaseStudiesService;
 }]);
 company.controller( 'CompanyController', [ '$scope', 'CompanyService', function ( $scope, CompanyService ){
 
@@ -389,7 +389,7 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 useCSS: false,
                 controls: !0,
                 hideControlOnEnd: !0,
-                auto: true,
+                auto: false,
                 tickerHover: true,
                 touchEnabled: true,
                 onSliderLoad: function (currentIndex) {
@@ -410,6 +410,13 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 }
 
             });
+            
+            // $('.bx-prev').click( function () {
+            //     $scope.slider.startAuto();
+            // });
+            // $('.bx-next').click( function () {
+            //     $scope.slider.startAuto();
+            // });
             $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
             setTimeout(function () {
                 //$scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('leaving');

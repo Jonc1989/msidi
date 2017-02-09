@@ -12,7 +12,7 @@
                     We manage all necessary data, which allows to make wise and fast decisions.
                 </div>
             </div>
-            <div class="notebook col-md-offset-1 col-md-9"></div>
+            <div class="notebook col-md-offset-5 col-md-6"></div>
         </div>
 
 
