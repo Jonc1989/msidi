@@ -5832,10 +5832,8 @@ button.close {
   opacity: 0;
   background: url(../images/design/iMac2.png) right top no-repeat;
   height: 397px;
-  width: 110%;
+  width: 100%;
   right: -1000px;
-  top: -165px;
-  position: absolute;
   background-size: contain; }
 
 .amber-bg {
@@ -5992,7 +5990,7 @@ button.close {
 .design-container {
   background: url(../images/opal/opal.png) center center no-repeat; }
   .design-container .inner-bg {
-    padding-top: 320px; }
+    padding-top: 155px; }
 
 .opal-container {
   background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;

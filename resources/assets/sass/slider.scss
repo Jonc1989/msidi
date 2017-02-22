@@ -69,10 +69,10 @@
   opacity: 0;
   background: url(../images/design/iMac2.png) right top no-repeat;
   height: 397px;
-  width: 110%;
+  width: 100%;
   right: -1000px;
-  top: -165px;
-  position: absolute;
+  //top: -165px;
+  //position: absolute;
   @include background-size(contain);
 }
 .amber-bg{
@@ -245,7 +245,7 @@
 }
 .design-container{
   .inner-bg{
-    padding-top: 320px;
+    padding-top: 155px;
   }
   background: url(../images/opal/opal.png) center center no-repeat;
 }
