@@ -5797,7 +5797,6 @@ button.close {
   height: 348px;
   position: absolute;
   left: -1000px;
-  bottom: -54px;
   opacity: 0; }
 
 .keyboard {
@@ -5991,6 +5990,12 @@ button.close {
   background: url(../images/opal/opal.png) center center no-repeat; }
   .design-container .inner-bg {
     padding-top: 155px; }
+  .design-container .text-from-left {
+    margin-top: 205px;
+    max-height: 500px;
+    transform: translateX(100px); }
+  .design-container .title {
+    max-width: 370px; }
 
 .opal-container {
   background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;
@@ -7157,11 +7162,13 @@ img {
   .custom-software-container .inner-bg {
     padding-top: 180px; }
   .design-container .inner-bg {
-    padding-top: 190px; }
+    padding-top: 125px; }
   .mac2 {
-    top: -40px; }
+    height: 295px; }
+  .design-container .text-from-left {
+    max-height: 330px; }
   .notebook {
-    height: 275px;
+    height: 185px;
     margin-left: 40%; } }
 
 @media (min-width: 1200px) {

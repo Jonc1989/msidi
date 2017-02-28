@@ -34,7 +34,7 @@
   height: 348px;
   position: absolute;
   left: -1000px;
-  bottom: -54px;
+  //bottom: -54px;
   opacity: 0;
 }
 .keyboard{
@@ -248,6 +248,14 @@
     padding-top: 155px;
   }
   background: url(../images/opal/opal.png) center center no-repeat;
+  .text-from-left{
+    margin-top: 205px;
+    max-height: 500px;
+    transform: translateX(100px);
+  }
+  .title{
+    max-width: 370px;
+  }
 }
 .opal-container{
   background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;
