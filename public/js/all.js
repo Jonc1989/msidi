@@ -22,13 +22,13 @@ $(document).ready(function(){
 var career = angular.module('career', [
 
 ]);
-var clients = angular.module('clients', [
-
-]);
 var caseStudies = angular.module('caseStudies', [
 
 ]);
 var company = angular.module('company', [
+
+]);
+var clients = angular.module('clients', [
 
 ]);
 var slider = angular.module('slider', [
@@ -113,79 +113,6 @@ career.service( 'CareerService', ['$http', '$q', function( $http, $q )
     return CareerService;
 }]);
 
-caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
-
-    $scope.clients = [];
-
-    this.$onInit = function () {
-
-        var slider = $('.client-slider').bxSlider({
-            slideWidth: 820,
-            minSlides: 1,
-            moveSlides: 1,
-            slideMargin: 20,
-            speed: 500,
-            pager: !1,
-            infiniteLoop: !0,
-            controls: !0,
-            hideControlOnEnd: !0,
-            auto: false,
-            tickerHover: true,
-            touchEnabled: true,
-            onSliderLoad: function () {
-
-            },
-            onSlideBefore: function (e) {
-                //setTimeout(function () {
-                    //$(e).removeClass('active');
-                    $('.client-slide').removeClass('active');
-                //},497);
-
-            },
-            onSlideAfter: function (e) { console.log( e);
-                //setTimeout(function () {
-                    $(e).find('.client-slide').addClass('active');
-                //},500);
-
-            }
-
-        });
-       // setTimeout(function () {
-            slider.getCurrentSlideElement().find('.client-slide').addClass('active');
-       // },500);
-
-    };
-
-    $(window).load(function () {
-        var scroll = $(window).scrollTop();
-        var height = $(window).height();
-        var partners = $('#clients .partnerz' ).offset().top;
-        var partnersHeight = $('#clients .partnerz' ).height();
-        var breakpoint = ( scroll + ( height / 2 ));
-
-        if ( breakpoint > ( partners - 100 ) &&  breakpoint < ( partners + partnersHeight + 100 ) ) {
-            $(".year").addClass("active");
-            $(".year-txt").addClass("active");
-            $('.partner .image').addClass( 'active' );
-        }
-
-
-        $(window).on('scroll',function() {
-            var currentScroll = $(window).scrollTop();
-            var currentBreakpoint = ( currentScroll + ( height / 2 ));
-
-            if ( currentBreakpoint > ( partners - 100 ) &&  currentBreakpoint < ( partners + partnersHeight + 100 ) ){
-
-                $(".year").addClass("active");
-                $(".year-txt").addClass("active");
-                $('.partner .image').addClass( 'active' );
-            }
-        });
-
-    });
-
-
-}]);
 caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
     function ( $scope, CaseStudiesService, $animate){
 
@@ -355,6 +282,79 @@ company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
     };
     return CompanyService;
 }]);
+caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
+
+    $scope.clients = [];
+
+    this.$onInit = function () {
+
+        var slider = $('.client-slider').bxSlider({
+            slideWidth: 820,
+            minSlides: 1,
+            moveSlides: 1,
+            slideMargin: 20,
+            speed: 500,
+            pager: !1,
+            infiniteLoop: !0,
+            controls: !0,
+            hideControlOnEnd: !0,
+            auto: false,
+            tickerHover: true,
+            touchEnabled: true,
+            onSliderLoad: function () {
+
+            },
+            onSlideBefore: function (e) {
+                //setTimeout(function () {
+                    //$(e).removeClass('active');
+                    $('.client-slide').removeClass('active');
+                //},497);
+
+            },
+            onSlideAfter: function (e) { console.log( e);
+                //setTimeout(function () {
+                    $(e).find('.client-slide').addClass('active');
+                //},500);
+
+            }
+
+        });
+       // setTimeout(function () {
+            slider.getCurrentSlideElement().find('.client-slide').addClass('active');
+       // },500);
+
+    };
+
+    $(window).load(function () {
+        var scroll = $(window).scrollTop();
+        var height = $(window).height();
+        var partners = $('#clients .partnerz' ).offset().top;
+        var partnersHeight = $('#clients .partnerz' ).height();
+        var breakpoint = ( scroll + ( height / 2 ));
+
+        if ( breakpoint > ( partners - 100 ) &&  breakpoint < ( partners + partnersHeight + 100 ) ) {
+            $(".year").addClass("active");
+            $(".year-txt").addClass("active");
+            $('.partner .image').addClass( 'active' );
+        }
+
+
+        $(window).on('scroll',function() {
+            var currentScroll = $(window).scrollTop();
+            var currentBreakpoint = ( currentScroll + ( height / 2 ));
+
+            if ( currentBreakpoint > ( partners - 100 ) &&  currentBreakpoint < ( partners + partnersHeight + 100 ) ){
+
+                $(".year").addClass("active");
+                $(".year-txt").addClass("active");
+                $('.partner .image').addClass( 'active' );
+            }
+        });
+
+    });
+
+
+}]);
 slider.controller( 'IndexController', [ '$scope', function ( $scope ){
 
     $scope.slider = {};
@@ -389,7 +389,7 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 useCSS: false,
                 controls: !0,
                 hideControlOnEnd: !0,
-                auto: false,
+                auto: true,
                 tickerHover: true,
                 touchEnabled: true,
                 onSliderLoad: function (currentIndex) {
@@ -419,7 +419,7 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
             // });
             $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
             setTimeout(function () {
-                //$scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('leaving');
+                $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('leaving');
             },3000);
 
         });

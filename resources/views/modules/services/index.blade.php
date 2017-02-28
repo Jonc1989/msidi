@@ -12,7 +12,7 @@
                         </div>
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12 clear-pads border-bottom-blue">
-                        <div class="col-md-3 col-md-3 col-xs-12 service-type">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 service-type">
                                 <div class="monitor"></div>
                                 <div class="service-title">Custom software development</div>
                                 <div class="title-divider"></div>
@@ -28,7 +28,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-md-3 col-md-3 col-xs-12 service-type">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 service-type">
                                 <div class="light-bulb"></div>
                                 <div class="service-title">User Experience <br>design</div>
                                 <div class="title-divider"></div>
@@ -44,7 +44,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-md-3 col-md-3 col-xs-12 service-type">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 service-type">
                                 <div class="magnifier"></div>
                                 <div class="service-title">Re-engineering <br>and software testing</div>
                                 <div class="title-divider"></div>
@@ -60,7 +60,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-md-3 col-md-3 col-xs-12 service-type">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 service-type">
                                 <div class="lifebelt"></div>
                                 <div class="service-title">Software maintenance <br>and support</div>
                                 <div class="title-divider"></div>

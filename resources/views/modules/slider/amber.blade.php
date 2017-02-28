@@ -13,7 +13,7 @@
          </div>
 
 
-        <div class="col-md-6 col-sm-6 mac clear-pads">
+        <div class="col-lg-5 col-md-6 col-sm-6 mac clear-pads">
             <div class=""></div>
         </div>
     </div>

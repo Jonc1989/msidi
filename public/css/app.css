@@ -5800,7 +5800,7 @@ button.close {
   opacity: 0; }
 
 .keyboard {
-  background: url(../images/design/keyboard.png) center center no-repeat;
+  background: url(../images/design/keyboard.png) right center no-repeat;
   height: 245px;
   margin-left: 1000px;
   background-size: contain; }
@@ -5810,7 +5810,7 @@ button.close {
   height: 245px; }
 
 .mouse {
-  background: url(../images/design/mouse.png) left center no-repeat;
+  background: url(../images/design/mouse.png) right center no-repeat;
   height: 120px;
   margin-left: 1000px;
   background-size: contain; }
@@ -5833,6 +5833,7 @@ button.close {
   height: 397px;
   width: 100%;
   right: -1000px;
+  margin-bottom: 30px;
   background-size: contain; }
 
 .amber-bg {
@@ -5882,8 +5883,6 @@ button.close {
   height: 100%; }
   .text-from-left .title {
     margin-left: -1000px; }
-  .text-from-left .title:first-of-type {
-    margin-bottom: 0px; }
   .text-from-left .text {
     width: 100%;
     margin-left: -1000px; }
@@ -5893,8 +5892,9 @@ button.close {
   opacity: 0; }
 
 .mac {
-  background: url(../images/amber/iMac.png) center bottom no-repeat;
+  background: url(../images/amber/iMac.png) left bottom no-repeat;
   background-size: contain;
+  margin-top: 10px;
   height: 620px; }
 
 .laptop {
@@ -5913,12 +5913,10 @@ button.close {
 .data {
   background: url(../images/custom-software/data.png) top left no-repeat;
   height: 187px;
-  position: absolute;
   left: 5000px;
   opacity: 0; }
 
 .inner-bg .mac {
-  left: 2500px;
   opacity: 0; }
 
 .inner-bg .laptop {
@@ -5931,8 +5929,9 @@ button.close {
   bottom: -10000px;
   right: 30%;
   height: 457px;
-  width: 255px;
-  background: url(../images/custom-software/rocket.png) center center no-repeat; }
+  width: 190px;
+  background: url(../images/custom-software/rocket.png) center center no-repeat;
+  background-size: contain; }
 
 .inner-bg .ecolines-bg {
   background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;
@@ -5993,7 +5992,7 @@ button.close {
   .design-container .text-from-left {
     margin-top: 205px;
     max-height: 500px;
-    transform: translateX(100px); }
+    transform: translateX(260px); }
   .design-container .title {
     max-width: 370px; }
 
@@ -6051,7 +6050,6 @@ button.close {
   opacity: 1; }
 
 .inner-bg.active .mac {
-  left: 0px;
   opacity: 1; }
 
 .inner-bg.active .laptop {
@@ -6086,7 +6084,7 @@ button.close {
   opacity: 1; }
 
 .inner-bg.active .rocket {
-  bottom: 100px; }
+  bottom: 9vw; }
 
 .inner-bg.active .clouds {
   bottom: 0px; }
@@ -6110,10 +6108,15 @@ button.close {
   right: 0px; }
 
 .inner-bg.active .keyboard {
-  margin-left: 80px; }
+  margin-left: 0px;
+  width: 60%;
+  display: inline-block; }
 
 .inner-bg.active .mouse {
-  margin-left: 0px; }
+  margin-left: 0px;
+  display: inline-block;
+  width: 15%;
+  vertical-align: top; }
 
 .inner-bg.active .pens {
   left: 0px;
@@ -6454,7 +6457,6 @@ img {
   margin: 0 !important; }
 
 .title {
-  font-size: 48px;
   margin-bottom: 45px;
   line-height: 1;
   font-family: 'Montserrat-UltraLight'; }
@@ -6498,6 +6500,9 @@ img {
   position: relative;
   height: 900px;
   width: 100%; }
+
+#services {
+  padding-top: 35px; }
 
 .center {
   width: 100%;
@@ -7110,7 +7115,7 @@ img {
 .year {
   transition: all 0.4s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
 
-.text-from-right, .mac, .laptop, .rocket, .clouds, .data, .sky, .city, .road, .bus,
+.text-from-right, .laptop, .rocket, .clouds, .data, .sky, .city, .road, .bus,
 .london, .iphone, .nexus, .text-from-left .title, .notebook, .text, .mac2, .keyboard, .mouse, .pens {
   transition: all 0.5s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
 
@@ -7128,6 +7133,19 @@ img {
 
 .image.active {
   transition: all 1.3s cubic-bezier(0, 1.025, 0.58, 1); }
+
+@keyframes right-to-left {
+  0% {
+    left: 1000px; }
+  85% {
+    left: -50px; }
+  92% {
+    left: 15px; }
+  100% {
+    left: 0px; } }
+
+.inner-bg.active .mac {
+  animation: right-to-left 1s; }
 
 @media (min-width: 1400px) {
   .industries {
@@ -7169,14 +7187,36 @@ img {
     max-height: 330px; }
   .notebook {
     height: 185px;
-    margin-left: 40%; } }
+    margin-left: 40%; }
+  .keyboard {
+    height: 175px; }
+  .mouse {
+    height: 100px; }
+  .pens {
+    bottom: -50px; }
+  .design-container .text-from-left {
+    margin-top: 205px;
+    max-height: 500px;
+    transform: translateX(200px); } }
 
 @media (min-width: 1200px) {
   .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: white;
-    font-size: 16px; } }
+    font-size: 16px; }
+  .title {
+    font-size: 48px; } }
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 40px; } }
 
 @media (max-width: 991px) {
+  body, .short-text {
+    font-size: 14px; }
+  .title {
+    font-size: 36px; }
+  .name {
+    font-size: 15px; }
   .nav > li > a {
     padding-right: 10px;
     padding-left: 10px; }

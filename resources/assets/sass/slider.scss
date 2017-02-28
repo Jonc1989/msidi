@@ -38,7 +38,7 @@
   opacity: 0;
 }
 .keyboard{
-  background: url(../images/design/keyboard.png) center center no-repeat;
+  background: url(../images/design/keyboard.png) right center no-repeat;
   height: 245px;
   margin-left: 1000px;
   @include background-size(contain);
@@ -48,7 +48,7 @@
   height: 245px;
 }
 .mouse{
-  background: url(../images/design/mouse.png) left center no-repeat;
+  background: url(../images/design/mouse.png) right center no-repeat;
   height: 120px;
   margin-left: 1000px;
   @include background-size(contain);
@@ -71,6 +71,7 @@
   height: 397px;
   width: 100%;
   right: -1000px;
+  margin-bottom: 30px;
   //top: -165px;
   //position: absolute;
   @include background-size(contain);
@@ -136,7 +137,7 @@
     margin-left: -1000px;
   }
   .title:first-of-type{
-    margin-bottom: 0px;
+    //margin-bottom: 0px;
   }
   .text{
     width: 100%;
@@ -148,8 +149,9 @@
   opacity: 0;
 }
 .mac{
-  background: url(../images/amber/iMac.png) center bottom no-repeat;
+  background: url(../images/amber/iMac.png) left bottom no-repeat;
   @include background-size(contain);
+  margin-top: 10px;
   height: 620px;
 }
 .laptop{
@@ -168,12 +170,12 @@
 .data{
   background: url(../images/custom-software/data.png) top left no-repeat;
   height: 187px;
-  position: absolute;
+  //position: absolute;
   left: 5000px;
   opacity: 0;
 }
 .inner-bg .mac{
-  left: 2500px;
+  //left: 2500px;
   opacity: 0;
 }
 .inner-bg .laptop{
@@ -186,8 +188,9 @@
   bottom: -10000px;
   right: 30%;
   height: 457px;
-  width: 255px;
+  width: 190px;
   background: url(../images/custom-software/rocket.png) center center no-repeat;
+  background-size: contain;
 }
 .inner-bg .ecolines-bg{
   background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;
@@ -251,7 +254,7 @@
   .text-from-left{
     margin-top: 205px;
     max-height: 500px;
-    transform: translateX(100px);
+    transform: translateX(260px);
   }
   .title{
     max-width: 370px;
@@ -320,7 +323,7 @@
     opacity: 1;
   }
   .mac{
-    left: 0px;
+    //left: 0px;
     opacity: 1;
 
   }
@@ -356,7 +359,7 @@
     opacity: 1;
   }
   .rocket{
-    bottom: 100px;
+    bottom: 9vw;
   }
   .clouds{
     bottom: 0px;
@@ -382,10 +385,15 @@
     right: 0px;
   }
   .keyboard{
-    margin-left: 80px;
+    margin-left: 0px;
+    width: 60%;
+    display: inline-block;
   }
   .mouse {
     margin-left: 0px;
+    display: inline-block;
+    width: 15%;
+    vertical-align: top;
   }
   .pens {
     left: 0px;

@@ -99,7 +99,6 @@ img{border:0}
   margin: 0!important;
 }
 .title{
-  font-size: 48px;
   margin-bottom: 45px;
   line-height: 1;
   font-family: 'Montserrat-UltraLight';
@@ -155,7 +154,9 @@ img{border:0}
   width: 100%;
 }
 
-
+#services{
+  padding-top: 35px;
+}
 
 .center{
   width: 100%;
@@ -860,7 +861,7 @@ img{border:0}
   -o-transition: all .4s cubic-bezier(0.465, 0.615, 0.370, 1.235);
   transition: all  .4s cubic-bezier( 0.465, 0.615, 0.370, 1.15 );
 }
-.text-from-right, .mac, .laptop, .rocket, .clouds, .data, .sky, .city, .road, .bus,
+.text-from-right, .laptop, .rocket, .clouds, .data, .sky, .city, .road, .bus,
  .london, .iphone, .nexus, .text-from-left .title, .notebook, .text, .mac2, .keyboard, .mouse, .pens{
  -webkit-transition: all .5s cubic-bezier(0.465, 0.615, 0.370, 1.235);
   -moz-transition: all .5s cubic-bezier(0.465, 0.615, 0.370, 1.235);
@@ -884,6 +885,18 @@ img{border:0}
 }
 .image.active {
   @include animate( all, 1.3s, cubic-bezier(0.000, 1.025, 0.580, 1.000) );
+}
+
+@keyframes right-to-left {
+  0%   {left: 1000px;}
+
+  85%   {left: -50px;}
+  92%   {left: 15px;}
+  100% {left: 0px;}
+}
+.inner-bg.active .mac{
+
+  animation: right-to-left 1s;
 }
 @import "medium";
 @import "small";

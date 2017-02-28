@@ -32,7 +32,7 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 useCSS: false,
                 controls: !0,
                 hideControlOnEnd: !0,
-                auto: false,
+                auto: true,
                 tickerHover: true,
                 touchEnabled: true,
                 onSliderLoad: function (currentIndex) {
@@ -62,7 +62,7 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
             // });
             $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
             setTimeout(function () {
-                //$scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('leaving');
+                $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('leaving');
             },3000);
 
         });
