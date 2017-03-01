@@ -1,6 +1,6 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads amber-container">
 
-    <div class="inner-bg amber-bg">
+    <div class="inner-bg amber-bg first-slide">
         <div class="city"></div>
         <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 text-from-right white">
             <div class="title clear-margs" >Amber</div>

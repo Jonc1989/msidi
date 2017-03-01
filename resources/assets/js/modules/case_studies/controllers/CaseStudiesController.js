@@ -21,9 +21,8 @@ caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService
 
     $scope.getData = function(){
         CaseStudiesService.all( 6 ).then(function(response)
-        {console.log(response);
+        {
             $scope.caseStudies = response;
-            
         });
     };
 

@@ -6,12 +6,16 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
         $scope.initSlider();
     };
 
+    $scope.interval = null;
+
     $scope.makeActive = function (e) {
         $(e).find('.inner-bg').addClass('active');
     };
 
     $scope.makeInActive = function (e) {
-        $(e).find('.inner-bg').addClass('leaving');
+        $scope.interval = setTimeout(function () {
+            $(e).find('.inner-bg').addClass('leaving')
+        }, 3500);
     }
 
 
@@ -36,19 +40,19 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 tickerHover: true,
                 touchEnabled: true,
                 onSliderLoad: function (currentIndex) {
-                    //$( '#slider' ).css( 'opacity', 1 );
+                    //console.log( 'onSliderLoad' );
                 },
                 onSlideBefore: function (e) {
-                    //setTimeout(function () {
                     $('.inner-bg').removeClass('active');
                     $('.inner-bg').removeClass('leaving');
-                    //},497);
 
+                    console.log( 'Before' );
                 },
                 onSlideAfter: function (e) {
                     setTimeout($scope.makeActive( e ), 50);
+                    $scope.makeInActive(e);
+                    console.log( 'After' );
 
-                    //setTimeout( $scope.makeInActive( e ), 3000);
 
                 }
 
@@ -63,7 +67,8 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
             $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
             setTimeout(function () {
                 $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('leaving');
-            },3000);
+                $( '.amber-bg' ).removeClass('first-slide');
+            },3500);
 
         });
 

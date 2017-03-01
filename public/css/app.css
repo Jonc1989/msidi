@@ -5775,8 +5775,10 @@ button.close {
   border: none;
   left: 0px; }
 
-#slider .bx-wrapper .bx-viewport {
-  background: #506df9; }
+#slider {
+  overflow: hidden; }
+  #slider .bx-wrapper .bx-viewport {
+    background: #506df9; }
 
 @media (min-width: 768px) {
   #slider {
@@ -5856,7 +5858,7 @@ button.close {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: -1000px; }
+  top: -2000px; }
 
 .ecolines-container {
   background: url(../images/custom-software/custom-software.png);
@@ -5872,7 +5874,7 @@ button.close {
   .custom-software-container .inner-bg {
     padding-top: 250px; }
 
-.amber-bg.active {
+.amber-bg.active, .first-slide.amber-bg {
   background-position-x: 0px; }
 
 .amber-container {
@@ -5888,14 +5890,14 @@ button.close {
     margin-left: -1000px; }
 
 .inner-bg .text-from-right {
-  left: 2500px;
   opacity: 0; }
 
 .mac {
   background: url(../images/amber/iMac.png) left bottom no-repeat;
   background-size: contain;
   margin-top: 10px;
-  height: 620px; }
+  height: 620px;
+  opacity: 0; }
 
 .laptop {
   background: url(../images/custom-software/laptop.png) bottom center no-repeat;
@@ -5914,9 +5916,6 @@ button.close {
   background: url(../images/custom-software/data.png) top left no-repeat;
   height: 187px;
   left: 5000px;
-  opacity: 0; }
-
-.inner-bg .mac {
   opacity: 0; }
 
 .inner-bg .laptop {
@@ -6046,7 +6045,6 @@ button.close {
   bottom: -5px; }
 
 .inner-bg.active .text-from-right {
-  left: 0px;
   opacity: 1; }
 
 .inner-bg.active .mac {
@@ -6436,6 +6434,9 @@ ul, menu, dir {
   -webkit-margin-after: 0px;
   -webkit-padding-start: 0px; }
 
+.bxslider li {
+  list-style: none; }
+
 img {
   border: 0; }
 
@@ -6811,21 +6812,24 @@ img {
   display: inline-block; }
 
 .year {
+  width: 100%;
   font-size: 115px;
   line-height: 1;
-  margin-left: -400px; }
+  margin-left: -400px;
+  clear: both; }
 
 .year-txt {
+  width: 100%;
   margin-bottom: 45px;
   text-align: left;
   padding-left: 52px;
   margin-left: -400px; }
 
 .partner .image {
-  width: 180px;
   height: 75px;
-  margin-left: -500px;
-  display: inline-block; }
+  margin-left: -600px;
+  display: block;
+  width: 100%; }
 
 .partner .image.active, .year.active, .year-txt.active {
   margin-left: 0px; }
@@ -7109,17 +7113,17 @@ img {
 .case-studies .image {
   transition: all  .4s; }
 
-.custom-software-bg, .amber-bg, .design-bg, .opal-bg, .ecolines-bg {
-  transition: all .5s; }
+.custom-software-bg, .amber-bg, .design-bg, .opal-bg, .ecolines-bg, .mac, .city {
+  transition: all .4s; }
 
 .year {
   transition: all 0.4s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
 
-.text-from-right, .laptop, .rocket, .clouds, .data, .sky, .city, .road, .bus,
+.laptop, .rocket, .clouds, .data, .sky, .road, .bus,
 .london, .iphone, .nexus, .text-from-left .title, .notebook, .text, .mac2, .keyboard, .mouse, .pens {
   transition: all 0.5s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
 
-.sky .title, .sky .ecolines-slide-text {
+.title, .sky .ecolines-slide-text {
   transition: all .6s; }
 
 .sky .trees {
@@ -7137,14 +7141,48 @@ img {
 @keyframes right-to-left {
   0% {
     left: 1000px; }
-  85% {
+  50% {
     left: -50px; }
+  85% {
+    left: 7px; }
   92% {
-    left: 15px; }
+    left: -1px; }
   100% {
-    left: 0px; } }
+    left: 0px;
+    opacity: 1; } }
+
+@keyframes up {
+  0% {
+    bottom: -1000px; }
+  50% {
+    bottom: -500px; }
+  85% {
+    bottom: -7px; }
+  92% {
+    bottom: 2px; }
+  100% {
+    opacity: 1;
+    bottom: -5px; } }
+
+@keyframes down {
+  0% {
+    bottom: -5px; }
+  50% {
+    bottom: 2px; }
+  85% {
+    bottom: -7px; }
+  92% {
+    bottom: -500px; }
+  100% {
+    bottom: -1000px; } }
+
+.inner-bg.active .city {
+  animation: up .6s; }
 
 .inner-bg.active .mac {
+  animation: right-to-left .7s; }
+
+.inner-bg.active .text-from-right {
   animation: right-to-left 1s; }
 
 @media (min-width: 1400px) {
