@@ -46,11 +46,10 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                     $('.inner-bg').removeClass('active');
                     $('.inner-bg').removeClass('leaving');
 
-                    console.log( 'Before' );
                 },
                 onSlideAfter: function (e) {
                     setTimeout($scope.makeActive( e ), 50);
-                    $scope.makeInActive(e);
+                    //$scope.makeInActive(e);
                     console.log( 'After' );
 
 
