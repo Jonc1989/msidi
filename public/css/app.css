@@ -5910,23 +5910,22 @@ button.close {
   background-size: contain;
   height: 358px;
   position: absolute;
-  bottom: -10000px; }
+  bottom: -1000px; }
 
 .data {
-  background: url(../images/custom-software/data.png) top left no-repeat;
-  height: 187px;
+  background: url(../images/custom-software/data.png) bottom left no-repeat;
+  height: 240px;
   left: 5000px;
   opacity: 0; }
 
 .inner-bg .laptop {
-  left: 5000px;
   opacity: 0;
-  bottom: 0px; }
+  bottom: -45px; }
 
 .rocket {
   position: absolute;
-  bottom: -10000px;
-  right: 30%;
+  bottom: -1000px;
+  right: 37%;
   height: 457px;
   width: 190px;
   background: url(../images/custom-software/rocket.png) center center no-repeat;
@@ -5947,7 +5946,6 @@ button.close {
   height: 90%;
   height: calc(100% - 190px);
   position: absolute;
-  top: 1000px;
   overflow: hidden; }
   .sky .title {
     text-align: center; }
@@ -5960,7 +5958,7 @@ button.close {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0px; }
+  bottom: -2px; }
 
 .highway {
   width: 100%;
@@ -6051,11 +6049,7 @@ button.close {
   opacity: 1; }
 
 .inner-bg.active .laptop {
-  left: 0px;
   opacity: 1; }
-
-.inner-bg.active .sky {
-  top: 0px; }
 
 .inner-bg.active .road {
   right: 0px; }
@@ -6080,9 +6074,6 @@ button.close {
 .inner-bg.active .data {
   left: 0px;
   opacity: 1; }
-
-.inner-bg.active .rocket {
-  bottom: 9vw; }
 
 .inner-bg.active .clouds {
   bottom: 0px; }
@@ -6143,9 +6134,6 @@ button.close {
 
 .inner-bg.active.leaving .bus {
   left: 2000px; }
-
-.inner-bg.active.leaving .sky {
-  top: 1000px; }
 
 .inner-bg.active.leaving .nexus {
   left: -5000px; }
@@ -7116,10 +7104,13 @@ img {
 .custom-software-bg, .amber-bg, .design-bg, .opal-bg, .ecolines-bg, .mac, .city, .text-from-right {
   transition: all .4s; }
 
+.road {
+  transition: all .5s; }
+
 .year {
   transition: all 0.4s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
 
-.laptop, .rocket, .clouds, .data, .sky, .road, .bus,
+.laptop, .sky,
 .london, .iphone, .nexus, .text-from-left .title, .notebook, .text, .mac2, .keyboard, .mouse, .pens {
   transition: all 0.5s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
 
@@ -7151,30 +7142,109 @@ img {
     left: 0px;
     opacity: 1; } }
 
+@keyframes right-to-left-faster {
+  0% {
+    left: 5000px; }
+  50% {
+    left: -50px; }
+  85% {
+    left: 7px; }
+  92% {
+    left: -1px; }
+  100% {
+    left: 0px;
+    opacity: 1; } }
+
+@keyframes left-to-right {
+  0% {
+    left: -5000px; }
+  75% {
+    left: 15px; }
+  100% {
+    left: 0px; } }
+
+@keyframes spawn-bg {
+  0% {
+    background-position-y: 500%; }
+  100% {
+    background-position-y: 90%; } }
+
 @keyframes up {
   0% {
     bottom: -1000px; }
   50% {
-    bottom: -500px; }
-  85% {
-    bottom: -10px; }
-  92% {
-    bottom: 5px; }
+    bottom: 20px; }
+  75% {
+    bottom: 0px; }
   100% {
     opacity: 1;
     bottom: -5px; } }
 
+@keyframes up2 {
+  0% {
+    bottom: -1000px; }
+  50% {
+    bottom: 20px; }
+  75% {
+    bottom: 5px; }
+  100% {
+    opacity: 1;
+    bottom: 0px; } }
+
+@keyframes up3 {
+  0% {
+    bottom: -2000px; }
+  50% {
+    bottom: 5px; }
+  75% {
+    bottom: 3px; }
+  100% {
+    opacity: 1;
+    bottom: -2px; } }
+
+@keyframes spawn-up {
+  0% {
+    opacity: 0;
+    bottom: -1000px; }
+  50% {
+    opacity: 0;
+    bottom: -100px; }
+  75% {
+    opacity: 0.5;
+    bottom: 10px; }
+  100% {
+    opacity: 1;
+    bottom: 0px; } }
+
 @keyframes down {
   0% {
-    bottom: -5px; }
+    bottom: 0px; }
   50% {
-    bottom: 2px; }
-  85% {
-    bottom: -7px; }
-  92% {
-    bottom: -500px; }
+    bottom: -5px; }
+  75% {
+    bottom: 20px; }
   100% {
     bottom: -1000px; } }
+
+@keyframes up-elastic {
+  0% {
+    bottom: -1000px; }
+  50% {
+    bottom: 185px; }
+  75% {
+    bottom: 145px; }
+  100% {
+    bottom: 160px; } }
+
+@keyframes to-sky-elastic {
+  0% {
+    bottom: 160px; }
+  50% {
+    bottom: 145px; }
+  75% {
+    bottom: 185px; }
+  100% {
+    bottom: 1000px; } }
 
 .inner-bg.active .text-from-right .title:nth-child(1) {
   animation: right-to-left .85s; }
@@ -7188,8 +7258,38 @@ img {
 .inner-bg.active .mac {
   animation: right-to-left .7s; }
 
+.inner-bg.active .laptop {
+  animation: right-to-left .6s; }
+
+.inner-bg.active .data {
+  animation: right-to-left-faster .7s; }
+
 .inner-bg.active .city {
   animation: up .6s; }
+
+.inner-bg.active .clouds {
+  animation: up2 .6s; }
+
+.inner-bg.active .rocket {
+  animation: up-elastic .7s;
+  bottom: 160px; }
+
+.inner-bg.active .bus {
+  animation: left-to-right .8s; }
+
+.inner-bg.active .sky {
+  animation: spawn-bg .7s; }
+  .inner-bg.active .sky .title {
+    animation: spawn-up .6s; }
+
+.inner-bg.active .trees {
+  animation: up3 .6s; }
+
+.inner-bg.active.leaving .rocket {
+  animation: to-sky-elastic .5s; }
+
+.inner-bg.active.leaving .clouds {
+  animation: down .6s; }
 
 @media (min-width: 1400px) {
   .industries {
@@ -7216,7 +7316,7 @@ img {
   #slider .amber-container, #slider, #slider .bx-wrapper, #slider .bx-viewport {
     height: 750px; }
   .inner-bg, .ecolines-container {
-    height: 700px; }
+    height: 675px; }
   .opal-container .london {
     height: 950px; }
   .opal-container .inner-bg {

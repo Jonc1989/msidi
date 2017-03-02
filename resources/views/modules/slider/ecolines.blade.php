@@ -6,7 +6,7 @@
 
         </div>
         <div class="sky white">
-            <div class="title">Ecolines</div>
+            <div class="col-md-12 clear-pads title">Ecolines</div>
             <div class="ecolines-slide-text">
                 We believe that everyone want to live in safe and well maintained environment.
                 Working closely with real estate managers and residents we can achieve results.

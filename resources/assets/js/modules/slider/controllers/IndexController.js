@@ -7,6 +7,7 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
     };
 
     $scope.interval = null;
+    $scope.secondInterval = null;
 
     $scope.makeActive = function (e) {
         $(e).find('.inner-bg').addClass('active');
@@ -16,8 +17,14 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
         $scope.interval = setTimeout(function () {
             $(e).find('.inner-bg').addClass('leaving')
         }, 3500);
-    }
+    };
 
+    $scope.makeInActiveFirstSlide = function (e) {
+        $scope.secondInterval = setTimeout(function () {
+            $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('leaving');
+            $( '.amber-bg' ).removeClass('first-slide');
+        },3500);
+    };
 
     $scope.initSlider = function () {
 
@@ -50,24 +57,22 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 onSlideAfter: function (e) {
                     setTimeout($scope.makeActive( e ), 50);
                     //$scope.makeInActive(e);
-                    console.log( 'After' );
-
-
                 }
 
             });
             
             // $('.bx-prev').click( function () {
-            //     $scope.slider.startAuto();
+            //     clearTimeout( $scope.interval );
+            //     clearTimeout( $scope.secondInterval );
+            //     $scope.slider.startAuto(true);
             // });
             // $('.bx-next').click( function () {
-            //     $scope.slider.startAuto();
+            //     clearTimeout( $scope.interval );
+            //     clearTimeout( $scope.secondInterval );
+            //     $scope.slider.startAuto(true);
             // });
             $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
-            setTimeout(function () {
-                $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('leaving');
-                $( '.amber-bg' ).removeClass('first-slide');
-            },3500);
+            $scope.makeInActiveFirstSlide();
 
         });
 
