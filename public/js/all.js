@@ -19,80 +19,21 @@ $(document).ready(function(){
 
 });
 
-var caseStudies = angular.module('caseStudies', [
+var career = angular.module('career', [
 
 ]);
-var career = angular.module('career', [
+var caseStudies = angular.module('caseStudies', [
 
 ]);
 var clients = angular.module('clients', [
 
 ]);
-var company = angular.module('company', [
-
-]);
 var slider = angular.module('slider', [
 
 ]);
-caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
-    function ( $scope, CaseStudiesService, $animate){
+var company = angular.module('company', [
 
-    $scope.caseStudies = [];
-
-    this.$onInit = function () {
-        $scope.getData();
-    };
-
-    $scope.visible = 'all';
-
-    $scope.filter = function ( category ) {
-        $scope.visible = category;
-    };
-
-    $scope.showPosts = function ( category ) {
-        return $scope.visible === 'all' || $scope.visible === category;
-    };
-    
-
-
-    $scope.getData = function(){
-        CaseStudiesService.all( 6 ).then(function(response)
-        {
-            $scope.caseStudies = response;
-        });
-    };
-
-
-}]);
-caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
-{
-    var CaseStudiesService = {
-
-        all: function( count )
-        {
-            var deferred = $q.defer();
-            $http.get( '/api/case-studies', {params:{ count: count }} )
-                .success( function( response )
-                {
-                    deferred.resolve( response );
-                } )
-                .error( function( response, status )
-                {
-                    if (status === 422)
-                    {
-                        deferred.resolve({errors: response});
-                    } else
-                    {
-                        deferred.reject();
-                    }
-                } );
-
-            return deferred.promise;
-
-        }
-    };
-    return CaseStudiesService;
-}]);
+]);
 career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $scope, CareerService ){
 
 
@@ -172,6 +113,65 @@ career.service( 'CareerService', ['$http', '$q', function( $http, $q )
     return CareerService;
 }]);
 
+caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
+    function ( $scope, CaseStudiesService, $animate){
+
+    $scope.caseStudies = [];
+
+    this.$onInit = function () {
+        $scope.getData();
+    };
+
+    $scope.visible = 'all';
+
+    $scope.filter = function ( category ) {
+        $scope.visible = category;
+    };
+
+    $scope.showPosts = function ( category ) {
+        return $scope.visible === 'all' || $scope.visible === category;
+    };
+    
+
+
+    $scope.getData = function(){
+        CaseStudiesService.all( 6 ).then(function(response)
+        {
+            $scope.caseStudies = response;
+        });
+    };
+
+
+}]);
+caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
+{
+    var CaseStudiesService = {
+
+        all: function( count )
+        {
+            var deferred = $q.defer();
+            $http.get( '/api/case-studies', {params:{ count: count }} )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CaseStudiesService;
+}]);
 caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
 
     $scope.clients = [];
@@ -245,34 +245,88 @@ caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
 
 
 }]);
-company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
-{
-    var CompanyService = {
+slider.controller( 'IndexController', [ '$scope', function ( $scope ){
 
-        sendMail: function( message )
-        {
-            var deferred = $q.defer();
-            $http.post( '/api/company/send', message )
-                .success( function( response )
-                {
-                    deferred.resolve( response );
-                } )
-                .error( function( response, status )
-                {
-                    if (status === 422)
-                    {
-                        deferred.resolve({errors: response});
-                    } else
-                    {
-                        deferred.reject();
-                    }
-                } );
+    $scope.slider = {};
 
-            return deferred.promise;
-
-        }
+    this.$onInit = function () {
+        $scope.initSlider();
     };
-    return CompanyService;
+
+    $scope.interval = null;
+    $scope.secondInterval = null;
+
+    $scope.makeActive = function (e) {
+        $(e).find('.inner-bg').addClass('active');
+    };
+
+    $scope.makeInActive = function (e) {
+        $scope.interval = setTimeout(function () {
+            $(e).find('.inner-bg').addClass('leaving')
+        }, 3500);
+    };
+
+    $scope.makeInActiveFirstSlide = function (e) {
+        $scope.secondInterval = setTimeout(function () {
+            $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('leaving');
+            $( '.amber-bg' ).removeClass('first-slide');
+        },3500);
+    };
+
+    $scope.initSlider = function () {
+
+        $(window).load(function () {
+
+
+
+            $scope.slider = $('.bxslider').bxSlider({
+                minSlides: 1,
+                moveSlides: 1,
+                easing: 'ease-out',
+                speed: 0,
+                pager: !1,
+                pause: 4000,
+                infiniteLoop: true,
+                useCSS: false,
+                controls: !0,
+                hideControlOnEnd: !0,
+                auto: true,
+                tickerHover: true,
+                touchEnabled: true,
+                onSliderLoad: function (currentIndex) {
+                    //console.log( 'onSliderLoad' );
+                },
+                onSlideBefore: function (e) {
+                    $('.inner-bg').removeClass('active');
+                    $('.inner-bg').removeClass('leaving');
+
+                },
+                onSlideAfter: function (e) {
+                    setTimeout($scope.makeActive( e ), 50);
+                    $scope.makeInActive(e);
+                }
+
+            });
+            
+            $('.bx-prev').click( function () {
+                clearTimeout( $scope.interval );
+                clearTimeout( $scope.secondInterval );
+                $scope.slider.startAuto(true);
+            });
+            $('.bx-next').click( function () {
+                clearTimeout( $scope.interval );
+                clearTimeout( $scope.secondInterval );
+                $scope.slider.startAuto(true);
+            });
+            $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
+            $scope.makeInActiveFirstSlide();
+
+        });
+
+    };
+    
+    
+
 }]);
 company.controller( 'CompanyController', [ '$scope', 'CompanyService', function ( $scope, CompanyService ){
 
@@ -354,87 +408,33 @@ company.controller( 'CompanyController', [ '$scope', 'CompanyService', function 
     }
 
 }]);
-slider.controller( 'IndexController', [ '$scope', function ( $scope ){
+company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
+{
+    var CompanyService = {
 
-    $scope.slider = {};
+        sendMail: function( message )
+        {
+            var deferred = $q.defer();
+            $http.post( '/api/company/send', message )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
 
-    this.$onInit = function () {
-        $scope.initSlider();
+            return deferred.promise;
+
+        }
     };
-
-    $scope.interval = null;
-    $scope.secondInterval = null;
-
-    $scope.makeActive = function (e) {
-        $(e).find('.inner-bg').addClass('active');
-    };
-
-    $scope.makeInActive = function (e) {
-        $scope.interval = setTimeout(function () {
-            $(e).find('.inner-bg').addClass('leaving')
-        }, 3500);
-    };
-
-    $scope.makeInActiveFirstSlide = function (e) {
-        $scope.secondInterval = setTimeout(function () {
-            $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('leaving');
-            $( '.amber-bg' ).removeClass('first-slide');
-        },3500);
-    };
-
-    $scope.initSlider = function () {
-
-        $(window).load(function () {
-
-
-
-            $scope.slider = $('.bxslider').bxSlider({
-                minSlides: 1,
-                moveSlides: 1,
-                easing: 'ease-out',
-                speed: 0,
-                pager: !1,
-                pause: 4000,
-                infiniteLoop: true,
-                useCSS: false,
-                controls: !0,
-                hideControlOnEnd: !0,
-                auto: true,
-                tickerHover: true,
-                touchEnabled: true,
-                onSliderLoad: function (currentIndex) {
-                    //console.log( 'onSliderLoad' );
-                },
-                onSlideBefore: function (e) {
-                    $('.inner-bg').removeClass('active');
-                    $('.inner-bg').removeClass('leaving');
-
-                },
-                onSlideAfter: function (e) {
-                    setTimeout($scope.makeActive( e ), 50);
-                    //$scope.makeInActive(e);
-                }
-
-            });
-            
-            // $('.bx-prev').click( function () {
-            //     clearTimeout( $scope.interval );
-            //     clearTimeout( $scope.secondInterval );
-            //     $scope.slider.startAuto(true);
-            // });
-            // $('.bx-next').click( function () {
-            //     clearTimeout( $scope.interval );
-            //     clearTimeout( $scope.secondInterval );
-            //     $scope.slider.startAuto(true);
-            // });
-            $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
-            $scope.makeInActiveFirstSlide();
-
-        });
-
-    };
-    
-    
-
+    return CompanyService;
 }]);
 //# sourceMappingURL=all.js.map

@@ -919,9 +919,18 @@ img{border:0}
   75%   {left: 15px;}
   100% {left: 0px;}
 }
+@keyframes left-to-right2 {
+  0%   {left: 0px;}
+  25%   {left: -15px;}
+  100% {left: 5000px;}
+}
 @keyframes spawn-bg {
   0% {background-position-y: 500%;}
   100% {background-position-y: 90%;}
+}
+@keyframes spawn-bg-reverse {
+  0% {background-position-y: 90%;}
+  100% {background-position-y: 500%;}
 }
 @keyframes up {
   0% {bottom: -1000px;}
@@ -940,6 +949,12 @@ img{border:0}
   50%   {bottom: 5px;}
   75%   {bottom: 3px;}
   100%   { opacity: 1; bottom: -2px;}
+}
+@keyframes up3-reverse-motion {
+  0% { bottom: -2px;}
+  25%  {bottom: 3px;}
+  50%   {bottom: 5px;}
+100%   {bottom: -2000px;}
 }
 @keyframes spawn-up {
   0% { opacity: 0; bottom: -1000px;}
@@ -1005,6 +1020,9 @@ img{border:0}
   .sky{
     animation: spawn-bg .7s;
     .title{
+      animation: spawn-up .7s;
+    }
+    .ecolines-slide-text{
       animation: spawn-up .6s;
     }
   }
@@ -1018,6 +1036,16 @@ img{border:0}
   }
   .clouds{
     animation: down .6s;
+  }
+  .bus{
+    animation: left-to-right2 .6s;
+  }
+  .trees{
+    animation: up3-reverse-motion .2s;
+    bottom: -2000px;
+  }
+  .sky{
+    animation: spawn-bg-reverse .5s;
   }
 }
 @import "medium";

@@ -5949,7 +5949,7 @@ button.close {
   overflow: hidden; }
   .sky .title {
     text-align: center; }
-  .sky .ecolines-slide-text {
+  .sky .ecolines-slide-text div {
     max-width: 680px;
     margin: 0 auto; }
 
@@ -6130,10 +6130,10 @@ button.close {
   opacity: 0; }
 
 .inner-bg.active.leaving .road {
-  opacity: 0; }
+  right: 5000px; }
 
 .inner-bg.active.leaving .bus {
-  left: 2000px; }
+  left: 5000px; }
 
 .inner-bg.active.leaving .nexus {
   left: -5000px; }
@@ -7163,11 +7163,25 @@ img {
   100% {
     left: 0px; } }
 
+@keyframes left-to-right2 {
+  0% {
+    left: 0px; }
+  25% {
+    left: -15px; }
+  100% {
+    left: 5000px; } }
+
 @keyframes spawn-bg {
   0% {
     background-position-y: 500%; }
   100% {
     background-position-y: 90%; } }
+
+@keyframes spawn-bg-reverse {
+  0% {
+    background-position-y: 90%; }
+  100% {
+    background-position-y: 500%; } }
 
 @keyframes up {
   0% {
@@ -7201,6 +7215,16 @@ img {
   100% {
     opacity: 1;
     bottom: -2px; } }
+
+@keyframes up3-reverse-motion {
+  0% {
+    bottom: -2px; }
+  25% {
+    bottom: 3px; }
+  50% {
+    bottom: 5px; }
+  100% {
+    bottom: -2000px; } }
 
 @keyframes spawn-up {
   0% {
@@ -7280,6 +7304,8 @@ img {
 .inner-bg.active .sky {
   animation: spawn-bg .7s; }
   .inner-bg.active .sky .title {
+    animation: spawn-up .7s; }
+  .inner-bg.active .sky .ecolines-slide-text {
     animation: spawn-up .6s; }
 
 .inner-bg.active .trees {
@@ -7290,6 +7316,16 @@ img {
 
 .inner-bg.active.leaving .clouds {
   animation: down .6s; }
+
+.inner-bg.active.leaving .bus {
+  animation: left-to-right2 .6s; }
+
+.inner-bg.active.leaving .trees {
+  animation: up3-reverse-motion .2s;
+  bottom: -2000px; }
+
+.inner-bg.active.leaving .sky {
+  animation: spawn-bg-reverse .5s; }
 
 @media (min-width: 1400px) {
   .industries {

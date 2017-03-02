@@ -7,10 +7,11 @@
         </div>
         <div class="sky white">
             <div class="col-md-12 clear-pads title">Ecolines</div>
-            <div class="ecolines-slide-text">
-                We believe that everyone want to live in safe and well maintained environment.
-                Working closely with real estate managers and residents we can achieve results.
-                We manage all necessary data, which allows to make wise and fast decisions.
+            <div class="ecolines-slide-text col-lg-12 ">
+                <div>We believe that everyone want to live in safe and well maintained environment.
+                    Working closely with real estate managers and residents we can achieve results.
+                    We manage all necessary data, which allows to make wise and fast decisions.
+                </div>
             </div>
             <div class="trees"></div>
         </div>
