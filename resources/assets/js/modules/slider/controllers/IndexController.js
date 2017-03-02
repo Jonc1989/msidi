@@ -43,7 +43,7 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 useCSS: false,
                 controls: !0,
                 hideControlOnEnd: !0,
-                auto: true,
+                auto: false,
                 tickerHover: true,
                 touchEnabled: true,
                 onSliderLoad: function (currentIndex) {
@@ -56,23 +56,23 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 },
                 onSlideAfter: function (e) {
                     setTimeout($scope.makeActive( e ), 50);
-                    $scope.makeInActive(e);
+                    //$scope.makeInActive(e);
                 }
 
             });
             
-            $('.bx-prev').click( function () {
-                clearTimeout( $scope.interval );
-                clearTimeout( $scope.secondInterval );
-                $scope.slider.startAuto(true);
-            });
-            $('.bx-next').click( function () {
-                clearTimeout( $scope.interval );
-                clearTimeout( $scope.secondInterval );
-                $scope.slider.startAuto(true);
-            });
+            // $('.bx-prev').click( function () {
+            //     clearTimeout( $scope.interval );
+            //     clearTimeout( $scope.secondInterval );
+            //     $scope.slider.startAuto(true);
+            // });
+            // $('.bx-next').click( function () {
+            //     clearTimeout( $scope.interval );
+            //     clearTimeout( $scope.secondInterval );
+            //     $scope.slider.startAuto(true);
+            // });
             $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
-            $scope.makeInActiveFirstSlide();
+            //$scope.makeInActiveFirstSlide();
 
         });
 

@@ -4,9 +4,9 @@
 
 
         <ul class="bxslider">
-            <li>@include('modules.slider.amber')</li>
+            <!--<li>@include('modules.slider.amber')</li>
             <li>@include('modules.slider.custom_software')</li>
-            <li>@include('modules.slider.ecolines')</li>
+            <li>@include('modules.slider.ecolines')</li>-->
             <li>@include('modules.slider.opal')</li>
             <li>@include('modules.slider.design')</li>
         </ul>

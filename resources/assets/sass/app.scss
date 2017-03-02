@@ -873,7 +873,7 @@ img{border:0}
   transition: all  .4s cubic-bezier( 0.465, 0.615, 0.370, 1.15 );
 }
  .laptop, .sky,
- .london, .iphone, .nexus, .text-from-left .title, .notebook, .text, .mac2, .keyboard, .mouse, .pens{
+ .london, .text-from-left .title, .notebook, .text, .mac2, .keyboard, .mouse, .pens{
  -webkit-transition: all .5s cubic-bezier(0.465, 0.615, 0.370, 1.235);
   -moz-transition: all .5s cubic-bezier(0.465, 0.615, 0.370, 1.235);
  -o-transition: all .5s cubic-bezier(0.465, 0.615, 0.370, 1.235);
@@ -979,8 +979,16 @@ img{border:0}
   75%  { bottom: 185px;}
   100% { bottom: 1000px;}
 }
-
-
+@keyframes nexus-spawn{
+  0%   { left: -5000px;}
+  //75%  { left: 35%;}
+  100% { left: 30%;}
+}
+@keyframes iphone-spawn{
+  0%   { right: 5000px;}
+  75%  { right: 20%;}
+  100% { right: 15%;}
+}
 
 .inner-bg.active{
   .text-from-right{
@@ -1027,6 +1035,12 @@ img{border:0}
   }
   .trees{
     animation: up3 .6s;
+  }
+  .nexus{
+    animation: nexus-spawn 1s;
+  }
+  .iphone{
+    animation: iphone-spawn 1s;
   }
 }
 .inner-bg.active.leaving{

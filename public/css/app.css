@@ -7112,7 +7112,7 @@ img {
   transition: all 0.4s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
 
 .laptop, .sky,
-.london, .iphone, .nexus, .text-from-left .title, .notebook, .text, .mac2, .keyboard, .mouse, .pens {
+.london, .text-from-left .title, .notebook, .text, .mac2, .keyboard, .mouse, .pens {
   transition: all 0.5s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
 
 .title, .sky .ecolines-slide-text {
@@ -7271,6 +7271,20 @@ img {
   100% {
     bottom: 1000px; } }
 
+@keyframes nexus-spawn {
+  0% {
+    left: -5000px; }
+  100% {
+    left: 30%; } }
+
+@keyframes iphone-spawn {
+  0% {
+    right: 5000px; }
+  75% {
+    right: 20%; }
+  100% {
+    right: 15%; } }
+
 .inner-bg.active .text-from-right .title:nth-child(1) {
   animation: right-to-left .85s; }
 
@@ -7311,6 +7325,12 @@ img {
 
 .inner-bg.active .trees {
   animation: up3 .6s; }
+
+.inner-bg.active .nexus {
+  animation: nexus-spawn 1s; }
+
+.inner-bg.active .iphone {
+  animation: iphone-spawn 1s; }
 
 .inner-bg.active.leaving .rocket {
   animation: to-sky-elastic .5s; }
@@ -7378,9 +7398,9 @@ img {
   .holder {
     max-width: 230px; }
   .design-container .text-from-left {
-    margin-top: 205px;
-    max-height: 500px;
-    transform: translateX(200px); } }
+    margin-top: 140px;
+    max-height: 410px;
+    transform: translateX(120px); } }
 
 @media (min-width: 1200px) {
   .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
