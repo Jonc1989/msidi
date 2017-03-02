@@ -8,7 +8,7 @@
                                 and IT support since 2009
                         </div>
 
-                        <div class="col-md-12">
+                        <div class="col-md-12 clear-pads">
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                         <div class="team">
                                                 <div class="valery"></div>
@@ -35,11 +35,11 @@
         <div class="container">
                 <div class="title center">Let's get in touch</div>
                 <div class="col-md-offset-2 col-md-8 contact-info">
-                        <div class="col-md-6 right">
+                        <div class="col-md-6 col-sm-6 right">
                                 <div class="pin">SIA MS-IDI Maskavas iela 22,</div>
                                 <div class="pin2">Rēzekne, LV-4604, Latvija</div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-6">
                                 <div class="email">Email: info@ms-idi.eu</div>
                                 <div class="phone">Telephone: +371 278257 77</div>
                                 <div class="fax">Fax: +371 64605888</div>

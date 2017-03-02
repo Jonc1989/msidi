@@ -456,7 +456,8 @@ img{border:0}
   padding-bottom: 250px;
 }
 .pen_holder{
-
+  max-width: 100%;
+  max-height:100%;
 }
 
 .partner-wrap{
@@ -521,9 +522,7 @@ img{border:0}
  left: 0px;
   background: url(../images/Line.png) center center no-repeat;
 }
-.partner-wrap:not(:last-of-type){
-  margin-right: 55px;
-}
+
 .years{
   width: 100%;
 

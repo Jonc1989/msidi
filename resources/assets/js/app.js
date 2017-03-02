@@ -1,5 +1,4 @@
 var app = angular.module( 'app', [
-    'ngAnimate',
    'caseStudies',
     'clients',
     'company',
