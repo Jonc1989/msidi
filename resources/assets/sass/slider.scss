@@ -42,7 +42,7 @@
 .keyboard{
   background: url(../images/design/keyboard.png) right center no-repeat;
   height: 245px;
-  margin-left: 1000px;
+  margin-left: 2000px;
   @include background-size(contain);
 }
 .overflow-hidden{
@@ -64,9 +64,10 @@
   opacity: 0;
   @include background-size(contain);
 }
-.computer-wrap{
-  height: 260px;
-}
+//.computer-wrap{
+//  overflow: hidden;
+//}
+
 .mac2{
   opacity: 0;
   background: url(../images/design/iMac2.png) right top no-repeat;
@@ -136,14 +137,14 @@
   opacity: 0;
   height: 100%;
   .title{
-    margin-left: -1000px;
+    //margin-left: -1000px;
   }
   .title:first-of-type{
     //margin-bottom: 0px;
   }
   .text{
     width: 100%;
-    margin-left: -1000px;
+    //margin-left: -1000px;
   }
 }
 .inner-bg .text-from-right{
@@ -200,7 +201,7 @@
   top: 0px;
 }
 .sky{
-  background: url(../images/ecolines/sky.png) center 90% no-repeat;
+  background: url(../images/ecolines/sky.png) center 500% no-repeat;
   padding-top: 270px;
   width: 100%;
   height: 90%;
@@ -210,8 +211,10 @@
   overflow: hidden;
   .title{
     text-align: center;
+    bottom: -1000px;
   }
   .ecolines-slide-text{
+    bottom: -1000px;
     div{
       max-width: 680px;
       margin: 0 auto;
@@ -223,7 +226,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  bottom: -2px;
+  bottom: -1500px;
 }
 .highway{
   width: 100%;
@@ -237,7 +240,7 @@
   height: 100%;
   position: absolute;
   top: 0px;
-  right: -5000px;
+  right: -2000px;
 }
 .bus{
   background: url(../images/ecolines/bus.png) center center no-repeat;
@@ -245,7 +248,7 @@
   background-size: contain;
   position: absolute;
   top: -85px;
-  left: -5000px;
+  left: -2000px;
 }
 .design-container{
   .inner-bg{
@@ -263,7 +266,14 @@
 }
 .opal-container{
   background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;
-  overflow: hidden;
+  .london-wrap{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+  }
+
   .inner-bg{
     padding-top: 240px;
     .opal-bg{
@@ -271,27 +281,27 @@
       width: 100%;
       height: 100%;
       position: absolute;
-      top: -5000px;
+      top: 5000px;
     }
   }
   .phones{
     position: absolute;
     bottom: 0px;
     width: 100%;
-
+    display: none;
     .nexus{
       height: 595px;
       background: url(../images/opal/nexus.png) right bottom no-repeat;
       background-size: contain;
       position: absolute;
-      bottom: 0px;
-      left: -5000px;
+      bottom: -50px;
+      left: -2000px;
     }
     .iphone{
       position: absolute;
-      bottom: 0px;
+      bottom: -50px;
       height: 565px;
-      right: -5000px;
+      right: -2000px;
       background: url(../images/opal/iphone.png) left bottom no-repeat;
       background-size: contain;
     }
@@ -301,15 +311,15 @@
     background-size: contain;
     width: 90%;
     height: 1000px;
-    bottom: -1000px;
+    bottom: -1500px;
     position: absolute;
     right: 0px;
 
-    -webkit-transform: rotate(60deg);
-    -moz-transform: rotate(60deg);
-    -ms-transform: rotate(60deg);
-    -o-transform: rotate(60deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    //-webkit-transform: rotate(60deg);
+    //-moz-transform: rotate(60deg);
+    //-ms-transform: rotate(60deg);
+    //-o-transform: rotate(60deg);
+    //filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   }
 }
 .inner-bg.active{
@@ -341,6 +351,9 @@
   .bus{
     left: 0px;
   }
+  .phones{
+    display: block;
+  }
   .nexus{
     left: 30%;
   }
@@ -348,12 +361,12 @@
     right: 15%;
   }
   .london{
-    bottom: -600px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+    bottom: -600px
+    //-webkit-transform: rotate(0deg);
+    //-moz-transform: rotate(0deg);
+    //-ms-transform: rotate(0deg);
+    //-o-transform: rotate(0deg);
+    //filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
   }
   .data{
     left: 0px;
@@ -370,12 +383,12 @@
   }
   .text-from-left{
     opacity: 1;
-    .title{
-      margin-left: 0px;
-    }
-    .text{
-      margin-left: 0px;
-    }
+    //.title{
+    //  margin-left: 0px;
+    //}
+    //.text{
+    //  margin-left: 0px;
+    //}
   }
   .notebook{
     left: 0px;
@@ -422,27 +435,27 @@
     opacity: 0;
   }
   .road{
-    right: 5000px;
+    right: 2000px;
   }
   .bus{
-    left: 5000px;
+    left: 2000px;
   }
   .sky{
     //top: 1000px;
   }
   .nexus{
-    left: -5000px;
+    left: -2000px;
   }
   .iphone{
-    right: -5000px;
+    right: -2000px;
   }
   .london{
-    bottom: -1000px;
-    -webkit-transform: rotate(60deg);
-    -moz-transform: rotate(60deg);
-    -ms-transform: rotate(60deg);
-    -o-transform: rotate(60deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    //bottom: -2000px;
+    //-webkit-transform: rotate(60deg);
+    //-moz-transform: rotate(60deg);
+    //-ms-transform: rotate(60deg);
+    //-o-transform: rotate(60deg);
+    //filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   }
   .data{
     opacity: 0;
@@ -544,6 +557,31 @@
     right: -31px;
     background: url(../images/arrow-right.png) center center no-repeat;
   }
-
-
+}
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+  bottom: 70px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a{
+  background: white;//
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover{
+  background: #ffc1fa;
+}
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: violet;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: white;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+}
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: center;
+  width: 100%;
+}
+.bx-controls-auto{
+  //display: none;
 }

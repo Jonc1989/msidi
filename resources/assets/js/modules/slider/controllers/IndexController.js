@@ -40,12 +40,14 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 pager: !1,
                 pause: 4000,
                 infiniteLoop: true,
-                useCSS: false,
-                controls: !0,
+                autoControls: false,
+                controls: true,
                 hideControlOnEnd: !0,
                 auto: false,
-                tickerHover: true,
-                touchEnabled: true,
+                autoStart: true,
+                stopAutoOnClick: false,
+                tickerHover: false,
+                touchEnabled: false,
                 onSliderLoad: function (currentIndex) {
                     //console.log( 'onSliderLoad' );
                 },
@@ -56,7 +58,7 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 },
                 onSlideAfter: function (e) {
                     setTimeout($scope.makeActive( e ), 50);
-                    //$scope.makeInActive(e);
+                    $scope.makeInActive(e);
                 }
 
             });
@@ -71,8 +73,16 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
             //     clearTimeout( $scope.secondInterval );
             //     $scope.slider.startAuto(true);
             // });
+            //
+            // $('.bx-pager-link').click( function (e) {
+            //     clearTimeout( $scope.interval );
+            //     clearTimeout( $scope.secondInterval );
+            //     $scope.slider.startAuto();
+            //     //$('.bx-start').click();
+            // });
+
             $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
-            //$scope.makeInActiveFirstSlide();
+            $scope.makeInActiveFirstSlide();
 
         });
 

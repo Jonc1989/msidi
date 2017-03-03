@@ -18,11 +18,9 @@
         </div>
 
 
-        <div class="col-lg-8 col-md-6 clear-pads">
+        <div class="col-lg-8 col-md-6 clear-pads computer-wrap">
             <div class="col-md-12 clear-pads mac2"></div>
-            <!--<div class="col-md-12 clear-pads computer-wrap">
 
-            </div>-->
 
             <div class="col-lg-12 col-md-10 clear-pads overflow-hidden">
                 <div class="keyboard">

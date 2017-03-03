@@ -99,4 +99,10 @@
     max-width: 180px;
     top: 125px;
   }
+
+}
+@media (min-width: 992px) {
+  .partner-wrap, .partner-col .opal, .partner-col .ecolines, .partner-col .rn, .partner-col .rta {
+    width: 100%;
+  }
 }
