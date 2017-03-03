@@ -1,4 +1,4 @@
-<div id="services" class="col-md-12 col-sm-12 col-xs-12 clear-pads blue-bg services white">
+<div id="services" class="col-md-12 col-sm-12 col-xs-12 clear-pads blue-bg services white" ng-controller="ServiceController">
         <div class="container clear-pads">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="title center title">Explore <span class="bold">variety</span> of our services</div>

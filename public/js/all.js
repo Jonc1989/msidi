@@ -3,7 +3,8 @@ var app = angular.module( 'app', [
     'clients',
     'company',
     'career',
-    'slider'
+    'slider',
+    'service'
 ] );
 
 $(document).ready(function(){
@@ -21,48 +22,24 @@ $(document).ready(function(){
 var career = angular.module('career', [
 
 ]);
-var caseStudies = angular.module('caseStudies', [
+var clients = angular.module('clients', [
 
 ]);
-var clients = angular.module('clients', [
+var caseStudies = angular.module('caseStudies', [
 
 ]);
 var company = angular.module('company', [
 
 ]);
+/**
+ * Created by Jānis Mozais on 03.03.2017..
+ */
+var service = angular.module('service', [
+
+]);
 var slider = angular.module('slider', [
 
 ]);
-career.service( 'CareerService', ['$http', '$q', function( $http, $q )
-{
-    var CareerService = {
-
-        sendMail: function( message )
-        {
-            var deferred = $q.defer();
-            $http.post( '/api/career/send', message )
-                .success( function( response )
-                {
-                    deferred.resolve( response );
-                } )
-                .error( function( response, status )
-                {
-                    if (status === 422)
-                    {
-                        deferred.resolve({errors: response});
-                    } else
-                    {
-                        deferred.reject();
-                    }
-                } );
-
-            return deferred.promise;
-
-        }
-    };
-    return CareerService;
-}]);
-
 career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $scope, CareerService ){
 
 
@@ -112,44 +89,14 @@ career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $
     };
 
 }]);
-caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
-    function ( $scope, CaseStudiesService, $animate){
-
-    $scope.caseStudies = [];
-
-    this.$onInit = function () {
-        $scope.getData();
-    };
-
-    $scope.visible = 'all';
-
-    $scope.filter = function ( category ) {
-        $scope.visible = category;
-    };
-
-    $scope.showPosts = function ( category ) {
-        return $scope.visible === 'all' || $scope.visible === category;
-    };
-    
-
-
-    $scope.getData = function(){
-        CaseStudiesService.all( 6 ).then(function(response)
-        {
-            $scope.caseStudies = response;
-        });
-    };
-
-
-}]);
-caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
+career.service( 'CareerService', ['$http', '$q', function( $http, $q )
 {
-    var CaseStudiesService = {
+    var CareerService = {
 
-        all: function( count )
+        sendMail: function( message )
         {
             var deferred = $q.defer();
-            $http.get( '/api/case-studies', {params:{ count: count }} )
+            $http.post( '/api/career/send', message )
                 .success( function( response )
                 {
                     deferred.resolve( response );
@@ -169,8 +116,9 @@ caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
 
         }
     };
-    return CaseStudiesService;
+    return CareerService;
 }]);
+
 caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
 
     $scope.clients = [];
@@ -243,6 +191,65 @@ caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
     });
 
 
+}]);
+caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
+    function ( $scope, CaseStudiesService, $animate){
+
+    $scope.caseStudies = [];
+
+    this.$onInit = function () {
+        $scope.getData();
+    };
+
+    $scope.visible = 'all';
+
+    $scope.filter = function ( category ) {
+        $scope.visible = category;
+    };
+
+    $scope.showPosts = function ( category ) {
+        return $scope.visible === 'all' || $scope.visible === category;
+    };
+    
+
+
+    $scope.getData = function(){
+        CaseStudiesService.all( 6 ).then(function(response)
+        {
+            $scope.caseStudies = response;
+        });
+    };
+
+
+}]);
+caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
+{
+    var CaseStudiesService = {
+
+        all: function( count )
+        {
+            var deferred = $q.defer();
+            $http.get( '/api/case-studies', {params:{ count: count }} )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CaseStudiesService;
 }]);
 company.controller( 'CompanyController', [ '$scope', 'CompanyService', function ( $scope, CompanyService ){
 
@@ -352,6 +359,41 @@ company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
         }
     };
     return CompanyService;
+}]);
+/**
+ * Created by Admin on 03.03.2017..
+ */
+service.controller( 'ServiceController', [ '$scope', function ( $scope ){
+
+    $scope.currentScroll = null;
+    $scope.currentBreakpoint = null;
+
+    $(window).load(function () {
+        $scope.scroll = $(window).scrollTop();
+        $scope.height = $(window).height();
+        $scope.projects = $('#services .project-count-wrap' ).offset().top;
+        $scope.projectsHeight = $('#services .project-count-wrap' ).height();
+        $scope.breakpoint = ( $scope.scroll + ( $scope.height / 2 ));
+
+        if ( $scope.breakpoint > ( $scope.projects - 100 ) &&  $scope.breakpoint < ( $scope.projects + $scope.projectsHeight + 100 ) ) {
+            //$(".year").addClass("active");
+console.log('fddf');
+        }
+
+
+        $(window).on('scroll',function() {
+            $scope.currentScroll = $(window).scrollTop();
+            $scope.currentBreakpoint = ( $scope.currentScroll + ( $scope.height / 2 ));
+
+            if ( $scope.currentBreakpoint > ( $scope.projects - 100 )
+                && $scope.currentBreakpoint < ( $scope.projects + $scope.projectsHeight + 100 ) ){
+
+                //$(".year").addClass("active");
+                console.log('fddf');
+            }
+        });
+
+    });
 }]);
 slider.controller( 'IndexController', [ '$scope', function ( $scope ){
 

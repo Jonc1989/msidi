@@ -3,7 +3,8 @@ var app = angular.module( 'app', [
     'clients',
     'company',
     'career',
-    'slider'
+    'slider',
+    'service'
 ] );
 
 $(document).ready(function(){

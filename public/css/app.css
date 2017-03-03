@@ -7514,18 +7514,20 @@ img {
   animation: macSlideOut .5s; }
 
 .inner-bg.active.leaving .keyboard, .inner-bg.active.leaving .mouse {
-  animation: keyboardSlideOut .5s; }
+  animation: keyboardSlideOut .5s;
+  margin-left: 2000px; }
 
 .inner-bg.active.leaving .notebook {
-  animation: bookSlideOut .5s; }
+  animation: bookSlideOut .5s;
+  left: -1000px; }
 
 .inner-bg.active.leaving .text-from-left .title {
   animation: slideOutFromLeft .5s;
-  margin-left: 0px; }
+  margin-left: -1000px; }
 
 .inner-bg.active.leaving .text-from-left .text {
   animation: slideOutFromLeft .5s;
-  margin-left: 0px; }
+  margin-left: -1000px; }
 
 @media (min-width: 1400px) {
   .industries {

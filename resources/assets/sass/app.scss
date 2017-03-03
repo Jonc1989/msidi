@@ -1200,18 +1200,20 @@ img{border:0}
   }
   .keyboard, .mouse{
     animation: keyboardSlideOut .5s;
+    margin-left: 2000px;
   }
   .notebook{
     animation: bookSlideOut .5s;
+    left: -1000px;
   }
   .text-from-left{
     .title{
       animation: slideOutFromLeft .5s;
-      margin-left: 0px;
+      margin-left: -1000px;
     }
     .text{
       animation: slideOutFromLeft .5s;
-      margin-left: 0px;
+      margin-left: -1000px;
     }
   }
 }
