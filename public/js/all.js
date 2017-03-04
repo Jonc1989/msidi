@@ -22,10 +22,10 @@ $(document).ready(function(){
 var career = angular.module('career', [
 
 ]);
-var clients = angular.module('clients', [
+var caseStudies = angular.module('caseStudies', [
 
 ]);
-var caseStudies = angular.module('caseStudies', [
+var clients = angular.module('clients', [
 
 ]);
 var company = angular.module('company', [
@@ -119,6 +119,65 @@ career.service( 'CareerService', ['$http', '$q', function( $http, $q )
     return CareerService;
 }]);
 
+caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
+    function ( $scope, CaseStudiesService, $animate){
+
+    $scope.caseStudies = [];
+
+    this.$onInit = function () {
+        $scope.getData();
+    };
+
+    $scope.visible = 'all';
+
+    $scope.filter = function ( category ) {
+        $scope.visible = category;
+    };
+
+    $scope.showPosts = function ( category ) {
+        return $scope.visible === 'all' || $scope.visible === category;
+    };
+    
+
+
+    $scope.getData = function(){
+        CaseStudiesService.all( 6 ).then(function(response)
+        {
+            $scope.caseStudies = response;
+        });
+    };
+
+
+}]);
+caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
+{
+    var CaseStudiesService = {
+
+        all: function( count )
+        {
+            var deferred = $q.defer();
+            $http.get( '/api/case-studies', {params:{ count: count }} )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CaseStudiesService;
+}]);
 caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
 
     $scope.clients = [];
@@ -191,65 +250,6 @@ caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
     });
 
 
-}]);
-caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
-    function ( $scope, CaseStudiesService, $animate){
-
-    $scope.caseStudies = [];
-
-    this.$onInit = function () {
-        $scope.getData();
-    };
-
-    $scope.visible = 'all';
-
-    $scope.filter = function ( category ) {
-        $scope.visible = category;
-    };
-
-    $scope.showPosts = function ( category ) {
-        return $scope.visible === 'all' || $scope.visible === category;
-    };
-    
-
-
-    $scope.getData = function(){
-        CaseStudiesService.all( 6 ).then(function(response)
-        {
-            $scope.caseStudies = response;
-        });
-    };
-
-
-}]);
-caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
-{
-    var CaseStudiesService = {
-
-        all: function( count )
-        {
-            var deferred = $q.defer();
-            $http.get( '/api/case-studies', {params:{ count: count }} )
-                .success( function( response )
-                {
-                    deferred.resolve( response );
-                } )
-                .error( function( response, status )
-                {
-                    if (status === 422)
-                    {
-                        deferred.resolve({errors: response});
-                    } else
-                    {
-                        deferred.reject();
-                    }
-                } );
-
-            return deferred.promise;
-
-        }
-    };
-    return CaseStudiesService;
 }]);
 company.controller( 'CompanyController', [ '$scope', 'CompanyService', function ( $scope, CompanyService ){
 
@@ -367,17 +367,22 @@ service.controller( 'ServiceController', [ '$scope', function ( $scope ){
 
     $scope.currentScroll = null;
     $scope.currentBreakpoint = null;
-
+    $scope.countFinished = false;
     $(window).load(function () {
+
+        var counter = new countUp('project-count', 1, 8, 0, 2);
+
+
         $scope.scroll = $(window).scrollTop();
         $scope.height = $(window).height();
         $scope.projects = $('#services .project-count-wrap' ).offset().top;
         $scope.projectsHeight = $('#services .project-count-wrap' ).height();
         $scope.breakpoint = ( $scope.scroll + ( $scope.height / 2 ));
-
+        
         if ( $scope.breakpoint > ( $scope.projects - 100 ) &&  $scope.breakpoint < ( $scope.projects + $scope.projectsHeight + 100 ) ) {
-            //$(".year").addClass("active");
-console.log('fddf');
+            $scope.countFinished = true;
+            counter.start();
+
         }
 
 
@@ -388,8 +393,12 @@ console.log('fddf');
             if ( $scope.currentBreakpoint > ( $scope.projects - 100 )
                 && $scope.currentBreakpoint < ( $scope.projects + $scope.projectsHeight + 100 ) ){
 
-                //$(".year").addClass("active");
-                console.log('fddf');
+                if( !$scope.countFinished ){
+                    $scope.countFinished = true;
+                    counter.start();
+
+                }
+
             }
         });
 
