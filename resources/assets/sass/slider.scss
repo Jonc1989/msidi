@@ -60,7 +60,7 @@
   height: 150px;
   position: absolute;
   bottom: -115px;
-  left: 1000px;
+  left: 1500px;
   opacity: 0;
   @include background-size(contain);
 }
@@ -74,7 +74,7 @@
   height: 397px;
   width: 100%;
   right: -1000px;
-  margin-bottom: 30px;
+  //margin-bottom: 30px;
   //top: -165px;
   //position: absolute;
   @include background-size(contain);
@@ -185,7 +185,7 @@
 }
 .rocket{
   position: absolute;
-  bottom: -1000px;
+  bottom: -500px;
   right: 37%;
   height: 457px;
   width: 190px;
@@ -376,7 +376,7 @@
     //bottom: 160px;
   }
   .clouds{
-    bottom: 0px;
+    bottom: -5px;
   }
   .design-bg{
     left: 0px;
@@ -419,9 +419,6 @@
 
 }
 .inner-bg.active.leaving{
-  .mac2 {
-    opacity: 0;
-  }
   .city {
     bottom: -1000px;
   }
@@ -464,7 +461,7 @@
     bottom: 2000px;
   }
   .clouds{
-    bottom: -2000px;
+    bottom: -1000px;
   }
 }
 

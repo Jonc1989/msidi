@@ -2,6 +2,12 @@
   .partner-wrap:not(:last-of-type){
     margin-right: 55px;
   }
+  .service-title{
+    padding: 0px;
+  }
+  .monitor, .light-bulb, .magnifier, .lifebelt {
+    margin-bottom: 25px;
+  }
 }
 
 @media (max-width: 991px){
@@ -33,6 +39,9 @@
     height: 100px;
     margin-bottom: 30px;
   }
+  .service-type {
+    margin-bottom: 80px;
+  }
 }
 @media (max-width: 767px){
   #slider{
@@ -51,5 +60,11 @@
   .navbar-brand {
     float: left;
     padding: 5px 30px;
+  }
+}
+@media (min-width: 600px)and (max-width: 767px){
+  .service-type{
+    margin-left: 25%;
+    width: 50%;
   }
 }

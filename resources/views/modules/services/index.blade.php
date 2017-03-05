@@ -12,11 +12,13 @@
                         </div>
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12 clear-pads border-bottom-blue">
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 service-type">
-                                <div class="monitor"></div>
-                                <div class="service-title">Custom software development</div>
-                                <div class="title-divider"></div>
-                                <div class="services-list">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 service-type">
+                                <div class="col-md-12 col-sm-12 col-xs-12 clear-pads ">
+                                        <div class="monitor col-sm-3 col-xs-3 clear-pads"></div>
+                                        <div class="service-title col-sm-9 col-xs-9">Custom software development</div>
+                                </div>
+                                <div class="title-divider col-xs-12"></div>
+                                <div class="services-list col-xs-12 clear-pads">
                                         <ul>
                                                 <li>Architecture design</li>
                                                 <li>Software development</li>
@@ -28,11 +30,13 @@
                                 </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 service-type">
-                                <div class="light-bulb"></div>
-                                <div class="service-title">User Experience <br>design</div>
-                                <div class="title-divider"></div>
-                                <div class="services-list">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 service-type">
+                                <div class="col-md-12 col-sm-12 col-xs-12 clear-pads ">
+                                        <div class="light-bulb col-sm-3 col-xs-3 clear-pads"></div>
+                                        <div class="service-title col-sm-9 col-xs-9">User Experience <br>design</div>
+                                </div>
+                                <div class="title-divider col-xs-12"></div>
+                                <div class="services-list col-xs-12 clear-pads">
                                         <ul>
                                                 <li>Use cases and scenarios</li>
                                                 <li>Customer Journey Maps</li>
@@ -44,11 +48,13 @@
                                 </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 service-type">
-                                <div class="magnifier"></div>
-                                <div class="service-title">Re-engineering <br>and software testing</div>
-                                <div class="title-divider"></div>
-                                <div class="services-list">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 service-type">
+                                <div class="col-md-12 col-sm-12 col-xs-12 clear-pads ">
+                                        <div class="magnifier col-sm-3 col-xs-3 clear-pads"></div>
+                                        <div class="service-title col-sm-9 col-xs-9">Re-engineering <br>and software testing</div>
+                                </div>
+                                <div class="title-divider col-xs-12"></div>
+                                <div class="services-list col-xs-12 clear-pads">
                                         <ul>
                                                 <li>Service enabling</li>
                                                 <li>Platform migration</li>
@@ -60,11 +66,13 @@
                                 </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 service-type">
-                                <div class="lifebelt"></div>
-                                <div class="service-title">Software maintenance <br>and support</div>
-                                <div class="title-divider"></div>
-                                <div class="services-list">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 service-type">
+                                <div class="col-md-12 col-sm-12 col-xs-12 col-xs-3 clear-pads ">
+                                        <div class="lifebelt col-sm-3 clear-pads"></div>
+                                        <div class="service-title col-sm-9 col-xs-9">Software maintenance <br>and support</div>
+                                </div>
+                                <div class="title-divider col-xs-12"></div>
+                                <div class="services-list col-xs-12 clear-pads">
                                         <ul>
                                                 <li>Continious integration</li>
                                                 <li>Testing</li>

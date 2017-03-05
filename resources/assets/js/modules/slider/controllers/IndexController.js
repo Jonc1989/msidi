@@ -16,14 +16,14 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
     $scope.makeInActive = function (e) {
         $scope.interval = setTimeout(function () {
             $(e).find('.inner-bg').addClass('leaving')
-        }, 3500);
+        }, 3000);
     };
 
     $scope.makeInActiveFirstSlide = function (e) {
         $scope.secondInterval = setTimeout(function () {
             $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('leaving');
             $( '.amber-bg' ).removeClass('first-slide');
-        },3500);
+        },3000);
     };
 
     $scope.initSlider = function () {
@@ -63,23 +63,23 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
 
             });
             
-            // $('.bx-prev').click( function () {
-            //     clearTimeout( $scope.interval );
-            //     clearTimeout( $scope.secondInterval );
-            //     $scope.slider.startAuto(true);
-            // });
-            // $('.bx-next').click( function () {
-            //     clearTimeout( $scope.interval );
-            //     clearTimeout( $scope.secondInterval );
-            //     $scope.slider.startAuto(true);
-            // });
-            //
-            // $('.bx-pager-link').click( function (e) {
-            //     clearTimeout( $scope.interval );
-            //     clearTimeout( $scope.secondInterval );
-            //     $scope.slider.startAuto();
-            //     //$('.bx-start').click();
-            // });
+            $('.bx-prev').click( function () {
+                clearTimeout( $scope.interval );
+                clearTimeout( $scope.secondInterval );
+                //$scope.slider.startAuto(true);
+            });
+            $('.bx-next').click( function () {
+                clearTimeout( $scope.interval );
+                clearTimeout( $scope.secondInterval );
+                //$scope.slider.startAuto(true);
+            });
+            
+            $('.bx-pager-link').click( function (e) {
+                clearTimeout( $scope.interval );
+                clearTimeout( $scope.secondInterval );
+                $scope.slider.startAuto();
+                //$('.bx-start').click();
+            });
 
             $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
             $scope.makeInActiveFirstSlide();

@@ -5822,7 +5822,7 @@ button.close {
   height: 150px;
   position: absolute;
   bottom: -115px;
-  left: 1000px;
+  left: 1500px;
   opacity: 0;
   background-size: contain; }
 
@@ -5832,7 +5832,6 @@ button.close {
   height: 397px;
   width: 100%;
   right: -1000px;
-  margin-bottom: 30px;
   background-size: contain; }
 
 .amber-bg {
@@ -5918,7 +5917,7 @@ button.close {
 
 .rocket {
   position: absolute;
-  bottom: -1000px;
+  bottom: -500px;
   right: 37%;
   height: 457px;
   width: 190px;
@@ -6072,7 +6071,7 @@ button.close {
   opacity: 1; }
 
 .inner-bg.active .clouds {
-  bottom: 0px; }
+  bottom: -5px; }
 
 .inner-bg.active .design-bg {
   left: 0px; }
@@ -6106,9 +6105,6 @@ button.close {
 .inner-bg.active .custom-software-bg {
   top: 0px; }
 
-.inner-bg.active.leaving .mac2 {
-  opacity: 0; }
-
 .inner-bg.active.leaving .city {
   bottom: -1000px; }
 
@@ -6140,7 +6136,7 @@ button.close {
   bottom: 2000px; }
 
 .inner-bg.active.leaving .clouds {
-  bottom: -2000px; }
+  bottom: -1000px; }
 
 .inner-bg.active .ecolines-bg {
   background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;
@@ -6511,8 +6507,7 @@ img {
 
 .monitor, .light-bulb, .magnifier, .lifebelt {
   width: 70px;
-  height: 70px;
-  margin-bottom: 25px; }
+  height: 70px; }
 
 .monitor {
   background: url(../images/monitor.png) center center no-repeat; }
@@ -7110,17 +7105,20 @@ img {
 .case-studies .image {
   transition: all  .4s; }
 
-.custom-software-bg, .amber-bg, .design-bg, .opal-bg, .ecolines-bg, .mac, .city, .text-from-right {
+.custom-software-bg, .amber-bg, .design-bg, .ecolines-bg, .mac, .city {
   transition: all .4s; }
 
-.road {
+.opal-bg {
   transition: all .6s; }
 
 .year {
   transition: all 0.4s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
 
-.laptop, .sky, .text, .pens {
+.laptop, .sky {
   transition: all 0.5s cubic-bezier(0.465, 0.615, 0.37, 1.15); }
+
+.title, .text-from-right, .text, .laptop, .data {
+  transition: all .8s; }
 
 .year {
   transition: all 1s cubic-bezier(0, 1.025, 0.58, 1); }
@@ -7130,6 +7128,12 @@ img {
 
 .image.active {
   transition: all 1.3s cubic-bezier(0, 1.025, 0.58, 1); }
+
+.pens {
+  transition: all 0.7s cubic-bezier(0.465, 0.615, 0.37, 1.235); }
+
+.road {
+  transition: all 0.7s ease-in; }
 
 @keyframes macSlideIn {
   0% {
@@ -7173,11 +7177,9 @@ img {
   0% {
     left: 1000px; }
   50% {
-    left: -50px; }
-  85% {
-    left: 7px; }
-  92% {
-    left: -1px; }
+    left: -15px; }
+  75% {
+    left: 5px; }
   100% {
     left: 0px;
     opacity: 1; } }
@@ -7186,11 +7188,9 @@ img {
   0% {
     left: 5000px; }
   50% {
-    left: -50px; }
-  85% {
-    left: 7px; }
-  92% {
-    left: -1px; }
+    left: -7px; }
+  75% {
+    left: 2px; }
   100% {
     left: 0px;
     opacity: 1; } }
@@ -7226,8 +7226,6 @@ img {
 @keyframes up {
   0% {
     bottom: -1000px; }
-  50% {
-    bottom: 20px; }
   75% {
     bottom: 0px; }
   100% {
@@ -7292,17 +7290,15 @@ img {
 
 @keyframes down {
   0% {
-    bottom: 0px; }
-  50% {
     bottom: -5px; }
-  75% {
-    bottom: 20px; }
+  25% {
+    bottom: 0px; }
   100% {
     bottom: -1000px; } }
 
 @keyframes up-elastic {
   0% {
-    bottom: -1000px; }
+    bottom: -500px; }
   50% {
     bottom: 185px; }
   75% {
@@ -7313,10 +7309,8 @@ img {
 @keyframes to-sky-elastic {
   0% {
     bottom: 160px; }
-  50% {
+  25% {
     bottom: 145px; }
-  75% {
-    bottom: 185px; }
   100% {
     bottom: 1000px; } }
 
@@ -7339,6 +7333,22 @@ img {
     right: 14%; }
   100% {
     right: 15%; } }
+
+@keyframes nexusGoBack {
+  0% {
+    left: 30%; }
+  25% {
+    left: 35%; }
+  100% {
+    left: -2000px; } }
+
+@keyframes iphoneGoBack {
+  0% {
+    right: 15%; }
+  25% {
+    right: 20%; }
+  100% {
+    right: -2000px; } }
 
 @keyframes rotateUp {
   0% {
@@ -7411,94 +7421,94 @@ img {
     margin-left: -1000px; } }
 
 .inner-bg.active .text-from-right .title:nth-child(1) {
-  animation: right-to-left .85s; }
+  animation: right-to-left 1.2s; }
 
 .inner-bg.active .text-from-right .title:nth-child(2) {
-  animation: right-to-left .8s; }
+  animation: right-to-left 1.1s; }
 
 .inner-bg.active .text-from-right .description {
-  animation: right-to-left .75s; }
+  animation: right-to-left 1s; }
 
 .inner-bg.active .mac {
-  animation: right-to-left .7s; }
+  animation: right-to-left 1s; }
 
 .inner-bg.active .laptop {
-  animation: right-to-left .6s; }
+  animation: right-to-left 1s; }
 
 .inner-bg.active .data {
-  animation: right-to-left-faster .7s; }
+  animation: right-to-left-faster 1.2s; }
 
 .inner-bg.active .city {
-  animation: up .6s; }
+  animation: up .9s; }
 
 .inner-bg.active .clouds {
-  animation: up2 .6s; }
+  animation: up 1s; }
 
 .inner-bg.active .rocket {
-  animation: up-elastic .7s;
+  animation: up-elastic 1s;
   bottom: 160px; }
 
 .inner-bg.active .bus {
-  animation: left-to-right .8s; }
+  animation: left-to-right 1s; }
 
 .inner-bg.active .sky {
-  animation: spawn-bg .7s;
+  animation: spawn-bg 1.1s;
   background-position-y: 90%; }
   .inner-bg.active .sky .title {
-    animation: spawn-up .7s;
+    animation: spawn-up 1.2s;
     bottom: 0px; }
   .inner-bg.active .sky .ecolines-slide-text {
-    animation: spawn-up .6s;
+    animation: spawn-up 1.15s;
     bottom: 0px; }
 
 .inner-bg.active .trees {
-  animation: up3 .8s;
+  animation: up3 1s;
   bottom: -2px; }
 
 .inner-bg.active .nexus {
-  animation: nexus-spawn .7s; }
+  animation: nexus-spawn 1s; }
 
 .inner-bg.active .iphone {
-  animation: iphone-spawn .7s; }
+  animation: iphone-spawn 1s; }
 
 .inner-bg.active .london {
-  animation: rotateUp .7s; }
+  animation: rotateUp 1s; }
 
 .inner-bg.active .mac2 {
-  animation: macSlideIn .6s; }
+  animation: macSlideIn 1s; }
 
 .inner-bg.active .keyboard, .inner-bg.active .mouse {
-  animation: keyboardSlideIn .6s; }
+  animation: keyboardSlideIn 1.1s; }
 
 .inner-bg.active .notebook {
-  animation: bookSlideIn .6s; }
+  animation: bookSlideIn 1.15s; }
 
 .inner-bg.active .text-from-left .title {
-  animation: slideInFromLeft .6s;
+  animation: slideInFromLeft 1.1s;
   margin-left: 0px; }
 
 .inner-bg.active .text-from-left .text {
-  animation: slideInFromLeft .6s;
+  animation: slideInFromLeft 1.2s;
   margin-left: 0px; }
 
 .inner-bg.active.leaving .rocket {
-  animation: to-sky-elastic .5s; }
+  animation: to-sky-elastic .9s; }
 
 .inner-bg.active.leaving .clouds {
-  animation: down .6s; }
+  animation: down .9s; }
 
 .inner-bg.active.leaving .bus {
-  animation: left-to-right2 .6s; }
+  animation: left-to-right2 .8s; }
 
 .inner-bg.active.leaving .trees {
-  animation: up3-reverse-motion .2s;
+  animation: up3-reverse-motion .5s;
   bottom: -2000px; }
 
 .inner-bg.active.leaving .sky {
   animation: spawn-bg-reverse .5s; }
 
 .inner-bg.active.leaving .london {
-  animation: rotateDown .5s;
+  animation: rotateDown .9s;
   bottom: -1500px; }
 
 .inner-bg.active.leaving .sky {
@@ -7510,15 +7520,22 @@ img {
   .inner-bg.active.leaving .sky .title {
     animation: spawn-down .6s; }
 
+.inner-bg.active.leaving .nexus {
+  animation: nexusGoBack .9s; }
+
+.inner-bg.active.leaving .iphone {
+  animation: iphoneGoBack .9s; }
+
 .inner-bg.active.leaving .mac2 {
-  animation: macSlideOut .5s; }
+  animation: macSlideOut .9s;
+  opacity: 0; }
 
 .inner-bg.active.leaving .keyboard, .inner-bg.active.leaving .mouse {
-  animation: keyboardSlideOut .5s;
+  animation: keyboardSlideOut .9s;
   margin-left: 2000px; }
 
 .inner-bg.active.leaving .notebook {
-  animation: bookSlideOut .5s;
+  animation: bookSlideOut .9s;
   left: -1000px; }
 
 .inner-bg.active.leaving .text-from-left .title {
@@ -7531,7 +7548,9 @@ img {
 
 @media (min-width: 1400px) {
   .industries {
-    width: 295px; } }
+    width: 295px; }
+  .mac2 {
+    margin-bottom: 30px; } }
 
 @media (max-width: 1399px) {
   .industries:not(:last-of-type) {
@@ -7551,6 +7570,8 @@ img {
     padding-top: 160px; }
   #slider .slider-container {
     height: 750px; }
+    #slider .slider-container .title {
+      margin-bottom: 25px; }
   #slider .amber-container, #slider, #slider .bx-wrapper, #slider .bx-viewport {
     height: 750px; }
   .inner-bg, .ecolines-container {
@@ -7560,7 +7581,7 @@ img {
   .opal-container .inner-bg {
     padding-top: 175px; }
   .custom-software-container .inner-bg {
-    padding-top: 180px; }
+    padding-top: 100px; }
   .design-container .inner-bg {
     padding-top: 125px; }
   .mac2 {
@@ -7568,7 +7589,7 @@ img {
   .design-container .text-from-left {
     max-height: 330px; }
   .notebook {
-    height: 185px;
+    height: 240px;
     margin-left: 40%; }
   .keyboard {
     height: 175px; }
@@ -7603,7 +7624,11 @@ img {
 
 @media (min-width: 992px) {
   .partner-wrap:not(:last-of-type) {
-    margin-right: 55px; } }
+    margin-right: 55px; }
+  .service-title {
+    padding: 0px; }
+  .monitor, .light-bulb, .magnifier, .lifebelt {
+    margin-bottom: 25px; } }
 
 @media (max-width: 991px) {
   body, .short-text {
@@ -7622,7 +7647,9 @@ img {
   .partner-col .opal, .partner-col .ecolines, .partner-col .rn, .partner-col .rta {
     width: 100%;
     height: 100px;
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .service-type {
+    margin-bottom: 80px; } }
 
 @media (max-width: 767px) {
   #slider {
@@ -7637,5 +7664,10 @@ img {
   .navbar-brand {
     float: left;
     padding: 5px 30px; } }
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .service-type {
+    margin-left: 25%;
+    width: 50%; } }
 
 /*# sourceMappingURL=app.css.map */

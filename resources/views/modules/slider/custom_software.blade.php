@@ -2,7 +2,7 @@
 
     <div class="inner-bg ">
         <div class="custom-software-bg"></div>
-        <div class="col-lg-3 col-lg-offset-2 col-md-6 text-from-right white">
+        <div class="col-lg-3 col-lg-offset-2 col-md-4 col-md-offset-1 text-from-right white">
             <div class="title col-lg-12 clear-pads clear-margs" >Custom Software </div>
             <div class="title col-lg-12 clear-pads">development</div>
             <div class="description col-lg-12 clear-pads">

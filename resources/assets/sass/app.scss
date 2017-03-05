@@ -174,7 +174,6 @@ img{border:0}
 .monitor, .light-bulb, .magnifier, .lifebelt{
   width: 70px;
   height: 70px;
-  margin-bottom: 25px;
 }
 .monitor{
   background: url(../images/monitor.png) center center no-repeat;
@@ -861,10 +860,10 @@ img{border:0}
   -o-transition: all .4s;
   transition: all  .4s;
 }
-.custom-software-bg, .amber-bg, .design-bg, .opal-bg, .ecolines-bg, .mac, .city, .text-from-right{
+.custom-software-bg, .amber-bg, .design-bg, .ecolines-bg, .mac, .city{
   transition: all .4s;
 }
-.road{
+.opal-bg{
   transition: all .6s;
 }
 .year{
@@ -873,14 +872,14 @@ img{border:0}
   -o-transition: all .4s cubic-bezier(0.465, 0.615, 0.370, 1.235);
   transition: all  .4s cubic-bezier( 0.465, 0.615, 0.370, 1.15 );
 }
- .laptop, .sky, .text, .pens{
+ .laptop, .sky{
  -webkit-transition: all .5s cubic-bezier(0.465, 0.615, 0.370, 1.235);
   -moz-transition: all .5s cubic-bezier(0.465, 0.615, 0.370, 1.235);
  -o-transition: all .5s cubic-bezier(0.465, 0.615, 0.370, 1.235);
  transition: all  .5s cubic-bezier( 0.465, 0.615, 0.370, 1.15 );
 }
-.title{
-  //transition: all .6s;
+.title, .text-from-right, .text, .laptop, .data{
+  transition: all .8s;
 }
 .sky .trees{
   //transition: all .7s;
@@ -896,6 +895,12 @@ img{border:0}
 }
 .image.active {
   @include animate( all, 1.3s, cubic-bezier(0.000, 1.025, 0.580, 1.000) );
+}
+.pens{
+  @include animate( all, .7s, cubic-bezier(0.465, 0.615, 0.370, 1.235) );
+}
+.road{
+  @include animate( all, .7s, ease-in );
 }
 @keyframes macSlideIn {
   0%   {right: -2000px;}
@@ -923,16 +928,15 @@ img{border:0}
 }
 @keyframes right-to-left {
   0%   {left: 1000px;}
-  50%   {left: -50px;}
-  85%   {left: 7px;}
-  92%   {left: -1px;}
+
+  50%   {left: -15px;}
+  75%   {left: 5px;}
   100% {left: 0px; opacity: 1;}
 }
 @keyframes right-to-left-faster {
   0%   {left: 5000px;}
-  50%   {left: -50px;}
-  85%   {left: 7px;}
-  92%   {left: -1px;}
+  50%   {left: -7px;}
+  75%   {left: 2px;}
   100% {left: 0px; opacity: 1;}
 }
 @keyframes left-to-right {
@@ -956,8 +960,8 @@ img{border:0}
 }
 @keyframes up {
   0% {bottom: -1000px;}
-  50%   {bottom: 20px;}
   75%   {bottom: 0px;}
+  //75%   {bottom: 0px;}
   100%   { opacity: 1; bottom: -5px;}
 }
 @keyframes up2 {
@@ -991,22 +995,24 @@ img{border:0}
   100%   { opacity: 0; bottom: -1000px;}
 }
 @keyframes down {
-  0%   {  bottom: 0px;}
-  50%  {bottom: -5px;}
-  75%  {bottom: 20px;}
+  0%   {  bottom: -5px;}
+  25%  {bottom: 0px;}
+  //75%  {bottom: 20px;}
   100% {bottom: -1000px;}
 }
 @keyframes up-elastic {
-  0% {bottom: -1000px;}
+  0% {bottom: -500px;}
   50%   {bottom: 185px;}
   75%   {bottom: 145px;}
   100%  { bottom: 160px;}
 }
 @keyframes to-sky-elastic {
-  0%   { bottom: 160px;}
-  50%  { bottom: 145px;}
-  75%  { bottom: 185px;}
-  100% { bottom: 1000px;}
+  0% {
+    bottom: 160px; }
+  25% {
+    bottom: 145px; }
+  100% {
+    bottom: 1000px; }
 }
 @keyframes nexus-spawn{
   0%   { left: -2000px;}
@@ -1019,6 +1025,16 @@ img{border:0}
   50%  { right: 20%;}
   75%  { right: 14%;}
   100% { right: 15%;}
+}
+@keyframes nexusGoBack{
+  0%   { left: 30%;}
+  25%  { left: 35%;}
+  100%  {left: -2000px;}
+}
+@keyframes iphoneGoBack{
+  0%    { right: 15%;}
+  25%  { right: 20%;}
+  100% { right: -2000px;}
 }
 @keyframes rotateUp {
   0% {
@@ -1087,101 +1103,101 @@ img{border:0}
 .inner-bg.active{
   .text-from-right{
     .title:nth-child(1){
-      animation: right-to-left .85s;
+      animation: right-to-left 1.2s;
     }
     .title:nth-child(2){
-      animation: right-to-left .8s;
+      animation: right-to-left 1.1s;
     }
     .description{
-      animation: right-to-left .75s;
+      animation: right-to-left 1s;
     }
   }
   .mac{
-    animation: right-to-left .7s;
+    animation: right-to-left 1s;
   }
   .laptop{
-    animation: right-to-left .6s;
+    animation: right-to-left 1s;
   }
   .data{
-    animation: right-to-left-faster .7s;
+    animation: right-to-left-faster 1.2s;
   }
   .city{
-    animation: up .6s;
+    animation: up .9s;
   }
   .clouds{
-    animation: up2 .6s;
+    animation: up 1s;
   }
   .rocket{
-    animation: up-elastic .7s;
+    animation: up-elastic 1s;
     bottom: 160px;
   }
   .bus{
-    animation: left-to-right .8s;
+    animation: left-to-right 1s;
   }
   .sky{
-    animation: spawn-bg .7s;
+    animation: spawn-bg 1.1s;
     background-position-y: 90%;
     .title{
-      animation: spawn-up .7s;
+      animation: spawn-up 1.2s;
       bottom: 0px;
     }
     .ecolines-slide-text{
-      animation: spawn-up .6s;
+      animation: spawn-up 1.15s;
       bottom: 0px;
     }
   }
   .trees{
-    animation: up3 .8s;
+    animation: up3 1s;
     bottom: -2px;
   }
   .nexus{
-    animation: nexus-spawn .7s;
+    animation: nexus-spawn 1s;
   }
   .iphone{
-    animation: iphone-spawn .7s;
+    animation: iphone-spawn 1s;
   }
   .london{
-    animation: rotateUp .7s;
+    animation: rotateUp 1s;
   }
   .mac2{
-    animation: macSlideIn .6s;
+    animation: macSlideIn 1s;
   }
   .keyboard, .mouse{
-    animation: keyboardSlideIn .6s;
+    animation: keyboardSlideIn 1.1s;
   }
   .notebook{
-    animation: bookSlideIn .6s;
+    animation: bookSlideIn 1.15s;
   }
   .text-from-left{
     .title{
-      animation: slideInFromLeft .6s;
+      animation: slideInFromLeft 1.1s;
       margin-left: 0px;
     }
     .text{
-      animation: slideInFromLeft .6s;
+      animation: slideInFromLeft 1.2s;
       margin-left: 0px;
     }
   }
 }
 .inner-bg.active.leaving{
   .rocket{
-    animation: to-sky-elastic .5s;
+    animation: to-sky-elastic .9s;
   }
   .clouds{
-    animation: down .6s;
+    animation: down .9s;
   }
   .bus{
-    animation: left-to-right2 .6s;
+    animation: left-to-right2 .8s;
   }
   .trees{
-    animation: up3-reverse-motion .2s;
+    animation: up3-reverse-motion .5s;
     bottom: -2000px;
   }
   .sky{
     animation: spawn-bg-reverse .5s;
   }
   .london{
-    animation: rotateDown .5s;
+    animation: rotateDown .9s;
     bottom: -1500px;
   }
   .sky{
@@ -1195,15 +1211,22 @@ img{border:0}
       animation: spawn-down .6s;
     }
   }
+  .nexus{
+    animation: nexusGoBack .9s;
+  }
+  .iphone{
+    animation: iphoneGoBack .9s;
+  }
   .mac2{
-    animation: macSlideOut .5s;
+    animation: macSlideOut .9s;
+    opacity: 0;
   }
   .keyboard, .mouse{
-    animation: keyboardSlideOut .5s;
+    animation: keyboardSlideOut .9s;
     margin-left: 2000px;
   }
   .notebook{
-    animation: bookSlideOut .5s;
+    animation: bookSlideOut .9s;
     left: -1000px;
   }
   .text-from-left{
