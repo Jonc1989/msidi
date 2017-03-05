@@ -8,15 +8,14 @@ caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
             slideWidth: 820,
             minSlides: 1,
             moveSlides: 1,
+            speed: 0,
+            useCSS: true,
+            pager: false,
+            pause: 4000,
+            infiniteLoop: true,
+            controls: true,
             slideMargin: 20,
-            speed: 500,
-            pager: !1,
-            infiniteLoop: !0,
-            controls: !0,
-            hideControlOnEnd: !0,
-            auto: false,
-            tickerHover: true,
-            touchEnabled: true,
+            auto: true,
             onSliderLoad: function () {
 
             },
@@ -27,7 +26,7 @@ caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
                 //},497);
 
             },
-            onSlideAfter: function (e) { console.log( e);
+            onSlideAfter: function (e) {
                 //setTimeout(function () {
                     $(e).find('.client-slide').addClass('active');
                 //},500);

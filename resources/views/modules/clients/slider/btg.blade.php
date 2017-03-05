@@ -1,8 +1,8 @@
 <div class="client-slide">
     <div class="client-slide-wrap">
-        <div class="client-name">Pēteris Kokovins</div>
-        <div class="client-position">Head of the board</div>
-        <div class="client-description">
+        <div class="client-name col-md-12 clear-pads">Pēteris Kokovins</div>
+        <div class="client-position col-md-12 clear-pads">Head of the board</div>
+        <div class="client-description col-md-12 clear-pads">
             “We are very pleased with the MS-IDI company’s contribution to the future of our business.
             The introduced OPAL system has repeatedly optimized a number of processes taking place in out company,
             made them more transparent, as well as increased work erformance speed and quality.
