@@ -58,7 +58,7 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 },
                 onSlideAfter: function (e) {
                     setTimeout($scope.makeActive( e ), 50);
-                    $scope.makeInActive(e);
+                    //$scope.makeInActive(e);
                 }
 
             });

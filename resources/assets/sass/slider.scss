@@ -102,6 +102,7 @@
   width: 100%;
   position: absolute;
   top: -2000px;
+  overflow: hidden;
 }
 .ecolines-container{
   background: url(../images/custom-software/custom-software.png);
@@ -123,6 +124,7 @@
     padding-top: 250px;
   }
   background: url(../images/amber/amber-bgg.png) center center no-repeat;
+  background-position-x: 0px;
 }
 .amber-bg.active, .first-slide.amber-bg {
   background-position-x: 0px;

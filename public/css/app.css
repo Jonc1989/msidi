@@ -5854,7 +5854,8 @@ button.close {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: -2000px; }
+  top: -2000px;
+  overflow: hidden; }
 
 .ecolines-container {
   background: url(../images/custom-software/custom-software.png);
@@ -5866,7 +5867,8 @@ button.close {
   background-position: 0px 0px; }
 
 .custom-software-container {
-  background: url(../images/amber/amber-bgg.png) center center no-repeat; }
+  background: url(../images/amber/amber-bgg.png) center center no-repeat;
+  background-position-x: 0px; }
   .custom-software-container .inner-bg {
     padding-top: 250px; }
 
