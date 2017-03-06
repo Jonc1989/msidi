@@ -1,13 +1,14 @@
 @extends('master')
 
 @section('content')
-<div class="page-section page-content">
-    <div class="row block" >
-        <h1 class="exigen-title black">Exigen Services</h1>
-        <p  class="exigen-text black">Exigen Services is a private multinational company specializing in the software development provision services on order, and actively using the Agile methodology. During the cooperation between MS-IDI and Exigen Services, multiple projects has been successfully implemented for large clients from the USA and Europe. At the moment cooperation successfully go on and it is already the 3rd year of great cooperation.</p>
+<div id="exigen" class="col-md-12 col-sm-12 col-xs-12 clear-pads">
+    <div class="col-md-12 col-sm-12 col-xs-12" >
+        <div class="title center title">Exigen Services</div>
+        <div  class="center short-text">Exigen Services is a private multinational company
+            specializing in the software development provision services on order, and actively using the Agile methodology. During the cooperation between MS-IDI and Exigen Services, multiple projects has been successfully implemented for large clients from the USA and Europe. At the moment cooperation successfully go on and it is already the 3rd year of great cooperation.</div>
     </div>
-    <div id="exigen-info" class="medium-12 column orange" style="margin-top: 50px;">
-        <div class="row block clear-pads">
+    <div id="exigen-info" class="col-md-12 col-sm-12 col-xs-12 clear-pads orange">
+        <div class="clear-pads">
             <div class="medium-12 column text-center exigen-info-pic">
                 <img src="http://ms-idi.eu/wp-content/uploads/2015/05/exigen_services_logo_white.png">
             </div>
@@ -21,6 +22,28 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="row block" style="margin-bottom: 5%;">
         <h1 class="exigen-title black">Exigen Services</h1>
         <div class="medium-6 column no-pads-right">

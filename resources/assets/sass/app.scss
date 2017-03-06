@@ -1307,6 +1307,7 @@ img{border:0}
     }
     .title{
       animation: spawn-down .6s;
+      bottom: -1000px;
     }
   }
   .nexus{
@@ -1345,3 +1346,4 @@ img{border:0}
 
 @import "medium";
 @import "small";
+//@import "exigen";

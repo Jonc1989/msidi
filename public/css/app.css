@@ -6297,49 +6297,8 @@ button.form-control:focus {
   outline: 0;
   box-shadow: none; }
 
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : 2014.13.10, 11:20:53
-    Author     : eddy
-*/
-.exigen-title {
-  text-transform: none;
-  font-size: 40px;
-  margin-top: 40px;
-  margin-bottom: 25px; }
-
-.exigen-text {
-  font-size: 16px;
-  margin-bottom: 70px; }
-
-.exigen-info {
-  font-family: 'Open Sans Light';
-  font-size: 16px;
-  height: 40px; }
-
-.exigen-info-text {
-  font-family: 'Open Sans Semibold';
-  font-size: 16px;
-  height: 40px; }
-
-.white {
-  color: white; }
-
-.black {
-  color: #6b6b6b; }
-
 .orange {
   background-color: #ff895e; }
-
-.clear-pads {
-  padding: 0; }
-
-#exigen-info {
-  padding-bottom: 55px; }
 
 #exigen-info::before {
   position: absolute;
@@ -6360,53 +6319,6 @@ and open the template in the editor.
   top: -30px;
   margin-left: 50%;
   left: -42px; }
-
-.exigen-info-pic {
-  padding-top: 50px;
-  padding-bottom: 30px; }
-
-.exigen-pic {
-  margin-top: 55px; }
-
-#coop-pic {
-  display: none; }
-
-#coop-wrap {
-  background-image: url("http://ms-idi.eu/wp-content/uploads/2014/10/pattern.png");
-  min-height: 635px;
-  background-repeat: no-repeat; }
-
-#dev-pic {
-  display: block;
-  float: right; }
-
-#dev-wrap, #dew-row {
-  max-height: 530px; }
-
-#dev-wrap {
-  position: absolute;
-  top: 0;
-  right: 0; }
-
-@media (max-width: 64em) {
-  #dev-pic {
-    display: none; } }
-
-@media (max-width: 40em) {
-  .exigen-title {
-    font-size: 30px;
-    margin-top: 30px;
-    margin-bottom: 20px; }
-  .exigen-text {
-    margin-bottom: 15px; }
-  .exigen-pic {
-    margin-top: 30px; }
-  #coop-pic {
-    display: block; }
-  #coop-wrap {
-    background-image: none;
-    height: auto;
-    min-height: 0; } }
 
 @font-face {
   font-family: 'Montserrat-Bold';
@@ -7658,7 +7570,8 @@ img {
     animation: spawn-down .5s;
     bottom: -1000px; }
   .inner-bg.active.leaving .sky .title {
-    animation: spawn-down .6s; }
+    animation: spawn-down .6s;
+    bottom: -1000px; }
 
 .inner-bg.active.leaving .nexus {
   animation: nexusGoBack .9s; }
@@ -7760,6 +7673,10 @@ img {
   .holder {
     max-width: 180px;
     top: 125px; } }
+
+@media (max-width: 1370px) {
+  #slider .title {
+    font-size: 40px; } }
 
 @media (min-width: 992px) {
   .partner-wrap, .partner-col .opal, .partner-col .ecolines, .partner-col .rn, .partner-col .rta {

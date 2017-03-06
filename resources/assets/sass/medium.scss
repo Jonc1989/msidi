@@ -107,6 +107,11 @@
   }
 
 }
+@media (max-width: 1370px) {
+  #slider .title{
+    font-size: 40px;
+  }
+}
 @media (min-width: 992px) {
   .partner-wrap, .partner-col .opal, .partner-col .ecolines, .partner-col .rn, .partner-col .rta {
     width: 100%;
