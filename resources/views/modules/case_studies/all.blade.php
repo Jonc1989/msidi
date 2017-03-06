@@ -1,19 +1,19 @@
 @extends('master')
 
 @section('content')
-    <div class="container clear-pads all-case-stadies" ng-controller="CaseStudiesController">
+    <div class="container clear-pads all-case-stadies" ng-controller="CaseStudiesController" ng-init="setCount()">
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="title center title">Case <span class="bold">studies</span></div>
         </div>
 
         <div class="col-md-12 clear-pads categories">
 
-                <div class="category" ng-click="filter( 'all' )">
+                <div class="category" ng-click="filter( 'all', $event )">
                     <span>All</span>
                 </div>
 
-            <div class="category" ng-repeat="item in caseStudies" ng-click="filter( item.categories.name )">
-                    <span ng-bind="item.categories.name"></span>
+            <div class="category" ng-repeat="category in categories" ng-click="filter( category, $event )">
+                    <span ng-bind="category"></span>
 
             </div>
         </div>

@@ -1,11 +1,19 @@
 <div id="company" class="col-md-12 col-sm-12 col-xs-12 clear-pads" ng-controller="CompanyController">
         <div class="col-md-12 col-sm-12 col-xs-12 clear-pads coffee-holder">
-                <img class="cofe" src="/images/company/cup.png" alt="">
+                <div class="shadow2"></div>
+                <div class="shadow3"></div>
+                <div class="cofe">
+                        <img  src="/images/company/cup.png" alt="">
+
+                </div>
+                <div class="pencil">
+                        <img  src="/images/company/pencil.png" alt="">
+                </div>
         </div>
         <div class="light-blue">
 
                 <div class="container ">
-                        <div class="title center">Who we are</div>
+                        <div class="title center">Here <span class="bold"> we are</span></div>
                         <div class="center short-text">
                                 MS-IDI has combined experience in software development
                                 and IT support since 2009
