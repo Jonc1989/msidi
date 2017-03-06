@@ -13,7 +13,9 @@ Route::group(['middleware' => ['web']], function () {
         Route::get( '/opal-online', 'App\Modules\CaseStudies\Controllers\CaseStudiesController@opalOnline' );
         
     });
-
+    
+    Route::get( '/brochure/{lang}', 'App\Modules\CaseStudies\Controllers\CaseStudiesController@showBrochure');
+    
     Route::group( [ 'prefix' => '/api' ], function ()
     {
         Route::resource( 'case-studies', 'App\Modules\CaseStudies\Controllers\api\CaseStudiesController' );

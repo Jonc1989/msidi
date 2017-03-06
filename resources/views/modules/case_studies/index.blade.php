@@ -9,14 +9,14 @@
 
                 <div class="col-md-12 brochure-wrap center">
                     <div class="brochure">
-                        <a href="">
+                        <a target="_blank" href="/brochure/en">
                             <div class="brochure-txt">PDF brochure (En)</div>
                             <div class="brochure-icon circle"><div class="icon"></div></div>
                         </a>
                     </div>
 
                     <div class="brochure">
-                        <a href="">
+                        <a target="_blank" href="/brochure/de">
                             <div class="brochure-txt">PDF brochure (De)</div>
                             <div class="brochure-icon circle"><div class="icon"></div></div>
                         </a>

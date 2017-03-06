@@ -97,4 +97,13 @@ class CaseStudiesController extends Controller
     {
         return view( 'modules.case_studies.opal-online' );
     }
+
+    /**
+     * @param $lang
+     */
+    public function showBrochure( $lang )
+    {
+        $path = \File::get( storage_path( 'brochures/Brochure_' . $lang . '.pdf' )  );
+        return \Response::make( $path, 200, ['Content-Type' => 'application/pdf'] );
+    }
 }
