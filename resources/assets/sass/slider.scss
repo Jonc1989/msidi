@@ -6,10 +6,16 @@
 }
 #slider{
   overflow: hidden;
-  //opacity: 0;
+  .slider-container{
+
+  }
   .bx-wrapper .bx-viewport {
 
     background: #506df9;
+  }
+  .bx-viewport{
+    max-width: 1920px;
+    margin: 0 auto;
   }
 }
 
@@ -465,6 +471,9 @@
   .clouds{
     bottom: -1000px;
   }
+  .pens {
+    left: 1500px;
+  }
 }
 
 .inner-bg.active .ecolines-bg{
@@ -473,14 +482,13 @@
 }
 
 @keyframes clientSlideIn {
-  0% { left: 600px;}
+  0% { left: 800px;}
   100% { left: 0px;}
 }
 @keyframes quoteSlideIn {
   0% {background-position-x: 200%;}
   100% {background-position-x: 10%;}
 }
-
 #clients{
   //max-width: 820px;
 
@@ -493,7 +501,18 @@
     .client-name, .client-position, .client-description{
       opacity: .5;
     }
-
+    .client-name{
+      left: 800px;
+    }
+    .client-position{
+      left: 800px;
+    }
+    .client-description{
+      left: 800px;
+    }
+    .client-slide-wrap{
+      background-position-x: 200%;
+    }
   }
   .client-slide.active{
     margin-top: 0px;
@@ -502,19 +521,28 @@
     .client-name, .client-position, .client-description{
       opacity: 1;
     }
+
+  }
+
+  .client-slide.animate{
     .client-name{
       animation: clientSlideIn .6s;
+      left: 0px;
     }
     .client-position{
       animation: clientSlideIn  .8s;
+      left: 0px;
     }
     .client-description{
       animation: clientSlideIn 1s;
+      left: 0px;
     }
     .client-slide-wrap{
       animation: quoteSlideIn 1s;
+      background-position-x: 10%;
     }
   }
+
   .client-slide-wrap{
     text-align: center;
     background: url(../images/quote.png);

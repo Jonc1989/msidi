@@ -2,7 +2,12 @@
     <div class="col-md-12 col-sm-12 col-xs-12 clear-pads green">
 
         <div class="col-md-12 col-sm-12 col-xs-12 clear-pads holder">
-            <img class="pen_holder" src="/images/pen_holder.png" alt="">
+            <div class="shadow"></div>
+            <div class="pen_holder">
+                <img  src="/images/pen_holder.png" alt="">
+            </div>
+
+
         </div>
         <div class="title center">What clients <span class="bold">say about us</span>?</div>
 

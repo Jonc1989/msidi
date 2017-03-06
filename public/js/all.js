@@ -191,26 +191,21 @@ caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
             speed: 0,
             useCSS: true,
             pager: false,
-            pause: 4000,
+            pause: 10000,
             infiniteLoop: true,
             controls: true,
             slideMargin: 20,
             auto: true,
             onSliderLoad: function () {
-
+                $('.client-slide').addClass('animate');
             },
             onSlideBefore: function (e) {
-                //setTimeout(function () {
-                    //$(e).removeClass('active');
-                    $('.client-slide').removeClass('active');
-                //},497);
-
+                $('.client-slide').removeClass('active');
+                $('.client-slide').removeClass('animate');
             },
             onSlideAfter: function (e) {
-                //setTimeout(function () {
-                    $(e).find('.client-slide').addClass('active');
-                //},500);
-
+                $(e).find('.client-slide').addClass('active');
+                $('.client-slide').addClass('animate');
             }
 
         });
@@ -218,6 +213,7 @@ caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
             slider.getCurrentSlideElement().find('.client-slide').addClass('active');
        // },500);
 
+        $( '.holder' ).show();
     };
 
     $(window).load(function () {
@@ -442,13 +438,13 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 moveSlides: 1,
                 easing: 'ease-out',
                 speed: 0,
-                pager: !1,
+                pager: !0,
                 pause: 4000,
                 infiniteLoop: true,
                 autoControls: false,
-                controls: true,
+                controls: false,
                 hideControlOnEnd: !0,
-                auto: false,
+                auto: true,
                 autoStart: true,
                 stopAutoOnClick: false,
                 tickerHover: false,
@@ -463,28 +459,28 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 },
                 onSlideAfter: function (e) {
                     setTimeout($scope.makeActive( e ), 50);
-                    //$scope.makeInActive(e);
+                    $scope.makeInActive(e);
                 }
 
             });
             
-            $('.bx-prev').click( function () {
-                clearTimeout( $scope.interval );
-                clearTimeout( $scope.secondInterval );
-                //$scope.slider.startAuto(true);
-            });
-            $('.bx-next').click( function () {
-                clearTimeout( $scope.interval );
-                clearTimeout( $scope.secondInterval );
-                //$scope.slider.startAuto(true);
-            });
-            
-            $('.bx-pager-link').click( function (e) {
-                clearTimeout( $scope.interval );
-                clearTimeout( $scope.secondInterval );
-                $scope.slider.startAuto();
-                //$('.bx-start').click();
-            });
+            // $('.bx-prev').click( function () {
+            //     clearTimeout( $scope.interval );
+            //     clearTimeout( $scope.secondInterval );
+            //     $scope.slider.startAuto(true);
+            // });
+            // $('.bx-next').click( function () {
+            //     clearTimeout( $scope.interval );
+            //     clearTimeout( $scope.secondInterval );
+            //     $scope.slider.startAuto(true);
+            // });
+            //
+            // $('.bx-pager-link').click( function (e) {
+            //     clearTimeout( $scope.interval );
+            //     clearTimeout( $scope.secondInterval );
+            //     $scope.slider.startAuto();
+            //     //$('.bx-start').click();
+            // });
 
             $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
             $scope.makeInActiveFirstSlide();

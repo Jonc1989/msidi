@@ -11,26 +11,21 @@ caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
             speed: 0,
             useCSS: true,
             pager: false,
-            pause: 4000,
+            pause: 10000,
             infiniteLoop: true,
             controls: true,
             slideMargin: 20,
             auto: true,
             onSliderLoad: function () {
-
+                $('.client-slide').addClass('animate');
             },
             onSlideBefore: function (e) {
-                //setTimeout(function () {
-                    //$(e).removeClass('active');
-                    $('.client-slide').removeClass('active');
-                //},497);
-
+                $('.client-slide').removeClass('active');
+                $('.client-slide').removeClass('animate');
             },
             onSlideAfter: function (e) {
-                //setTimeout(function () {
-                    $(e).find('.client-slide').addClass('active');
-                //},500);
-
+                $(e).find('.client-slide').addClass('active');
+                $('.client-slide').addClass('animate');
             }
 
         });
@@ -38,6 +33,7 @@ caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
             slider.getCurrentSlideElement().find('.client-slide').addClass('active');
        // },500);
 
+        $( '.holder' ).show();
     };
 
     $(window).load(function () {

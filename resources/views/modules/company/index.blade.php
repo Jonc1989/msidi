@@ -1,4 +1,7 @@
 <div id="company" class="col-md-12 col-sm-12 col-xs-12 clear-pads" ng-controller="CompanyController">
+        <div class="col-md-12 col-sm-12 col-xs-12 clear-pads coffee-holder">
+                <img class="cofe" src="/images/company/cup.png" alt="">
+        </div>
         <div class="light-blue">
 
                 <div class="container ">

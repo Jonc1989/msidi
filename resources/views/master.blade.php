@@ -7,7 +7,6 @@
         <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">-->
         <link rel="stylesheet" href="<?=  url('/') ?>/css/jquery.bxslider.css">
         <link rel="stylesheet" href="<?=  url('/') ?>/css/app.css">
-        <!--<link rel="stylesheet" href="<?=  url('/') ?>/css/ngAnimate.css">-->
     </head>
     <body>
 

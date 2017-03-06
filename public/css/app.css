@@ -5779,6 +5779,9 @@ button.close {
   overflow: hidden; }
   #slider .bx-wrapper .bx-viewport {
     background: #506df9; }
+  #slider .bx-viewport {
+    max-width: 1920px;
+    margin: 0 auto; }
 
 @media (min-width: 768px) {
   #slider {
@@ -6140,13 +6143,16 @@ button.close {
 .inner-bg.active.leaving .clouds {
   bottom: -1000px; }
 
+.inner-bg.active.leaving .pens {
+  left: 1500px; }
+
 .inner-bg.active .ecolines-bg {
   background: url(../images/ecolines/ecolines-bg.png) center center no-repeat;
   left: 0px; }
 
 @keyframes clientSlideIn {
   0% {
-    left: 600px; }
+    left: 800px; }
   100% {
     left: 0px; } }
 
@@ -6163,6 +6169,14 @@ button.close {
   background: white; }
   #clients .client-slide .client-name, #clients .client-slide .client-position, #clients .client-slide .client-description {
     opacity: .5; }
+  #clients .client-slide .client-name {
+    left: 800px; }
+  #clients .client-slide .client-position {
+    left: 800px; }
+  #clients .client-slide .client-description {
+    left: 800px; }
+  #clients .client-slide .client-slide-wrap {
+    background-position-x: 200%; }
 
 #clients .client-slide.active {
   margin-top: 0px;
@@ -6170,14 +6184,22 @@ button.close {
   height: 465px; }
   #clients .client-slide.active .client-name, #clients .client-slide.active .client-position, #clients .client-slide.active .client-description {
     opacity: 1; }
-  #clients .client-slide.active .client-name {
-    animation: clientSlideIn .6s; }
-  #clients .client-slide.active .client-position {
-    animation: clientSlideIn  .8s; }
-  #clients .client-slide.active .client-description {
-    animation: clientSlideIn 1s; }
-  #clients .client-slide.active .client-slide-wrap {
-    animation: quoteSlideIn 1s; }
+
+#clients .client-slide.animate .client-name {
+  animation: clientSlideIn .6s;
+  left: 0px; }
+
+#clients .client-slide.animate .client-position {
+  animation: clientSlideIn  .8s;
+  left: 0px; }
+
+#clients .client-slide.animate .client-description {
+  animation: clientSlideIn 1s;
+  left: 0px; }
+
+#clients .client-slide.animate .client-slide-wrap {
+  animation: quoteSlideIn 1s;
+  background-position-x: 10%; }
 
 #clients .client-slide-wrap {
   text-align: center;
@@ -6749,10 +6771,20 @@ img {
 
 .holder {
   position: absolute;
-  max-width: 270px;
-  max-height: 280px;
+  width: 270px;
+  height: 280px;
   top: 100px;
-  left: 5%; }
+  left: 5%;
+  display: none; }
+
+.coffee-holder {
+  position: absolute;
+  max-width: 251px;
+  max-height: 188px;
+  right: 5%; }
+  .coffee-holder img {
+    max-width: 100%;
+    max-height: 100%; }
 
 .green {
   padding-top: 250px;
@@ -6762,8 +6794,21 @@ img {
   padding-bottom: 250px; }
 
 .pen_holder {
-  max-width: 100%;
-  max-height: 100%; }
+  position: absolute;
+  top: 0px;
+  max-width: 270px;
+  max-height: 280px; }
+
+.shadow {
+  content: '';
+  width: 70%;
+  height: 169px;
+  box-shadow: 5px 5px 25px 2px rgba(0, 0, 0, 0.75);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  left: 19%;
+  z-index: 0; }
 
 .partner-wrap {
   height: 375px;
@@ -7154,9 +7199,6 @@ img {
 .pens {
   transition: all 0.7s cubic-bezier(0.465, 0.615, 0.37, 1.235); }
 
-.road {
-  transition: all 0.7s ease-in; }
-
 @keyframes macSlideIn {
   0% {
     right: -2000px; }
@@ -7442,6 +7484,18 @@ img {
   100% {
     margin-left: -1000px; } }
 
+@keyframes roadSlideIn {
+  0% {
+    right: -2000px; }
+  100% {
+    right: 0px; } }
+
+@keyframes roadSlideOut {
+  0% {
+    right: 0px; }
+  100% {
+    right: 2000px; } }
+
 .inner-bg.active .text-from-right .title:nth-child(1) {
   animation: right-to-left 1.2s; }
 
@@ -7513,6 +7567,9 @@ img {
   animation: slideInFromLeft 1.2s;
   margin-left: 0px; }
 
+.inner-bg.active .road {
+  animation: roadSlideIn .7s; }
+
 .inner-bg.active.leaving .rocket {
   animation: to-sky-elastic .9s; }
 
@@ -7567,6 +7624,9 @@ img {
 .inner-bg.active.leaving .text-from-left .text {
   animation: slideOutFromLeft .5s;
   margin-left: -1000px; }
+
+.inner-bg.active.leaving .road {
+  animation: roadSlideOut .7s; }
 
 @media (min-width: 1400px) {
   .industries {

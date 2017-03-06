@@ -442,10 +442,21 @@ img{border:0}
 }
 .holder{
   position: absolute;
-  max-width: 270px;
-  max-height: 280px;
+  width: 270px;
+  height: 280px;
   top: 100px;
   left: 5%;
+  display: none;
+}
+.coffee-holder{
+  position: absolute;
+  max-width: 251px;
+  max-height: 188px;
+  right: 5%;
+  img{
+    max-width: 100%;
+    max-height:100%;
+  }
 }
 .green{
   padding-top: 250px;
@@ -455,8 +466,23 @@ img{border:0}
   padding-bottom: 250px;
 }
 .pen_holder{
-  max-width: 100%;
-  max-height:100%;
+  position: absolute;
+  top: 0px;
+  max-width: 270px;
+  max-height: 280px;
+}
+.shadow{
+  content: '';
+  width: 70%;
+  height: 169px;
+  -webkit-box-shadow: 5px 5px 25px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 5px 5px 25px 2px rgba(0,0,0,0.75);
+  box-shadow: 5px 5px 25px 2px rgba(0,0,0,0.75);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  left: 19%;
+  z-index: 0;
 }
 
 .partner-wrap{
@@ -899,9 +925,7 @@ img{border:0}
 .pens{
   @include animate( all, .7s, cubic-bezier(0.465, 0.615, 0.370, 1.235) );
 }
-.road{
-  @include animate( all, .7s, ease-in );
-}
+
 @keyframes macSlideIn {
   0%   {right: -2000px;}
   50%   {right: 15px;}
@@ -1100,6 +1124,14 @@ img{border:0}
   50%  { margin-left: 20px;}
   100% { margin-left: -1000px; }
 }
+@keyframes roadSlideIn {
+  0% { right: -2000px;}
+  100% { right: 0px;}
+}
+@keyframes roadSlideOut {
+  0% { right: 0px;}
+  100% { right: 2000px;}
+}
 .inner-bg.active{
   .text-from-right{
     .title:nth-child(1){
@@ -1178,6 +1210,9 @@ img{border:0}
       margin-left: 0px;
     }
   }
+  .road{
+    animation: roadSlideIn .7s;
+  }
 }
 .inner-bg.active.leaving{
   .rocket{
@@ -1239,6 +1274,11 @@ img{border:0}
       margin-left: -1000px;
     }
   }
+  .road{
+    animation: roadSlideOut .7s;
+  }
 }
+
+
 @import "medium";
 @import "small";
