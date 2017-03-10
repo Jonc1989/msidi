@@ -1342,8 +1342,16 @@ img{border:0}
     animation: roadSlideOut .7s;
   }
 }
+.brief-project-info{
+  div{
+    height: 40px;
+  }
+  margin-bottom: 50px;
+}
 
-
+.padd-top-50{
+  padding-top: 50px;
+}
 @import "medium";
 @import "small";
 //@import "exigen";
