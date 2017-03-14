@@ -7756,4 +7756,9 @@ img {
     margin-left: 25%;
     width: 50%; } }
 
+#opal-online .top-img {
+  background: url(http://ms-idi.eu/wp-content/uploads/2014/10/Rectangle-13.png) center center no-repeat;
+  background-size: cover;
+  padding-top: 5%; }
+
 /*# sourceMappingURL=app.css.map */

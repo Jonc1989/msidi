@@ -3,7 +3,7 @@
 @section('content')
 <div id="exigen" class="col-md-12 col-sm-12 col-xs-12 clear-pads">
     <div class="col-md-12 col-sm-12 col-xs-12" >
-        <div class="title center title">Exigen Services</div>
+        <div class="title center">Exigen Services</div>
         <div  class="center short-text">Exigen Services is a private multinational company
             specializing in the software development provision services on order, and actively using the Agile methodology. During the cooperation between MS-IDI and Exigen Services, multiple projects has been successfully implemented for large clients from the USA and Europe. At the moment cooperation successfully go on and it is already the 3rd year of great cooperation.</div>
     </div>

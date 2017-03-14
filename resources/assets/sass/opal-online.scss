@@ -1,245 +1,256 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : 2014.13.10, 11:20:53
-    Author     : eddy
-*/
+///*
+//To change this license header, choose License Headers in Project Properties.
+//To change this template file, choose Tools | Templates
+//and open the template in the editor.
+//*/
+///*
+//    Created on : 2014.13.10, 11:20:53
+//    Author     : eddy
+//*/
+//
+//body
+//{
+//}
+///* TOP block*/
+//.opex-top-title
+//{
+//  font-family: 'Open Sans Light';
+//  font-size: 48px;
+//  color: white;
+//  margin-top: 10%;
+//}
+//.opex-top-text
+//{
+//  font-family: 'Open Sans';
+//  font-size: 16px;
+//  color: white;
+//  margin-bottom: 10%;
+//}
+//.opex-top-bg
+//{
+//  background-size: 100% 100%;
+//  background-repeat: no-repeat;
+//}
+//.opex-top-pic
+//{
+//  margin-top: 15%;
+//  padding-right: 30px;
+//}
+//.opex-top-img
+//{
+//  text-align: right;
+//}
+//
+///* SECOND block*/
+//.opex-info
+//{
+//  font-family: 'Open Sans Light';
+//  font-size: 16px;
+//  color: #6b6b6b;
+//  float: left;
+//  height: 40px;
+//  padding: 0;
+//}
+//.opex-info-text
+//{
+//  font-family: 'Open Sans Semibold';
+//  font-size: 16px;
+//  float:left;
+//  height: 40px;
+//  padding: 0;
+//}
+//.opex-info-title
+//{
+//  font-family: 'Open Sans Light';
+//  font-size: 48px;
+//  color: #ff6b36;
+//  text-align: center;
+//  margin-top: 50px;
+//  margin-bottom: 50px;
+//
+//}
+//.opex-info-pic
+//{
+//
+//}
+//#info-list
+//{
+//  list-style: none;
+//}
+///* ABOUT block*/
+//.opex-about-bg
+//{
+//  background: linear-gradient(45deg, #206d87 0%,#39a7d1 59%);
+//}
+//.opex-about-text
+//{
+//  margin-top: 70px;
+//  margin-right: 5%;
+//  font-family: 'Open Sans Light';
+//  font-size: 1em;
+//  color: white;
+//}
+//.opex-about-pic
+//{
+//  margin-bottom: 50px;
+//  margin-top: 50px;
+//}
+///* Beta test block*/
+//.opex-beta-pic
+//{
+//  float: right;
+//  position: absolute;
+//  top: 0;
+//  right: 0;
+//  margin-top: 10%;
+//  margin-bottom: 10%;
+//}
+//.opex-beta-text
+//{
+//  margin-top: 20%;
+//  margin-bottom: 20%;
+//  font-size: 16px;
+//}
+//#beta-img-wrap
+//{
+//  padding-right: 0;
+//  position: absolute;
+//  top: 0;
+//}
+///* Prototype block*/
+//.prot-bg
+//{
+//  background-repeat: repeat;
+//  background-size: 50% 50%;
+//}
+///* Business logic block*/
+//.corner
+//{
+//  position:relative;
+//  background-color: #f8f8f8;
+//  padding: 0;
+//}
+//.under-corner-wrap
+//{
+//  padding: 50px;
+//}
+//.under-corner-wrap div, .under-corner-wrap p
+//{
+//  margin: 0;
+//  padding: 0;
+//}
+//.corner::before
+//{
+//  content:"";
+//  position:absolute;
+//  top:0;
+//  right:0;
+//  border-width:0 55px 55px 0;
+//  border-style:solid;
+//  border-color:#f8f8f8 #d7e6ec;
+//}
+//.opex-corner-pic
+//{
+//  position: absolute;
+//  margin: auto;
+//  top: 0;
+//  left: 0;
+//  right: 0;
+//  bottom: 0;
+//  max-width: 100%;
+//}
+///* Integrated services*/
+//.logo-wrap
+//{
+//  height: 85px;
+//  width: 260px;
+//  border: 1px solid #dadada;
+//  position: relative;
+//  margin-bottom: 5%;
+//}
+//.logo-wrap > img
+//{
+//  position: absolute;
+//  margin: auto;
+//  top: 0;
+//  left: 0;
+//  right: 0;
+//  bottom: 0;
+//}
+///* screen*/
+//@media(max-width: 64em)
+//{
+//  .opex-top-pic
+//  {
+//    margin-top: 0;
+//  }
+//  .opex-top-img
+//  {
+//    text-align: center;
+//  }
+//  .opex-top-title
+//  {
+//    font-size: 36px;
+//  }
+//}
+//@media(max-width: 40em)
+//{
+//  .opex-top-title
+//  {
+//    font-size: 24px;
+//  }
+//  .opex-top-text
+//  {
+//    font-size: 14px;
+//  }
+//  .opex-info-pic
+//  {
+//    margin-bottom: 15%;
+//  }
+//  .opex-about-text
+//  {
+//    font-size: 0.8em;
+//    margin-right: 0;
+//  }
+//  .logo-wrap
+//  {
+//    margin-left: auto;
+//    margin-right: auto;
+//    float: none !important;
+//    width: 220px;
+//  }
+//  .under-corner-wrap > div:last-child
+//  {
+//    text-align: center;
+//  }
+//  .under-corner-wrap > div > img
+//  {
+//    position: relative;
+//    margin-top: 20px;
+//  }
+//  .opex-beta-pic, #beta-img-wrap
+//  {
+//    position: relative;
+//  }
+//  .opex-beta-text
+//  {
+//    margin-top: 15%;
+//    margin-bottom: 0%;
+//    font-size: 0.9em;
+//  }
+//  .opex-corner-pic
+//  {
+//    max-width: 150px;
+//  }
+//}
 
-body
-{
-}
-/* TOP block*/
-.opex-top-title
-{
-  font-family: 'Open Sans Light';
-  font-size: 48px;
-  color: white;
-  margin-top: 10%;
-}
-.opex-top-text
-{
-  font-family: 'Open Sans';
-  font-size: 16px;
-  color: white;
-  margin-bottom: 10%;
-}
-.opex-top-bg
-{
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-.opex-top-pic
-{
-  margin-top: 15%;
-  padding-right: 30px;
-}
-.opex-top-img
-{
-  text-align: right;
-}
+#opal-online{
+  .top-img{
+    background: url(http://ms-idi.eu/wp-content/uploads/2014/10/Rectangle-13.png) center center no-repeat;
+    background-size: cover;
+    padding-top: 5%;
+    .top-info{
 
-/* SECOND block*/
-.opex-info
-{
-  font-family: 'Open Sans Light';
-  font-size: 16px;
-  color: #6b6b6b;
-  float: left;
-  height: 40px;
-  padding: 0;
-}
-.opex-info-text
-{
-  font-family: 'Open Sans Semibold';
-  font-size: 16px;
-  float:left;
-  height: 40px;
-  padding: 0;
-}
-.opex-info-title
-{
-  font-family: 'Open Sans Light';
-  font-size: 48px;
-  color: #ff6b36;
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-
-}
-.opex-info-pic
-{
-
-}
-#info-list
-{
-  list-style: none;
-}
-/* ABOUT block*/
-.opex-about-bg
-{
-  background: linear-gradient(45deg, #206d87 0%,#39a7d1 59%);
-}
-.opex-about-text
-{
-  margin-top: 70px;
-  margin-right: 5%;
-  font-family: 'Open Sans Light';
-  font-size: 1em;
-  color: white;
-}
-.opex-about-pic
-{
-  margin-bottom: 50px;
-  margin-top: 50px;
-}
-/* Beta test block*/
-.opex-beta-pic
-{
-  float: right;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 10%;
-  margin-bottom: 10%;
-}
-.opex-beta-text
-{
-  margin-top: 20%;
-  margin-bottom: 20%;
-  font-size: 16px;
-}
-#beta-img-wrap
-{
-  padding-right: 0;
-  position: absolute;
-  top: 0;
-}
-/* Prototype block*/
-.prot-bg
-{
-  background-repeat: repeat;
-  background-size: 50% 50%;
-}
-/* Business logic block*/
-.corner
-{
-  position:relative;
-  background-color: #f8f8f8;
-  padding: 0;
-}
-.under-corner-wrap
-{
-  padding: 50px;
-}
-.under-corner-wrap div, .under-corner-wrap p
-{
-  margin: 0;
-  padding: 0;
-}
-.corner::before
-{
-  content:"";
-  position:absolute;
-  top:0;
-  right:0;
-  border-width:0 55px 55px 0;
-  border-style:solid;
-  border-color:#f8f8f8 #d7e6ec;
-}
-.opex-corner-pic
-{
-  position: absolute;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  max-width: 100%;
-}
-/* Integrated services*/
-.logo-wrap
-{
-  height: 85px;
-  width: 260px;
-  border: 1px solid #dadada;
-  position: relative;
-  margin-bottom: 5%;
-}
-.logo-wrap > img
-{
-  position: absolute;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-/* screen*/
-@media(max-width: 64em)
-{
-  .opex-top-pic
-  {
-    margin-top: 0;
-  }
-  .opex-top-img
-  {
-    text-align: center;
-  }
-  .opex-top-title
-  {
-    font-size: 36px;
-  }
-}
-@media(max-width: 40em)
-{
-  .opex-top-title
-  {
-    font-size: 24px;
-  }
-  .opex-top-text
-  {
-    font-size: 14px;
-  }
-  .opex-info-pic
-  {
-    margin-bottom: 15%;
-  }
-  .opex-about-text
-  {
-    font-size: 0.8em;
-    margin-right: 0;
-  }
-  .logo-wrap
-  {
-    margin-left: auto;
-    margin-right: auto;
-    float: none !important;
-    width: 220px;
-  }
-  .under-corner-wrap > div:last-child
-  {
-    text-align: center;
-  }
-  .under-corner-wrap > div > img
-  {
-    position: relative;
-    margin-top: 20px;
-  }
-  .opex-beta-pic, #beta-img-wrap
-  {
-    position: relative;
-  }
-  .opex-beta-text
-  {
-    margin-top: 15%;
-    margin-bottom: 0%;
-    font-size: 0.9em;
-  }
-  .opex-corner-pic
-  {
-    max-width: 150px;
+    }
   }
 }

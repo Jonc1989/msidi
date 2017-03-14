@@ -1,19 +1,32 @@
 @extends('master')
 
 @section('content')
+<div id="opal-online" class="col-md-12 col-sm-12 col-xs-12 clear-pads">
 
-    <div class="page-section page-content">
-        <div class="medium-12 opex-top-bg" style="background-image: url('http://ms-idi.eu/wp-content/uploads/2014/10/Rectangle-13.png')">
-            <div class="row full-width" data-equalizer="">
-                <div class="large-5 large-offset-1 medium-10 medium-offset-1 column panel" data-equalizer-watch="" style="height: 552px;">
-                    <h2 class="opex-top-title">Opal Money Transfer: Customer Online Module</h2>
-                    <p class="opex-top-text">Web-solution, with which help the Opal Money Transfer clients can carry out independently money transfers from the United Kingdom to the Baltic and the Eastern Europe countries. This system uses the same components and the same business processes as the Opal Money Transfer: BOP. Opal: COM offers the client a basic set of functions to manage their own profile and documents, transfer execution, viewing the status of the transfers and their subsequent generation in PDF. The system is characterized by extremely simple and convenient interface.</p>
-                </div>
-                <div id="opex-top-img" class="large-6 medium-12 column panel left text-center" data-equalizer-watch="" style="height: 552px;">
-                    <img class="opex-top-pic resp" src="http://ms-idi.eu/wp-content/uploads/2014/10/Layer-48.png">
+
+        <div class="col-md-12 col-sm-12 col-xs-12 top-img">
+
+            <div class="col-lg-offset-1 col-lg-5 col-md-6 col-sm-6 col-xs-12 top-info white">
+                <div class="title ">Opal Money Transfer: Customer Online Module</div>
+                <div  class="short-text">Web-solution, with which help the Opal Money Transfer clients can carry out independently money transfers from the United
+                    Kingdom to the Baltic and the Eastern Europe countries. This system uses the same components and the same business processes as the
+                    Opal Money Transfer: BOP. Opal: COM offers the client a basic set of functions to manage their own profile and documents, transfer execution,
+                    viewing the status of the transfers and their subsequent generation in PDF. The system is characterized by extremely simple and convenient interface.
                 </div>
             </div>
+            <div class="col-md-6 col-sm-6 col-xs-12" >
+                <img class="opex-top-pic resp" src="http://ms-idi.eu/wp-content/uploads/2014/10/Layer-48.png">
+            </div>
+
         </div>
+
+
+
+
+
+
+
+
         <div class="row full-width opex-info-bg" style="background-image: url('http://ms-idi.eu/wp-content/uploads/2014/10/Layer-24.png'); padding-bottom: 5%;">
             <div class="medium-10 medium-offset-1">
                 <h2 class="opex-info-title">About project</h2>
@@ -30,6 +43,9 @@
                 </div>
             </div>
         </div>
+
+        <!--style="background-image: url('http://ms-idi.eu/wp-content/uploads/2014/10/Rectangle-13.png')"
+        -->
 
         <div class="medium-12 opex-about-bg">
             <div class="row block no-pads">
@@ -123,6 +139,7 @@
                 <p>After putting the project into operation the companies' executives held talks about another phase of cooperation in the framework of the project on the funds transfer. As a result began the development of mobile application for the Opal Money Transfer clients. The functionality of mobile application, for the most part, repeats the Opal: COM possibilities with some features of mobile devices. </p>
             </div>
         </div>
-    </div>
+
+</div>
 
 @endsection
