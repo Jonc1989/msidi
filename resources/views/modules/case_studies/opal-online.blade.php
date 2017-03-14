@@ -4,81 +4,100 @@
 <div id="opal-online" class="col-md-12 col-sm-12 col-xs-12 clear-pads">
 
 
-        <div class="col-md-12 col-sm-12 col-xs-12 top-img">
+    <div class="col-md-12 col-sm-12 col-xs-12 top-img">
 
-            <div class="col-lg-offset-1 col-lg-5 col-md-6 col-sm-6 col-xs-12 top-info white">
-                <div class="title ">Opal Money Transfer: Customer Online Module</div>
-                <div  class="short-text">Web-solution, with which help the Opal Money Transfer clients can carry out independently money transfers from the United
-                    Kingdom to the Baltic and the Eastern Europe countries. This system uses the same components and the same business processes as the
-                    Opal Money Transfer: BOP. Opal: COM offers the client a basic set of functions to manage their own profile and documents, transfer execution,
-                    viewing the status of the transfers and their subsequent generation in PDF. The system is characterized by extremely simple and convenient interface.
+        <div class="col-lg-offset-1 col-lg-5 col-md-6 col-sm-6 col-xs-12 top-info white">
+            <div class="title ">Opal Money Transfer: Customer Online Module</div>
+            <div  class="short-text">Web-solution, with which help the Opal Money Transfer clients can carry out independently money transfers from the United
+                Kingdom to the Baltic and the Eastern Europe countries. This system uses the same components and the same business processes as the
+                Opal Money Transfer: BOP. Opal: COM offers the client a basic set of functions to manage their own profile and documents, transfer execution,
+                viewing the status of the transfers and their subsequent generation in PDF. The system is characterized by extremely simple and convenient interface.
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12" >
+            <img class="opex-top-pic resp" src="http://ms-idi.eu/wp-content/uploads/2014/10/Layer-48.png">
+        </div>
+
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12" style="background-image: url('http://ms-idi.eu/wp-content/uploads/2014/10/Layer-24.png'); padding-bottom: 5%;">
+        <div class="col-lg-12">
+            <div class="title center orange">About project</div>
+       </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <img class="opex-info-pic" src="http://ms-idi.eu/wp-content/uploads/2014/10/Group-3.png">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-5 col-md-6 col-sm-6"> Project Manager:     </div> <div class="col-lg-6 col-md-6 col-sm-6">Edgars Rukmanis			</div>
+            <div class="col-lg-5 col-md-6 col-sm-6"> Team size:          </div> <div class="col-lg-6 col-md-6 col-sm-6">7		</div>
+            <div class="col-lg-5 col-md-6 col-sm-6"> Project start date:  </div> <div class="col-lg-6 col-md-6 col-sm-6">Jul 2013 </div>
+            <div class="col-lg-5 col-md-6 col-sm-6"> Project Duration:    </div> <div class="col-lg-6 col-md-6 col-sm-6">7 months			</div>
+            <div class="col-lg-5 col-md-6 col-sm-6"> Platform:            </div> <div class="col-lg-6 col-md-6 col-sm-6">.NET			</div>
+            <div class="col-lg-5 col-md-6 col-sm-6"> Basic technologies:  </div> <div class="col-lg-6 col-md-6 col-sm-6">.NET Asp.net jQuery		</div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-12 opex-about-bg">
+
+            <div class="col-lg-12 clear-pads">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 clear-pads white">
+                    The money transfer company "OPAL Transfer" works in London (UK) since 2003.
+                        The company's activity is aimed primarily at providing quality and affordable services to private and corporate clients.
+                        Money transfers are carried out in CIS countries (Russia, Ukraine, Belarus, Georgia, Uzbekistan, Moldova, Kyrgyzstan, Azerbaijan,
+                        Armenia, Kazakhstan, Turkmenistan, Tajikistan), Baltic States (Latvia, Estonia, Lithuania), Poland, Czech Republic, Slovakia
+                        and Bulgaria. The main advantage that "OPAL Transfer" sets itself apart from its competitors , clients call the speed of the
+                        transaction (up to 1 day), low cost (1% of the amount for the CIS countries and £3 for the Baltic and the Eastern Europe countries),
+                        service 7 days a week, and ease of completion of the transfer.
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 clear-pads">
+                    <img class="opex-about-pic resp" src="http://ms-idi.eu/wp-content/uploads/2014/10/shilluete1.png">
                 </div>
             </div>
-            <div class="col-md-6 col-sm-6 col-xs-12" >
-                <img class="opex-top-pic resp" src="http://ms-idi.eu/wp-content/uploads/2014/10/Layer-48.png">
-            </div>
 
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="container">
+            During beta testing of the Opal Money Transfer: Back Office Portal (hereinafter Opal: BOP),
+            the Opal company's management "gave the green light'' for development of the online module for
+            clients: Opal: Customer Online Module (hereinafter Opal: COM). This part of the project enables
+            carrying out the money transfers independently for both new and existing customers , without
+            direct participation of the operator. Clients become fully independent from the Opal enterprise
+            working time, and this operation can be carried
+            out in any time of the day, which nowadays  is de facto. Should be noted that this step also helps to attract new customers.
+
+            The most important question that had to be solved during the development of this project was the user interface / website design.
+            Firstly, what are the opportunities associated with the money transfers that  had to be provided to the clients and
+            which – not, and secondly, the organization of the whole navigation (since some clients have very minimal knowledge in
+            using computer/Internet, it was necessary to focus exactly on this part of the audience) and, thirdly, the color solution
+            (very different from Opal: BOP). The project development was divided into two parts:
+
+            working on the user interface and the development itself . Working on the interface, in its turn, began with the development of
+            the prototype. Using the Axure software, was created a prototype, which fully repeated the behavior of the developed project.
+            Thus, already in the initial phase of development, we were able to show the client how the final product will look like .
+            Accordingly, all corrections were made quickly and "painless" at first to  the prototype, and then to the developed product.
+
+            <img class="opex-beta-pic resp" src="http://ms-idi.eu/wp-content/uploads/2014/10/Layer-35-copy-2.png">
         </div>
 
 
+    </div>
 
 
 
 
 
 
-        <div class="row full-width opex-info-bg" style="background-image: url('http://ms-idi.eu/wp-content/uploads/2014/10/Layer-24.png'); padding-bottom: 5%;">
-            <div class="medium-10 medium-offset-1">
-                <h2 class="opex-info-title">About project</h2>
-                <div class="medium-4 medium-offset-1 small-12 column text-center">
-                    <img class="opex-info-pic" src="http://ms-idi.eu/wp-content/uploads/2014/10/Group-3.png">
-                </div>
-                <div class="medium-6 medium-offset-1 large-6 large-offset-1 small-12 column" style="float: left;">
-                    <div class="large-5 medium-6 small-6 columns opex-info"> Project Manager:     </div> <div class="medium-6 small-6 columns opex-info-text">Edgars Rukmanis			</div>
-                    <div class="large-5 medium-6 small-6 columns opex-info"> Team size:          </div> <div class="medium-6 small-6 columns opex-info-text">7		</div>
-                    <div class="large-5 medium-6 small-6 columns opex-info"> Project start date:  </div> <div class="medium-6 small-6 columns opex-info-text">Jul 2013 </div>
-                    <div class="large-5 medium-6 small-6 columns opex-info"> Project Duration:    </div> <div class="medium-6 small-6 columns opex-info-text">7 months			</div>
-                    <div class="large-5 medium-6 small-6 columns opex-info"> Platform:            </div> <div class="medium-6 small-6 columns opex-info-text">.NET			</div>
-                    <div class="large-5 medium-6 small-6 columns opex-info"> Basic technologies:  </div> <div class="medium-6 small-6 columns opex-info-text">.NET Asp.net jQuery		</div>
-                </div>
-            </div>
-        </div>
 
-        <!--style="background-image: url('http://ms-idi.eu/wp-content/uploads/2014/10/Rectangle-13.png')"
-        -->
 
-        <div class="medium-12 opex-about-bg">
-            <div class="row block no-pads">
-                <div class="medium-12 medium-offset-0 column no-pads">
-                    <div class="medium-6 small-12 column no-pads">
-                        <p class="opex-about-text">The money transfer company "OPAL Transfer" works in London (UK) since 2003. The company's activity is aimed primarily at providing quality and affordable services to private and corporate clients. Money transfers are carried out in CIS countries (Russia, Ukraine, Belarus, Georgia, Uzbekistan, Moldova, Kyrgyzstan, Azerbaijan, Armenia, Kazakhstan, Turkmenistan, Tajikistan), Baltic States (Latvia, Estonia, Lithuania), Poland, Czech Republic, Slovakia and Bulgaria. The main advantage that "OPAL Transfer" sets itself apart from its competitors , clients call the speed of the transaction (up to 1 day), low cost (1% of the amount for the CIS countries and £3 for the Baltic and the Eastern Europe countries), service 7 days a week, and ease of completion of the transfer.</p>
-                    </div>
-                    <div class="medium-6 small-12 column text-center">
-                        <img class="opex-about-pic resp" src="http://ms-idi.eu/wp-content/uploads/2014/10/shilluete1.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="medium-12 column">
-            <div class="row block no-pads">
-                <div class="medium-6 column no-pads">
-                    <p class="opex-beta-text">During beta testing of the Opal Money Transfer: Back Office Portal (hereinafter Opal: BOP), the Opal company's management "gave the green light'' for development of the online module for clients: Opal: Customer Online Module (hereinafter Opal: COM). This part of the project enables carrying out the money transfers independently for both new and existing customers , without direct participation of the operator. Clients become fully independent from the Opal enterprise working time, and this operation can be carried out in any time of the day, which nowadays  is de facto. Should be noted that this step also helps to attract new customers.</p>
-                </div>
-            </div>
-            <div id="beta-img-wrap" class="medium-5 medium-push-7 column">
-                <img class="opex-beta-pic resp" src="http://ms-idi.eu/wp-content/uploads/2014/10/Layer-35-copy-2.png">
-            </div>
-        </div>
-        <div class="row line" style="margin-top: 0px; margin-bottom: 60px; border-bottom: 1px solid #efefef; width: 100%;"></div><div class="medium-12 prot-bg" style="background-image: url('http://ms-idi.eu/wp-content/uploads/2014/10/Layer-37.png')">
-            <div class="row block no-pads">
-                <div class="medium-6 column no-pads-left">
-                    <p>The most important question that had to be solved during the development of this project was the user interface / website design. Firstly, what are the opportunities associated with the money transfers that  had to be provided to the clients and which – not, and secondly, the organization of the whole navigation (since some clients have very minimal knowledge in using computer/Internet, it was necessary to focus exactly on this part of the audience) and, thirdly, the color solution (very different from Opal: BOP). The project development was divided into two parts: </p>
-                </div>
-                <div class="medium-6 column no-pads-right">
-                    <p>working on the user interface and the development itself . Working on the interface, in its turn, began with the development of the prototype. Using the Axure software, was created a prototype, which fully repeated the behavior of the developed project. Thus, already in the initial phase of development, we were able to show the client how the final product will look like . Accordingly, all corrections were made quickly and "painless" at first to  the prototype, and then to the developed product.</p>
-                </div>
-            </div>
-        </div>
+
+
+        <div class="row line" style="margin-top: 0px; margin-bottom: 60px; border-bottom: 1px solid #efefef; width: 100%;"></div>
+
+
+
+
         <div class="row line" style="margin-top: 60px; margin-bottom: 50px; border-bottom: 1px solid #efefef; width: 100%;"></div><div class="row block corner">
             <div class="row under-corner-wrap" data-equalizer="">
                 <div class="medium-6 column panel" data-equalizer-watch="" style="height: 227px;">

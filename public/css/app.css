@@ -6324,7 +6324,7 @@ button.form-control:focus {
 .handshake {
   margin-bottom: 20px; }
 
-.orange {
+.orange-bg {
   background-color: #ff895e; }
 
 @font-face {
@@ -6406,6 +6406,9 @@ img {
 
 .white {
   color: white; }
+
+.orange {
+  color: #ff895e; }
 
 .container-fluid {
   padding: 0px; }
@@ -7755,6 +7758,9 @@ img {
   .service-type {
     margin-left: 25%;
     width: 50%; } }
+
+.opex-about-bg {
+  background: linear-gradient(45deg, #206d87 0%, #39a7d1 59%); }
 
 #opal-online .top-img {
   background: url(http://ms-idi.eu/wp-content/uploads/2014/10/Rectangle-13.png) center center no-repeat;

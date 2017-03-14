@@ -8,7 +8,7 @@
             specializing in the software development provision services on order, and actively using the Agile methodology. During the cooperation between MS-IDI and Exigen Services, multiple projects has been successfully implemented for large clients from the USA and Europe. At the moment cooperation successfully go on and it is already the 3rd year of great cooperation.</div>
     </div>
 
-    <div id="exigen-info" class="col-md-12 col-sm-12 col-xs-12 clear-pads orange">
+    <div id="exigen-info" class="col-md-12 col-sm-12 col-xs-12 clear-pads orange-bg">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
             <div class="orange-shit">
                 <div class="handshake">
@@ -59,7 +59,7 @@
     </div>
 
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads orange">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads orange-bg">
         <div class="col-lg-6 col-md-6 col-sm-6 hidden-sm hidden-xs clear-pads">
             <img  src="http://ms-idi.eu/wp-content/uploads/2014/10/pattern.png">
         </div>
@@ -96,7 +96,7 @@
     </div>
 
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads orange">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads orange-bg">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right screen">
             <img src="http://ms-idi.eu/wp-content/uploads/2014/10/computer1.png">
         </div>
