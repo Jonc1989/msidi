@@ -25,6 +25,31 @@ var career = angular.module('career', [
 var caseStudies = angular.module('caseStudies', [
 
 ]);
+
+caseStudies.controller( 'OpalOnlineController', [ '$scope', function ( $scope){
+
+    $scope.equalheight = function(e) {
+        var t, a = 0,
+            i = 0,
+            o = new Array;
+        $(e).each(function() {
+            if (t = $(this), $(t).height("auto"), topPostion = t.position().top, i != topPostion) {
+                for (currentDiv = 0; currentDiv < o.length; currentDiv++) o[currentDiv].height(a);
+                o.length = 0, i = topPostion, a = t.height(), o.push(t)
+            } else o.push(t), a = a < t.height() ? t.height() : a;
+            for (currentDiv = 0; currentDiv < o.length; currentDiv++) o[currentDiv].height(a)
+        })
+    };
+
+    this.$onInit = function () {
+        $scope.equalheight('.team-member');
+    };
+
+    $( window ).resize(function() {
+        $scope.equalheight('.team-member');
+    });
+
+}]);
 var clients = angular.module('clients', [
 
 ]);
@@ -40,6 +65,36 @@ var service = angular.module('service', [
 var slider = angular.module('slider', [
 
 ]);
+career.service( 'CareerService', ['$http', '$q', function( $http, $q )
+{
+    var CareerService = {
+
+        sendMail: function( message )
+        {
+            var deferred = $q.defer();
+            $http.post( '/api/career/send', message )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CareerService;
+}]);
+
 career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $scope, CareerService ){
 
 
@@ -89,36 +144,6 @@ career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $
     };
 
 }]);
-career.service( 'CareerService', ['$http', '$q', function( $http, $q )
-{
-    var CareerService = {
-
-        sendMail: function( message )
-        {
-            var deferred = $q.defer();
-            $http.post( '/api/career/send', message )
-                .success( function( response )
-                {
-                    deferred.resolve( response );
-                } )
-                .error( function( response, status )
-                {
-                    if (status === 422)
-                    {
-                        deferred.resolve({errors: response});
-                    } else
-                    {
-                        deferred.reject();
-                    }
-                } );
-
-            return deferred.promise;
-
-        }
-    };
-    return CareerService;
-}]);
-
 caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
     function ( $scope, CaseStudiesService, $animate){
 
