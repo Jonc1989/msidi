@@ -2,45 +2,65 @@
 
 @section('content')
 
-<div class="page-section page-content">
-    <div class="medium-12 bop-top-bg" style="background-image: url('http://ms-idi.eu/wp-content/uploads/2014/10/Rectangle-13.png')">
-        <div class="row full-width" data-equalizer="">
-            <div class="large-5 large-offset-1 medium-10 medium-offset-1 column panel" data-equalizer-watch="" style="height: 518px;">
-                <h2 class="bop-top-title">Opal Money Transfer: Back Office Portal</h2>
-                <p class="bop-top-text">The system, with which help it is possible to carry out private and corporate money transfers from the United Kingdom to former USSR countries and the Eastern Europe countries. The system also includes such modules as: the fight against money laundering, electronic verification of customers, different financial reports, reconciliation, bank payments authorization and other. This information system was designed / developed as a web-based solution with a possible high load level.</p>
-            </div>
-            <div id="bop-top-img" class="large-6 medium-12 small-12 column panel left text-center" data-equalizer-watch="" style="height: 518px;">
-                <img class="bop-top-pic resp" src="http://ms-idi.eu/wp-content/uploads/2014/10/mac.png">
-            </div>
-        </div>
-    </div>
-    <div class="row full-width opex-info-bg" style="background-image: url('http://ms-idi.eu/wp-content/uploads/2014/10/Layer-24.png'); padding-bottom: 5%;">
-        <div class="medium-10 medium-offset-1">
-            <h2 class="opex-info-title">About project</h2>
-            <div class="medium-4 medium-offset-1 small-12 column text-center">
-                <img class="opex-info-pic" src="http://ms-idi.eu/wp-content/uploads/2014/10/Group-3.png">
-            </div>
-            <div class="medium-6 medium-offset-1 large-6 large-offset-1 small-12 column" style="float: left;">
-                <div class="large-5 medium-6 small-6 columns opex-info"> Project Manager:     </div> <div class="medium-6 small-6 columns opex-info-text">Edgars Rukmanis			</div>
-                <div class="large-5 medium-6 small-6 columns opex-info"> Project start date:  </div> <div class="medium-6 small-6 columns opex-info-text">Jan 2013		</div>
-                <div class="large-5 medium-6 small-6 columns opex-info"> Team size:  		   </div> <div class="medium-6 small-6 columns opex-info-text">24 </div>
-                <div class="large-5 medium-6 small-6 columns opex-info"> Project Duration:    </div> <div class="medium-6 small-6 columns opex-info-text">1 year			</div>
-                <div class="large-5 medium-6 small-6 columns opex-info"> Platform:            </div> <div class="medium-6 small-6 columns opex-info-text">.NET			</div>
-                <div class="large-5 medium-6 small-6 columns opex-info"> Basic technologies:  </div> <div class="medium-6 small-6 columns opex-info-text">.NET ASP.net jQuery		</div>
+<div id="opal-bop" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-info clear-pads">
+
+        <div class="col-lg-offset-1 col-lg-5 col-md-6 col-sm-6 col-xs-12 white">
+            <div class="title ">Opal Money Transfer: Back Office Portal</div>
+            <div  class="short-text">The system, with which help it is possible to carry out private and corporate money transfers
+                from the United Kingdom to former USSR countries and the Eastern Europe countries.
+                The system also includes such modules as: the fight against money laundering, electronic
+                verification of customers, different financial reports, reconciliation, bank payments
+                authorization and other. This information system was designed / developed as a web-based
+                solution with a possible high load level.
             </div>
         </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 top-img clear-pads">
+            <img src="http://ms-idi.eu/wp-content/uploads/2014/10/mac.png">
+        </div>
+
     </div>
-    <div class="row block" style="margin-bottom: 5%;">
-        <div class="medium-12 text-center">
+
+    <div id="layer1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="title center orange">About project</div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+            <div class="col-lg-offset-2 col-lg-10 col-md-offset-3 col-md-9 col-sm-12 col-xs-12 sprockets">
+                <img class="opex-info-pic" src="/images/opal/sprockets.png">
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 brief-project-info">
+            <div class="col-lg-5 col-md-6 col-sm-6"> Project Manager:     </div> <div class="bold col-lg-6 col-md-6 col-sm-6">Edgars Rukmanis			</div>
+            <div class="col-lg-5 col-md-6 col-sm-6"> Team size:          </div> <div class="bold col-lg-6 col-md-6 col-sm-6">7		</div>
+            <div class="col-lg-5 col-md-6 col-sm-6"> Project start date:  </div> <div class="bold col-lg-6 col-md-6 col-sm-6">Jul 2013 </div>
+            <div class="col-lg-5 col-md-6 col-sm-6"> Project Duration:    </div> <div class="bold col-lg-6 col-md-6 col-sm-6">7 months			</div>
+            <div class="col-lg-5 col-md-6 col-sm-6"> Platform:            </div> <div class="bold col-lg-6 col-md-6 col-sm-6">.NET			</div>
+            <div class="col-lg-5 col-md-6 col-sm-6"> Basic technologies:  </div> <div class="bold col-lg-6 col-md-6 col-sm-6">.NET Asp.net jQuery		</div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <img class="resp" src="http://ms-idi.eu/wp-content/uploads/2014/10/Map1.png">
         </div>
-        <div class="medium-6 column no-pads-left">
-            <p>The money transfer company "OPAL Transfer" works in London (UK) since 2003 . The company's activity is aimed primarily at providing quality and affordable services to private and corporate clients. Money transfers are carried out in CIS countries (Russia, Ukraine, Belarus, Georgia, Uzbekistan, Moldova, Kyrgyzstan, Azerbaijan, Armenia, Kazakhstan, </p>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            The money transfer company "OPAL Transfer" works in London (UK) since 2003 . The company's activity
+            is aimed primarily at providing quality and affordable services to private and corporate clients.
+            Money transfers are carried out in CIS countries (Russia, Ukraine, Belarus, Georgia, Uzbekistan,
+            Moldova, Kyrgyzstan, Azerbaijan, Armenia, Kazakhstan,
+
         </div>
-        <div class="medium-6 column no-pads-right">
-            <p>Turkmenistan, Tajikistan), Baltic States (Latvia, Estonia, Lithuania), Poland, Czech Republic, Slovakia and Bulgaria. The main advantage that "OPAL Transfer" sets itself apart from its competitors , clients call the speed of the transaction (up to 1 day), low cost (1% of the amount for the CIS countries and £3 for the Baltic and the Eastern Europe countries), service 7 days a week, and ease of completion of the transfer.</p>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+            Turkmenistan, Tajikistan), Baltic States (Latvia, Estonia, Lithuania), Poland, Czech Republic,
+            Slovakia and Bulgaria. The main advantage that "OPAL Transfer" sets itself apart from its competitors ,
+            clients call the speed of the transaction (up to 1 day), low cost (1% of the amount for the CIS
+            countries and £3 for the Baltic and the Eastern Europe countries), service 7 days a week, and
+            ease of completion of the transfer.
         </div>
     </div>
+
     <div class="medium-12 bop-prot-bg" style="background-color: #038bc1">
         <div class="row block no-pads">
             <div class="row quote-row" style="background-color: #038bc1; color: white;">

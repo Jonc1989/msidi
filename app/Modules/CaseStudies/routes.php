@@ -11,6 +11,8 @@ Route::group(['middleware' => ['web']], function () {
         Route::get( '/exigen', 'App\Modules\CaseStudies\Controllers\CaseStudiesController@exigen' );
 
         Route::get( '/opal-online', 'App\Modules\CaseStudies\Controllers\CaseStudiesController@opalOnline' );
+
+        Route::get( '/opal-bop', 'App\Modules\CaseStudies\Controllers\CaseStudiesController@opalBop' );
         
     });
     

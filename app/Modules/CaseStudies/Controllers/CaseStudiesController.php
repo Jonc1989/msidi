@@ -98,6 +98,11 @@ class CaseStudiesController extends Controller
         return view( 'modules.case_studies.opal-online' );
     }
 
+    public function opalBop()
+    {
+        return view( 'modules.case_studies.opex-bop' );
+    }
+
     /**
      * @param $lang
      */

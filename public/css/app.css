@@ -7817,8 +7817,15 @@ img {
     border-width: 0 55px 55px 0;
     border-style: solid;
     border-color: #f8f8f8 #d7e6ec; }
-  #opal-online .net-pic {
-    text-align: center;
-    margin-top: 40px; }
+  #opal-online .pic {
+    text-align: center; }
+  #opal-online img {
+    max-width: 100%; }
+
+#opal-bop .top-info {
+  background: url(http://ms-idi.eu/wp-content/uploads/2014/10/Rectangle-13.png) center center no-repeat;
+  background-size: cover; }
+  #opal-bop .top-info .top-img {
+    text-align: right; }
 
 /*# sourceMappingURL=app.css.map */

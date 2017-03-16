@@ -292,8 +292,21 @@
     border-style: solid;
     border-color: #f8f8f8 #d7e6ec;
   }
-  .net-pic{
+  .pic{
     text-align: center;
-    margin-top: 40px;
+    //margin-top: 40px;
+  }
+  img{
+    max-width: 100%;
+  }
+}
+#opal-bop{
+  .top-info{
+    background: url(http://ms-idi.eu/wp-content/uploads/2014/10/Rectangle-13.png) center center no-repeat;
+    background-size: cover;
+//    padding-top: 5%;
+    .top-img{
+      text-align: right;
+    }
   }
 }
