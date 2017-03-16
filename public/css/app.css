@@ -7766,6 +7766,22 @@ img {
 .opex-about-bg {
   background: linear-gradient(45deg, #206d87 0%, #39a7d1 59%); }
 
+.logo-wrap {
+  height: 85px;
+  width: 260px;
+  border: 1px solid #dadada;
+  position: relative;
+  margin-bottom: 5%;
+  display: inline-block; }
+
+.logo-wrap > img {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
 #opal-online {
   margin-bottom: 100px; }
   #opal-online .title {
@@ -7801,5 +7817,8 @@ img {
     border-width: 0 55px 55px 0;
     border-style: solid;
     border-color: #f8f8f8 #d7e6ec; }
+  #opal-online .net-pic {
+    text-align: center;
+    margin-top: 40px; }
 
 /*# sourceMappingURL=app.css.map */

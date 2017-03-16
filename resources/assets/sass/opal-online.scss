@@ -160,23 +160,25 @@
 //  max-width: 100%;
 //}
 ///* Integrated services*/
-//.logo-wrap
-//{
-//  height: 85px;
-//  width: 260px;
-//  border: 1px solid #dadada;
-//  position: relative;
-//  margin-bottom: 5%;
-//}
-//.logo-wrap > img
-//{
-//  position: absolute;
-//  margin: auto;
-//  top: 0;
-//  left: 0;
-//  right: 0;
-//  bottom: 0;
-//}
+.logo-wrap
+{
+  height: 85px;
+  width: 260px;
+  border: 1px solid #dadada;
+  position: relative;
+  margin-bottom: 5%;
+  display: inline-block;
+}
+
+.logo-wrap > img
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 ///* screen*/
 //@media(max-width: 64em)
 //{
@@ -290,5 +292,8 @@
     border-style: solid;
     border-color: #f8f8f8 #d7e6ec;
   }
-
+  .net-pic{
+    text-align: center;
+    margin-top: 40px;
+  }
 }

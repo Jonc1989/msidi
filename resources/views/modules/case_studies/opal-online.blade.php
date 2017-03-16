@@ -116,8 +116,8 @@
                 call and access to resources, as well as facilitates the operations and system errors logging development.
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 column">
-                <div >
-                    <img class="opex-corner-pic" src="http://ms-idi.eu/wp-content/uploads/2014/10/WCF-icon.png">
+                <div class="net-pic">
+                    <img src="http://ms-idi.eu/wp-content/uploads/2014/10/WCF-icon.png">
                 </div>
 
             </div>
@@ -132,11 +132,16 @@
                 In addition to its own development, in this web-based
                 solution has also been integrated third-party services:
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <img src="http://ms-idi.eu/wp-content/uploads/2014/10/Layer-43.png">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+                <div class="logo-wrap">
+                    <img src="http://ms-idi.eu/wp-content/uploads/2014/10/Layer-43.png">
+                </div>
+
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <img src="http://ms-idi.eu/wp-content/uploads/2014/10/Layer-44.png">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                <div class="logo-wrap">
+                    <img src="http://ms-idi.eu/wp-content/uploads/2014/10/Layer-44.png">
+                </div>
             </div>
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
