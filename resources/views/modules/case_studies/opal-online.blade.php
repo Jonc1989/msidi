@@ -116,7 +116,7 @@
                 call and access to resources, as well as facilitates the operations and system errors logging development.
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 column">
-                <div class="pic">
+                <div class="pic dot-net">
                     <img src="http://ms-idi.eu/wp-content/uploads/2014/10/WCF-icon.png">
                 </div>
 

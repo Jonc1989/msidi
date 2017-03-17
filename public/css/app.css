@@ -6454,8 +6454,14 @@ img {
 .ecolines-container {
   height: 950px; }
 
+.white-bg {
+  background: white; }
+
 .blue-bg {
   background: #506df9; }
+
+.lighter-blue-bg {
+  background: #038bc1; }
 
 .blue-bg-shape {
   background: url(../images/blue-bg.png) top center no-repeat;
@@ -7772,6 +7778,7 @@ img {
   border: 1px solid #dadada;
   position: relative;
   margin-bottom: 5%;
+  margin-top: 5%;
   display: inline-block; }
 
 .logo-wrap > img {
@@ -7782,34 +7789,117 @@ img {
   right: 0;
   bottom: 0; }
 
-#opal-online {
-  margin-bottom: 100px; }
-  #opal-online .title {
-    margin-top: 50px; }
-  #opal-online .top-info {
-    background: url(http://ms-idi.eu/wp-content/uploads/2014/10/Rectangle-13.png) center center no-repeat;
-    background-size: cover;
-    padding-top: 5%; }
-    #opal-online .top-info .top-img {
-      text-align: center; }
-  #opal-online #layer1 {
-    background-image: url(../images/opal/layer1.png);
-    padding-bottom: 5%; }
-  #opal-online #layer2 {
-    background-image: url(../images/opal/layer2.png); }
-  #opal-online .line {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    border-bottom: 1px solid #efefef;
-    width: 100%; }
-  #opal-online .sprockets {
+#opal-online .title {
+  margin-top: 50px; }
+
+#opal-online .top-info {
+  background: url(http://ms-idi.eu/wp-content/uploads/2014/10/Rectangle-13.png) center center no-repeat;
+  background-size: cover;
+  padding-top: 5%; }
+  #opal-online .top-info .top-img {
     text-align: center; }
-  #opal-online .wrap {
-    padding-top: 75px;
-    padding-bottom: 50px; }
-  #opal-online .light-blue-bg {
+
+#opal-online #layer1 {
+  background-image: url(../images/opal/layer1.png);
+  padding-bottom: 5%; }
+
+#opal-online #layer2 {
+  background-image: url(../images/opal/layer2.png); }
+
+#opal-online .line {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border-bottom: 1px solid #efefef;
+  width: 100%; }
+
+#opal-online .wrap {
+  padding-top: 75px;
+  padding-bottom: 50px; }
+
+#opal-online .dot-net {
+  margin-top: 40px; }
+
+#opal-bop .top-info {
+  background: url(http://ms-idi.eu/wp-content/uploads/2014/10/Rectangle-13.png) center center no-repeat;
+  background-size: cover; }
+  #opal-bop .top-info .top-img {
+    text-align: right; }
+
+#opal-bop #layer1 {
+  background-image: url(../images/opal/layer1.png);
+  padding-bottom: 5%; }
+
+#opal-bop .map {
+  margin-bottom: 20px; }
+
+#opal-bop .quote-row {
+  position: relative;
+  border: 1px solid #d7d7d7;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  width: 100%; }
+
+#opal-bop .quote-row:before, #opal-bop .quote-row:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 100px;
+  left: 10%;
+  width: 100%;
+  top: 80%;
+  max-width: 80%;
+  background: #777;
+  box-shadow: 0px 0 50px 10px #BBB8B8;
+  transform: rotate(-3deg); }
+
+#opal-bop .quote-row:after {
+  transform: rotate(3deg);
+  right: 10%;
+  left: auto; }
+
+#opal-bop .quote {
+  display: inline-block;
+  padding-left: 50px;
+  padding-bottom: 10px; }
+
+#opal-bop .excerpt-text {
+  display: inline-block;
+  font-style: italic;
+  font-size: 18px;
+  padding-left: 5%; }
+
+#opal-bop .shadow-bot-top {
+  position: relative;
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 5%;
+  margin-top: 5%; }
+
+#opal-bop .shadow-bot-top:before, #opal-bop .shadow-bot-top:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  box-shadow: 0 0 20px #a19797;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  right: 15px;
+  border-radius: 40%; }
+
+#opal-bop .shadow-bot-top span {
+  color: #6dcff6;
+  margin-right: 20px; }
+
+#opal-online, #opal-bop {
+  margin-bottom: 100px; }
+  #opal-online .title, #opal-bop .title {
+    margin-top: 50px; }
+  #opal-online .sprockets, #opal-bop .sprockets {
+    text-align: center; }
+  #opal-online .light-blue-bg, #opal-bop .light-blue-bg {
     padding: 50px; }
-  #opal-online .light-blue-bg:before {
+  #opal-online .light-blue-bg:before, #opal-bop .light-blue-bg:before {
     content: "";
     position: absolute;
     top: 0;
@@ -7817,15 +7907,12 @@ img {
     border-width: 0 55px 55px 0;
     border-style: solid;
     border-color: #f8f8f8 #d7e6ec; }
-  #opal-online .pic {
+  #opal-online .pic, #opal-bop .pic {
     text-align: center; }
-  #opal-online img {
+  #opal-online .spacer, #opal-bop .spacer {
+    margin-top: 30px;
+    margin-bottom: 50px; }
+  #opal-online img, #opal-bop img {
     max-width: 100%; }
-
-#opal-bop .top-info {
-  background: url(http://ms-idi.eu/wp-content/uploads/2014/10/Rectangle-13.png) center center no-repeat;
-  background-size: cover; }
-  #opal-bop .top-info .top-img {
-    text-align: right; }
 
 /*# sourceMappingURL=app.css.map */
