@@ -6327,6 +6327,11 @@ button.form-control:focus {
 .orange-bg {
   background-color: #ff895e; }
 
+#rn .top-info {
+  background: url(../images/rn/rn-background.png) center center no-repeat;
+  background-size: cover;
+  padding-top: 5%; }
+
 @font-face {
   font-family: 'Montserrat-Bold';
   src: url("../fonts/montserrat/Montserrat-Bold.otf");
@@ -6409,6 +6414,9 @@ img {
 
 .orange {
   color: #ff895e; }
+
+.brown-green {
+  color: #4a670d; }
 
 .light-blue-bg {
   position: relative;

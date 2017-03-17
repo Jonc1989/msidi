@@ -88,19 +88,14 @@ class CaseStudiesController extends Controller
         //
     }
 
-    public function exigen()
+    /**
+     * @param $case_study
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function caseStudies( $case_study )
     {
-        return view( 'modules.case_studies.exigen' );
-    }
-
-    public function opalOnline()
-    {
-        return view( 'modules.case_studies.opal-online' );
-    }
-
-    public function opalBop()
-    {
-        return view( 'modules.case_studies.opex-bop' );
+        return view( 'modules.case_studies.' . $case_study );
     }
 
     /**
