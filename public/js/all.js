@@ -19,6 +19,9 @@ $(document).ready(function(){
 
 });
 
+var career = angular.module('career', [
+
+]);
 var caseStudies = angular.module('caseStudies', [
 
 ]);
@@ -47,13 +50,7 @@ caseStudies.controller( 'OpalOnlineController', [ '$scope', function ( $scope){
     // });
 
 }]);
-var career = angular.module('career', [
-
-]);
 var clients = angular.module('clients', [
-
-]);
-var company = angular.module('company', [
 
 ]);
 /**
@@ -62,81 +59,12 @@ var company = angular.module('company', [
 var service = angular.module('service', [
 
 ]);
+var company = angular.module('company', [
+
+]);
 var slider = angular.module('slider', [
 
 ]);
-caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
-    function ( $scope, CaseStudiesService, $animate){
-
-    $scope.caseStudies = [];
-    $scope.categories = [];
-    $scope.count = null;
-
-    this.$onInit = function () {};
-
-    $scope.sortCategories = function () {
-        $scope.caseStudies.forEach( function ( project ) {
-            if( $.inArray( project.categories.name , $scope.categories ) == -1 ){
-                $scope.categories.push( project.categories.name );
-            }
-        });
-    };
-
-    $scope.setCount = function ( count ) {
-        $scope.count = count;              $scope.getData();
-    };
-
-    $scope.visible = 'all';
-
-    $scope.filter = function ( category, event ) {
-        $( '.categories .category' ).removeClass( 'active' );
-        $scope.visible = category;
-        $( event.currentTarget).addClass( 'active' );
-    };
-
-    $scope.showPosts = function ( category ) {
-        return $scope.visible === 'all' || $scope.visible === category;
-    };
-
-    $scope.getData = function(){
-        CaseStudiesService.all( $scope.count ).then(function(response)
-        {
-            $scope.caseStudies = response;
-            $scope.sortCategories();
-        });
-    };
-
-
-}]);
-caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
-{
-    var CaseStudiesService = {
-
-        all: function( count )
-        {
-            var deferred = $q.defer();
-            $http.get( '/api/case-studies', {params:{ count: count }} )
-                .success( function( response )
-                {
-                    deferred.resolve( response );
-                } )
-                .error( function( response, status )
-                {
-                    if (status === 422)
-                    {
-                        deferred.resolve({errors: response});
-                    } else
-                    {
-                        deferred.reject();
-                    }
-                } );
-
-            return deferred.promise;
-
-        }
-    };
-    return CaseStudiesService;
-}]);
 career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $scope, CareerService ){
 
 
@@ -232,6 +160,49 @@ career.service( 'CareerService', ['$http', '$q', function( $http, $q )
     return CareerService;
 }]);
 
+caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
+    function ( $scope, CaseStudiesService, $animate){
+
+    $scope.caseStudies = [];
+    $scope.categories = [];
+    $scope.count = null;
+
+    this.$onInit = function () {};
+
+    $scope.sortCategories = function () {
+        $scope.caseStudies.forEach( function ( project ) {
+            if( $.inArray( project.categories.name , $scope.categories ) == -1 ){
+                $scope.categories.push( project.categories.name );
+            }
+        });
+    };
+
+    $scope.setCount = function ( count ) {
+        $scope.count = count;              $scope.getData();
+    };
+
+    $scope.visible = 'all';
+
+    $scope.filter = function ( category, event ) {
+        $( '.categories .category' ).removeClass( 'active' );
+        $scope.visible = category;
+        $( event.currentTarget).addClass( 'active' );
+    };
+
+    $scope.showPosts = function ( category ) {
+        return $scope.visible === 'all' || $scope.visible === category;
+    };
+
+    $scope.getData = function(){
+        CaseStudiesService.all( $scope.count ).then(function(response)
+        {
+            $scope.caseStudies = response;
+            $scope.sortCategories();
+        });
+    };
+
+
+}]);
 caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
 
     $scope.clients = [];
@@ -300,14 +271,14 @@ caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
 
 
 }]);
-company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
+caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
 {
-    var CompanyService = {
+    var CaseStudiesService = {
 
-        sendMail: function( message )
+        all: function( count )
         {
             var deferred = $q.defer();
-            $http.post( '/api/company/send', message )
+            $http.get( '/api/case-studies', {params:{ count: count }} )
                 .success( function( response )
                 {
                     deferred.resolve( response );
@@ -327,7 +298,7 @@ company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
 
         }
     };
-    return CompanyService;
+    return CaseStudiesService;
 }]);
 /**
  * Created by Admin on 03.03.2017..
@@ -452,6 +423,35 @@ company.controller( 'CompanyController', [ '$scope', 'CompanyService', function 
         //google.maps.event.addDomListener(window, 'load', init_map);
     }
 
+}]);
+company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
+{
+    var CompanyService = {
+
+        sendMail: function( message )
+        {
+            var deferred = $q.defer();
+            $http.post( '/api/company/send', message )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CompanyService;
 }]);
 slider.controller( 'IndexController', [ '$scope', function ( $scope ){
 

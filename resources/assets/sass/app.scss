@@ -104,6 +104,9 @@ img{border:0}
 .brown-green{
   color: rgb( 74, 103, 13 );
 }
+.brown-green-bg{
+  background-color: rgb( 74, 103, 13 );
+}
 .light-blue-bg{
   position: relative;
   background-color: #f8f8f8;
@@ -122,6 +125,9 @@ img{border:0}
   margin-bottom: 45px;
   line-height: 1;
   font-family: 'Montserrat-UltraLight';
+}
+.line{
+  margin-top: 60px; margin-bottom: 60px; border-bottom: 1px solid #efefef; width: 100%;
 }
 .service-title{
   font-size: 21px;
@@ -1452,5 +1458,5 @@ div.cs-skin-border {
 
 @import "medium";
 @import "small";
-//@import "exigen";
+@import "rn";
 @import "opal-online";

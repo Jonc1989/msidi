@@ -6,7 +6,7 @@
 
             <div class="col-lg-offset-1 col-lg-5 col-md-6 col-sm-6 col-xs-12 ">
                 <div class="title brown-green">Rezeknes Namsaimnieks Information system</div>
-                <div  class="short-text white">Information System of Rezeknes Namsaimnieks (RNIS) is modern IT
+                <div class="brown-green-bg short-text white">Information System of Rezeknes Namsaimnieks (RNIS) is modern IT
                     solution in house management sector. RNIS main purpose is to improve the quality of the
                     company’s professional activity and to inform customers of the company on its activities,
                     therefore stimulating the competition. To strengthen the loyalty and satisfaction of customers,
@@ -16,6 +16,41 @@
 
 
         </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 green-lime clear-pads">        </div>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title center"> About Project</div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
+                    <div class=""> Project Manager:     </div> <div class="">Edgar Rukmanis, Krisjanis Daugulis</div>
+                </div>
+
+
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
+                    <div class=""> Project start date:    </div> <div class="">  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 clear-pads">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
+                    <div class=""> Project Duration:     </div>    <div class="">10 months</div>
+                </div>
+
+
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
+                    <div class=""> Basic technologies:    </div>   <div class="">PHP, Angular, Laravel, jQuery</div>
+                </div><div></div>
+            </div>
+            <div class="line"></div>
+        </div>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title center">Intresting facts</div>
+        </div>
+
 
     </div>
 
@@ -45,50 +80,10 @@
 
 
         <div class="medium-12 column rn">
-            <div class="medium-12 column rn_top_background" style="background-image: url('http://ms-idi.eu/wp-content/uploads/2015/06/rn-background.png'); background-repeat: no-repeat;background-size:cover; background-position:right; ">
-
-                <p class="rn-title" style="">Rezeknes Namsaimnieks</p>
-                <p  class="rn-category" style="">Information system</p>
-
-                <div class="large-4 medium-8 small-10 column rn-about" >
-                    <div class="rn_triangle"></div>
-                    Information System of Rezeknes Namsaimnieks (RNIS) is modern IT solution in house management sector. RNIS main purpose is to improve the quality of the company’s professional activity and to inform customers of the company on its activities, therefore stimulating the competition. To strengthen the loyalty and satisfaction of customers, RNIS was developed and introduced to show SIA “Rezeknes Namsaimnieks” clearness, control and performance.            </div>
-
-
-            </div>
-            <div class="medium-12 column clear-pads">
-                <img class="green_lime" src="http://ms-idi.eu/wp-content/themes/serio/images/rn/rn_green_line.png" >
-            </div>
 
 
 
-            <div class="medium-12 column about_rn"> About Project</div>
-            <div class="about">
 
-                <div class="large-6 large-offset-0 medium-6 medium-offset-0 small-11 small-offset-1 column ">
-                    <div class="large-10 large-offset-2 medium-10 medium-offset-2  small-12 small-offset-0 column clear-pads">
-                        <div class="large-6 medium-6 small-6 columns rn-info left clear-pads"> Project Manager:     </div> <div class="large-6 medium-6 small-6 columns rn-info-text right clear-pads">Edgar Rukmanis, Krisjanis Daugulis</div>
-                    </div>
-
-
-
-                    <div class="large-10 large-offset-2 medium-10 medium-offset-2  small-12 small-offset-0 column clear-pads">
-                        <div class="large-6 medium-6 small-6 columns rn-info left clear-pads"> Project start date:    </div> <div class="large-6 medium-6 small-6 columns rn-info-text right clear-pads">  </div>
-                    </div>
-                </div>
-
-                <div class="large-6 large-offset-0 medium-6 medium-offset-0  small-11 small-offset-1 column">
-                    <div class="large-10 large-offset-0 medium-10 medium-offset-0  small-12 small-offset-0 column clear-pads">
-                        <div class="large-6 medium-6 small-6 columns rn-info left clear-pads"> Project Duration:     </div>    <div class="large-6 medium-6 small-6 columns rn-info-text clear-pads">10 months</div>
-                    </div>
-
-
-
-                    <div class="large-10 large-offset-0 medium-10 medium-offset-0  small-12 small-offset-0 column clear-pads">
-                        <div class="large-6 medium-6 small-6 columns rn-info left clear-pads"> Basic technologies:    </div>   <div class="large-6 medium-6 small-6 columns rn-info-text clear-pads">PHP, Angular, Laravel, jQuery</div>
-                    </div><div></div>
-                </div>
-            </div>
             <div class="medium-10 medium-offset-1 column divider">
                 <div style="margin-top: 50px; height: 1px; border-bottom: 1px solid #efefef;"></div>
             </div>

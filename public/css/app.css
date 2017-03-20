@@ -6418,6 +6418,9 @@ img {
 .brown-green {
   color: #4a670d; }
 
+.brown-green-bg {
+  background-color: #4a670d; }
+
 .light-blue-bg {
   position: relative;
   background-color: #f8f8f8; }
@@ -6436,6 +6439,12 @@ img {
   margin-bottom: 45px;
   line-height: 1;
   font-family: 'Montserrat-UltraLight'; }
+
+.line {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border-bottom: 1px solid #efefef;
+  width: 100%; }
 
 .service-title {
   font-size: 21px; }
@@ -7838,6 +7847,11 @@ div.cs-skin-border {
     margin-left: 25%;
     width: 50%; } }
 
+#rn .green-lime {
+  background: url(../images/rn/rn_green_line.png) center center no-repeat;
+  background-size: cover;
+  height: 377px; }
+
 .opex-about-bg {
   background: linear-gradient(45deg, #206d87 0%, #39a7d1 59%); }
 
@@ -7874,12 +7888,6 @@ div.cs-skin-border {
 
 #opal-online #layer2 {
   background-image: url(../images/opal/layer2.png); }
-
-#opal-online .line {
-  margin-top: 60px;
-  margin-bottom: 60px;
-  border-bottom: 1px solid #efefef;
-  width: 100%; }
 
 #opal-online .wrap {
   padding-top: 75px;
