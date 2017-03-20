@@ -19,9 +19,6 @@ $(document).ready(function(){
 
 });
 
-var career = angular.module('career', [
-
-]);
 var caseStudies = angular.module('caseStudies', [
 
 ]);
@@ -50,13 +47,13 @@ caseStudies.controller( 'OpalOnlineController', [ '$scope', function ( $scope){
     // });
 
 }]);
+var career = angular.module('career', [
+
+]);
 var clients = angular.module('clients', [
 
 ]);
 var company = angular.module('company', [
-
-]);
-var slider = angular.module('slider', [
 
 ]);
 /**
@@ -65,85 +62,9 @@ var slider = angular.module('slider', [
 var service = angular.module('service', [
 
 ]);
-career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $scope, CareerService ){
+var slider = angular.module('slider', [
 
-
-    $scope.careerForm = {};
-
-    $scope.vacancy = {
-        position: '',
-        email: '',
-        message: ''
-    };
-
-    $scope.loading = true;
-
-    $scope.removeErrors = function(){
-        $('#career .form-group' ).removeClass( 'has-error' );
-    };
-
-    $scope.setFormScope = function( form )
-    {
-        $scope.careerForm = form;
-    };
-
-     $scope.send = function () { console.log($scope.careerForm);
-        if( !$scope.careerForm.$invalid ){
-            CareerService.sendMail( $scope.vacancy ).then(function (response) {
-                $scope.vacancy = {
-                    position: '',
-                    email: '',
-                    message: ''
-                };
-            });
-        }else{
-            $scope.removeErrors();
-            for (var property in $scope.vacancy) {
-                if( $scope.careerForm[property].$invalid ){ 
-                    var $field = $( '[name="' + property + '"]' );
-                    if( $field ) {
-                        $field.closest( '.form-group' ) .addClass( 'has-error' );
-                    }
-                }
-            }
-        }
-     };
-
-    $scope.toggleMe = function ( event ) { console.log(event)
-        $( event.target ).parent().find('.plus').toggleClass( 'open' );
-    };
-
-}]);
-career.service( 'CareerService', ['$http', '$q', function( $http, $q )
-{
-    var CareerService = {
-
-        sendMail: function( message )
-        {
-            var deferred = $q.defer();
-            $http.post( '/api/career/send', message )
-                .success( function( response )
-                {
-                    deferred.resolve( response );
-                } )
-                .error( function( response, status )
-                {
-                    if (status === 422)
-                    {
-                        deferred.resolve({errors: response});
-                    } else
-                    {
-                        deferred.reject();
-                    }
-                } );
-
-            return deferred.promise;
-
-        }
-    };
-    return CareerService;
-}]);
-
+]);
 caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
     function ( $scope, CaseStudiesService, $animate){
 
@@ -216,6 +137,101 @@ caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
     };
     return CaseStudiesService;
 }]);
+career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $scope, CareerService ){
+
+
+    $scope.careerForm = {};
+
+    $scope.vacancy = {
+        position: '',
+        email: '',
+        message: ''
+    };
+
+    $scope.loading = true;
+
+    $scope.removeErrors = function(){
+        $('#career .form-group' ).removeClass( 'has-error' );
+    };
+
+    $scope.setFormScope = function( form )
+    {
+        $scope.careerForm = form;
+    };
+
+     $scope.send = function () {
+
+        if( !$scope.careerForm.$invalid ){
+            CareerService.sendMail( $scope.vacancy ).then(function (response) {
+                $scope.vacancy = {
+                    position: '',
+                    email: '',
+                    message: ''
+                };
+            });
+        }else{
+            $scope.removeErrors();
+            for (var property in $scope.vacancy) {
+                if( $scope.careerForm[property].$invalid ){
+                    var $field = $( '[name="' + property + '"]' );
+                    if( $field ) {
+                        $field.closest( '.form-group' ) .addClass( 'has-error' );
+                    }
+                }
+            }
+        }
+     };
+
+    $scope.toggleMe = function ( event ) { console.log(event)
+        $( event.target ).parent().find('.plus').toggleClass( 'open' );
+    };
+
+    var options = {
+        newTab : true,
+        stickyPlaceholder : true,
+        onChange : function( val ) {
+            $('select.cs-select.cs-skin-elastic option[value="' + val +'"]').attr("selected", "selected");
+            var vacancy = $('select.cs-select.cs-skin-elastic option:selected').text();
+
+            $scope.vacancy.position = vacancy;
+        }
+    };
+    [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+        new SelectFx(el, options);
+
+    } );
+
+}]);
+career.service( 'CareerService', ['$http', '$q', function( $http, $q )
+{
+    var CareerService = {
+
+        sendMail: function( message )
+        {
+            var deferred = $q.defer();
+            $http.post( '/api/career/send', message )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CareerService;
+}]);
+
 caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
 
     $scope.clients = [];
@@ -283,6 +299,79 @@ caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
     });
 
 
+}]);
+company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
+{
+    var CompanyService = {
+
+        sendMail: function( message )
+        {
+            var deferred = $q.defer();
+            $http.post( '/api/company/send', message )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CompanyService;
+}]);
+/**
+ * Created by Admin on 03.03.2017..
+ */
+service.controller( 'ServiceController', [ '$scope', function ( $scope ){
+
+    $scope.currentScroll = null;
+    $scope.currentBreakpoint = null;
+    $scope.countFinished = false;
+    $(window).load(function () {
+
+        var counter = new countUp('project-count', 1, 8, 0, 2);
+
+
+        $scope.scroll = $(window).scrollTop();
+        $scope.height = $(window).height();
+        $scope.projects = $('#services .project-count-wrap' ).offset().top;
+        $scope.projectsHeight = $('#services .project-count-wrap' ).height();
+        $scope.breakpoint = ( $scope.scroll + ( $scope.height / 2 ));
+        
+        if ( $scope.breakpoint > ( $scope.projects - 100 ) &&  $scope.breakpoint < ( $scope.projects + $scope.projectsHeight + 100 ) ) {
+            $scope.countFinished = true;
+            counter.start();
+
+        }
+
+
+        $(window).on('scroll',function() {
+            $scope.currentScroll = $(window).scrollTop();
+            $scope.currentBreakpoint = ( $scope.currentScroll + ( $scope.height / 2 ));
+
+            if ( $scope.currentBreakpoint > ( $scope.projects - 100 )
+                && $scope.currentBreakpoint < ( $scope.projects + $scope.projectsHeight + 100 ) ){
+
+                if( !$scope.countFinished ){
+                    $scope.countFinished = true;
+                    counter.start();
+
+                }
+
+            }
+        });
+
+    });
 }]);
 company.controller( 'CompanyController', [ '$scope', 'CompanyService', function ( $scope, CompanyService ){
 
@@ -363,35 +452,6 @@ company.controller( 'CompanyController', [ '$scope', 'CompanyService', function 
         //google.maps.event.addDomListener(window, 'load', init_map);
     }
 
-}]);
-company.service( 'CompanyService', ['$http', '$q', function( $http, $q )
-{
-    var CompanyService = {
-
-        sendMail: function( message )
-        {
-            var deferred = $q.defer();
-            $http.post( '/api/company/send', message )
-                .success( function( response )
-                {
-                    deferred.resolve( response );
-                } )
-                .error( function( response, status )
-                {
-                    if (status === 422)
-                    {
-                        deferred.resolve({errors: response});
-                    } else
-                    {
-                        deferred.reject();
-                    }
-                } );
-
-            return deferred.promise;
-
-        }
-    };
-    return CompanyService;
 }]);
 slider.controller( 'IndexController', [ '$scope', function ( $scope ){
 
@@ -485,49 +545,5 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
     
     
 
-}]);
-/**
- * Created by Admin on 03.03.2017..
- */
-service.controller( 'ServiceController', [ '$scope', function ( $scope ){
-
-    $scope.currentScroll = null;
-    $scope.currentBreakpoint = null;
-    $scope.countFinished = false;
-    $(window).load(function () {
-
-        var counter = new countUp('project-count', 1, 8, 0, 2);
-
-
-        $scope.scroll = $(window).scrollTop();
-        $scope.height = $(window).height();
-        $scope.projects = $('#services .project-count-wrap' ).offset().top;
-        $scope.projectsHeight = $('#services .project-count-wrap' ).height();
-        $scope.breakpoint = ( $scope.scroll + ( $scope.height / 2 ));
-        
-        if ( $scope.breakpoint > ( $scope.projects - 100 ) &&  $scope.breakpoint < ( $scope.projects + $scope.projectsHeight + 100 ) ) {
-            $scope.countFinished = true;
-            counter.start();
-
-        }
-
-
-        $(window).on('scroll',function() {
-            $scope.currentScroll = $(window).scrollTop();
-            $scope.currentBreakpoint = ( $scope.currentScroll + ( $scope.height / 2 ));
-
-            if ( $scope.currentBreakpoint > ( $scope.projects - 100 )
-                && $scope.currentBreakpoint < ( $scope.projects + $scope.projectsHeight + 100 ) ){
-
-                if( !$scope.countFinished ){
-                    $scope.countFinished = true;
-                    counter.start();
-
-                }
-
-            }
-        });
-
-    });
 }]);
 //# sourceMappingURL=all.js.map
