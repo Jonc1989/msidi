@@ -1,7 +1,93 @@
 #rn{
+  .title{
+    margin-top: 50px;
+  }
+  .top-info{
+    background: url(../images/rn/rn-background.png) center center no-repeat;
+    background-size: cover;
+    padding-top: 5%;
+    height: 740px;
+    .short-text{
+      border-radius: 0px 20px 20px 20px;
+      padding: 25px;
+    }
+  }
+  .rn-info{
+    padding-bottom: 60px;
+    border-bottom: 1px solid #efefef;
+  }
   .green-lime{
     background: url(../images/rn/rn_green_line.png) center center no-repeat;
     background-size: cover;
     height: 377px;
+  }
+  .light-green-bg{
+    padding-bottom: 50px;
+  }
+  .city-bg{
+    background: url(../images/rn/city.png) bottom center no-repeat;
+    background-size: cover;
+    height: 142px;
+  }
+  .palka{
+    background: url(../images/rn/line1.png) center center no-repeat;
+    background-size: contain;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    .info-item{
+      display: table;
+      height: 170px;
+    }
+    .modules{
+
+    }
+    .module{
+      display: inline-block;
+      text-align: center;
+    }
+    .slide-in-right, .slide-in-left{
+      display: table-cell;
+      vertical-align: middle;
+
+      float: none;
+    }
+    .slide-in-right{
+      padding-right: 50px;
+    }
+    .slide-in-right:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -5px;
+      width: 11px;
+      height: 11px;
+      border-radius: 10px;
+      background-color: #b1d1b2;
+    }
+    .slide-in-left{
+      padding-left: 50px;
+    }
+  }
+  .small-title{
+    font-size: 26px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  #system_parts{
+    img{
+      width: 50%;
+      float: left;
+      padding-right: 50px;
+      padding-bottom: 50px;
+    }
+
+
+    .public-part, .bop-part{
+      margin-bottom: 50px;
+    }
+  }
+  .intresting_facts{
+    padding-bottom: 40px;
   }
 }

@@ -6327,11 +6327,6 @@ button.form-control:focus {
 .orange-bg {
   background-color: #ff895e; }
 
-#rn .top-info {
-  background: url(../images/rn/rn-background.png) center center no-repeat;
-  background-size: cover;
-  padding-top: 5%; }
-
 @font-face {
   font-family: 'Montserrat-Bold';
   src: url("../fonts/montserrat/Montserrat-Bold.otf");
@@ -6418,8 +6413,11 @@ img {
 .brown-green {
   color: #4a670d; }
 
-.brown-green-bg {
-  background-color: #4a670d; }
+.green-bg {
+  background-color: rgba(52, 160, 61, 0.851); }
+
+.light-green-bg {
+  background-color: #ebf6cb; }
 
 .light-blue-bg {
   position: relative;
@@ -7847,10 +7845,81 @@ div.cs-skin-border {
     margin-left: 25%;
     width: 50%; } }
 
+#rn .title {
+  margin-top: 50px; }
+
+#rn .top-info {
+  background: url(../images/rn/rn-background.png) center center no-repeat;
+  background-size: cover;
+  padding-top: 5%;
+  height: 740px; }
+  #rn .top-info .short-text {
+    border-radius: 0px 20px 20px 20px;
+    padding: 25px; }
+
+#rn .rn-info {
+  padding-bottom: 60px;
+  border-bottom: 1px solid #efefef; }
+
 #rn .green-lime {
   background: url(../images/rn/rn_green_line.png) center center no-repeat;
   background-size: cover;
   height: 377px; }
+
+#rn .light-green-bg {
+  padding-bottom: 50px; }
+
+#rn .city-bg {
+  background: url(../images/rn/city.png) bottom center no-repeat;
+  background-size: cover;
+  height: 142px; }
+
+#rn .palka {
+  background: url(../images/rn/line1.png) center center no-repeat;
+  background-size: contain;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 50px; }
+  #rn .palka .info-item {
+    display: table;
+    height: 170px; }
+  #rn .palka .module {
+    display: inline-block;
+    text-align: center; }
+  #rn .palka .slide-in-right, #rn .palka .slide-in-left {
+    display: table-cell;
+    vertical-align: middle;
+    float: none; }
+  #rn .palka .slide-in-right {
+    padding-right: 50px; }
+  #rn .palka .slide-in-right:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    width: 11px;
+    height: 11px;
+    border-radius: 10px;
+    background-color: #b1d1b2; }
+  #rn .palka .slide-in-left {
+    padding-left: 50px; }
+
+#rn .small-title {
+  font-size: 26px;
+  margin-top: 50px;
+  margin-bottom: 20px; }
+
+#rn #system_parts img {
+  width: 50%;
+  float: left;
+  padding-right: 50px;
+  padding-bottom: 50px; }
+
+#rn #system_parts .public-part, #rn #system_parts .bop-part {
+  margin-bottom: 50px; }
+
+#rn .intresting_facts {
+  padding-bottom: 40px; }
 
 .opex-about-bg {
   background: linear-gradient(45deg, #206d87 0%, #39a7d1 59%); }
