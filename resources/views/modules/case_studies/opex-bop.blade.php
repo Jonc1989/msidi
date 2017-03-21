@@ -27,7 +27,7 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
             <div class="col-lg-offset-2 col-lg-10 col-md-offset-3 col-md-9 col-sm-12 col-xs-12 sprockets">
-                <img class="opex-info-pic" src="/images/opal/sprockets.png">
+                <img class="opex-info-pic" src="/public/images/opal/sprockets.png">
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 brief-project-info">

@@ -4,7 +4,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12 clear-pads holder">
             <div class="shadow"></div>
             <div class="pen_holder">
-                <img  src="/images/pen_holder.png" alt="">
+                <img  src="/public/images/pen_holder.png" alt="">
             </div>
 
 

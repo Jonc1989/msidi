@@ -3,11 +3,11 @@
                 <div class="shadow2"></div>
                 <div class="shadow3"></div>
                 <div class="cofe">
-                        <img  src="/images/company/cup.png" alt="">
+                        <img  src="/public/images/company/cup.png" alt="">
 
                 </div>
                 <div class="pencil">
-                        <img  src="/images/company/pencil.png" alt="">
+                        <img  src="/public/images/company/pencil.png" alt="">
                 </div>
         </div>
         <div class="light-blue">

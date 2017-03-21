@@ -38,7 +38,7 @@
                             </div>
                             <div class="white-layer">
                                 <div class="hover">
-                                    <img src="/images/eye.png">
+                                    <img src="/public/images/eye.png">
                                 </div>
                             </div>
                             <div class="portfolio-title" ng-bind="item.content">Exigen</div>

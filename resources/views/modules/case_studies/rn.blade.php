@@ -89,7 +89,7 @@
                     <div class="container">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads info-item">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right slide-in-right">
-                                <img src="/images/rn/docs.svg">
+                                <img src="/public/images/rn/docs.svg">
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 slide-in-left">
 
@@ -105,13 +105,13 @@
                                 (business management system) and public (customer self-service system).
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 slide-in-left">
-                                <img src="/images/rn/proc.svg">
+                                <img src="/public/images/rn/proc.svg">
                             </div>
                         </div>
 
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads info-item">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right slide-in-right">
-                                <img src="/images/rn/phones.svg">
+                                <img src="/public/images/rn/phones.svg">
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 slide-in-left">
                                 Information system also includes mobile app on Android and iOS.
@@ -137,7 +137,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title center">Two parts of system</div>
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads public-part">
-                    <img src="/images/rn/public_part.png">
+                    <img src="/public/images/rn/public_part.png">
                     <div class="small-title bold">Public part</div>
                     Public (customer self-service portal) part contains info about every building that is
                     managed by SIA „Rezeknes Namsaimnieks”, allowing to see auditing data and basic information
@@ -147,7 +147,7 @@
                 </div>
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads bop-part">
-                    <img src="/images/rn/bop_part.png">
+                    <img src="/public/images/rn/bop_part.png">
                     <div class="small-title bold">Administrative part</div>
                     Information system second part (Business Management System) is accessible only to employees
                     of the company. It is made for inside usage and oriented mainly for the workers of the company.
@@ -183,7 +183,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads info-item">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-right ">
                             <div class="module">
-                                <img src="/images/rn/building_managment.png">
+                                <img src="/public/images/rn/building_managment.png">
                                 <div class="module-title">Building Management Module</div>
                             </div>
 
@@ -191,7 +191,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-left">
 
                             <div class="module">
-                                <img src="/images/rn/meeting_managment.png">
+                                <img src="/public/images/rn/meeting_managment.png">
                                 <div class="module-title">Building Management Module</div>
                             </div>
                         </div>
@@ -200,13 +200,13 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads info-item">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-right">
                             <div class="module">
-                                <img src="/images/rn/app_managment.png">
+                                <img src="/public/images/rn/app_managment.png">
                                 <div class="module-title">Building Management Module</div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-left">
                             <div class="module">
-                                <img src="/images/rn/maintance_planning.png">
+                                <img src="/public/images/rn/maintance_planning.png">
                                 <div class="module-title">Building Management Module</div>
                             </div>
                         </div>
@@ -215,13 +215,13 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads info-item">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-right">
                             <div class="module">
-                                <img src="/images/rn/inspection_managment.png">
+                                <img src="/public/images/rn/inspection_managment.png">
                                 <div class="module-title">Building Management Module</div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-left">
                             <div class="module">
-                                <img src="/images/rn/user_managment.png">
+                                <img src="/public/images/rn/user_managment.png">
                                 <div class="module-title">Building Management Module</div>
                             </div>
                         </div>
@@ -230,13 +230,13 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads info-item">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-right">
                             <div class="module">
-                                <img src="/images/rn/costumer_managment.png">
+                                <img src="/public/images/rn/costumer_managment.png">
                                 <div class="module-title">Building Management Module</div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-left">
                             <div class="module">
-                                <img src="/images/rn/debtor_managment.png">
+                                <img src="/public/images/rn/debtor_managment.png">
                                 <div class="module-title">Building Management Module</div>
                             </div>
                         </div>
@@ -245,13 +245,13 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads info-item">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-right">
                             <div class="module">
-                                <img src="/images/rn/document_circulation.png">
+                                <img src="/public/images/rn/document_circulation.png">
                                 <div class="module-title">Building Management Module</div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-left">
                             <div class="module">
-                                <img src="/images/rn/journalification.png">
+                                <img src="/public/images/rn/journalification.png">
                                 <div class="module-title">Building Management Module</div>
                             </div>
                         </div>
@@ -260,7 +260,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads info-item">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-right">
                             <div class="module">
-                                <img src="/images/rn/administrative.png">
+                                <img src="/public/images/rn/administrative.png">
                                 <div class="module-title">Building Management Module</div>
                             </div>
                         </div>
@@ -305,7 +305,7 @@
                         time period. Meetings, technical inspections and maintenance works are being highlighted using different fonts.
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
-                        <img src="/images/rn/map.png">
+                        <img src="/public/images/rn/map.png">
                     </div>
 
                 </div>
@@ -315,7 +315,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title center">Mobile app development</div>
 
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clear-pads">
-                        <img src="/images/rn/mobile_app.png">
+                        <img src="/public/images/rn/mobile_app.png">
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
                         RNIS mobile app is analog to customer self-service system – it duplicates the same information,
