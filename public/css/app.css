@@ -6447,6 +6447,10 @@ img {
 .service-title {
   font-size: 21px; }
 
+@media (min-width: 1400px) {
+  .service-title {
+    width: 100%; } }
+
 .service-type {
   padding-left: 0px;
   margin-bottom: 20px; }

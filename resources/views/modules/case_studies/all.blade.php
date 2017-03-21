@@ -22,7 +22,7 @@
             <div class="col-md-4 case-studies" ng-repeat="item in caseStudies" ng-show="showPosts( item.categories.name)">
                  <!--ng-class="visible == 'all' || visible == item.categories.name ? 'ng-enter' : 'ng-hide'"-->
                 <div class="studie">
-                    <a href="">
+                    <a href="{{ item.url }}">
                         <div class="cover">
                             <div class="image" ng-style="{'background':'url({{ item.image }}) center center no-repeat'}">
 

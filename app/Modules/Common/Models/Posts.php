@@ -16,7 +16,7 @@ class Posts extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'name', 'content', 'image', 'category_id', 'created_at', 'updated_at'
+        'id', 'name', 'content', 'image', 'url', 'category_id', 'created_at', 'updated_at'
     ];
 
     public function categories()

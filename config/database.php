@@ -55,9 +55,9 @@ return [
         'mysql' => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
-            'database'  => 'ms-idi_new',
-            'username'  => 'root',
-            'password'  => '',
+            'database'  => env('DB_DATABASE', 'dev'),
+            'username'  => env('DB_USERNAME', 'dev'),
+            'password'  => env('DB_PASSWORD' ),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
