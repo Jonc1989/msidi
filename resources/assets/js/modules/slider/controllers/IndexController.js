@@ -46,8 +46,8 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 auto: true,
                 autoStart: true,
                 stopAutoOnClick: false,
-                tickerHover: false,
-                touchEnabled: false,
+                tickerHover: true,
+                touchEnabled: true,
                 onSliderLoad: function (currentIndex) {
                     //console.log( 'onSliderLoad' );
                 },

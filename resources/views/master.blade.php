@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="app">
     <head>
-        <title>Laravel</title>
+        <title>MS-IDI</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
         <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">-->
@@ -35,7 +35,7 @@
 
         <script src="<?=  url('/') ?>/js/vendor/classie.js"></script>
         <script src="<?=  url('/') ?>/js/vendor/selectFx.js"></script>
-        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+        <script src='//maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyC65qTskUjsL4_7f9gWsNfkGbUJ5p5bXv0'></script>
         <script src="<?=  url('/') ?>/js/vendor/countUp.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 

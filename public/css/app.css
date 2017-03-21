@@ -5891,7 +5891,7 @@ button.close {
   opacity: 0; }
 
 .mac {
-  background: url(../images/amber/iMac.png) left bottom no-repeat;
+  background: url(../images/amber/imac.png) left bottom no-repeat;
   background-size: contain;
   margin-top: 10px;
   height: 620px;
@@ -7850,7 +7850,8 @@ div.cs-skin-border {
     width: 50%; } }
 
 #rn .title {
-  margin-top: 50px; }
+  margin-top: 50px;
+  font-weight: bold; }
 
 #rn .top-info {
   background: url(../images/rn/rn-background.png) center center no-repeat;
@@ -7860,10 +7861,21 @@ div.cs-skin-border {
   #rn .top-info .short-text {
     border-radius: 0px 20px 20px 20px;
     padding: 25px; }
+  #rn .top-info .green-bg {
+    position: relative; }
+  #rn .top-info .green-bg:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 0 20px;
+    border-color: transparent transparent transparent rgba(52, 160, 61, 0.851);
+    position: absolute;
+    top: -20px;
+    left: 0; }
 
 #rn .rn-info {
-  padding-bottom: 60px;
-  border-bottom: 1px solid #efefef; }
+  padding-bottom: 60px; }
 
 #rn .green-lime {
   background: url(../images/rn/rn_green_line.png) center center no-repeat;
@@ -7886,7 +7898,16 @@ div.cs-skin-border {
   margin-bottom: 50px; }
   #rn .palka .info-item {
     display: table;
-    height: 170px; }
+    height: 200px; }
+  #rn .palka .dots:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    top: calc( 50% + 5px);
+    right: -150px;
+    width: 301px;
+    height: 1px;
+    background-color: #b1d1b2; }
   #rn .palka .module {
     display: inline-block;
     text-align: center; }
@@ -7907,6 +7928,8 @@ div.cs-skin-border {
     background-color: #b1d1b2; }
   #rn .palka .slide-in-left {
     padding-left: 50px; }
+    #rn .palka .slide-in-left .module {
+      float: right; }
 
 #rn .small-title {
   font-size: 26px;
@@ -7924,6 +7947,12 @@ div.cs-skin-border {
 
 #rn .intresting_facts {
   padding-bottom: 40px; }
+
+.text-content {
+  padding-bottom: 50px; }
+
+.border-bottom {
+  border-bottom: 1px solid #efefef; }
 
 .opex-about-bg {
   background: linear-gradient(45deg, #206d87 0%, #39a7d1 59%); }
