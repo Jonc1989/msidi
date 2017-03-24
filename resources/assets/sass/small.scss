@@ -8,6 +8,16 @@
   .monitor, .light-bulb, .magnifier, .lifebelt {
     margin-bottom: 25px;
   }
+  #rn .palka .dots:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    top: calc( 50% + 5px);
+    right: -150px;
+    width: 301px;
+    height: 1px;
+    background-color: #b1d1b2;
+  }
 }
 
 @media (max-width: 991px){
@@ -46,6 +56,10 @@
     text-align: center;
     padding-top: 20px;
   }
+  #rn .top-info {
+    height: 540px;
+  }
+
 }
 @media (max-width: 767px){
   #slider{
@@ -77,10 +91,81 @@
       padding-left: 40px;
     }
   }
+  .small-title {
+    margin-top: 50px;
+  }
+
+}
+@media (min-width: 600px){
+  .palka {
+    background: url(../images/rn/line1.png) center center no-repeat;
+    background-size: contain;
+  }
+  .dots:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    top: calc( 50% + 5px);
+    right: -75px;
+    width: 151px;
+    height: 1px;
+    background-color: #b1d1b2;
+  }
+  .slide-in-right:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    width: 11px;
+    height: 11px;
+    border-radius: 10px;
+    background-color: #b1d1b2;
+  }
+  .slide-in-right{
+    padding-right: 50px;
+  }
+  .slide-in-left {
+    padding-left: 50px;
+  }
 }
 @media (min-width: 600px)and (max-width: 767px){
   .service-type{
     margin-left: 25%;
     width: 50%;
+  }
+}
+@media (max-width: 767px){
+  #rn .palka .module{
+    display: block;
+  }
+  #rn .palka .slide-in-left .module{
+    float: none;
+  }
+  #rn #system_parts img {
+    padding-right: 15px;
+    padding-bottom: 15px;
+  }
+  .green-lime {
+    height: 150px;
+  }
+}
+@media (min-width: 500px){
+  #rn .palka .slide-in-right, #rn .palka .slide-in-left {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+  }
+  #rn .palka {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 499px){
+  #rn .palka .slide-in-right, #rn .palka .slide-in-left {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 50px;
+    text-align: center;
   }
 }

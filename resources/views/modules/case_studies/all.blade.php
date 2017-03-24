@@ -31,7 +31,7 @@
                         </div>
                         <div class="white-layer">
                             <div class="hover">
-                                <img src="/public/images/eye.png">
+                                <img src="<?= env( 'ROOT_PATH' );?>/images/eye.png">
                             </div>
                         </div>
                         <div class="portfolio-title" ng-bind="item.content">Exigen</div>

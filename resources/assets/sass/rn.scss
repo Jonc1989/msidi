@@ -1,4 +1,7 @@
 #rn{
+  img{
+    max-width: 100%;
+  }
   .title{
     margin-top: 50px;
     font-weight: bold;
@@ -35,7 +38,7 @@
   .green-lime{
     background: url(../images/rn/rn_green_line.png) center center no-repeat;
     background-size: cover;
-    height: 377px;
+
   }
   .light-green-bg{
     padding-bottom: 50px;
@@ -46,53 +49,50 @@
     height: 142px;
   }
   .palka{
-    background: url(../images/rn/line1.png) center center no-repeat;
-    background-size: contain;
+
     padding-top: 50px;
-    padding-bottom: 50px;
-    margin-bottom: 50px;
+    //padding-bottom: 50px;
+    //margin-bottom: 50px;
     .info-item{
       display: table;
       height: 200px;
     }
 
-    .dots:before{
-      content: '';
-      position: absolute;
-      top: 50%;
-      top: calc( 50% + 5px);
-      right: -150px;
-      width: 301px;
-      height: 1px;
-      background-color: #b1d1b2;
-    }
+    //.dots:before{
+    //  content: '';
+    //  position: absolute;
+    //  top: 50%;
+    //  top: calc( 50% + 5px);
+    //  right: -150px;
+    //  width: 301px;
+    //  height: 1px;
+    //  background-color: #b1d1b2;
+    //}
 
     .module{
       display: inline-block;
       text-align: center;
     }
-    .slide-in-right, .slide-in-left{
-      display: table-cell;
-      vertical-align: middle;
+    //.slide-in-right, .slide-in-left{
+    //  display: table-cell;
+    //  vertical-align: middle;
+    //
+    //  float: none;
+    //}
 
-      float: none;
-    }
-    .slide-in-right{
-      padding-right: 50px;
-    }
 
-    .slide-in-right:after{
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: -5px;
-      width: 11px;
-      height: 11px;
-      border-radius: 10px;
-      background-color: #b1d1b2;
-    }
+    //.slide-in-right:after{
+    //  content: '';
+    //  position: absolute;
+    //  top: 50%;
+    //  right: -5px;
+    //  width: 11px;
+    //  height: 11px;
+    //  border-radius: 10px;
+    //  background-color: #b1d1b2;
+    //}
     .slide-in-left{
-      padding-left: 50px;
+      //padding-left: 50px;
       .module{
         float: right;
       }
@@ -100,7 +100,7 @@
   }
   .small-title{
     font-size: 26px;
-    margin-top: 50px;
+    //margin-top: 50px;
     margin-bottom: 20px;
   }
   #system_parts{

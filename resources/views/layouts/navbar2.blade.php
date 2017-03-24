@@ -1,5 +1,5 @@
 <div class="col-md-12 clear-pads blue-bg">
-<div class="container">
+<div class="container clear-pads">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">

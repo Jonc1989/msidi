@@ -23,28 +23,28 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title center"> About Project</div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads rn-info border-bottom">
 
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
-                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"> Project Manager: </div>
-                        <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12 bold">Edgar Rukmanis, Krisjanis Daugulis</div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12"> Project Manager: </div>
+                        <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 bold">Edgar Rukmanis, Krisjanis Daugulis</div>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
-                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"> Project start date: </div>
-                        <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12 bold">  </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12"> Project start date: </div>
+                        <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 bold">  </div>
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
-                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"> Project Duration:     </div>
-                        <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12 bold">10 months</div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12"> Project Duration:     </div>
+                        <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 bold">10 months</div>
                     </div>
 
 
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
-                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"> Basic technologies:    </div>
-                        <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12 bold">PHP, Angular, Laravel, jQuery</div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12"> Basic technologies:    </div>
+                        <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 bold">PHP, Angular, Laravel, jQuery</div>
                     </div><div></div>
                 </div>
 
@@ -88,10 +88,10 @@
 
                     <div class="container">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads info-item">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right slide-in-right">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right slide-in-right">
                                 <img src="<?= env( 'ROOT_PATH' );?>/images/rn/docs.svg">
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 slide-in-left">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 slide-in-left">
 
                                 Information system the main purpose is to increase the efficiency of document circulation in the company
                                 “Rezeknes Namsaimnieks” and inform customers of the company on its activities.
@@ -99,21 +99,21 @@
                         </div>
 
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads info-item">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 slide-in-right">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 slide-in-right">
                                 Information system is anticipated to increase the efficiency of company’s employees, releasing them from the
                                 traditional circulation system of paper documents. It consists of two parts: administrative
                                 (business management system) and public (customer self-service system).
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 slide-in-left">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 slide-in-left">
                                 <img src="<?= env( 'ROOT_PATH' );?>/images/rn/proc.svg">
                             </div>
                         </div>
 
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads info-item">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right slide-in-right">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right slide-in-right">
                                 <img src="<?= env( 'ROOT_PATH' );?>/images/rn/phones.svg">
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 slide-in-left">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 slide-in-left">
                                 Information system also includes mobile app on Android and iOS.
                             </div>
                         </div>
@@ -182,14 +182,14 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads border-bottom">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads palka modules">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads info-item">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-right dots">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  slide-in-right dots">
                                 <div class="module">
                                     <img src="<?= env( 'ROOT_PATH' );?>/images/rn/building_managment.png">
                                     <div class="module-title">Building Management Module</div>
                                 </div>
 
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-left">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  slide-in-left">
 
                                 <div class="module">
                                     <img src="<?= env( 'ROOT_PATH' );?>/images/rn/meeting_managment.png">
@@ -199,13 +199,13 @@
                         </div>
 
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads info-item">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-right dots">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  slide-in-right dots">
                                 <div class="module">
                                     <img src="<?= env( 'ROOT_PATH' );?>/images/rn/app_managment.png">
                                     <div class="module-title">Application Management Module</div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-left">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  slide-in-left">
                                 <div class="module">
                                     <img src="<?= env( 'ROOT_PATH' );?>/images/rn/maintance_planning.png">
                                     <div class="module-title">Maintenance Planning Module</div>
@@ -214,13 +214,13 @@
                         </div>
 
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads info-item">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-right dots">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  slide-in-right dots">
                                 <div class="module">
                                     <img src="<?= env( 'ROOT_PATH' );?>/images/rn/inspection_managment.png">
                                     <div class="module-title">Tech Inspection Management Module</div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-left">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  slide-in-left">
                                 <div class="module">
                                     <img src="<?= env( 'ROOT_PATH' );?>/images/rn/user_managment.png">
                                     <div class="module-title">User Management Module</div>
@@ -229,13 +229,13 @@
                         </div>
 
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads info-item">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-right dots">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  slide-in-right dots">
                                 <div class="module">
                                     <img src="<?= env( 'ROOT_PATH' );?>/images/rn/costumer_managment.png">
                                     <div class="module-title">Customer Management Module</div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-left">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  slide-in-left">
                                 <div class="module">
                                     <img src="<?= env( 'ROOT_PATH' );?>/images/rn/debtor_managment.png">
                                     <div class="module-title">Debtor Management Module</div>
@@ -244,13 +244,13 @@
                         </div>
 
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads info-item">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-right dots">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  slide-in-right dots">
                                 <div class="module">
                                     <img src="<?= env( 'ROOT_PATH' );?>/images/rn/document_circulation.png">
                                     <div class="module-title">Document Circulation Module</div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-left">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  slide-in-left">
                                 <div class="module">
                                     <img src="<?= env( 'ROOT_PATH' );?>/images/rn/journalification.png">
                                     <div class="module-title">Journalification Module</div>
@@ -259,13 +259,13 @@
                         </div>
 
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads info-item">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-right dots">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  slide-in-right dots">
                                 <div class="module">
                                     <img src="<?= env( 'ROOT_PATH' );?>/images/rn/administrative.png">
                                     <div class="module-title">Administrative Module</div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  slide-in-left">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  slide-in-left">
 
                             </div>
                         </div>
@@ -301,10 +301,10 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title center">Mobile app development</div>
 
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clear-pads">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
                         <img src="<?= env( 'ROOT_PATH' );?>/images/rn/mobile_app.png">
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clear-pads">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clear-pads text-content">
                         RNIS mobile app is analog to customer self-service system – it duplicates the same information,
                         because the customer portal, business management system and the mobile app has united database.
                         Mobile app is developed on two platforms: Android (starting from Android 2.3.) and Apple (starting
