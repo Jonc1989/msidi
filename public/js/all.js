@@ -22,6 +22,9 @@ $(document).ready(function(){
 var career = angular.module('career', [
 
 ]);
+var clients = angular.module('clients', [
+
+]);
 var caseStudies = angular.module('caseStudies', [
 
 ]);
@@ -50,9 +53,6 @@ caseStudies.controller( 'OpalOnlineController', [ '$scope', function ( $scope){
     // });
 
 }]);
-var clients = angular.module('clients', [
-
-]);
 var company = angular.module('company', [
 
 ]);
@@ -65,36 +65,6 @@ var service = angular.module('service', [
 var slider = angular.module('slider', [
 
 ]);
-career.service( 'CareerService', ['$http', '$q', function( $http, $q )
-{
-    var CareerService = {
-
-        sendMail: function( message )
-        {
-            var deferred = $q.defer();
-            $http.post( '/api/career/send', message )
-                .success( function( response )
-                {
-                    deferred.resolve( response );
-                } )
-                .error( function( response, status )
-                {
-                    if (status === 422)
-                    {
-                        deferred.resolve({errors: response});
-                    } else
-                    {
-                        deferred.reject();
-                    }
-                } );
-
-            return deferred.promise;
-
-        }
-    };
-    return CareerService;
-}]);
-
 career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $scope, CareerService ){
 
 
@@ -158,6 +128,104 @@ career.controller( 'CareerController', [ '$scope', 'CareerService', function ( $
         new SelectFx(el, options);
 
     } );
+
+}]);
+career.service( 'CareerService', ['$http', '$q', function( $http, $q )
+{
+    var CareerService = {
+
+        sendMail: function( message )
+        {
+            var deferred = $q.defer();
+            $http.post( '/api/career/send', message )
+                .success( function( response )
+                {
+                    deferred.resolve( response );
+                } )
+                .error( function( response, status )
+                {
+                    if (status === 422)
+                    {
+                        deferred.resolve({errors: response});
+                    } else
+                    {
+                        deferred.reject();
+                    }
+                } );
+
+            return deferred.promise;
+
+        }
+    };
+    return CareerService;
+}]);
+
+caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
+
+    $scope.clients = [];
+
+    this.$onInit = function () {
+
+        var slider = $('.client-slider').bxSlider({
+            slideWidth: 820,
+            minSlides: 1,
+            moveSlides: 1,
+            speed: 0,
+            useCSS: true,
+            pager: false,
+            pause: 10000,
+            infiniteLoop: true,
+            controls: true,
+            slideMargin: 20,
+            auto: true,
+            onSliderLoad: function () {
+                $('.client-slide').addClass('animate');
+            },
+            onSlideBefore: function (e) {
+                $('.client-slide').removeClass('active');
+                $('.client-slide').removeClass('animate');
+            },
+            onSlideAfter: function (e) {
+                $(e).find('.client-slide').addClass('active');
+                $('.client-slide').addClass('animate');
+            }
+
+        });
+       // setTimeout(function () {
+            slider.getCurrentSlideElement().find('.client-slide').addClass('active');
+       // },500);
+
+        $( '.holder' ).show();
+    };
+
+    $(window).load(function () {
+        var scroll = $(window).scrollTop();
+        var height = $(window).height();
+        var partners = $('#clients .partnerz' ).offset().top;
+        var partnersHeight = $('#clients .partnerz' ).height();
+        var breakpoint = ( scroll + ( height / 2 ));
+
+        if ( breakpoint > ( partners - 100 ) &&  breakpoint < ( partners + partnersHeight + 100 ) ) {
+            $(".year").addClass("active");
+            $(".year-txt").addClass("active");
+            $('.partner .image').addClass( 'active' );
+        }
+
+
+        $(window).on('scroll',function() {
+            var currentScroll = $(window).scrollTop();
+            var currentBreakpoint = ( currentScroll + ( height / 2 ));
+
+            if ( currentBreakpoint > ( partners - 100 ) &&  currentBreakpoint < ( partners + partnersHeight + 100 ) ){
+
+                $(".year").addClass("active");
+                $(".year-txt").addClass("active");
+                $('.partner .image').addClass( 'active' );
+            }
+        });
+
+    });
+
 
 }]);
 caseStudies.controller( 'CaseStudiesController', [ '$scope', 'CaseStudiesService', '$animate',
@@ -231,74 +299,6 @@ caseStudies.service( 'CaseStudiesService', ['$http', '$q', function( $http, $q )
         }
     };
     return CaseStudiesService;
-}]);
-caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
-
-    $scope.clients = [];
-
-    this.$onInit = function () {
-
-        var slider = $('.client-slider').bxSlider({
-            slideWidth: 820,
-            minSlides: 1,
-            moveSlides: 1,
-            speed: 0,
-            useCSS: true,
-            pager: false,
-            pause: 10000,
-            infiniteLoop: true,
-            controls: true,
-            slideMargin: 20,
-            auto: true,
-            onSliderLoad: function () {
-                $('.client-slide').addClass('animate');
-            },
-            onSlideBefore: function (e) {
-                $('.client-slide').removeClass('active');
-                $('.client-slide').removeClass('animate');
-            },
-            onSlideAfter: function (e) {
-                $(e).find('.client-slide').addClass('active');
-                $('.client-slide').addClass('animate');
-            }
-
-        });
-       // setTimeout(function () {
-            slider.getCurrentSlideElement().find('.client-slide').addClass('active');
-       // },500);
-
-        $( '.holder' ).show();
-    };
-
-    $(window).load(function () {
-        var scroll = $(window).scrollTop();
-        var height = $(window).height();
-        var partners = $('#clients .partnerz' ).offset().top;
-        var partnersHeight = $('#clients .partnerz' ).height();
-        var breakpoint = ( scroll + ( height / 2 ));
-
-        if ( breakpoint > ( partners - 100 ) &&  breakpoint < ( partners + partnersHeight + 100 ) ) {
-            $(".year").addClass("active");
-            $(".year-txt").addClass("active");
-            $('.partner .image').addClass( 'active' );
-        }
-
-
-        $(window).on('scroll',function() {
-            var currentScroll = $(window).scrollTop();
-            var currentBreakpoint = ( currentScroll + ( height / 2 ));
-
-            if ( currentBreakpoint > ( partners - 100 ) &&  currentBreakpoint < ( partners + partnersHeight + 100 ) ){
-
-                $(".year").addClass("active");
-                $(".year-txt").addClass("active");
-                $('.partner .image').addClass( 'active' );
-            }
-        });
-
-    });
-
-
 }]);
 company.controller( 'CompanyController', [ '$scope', 'CompanyService', function ( $scope, CompanyService ){
 
