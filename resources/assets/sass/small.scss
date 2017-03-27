@@ -1,4 +1,10 @@
 @media (min-width: 992px){
+  .els-items {
+    width: 980px;
+  }
+  #els .els-quote {
+    width: 780px;
+  }
   .partner-wrap:not(:last-of-type){
     margin-right: 55px;
   }
@@ -59,7 +65,15 @@
   #rn .top-info {
     height: 540px;
   }
-
+  #els .els-quote {
+    width: 90%;
+    .els-title {
+      font-size: 24px;
+    }
+  }
+  #els .els-block-content{
+    max-width: 100%;
+  }
 }
 @media (max-width: 767px){
   #slider{
@@ -83,6 +97,10 @@
     text-align: center;
     padding-bottom: 0px;
   }
+  #info-graphic{
+    display: none;
+  }
+
 }
 @media (min-width: 768px){
   #exigen{
@@ -94,7 +112,9 @@
   .small-title {
     margin-top: 50px;
   }
-
+  #info-graphic-sm{
+    display: none;
+  }
 }
 @media (min-width: 600px){
   .palka {

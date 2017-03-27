@@ -1,18 +1,14 @@
-@font-face {
-  font-family: 'Montserrat Light';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Montserrat Light'), local('Montserrat-Light'),
-  url(http://allfont.net/cache/fonts/montserrat-light_d508f4bcd80b35f5ab68ae7d0e466277.woff) format('woff'),
-  url(http://allfont.net/cache/fonts/montserrat-light_d508f4bcd80b35f5ab68ae7d0e466277.ttf) format('truetype');
-}
+
 
 #els {
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat-Light", sans-serif;
   line-height: 20px;
   overflow: hidden;
+  img{
+    max-width: 100%;
+  }
 }
 //
 //.els-intro {
@@ -786,17 +782,18 @@
 #els{
   .els-title{
     text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat-Light", sans-serif;
     font-weight: bold;
     font-size: 30px;
   }
   .els-text{
     font-size: 14px;
-    font-family: "Montserrat Light", sans-serif;
+    font-family: "Montserrat-Light", sans-serif;
     line-height: 2;
     margin: 25px auto;
-    max-width: 605px;
-    text-align: center;
+    color: rgb(55, 55, 55);
+    //max-width: 605px;
+    //text-align: center;
   }
   .top-info{
     background: url(../images/els/els-top-bg.png) center center no-repeat;
@@ -804,6 +801,9 @@
     padding-top: 120px;
     .els-text{
       margin: 35px auto;
+      max-width: 605px;
+      text-align: center;
+      color: white;
     }
     .els-ticket{
       background: url(../images/els/ticket.png) center center no-repeat;
@@ -823,10 +823,15 @@
     }
   }
   .about{
-    margin-top: 70px;
+    padding-top: 70px;
+    .els-text{
+      max-width: 605px;
+      text-align: center;
+    }
   }
   .animation-block-text{
     padding-left: 110px;
+    margin-top: -65px;
   }
   .top-white{
     background: url(../images/els/top-white.png) center center no-repeat;
@@ -883,12 +888,12 @@
   }
   .els-project-team .els-text {
     font-size: 14px;
-    font-family: "Montserrat Light", sans-serif;
+    font-family: "Montserrat-Light", sans-serif;
     color: rgb(55, 55, 55);
     line-height: 2;
     text-align: center;
     margin-top: 20px;
-    max-width: 100%;
+    //max-width: 100%;
   }
   .els-project-team .els-text .els-separator {
     font-size: 30px;
@@ -903,6 +908,8 @@
   #yellow-shape{
     background: url(../images/els/yellow-shape.png) center center no-repeat;
     background-size: 100% 100%;
+    margin-top: 75px;
+    margin-bottom: 50px;
   }
   #yellow-shape2{
     background: url(../images/els/yellow-shape2.png) center center no-repeat;
@@ -911,16 +918,25 @@
     margin-top: 185px;
     img{
       margin-top: -185px;
+      margin-bottom: 40px;
     }
   }
   #yellow-bg{
     background: url(../images/els/yellow-bg.png) center center no-repeat;
     background-size: 100% 100%;
+    margin-top: 50px;
     .els-title{
       line-height: 1.333;
       max-width: 570px;
       margin: 95px auto 40px;
     }
+    .els-subtitle{
+      margin-bottom: 40px;
+    }
+  }
+  #road{
+    margin-top: -65px;
+    height: 195px;
   }
   .els-quote{
     background: url(../images/els/quote-bg.png) center center no-repeat;
@@ -937,7 +953,7 @@
     background-size: 100% 100%;
   }
   .els-items{
-    width: 980px;
+    //width: 980px;
     margin: 0 auto 20px;
     text-align: center;
     p{
@@ -951,7 +967,8 @@
   }
   #els-footer{
     background: url(../images/els/footer.png) center bottom no-repeat;
-    background-size: cover;
+    background-size: contain;
+    height: 700px;
   }
 
   .els-border{
@@ -979,7 +996,7 @@
   .els-block-content{
     max-width: 350px;
     margin-top: 50px;
-    margin-left: 10px;
+    //margin-left: 10px;
     .els-title{
       font-size: 30px;
       font-family: "Montserrat", sans-serif;
@@ -992,11 +1009,23 @@
     }
     .els-block-text{
       font-size: 14px;
-      font-family: "Montserrat Light", sans-serif;
+      font-family: "Montserrat-Light", sans-serif;
       color: rgb(55, 55, 55);
       font-weight: bold;
       line-height: 1.5;
     }
   }
+  .els-benefits{
+    margin-left: 25px;
+    max-width: 620px;
+  }
 
+  #infrastrocture{
+    //.els-text{
+    //  max-width: 100%;
+    //}
+  }
+  .els-block-image{
+    float: right;
+  }
 }

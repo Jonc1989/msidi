@@ -6328,46 +6328,14 @@ button.form-control:focus {
   background-color: #ff895e; }
 
 @font-face {
-  font-family: 'Montserrat-Bold';
-  src: url("../fonts/montserrat/Montserrat-Bold.otf");
-  src: url("../fonts/montserrat/montserrat-bold-webfont.eot");
-  src: url("../fonts/montserrat/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype");
-  src: url("../fonts/montserrat/montserrat-bold-webfont.svg#webfont") format("svg");
-  src: url("../fonts/montserrat/montserrat-bold-webfont.ttf");
-  src: url("../fonts/montserrat/montserrat-bold-webfont.woff") format("woff"); }
-
-@font-face {
-  font-family: 'Montserrat-ExtraBold';
-  src: url("../fonts/montserrat/Montserrat-ExtraBold.otf"); }
+  font-family: 'Montserrat-Light';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Light"), local("Montserrat-Light"), url(../fonts/montserrat/montserrat-light.woff) format("woff"), url(../fonts/montserrat/montserrat-light.ttf) format("truetype"); }
 
 @font-face {
   font-family: 'Montserrat-Hairline';
   src: url("../fonts/montserrat/Montserrat-Hairline.otf"); }
-
-@font-face {
-  font-family: 'Montserrat-Light';
-  src: url("../fonts/montserrat/Montserrat-Light.otf");
-  src: url("../fonts/montserrat/Montserrat-Light.otf");
-  src: url("../fonts/montserrat/fs/montserrat-light-webfont.eot?#iefix") format("embedded-opentype");
-  src: url("../fonts/montserrat/fs/montserrat-light-webfont.svg#webfont") format("svg");
-  src: url("../fonts/montserrat/fs/montserrat-light-webfont.ttf");
-  src: url("../fonts/montserrat/fs/montserrat-light-webfont.woff") format("woff"); }
-
-@font-face {
-  font-family: 'Montserrat-Regular';
-  src: url("../fonts/montserrat/Montserrat-Regular.otf");
-  src: url("../fonts/montserrat/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype");
-  src: url("../fonts/montserrat/montserrat-regular-webfont.svg#webfont") format("svg");
-  src: url("../fonts/montserrat/montserrat-regular-webfont.ttf");
-  src: url("../fonts/montserrat/montserrat-regular-webfont.woff") format("woff"); }
-
-@font-face {
-  font-family: 'Montserrat-SemiBold';
-  src: url("../fonts/montserrat/Montserrat-SemiBold.otf"); }
-
-@font-face {
-  font-family: 'Montserrat-UltraLight';
-  src: url("../fonts/montserrat/Montserrat-UltraLight.otf"); }
 
 html, body {
   height: 100%;
@@ -6402,13 +6370,16 @@ img {
 
 .bold {
   font-weight: bold;
-  font-family: 'Montserrat-Regular'; }
+  font-family: 'Montserrat Bold', arial; }
 
 .white {
   color: white; }
 
 .orange {
   color: #ff895e; }
+
+.light-black {
+  color: #373737; }
 
 .brown-green {
   color: #4a670d; }
@@ -6436,7 +6407,7 @@ img {
 .title {
   margin-bottom: 45px;
   line-height: 1;
-  font-family: 'Montserrat-UltraLight'; }
+  font-family: 'Montserrat-Light'; }
 
 .line {
   margin-top: 60px;
@@ -6493,6 +6464,9 @@ img {
   position: relative;
   height: 900px;
   width: 100%; }
+
+.centred {
+  max-width: 600px; }
 
 #services {
   padding-top: 35px; }
@@ -7786,18 +7760,14 @@ div.cs-skin-border {
 .border-bottom {
   border-bottom: 1px solid #efefef; }
 
-@font-face {
-  font-family: 'Montserrat Light';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Montserrat Light"), local("Montserrat-Light"), url(http://allfont.net/cache/fonts/montserrat-light_d508f4bcd80b35f5ab68ae7d0e466277.woff) format("woff"), url(http://allfont.net/cache/fonts/montserrat-light_d508f4bcd80b35f5ab68ae7d0e466277.ttf) format("truetype"); }
-
 #els {
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat-Light", sans-serif;
   line-height: 20px;
   overflow: hidden; }
+  #els img {
+    max-width: 100%; }
 
 .els-road-clouds {
   -webkit-user-drag: none;
@@ -7850,24 +7820,26 @@ div.cs-skin-border {
 
 #els .els-title {
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat-Light", sans-serif;
   font-weight: bold;
   font-size: 30px; }
 
 #els .els-text {
   font-size: 14px;
-  font-family: "Montserrat Light", sans-serif;
+  font-family: "Montserrat-Light", sans-serif;
   line-height: 2;
   margin: 25px auto;
-  max-width: 605px;
-  text-align: center; }
+  color: #373737; }
 
 #els .top-info {
   background: url(../images/els/els-top-bg.png) center center no-repeat;
   background-size: 100% 100%;
   padding-top: 120px; }
   #els .top-info .els-text {
-    margin: 35px auto; }
+    margin: 35px auto;
+    max-width: 605px;
+    text-align: center;
+    color: white; }
   #els .top-info .els-ticket {
     background: url(../images/els/ticket.png) center center no-repeat;
     background-size: 100% 100%;
@@ -7884,10 +7856,14 @@ div.cs-skin-border {
       margin-bottom: 20px; }
 
 #els .about {
-  margin-top: 70px; }
+  padding-top: 70px; }
+  #els .about .els-text {
+    max-width: 605px;
+    text-align: center; }
 
 #els .animation-block-text {
-  padding-left: 110px; }
+  padding-left: 110px;
+  margin-top: -65px; }
 
 #els .top-white {
   background: url(../images/els/top-white.png) center center no-repeat;
@@ -7939,12 +7915,11 @@ div.cs-skin-border {
 
 #els .els-project-team .els-text {
   font-size: 14px;
-  font-family: "Montserrat Light", sans-serif;
+  font-family: "Montserrat-Light", sans-serif;
   color: #373737;
   line-height: 2;
   text-align: center;
-  margin-top: 20px;
-  max-width: 100%; }
+  margin-top: 20px; }
 
 #els .els-project-team .els-text .els-separator {
   font-size: 30px;
@@ -7959,7 +7934,9 @@ div.cs-skin-border {
 
 #els #yellow-shape {
   background: url(../images/els/yellow-shape.png) center center no-repeat;
-  background-size: 100% 100%; }
+  background-size: 100% 100%;
+  margin-top: 75px;
+  margin-bottom: 50px; }
 
 #els #yellow-shape2 {
   background: url(../images/els/yellow-shape2.png) center center no-repeat;
@@ -7967,15 +7944,23 @@ div.cs-skin-border {
   height: 547px;
   margin-top: 185px; }
   #els #yellow-shape2 img {
-    margin-top: -185px; }
+    margin-top: -185px;
+    margin-bottom: 40px; }
 
 #els #yellow-bg {
   background: url(../images/els/yellow-bg.png) center center no-repeat;
-  background-size: 100% 100%; }
+  background-size: 100% 100%;
+  margin-top: 50px; }
   #els #yellow-bg .els-title {
     line-height: 1.333;
     max-width: 570px;
     margin: 95px auto 40px; }
+  #els #yellow-bg .els-subtitle {
+    margin-bottom: 40px; }
+
+#els #road {
+  margin-top: -65px;
+  height: 195px; }
 
 #els .els-quote {
   background: url(../images/els/quote-bg.png) center center no-repeat;
@@ -7992,7 +7977,6 @@ div.cs-skin-border {
   background-size: 100% 100%; }
 
 #els .els-items {
-  width: 980px;
   margin: 0 auto 20px;
   text-align: center; }
   #els .els-items p {
@@ -8004,7 +7988,8 @@ div.cs-skin-border {
 
 #els #els-footer {
   background: url(../images/els/footer.png) center bottom no-repeat;
-  background-size: cover; }
+  background-size: contain;
+  height: 700px; }
 
 #els .els-border {
   border: 2px solid #ffdf1b;
@@ -8024,8 +8009,7 @@ div.cs-skin-border {
 
 #els .els-block-content {
   max-width: 350px;
-  margin-top: 50px;
-  margin-left: 10px; }
+  margin-top: 50px; }
   #els .els-block-content .els-title {
     font-size: 30px;
     font-family: "Montserrat", sans-serif;
@@ -8037,10 +8021,137 @@ div.cs-skin-border {
     margin-bottom: 45px; }
   #els .els-block-content .els-block-text {
     font-size: 14px;
-    font-family: "Montserrat Light", sans-serif;
+    font-family: "Montserrat-Light", sans-serif;
     color: #373737;
     font-weight: bold;
     line-height: 1.5; }
+
+#els .els-benefits {
+  margin-left: 25px;
+  max-width: 620px; }
+
+#els .els-block-image {
+  float: right; }
+
+#ept .ept-title {
+  font-size: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px; }
+
+#ept .ept-text {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 2;
+  text-align: center;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto; }
+
+#ept #yellow-city {
+  background: url(../images/ept/yellow-city.png) center center no-repeat;
+  background-size: 100% 100%; }
+
+#eow .ows-title {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.333;
+  text-align: center;
+  margin-bottom: 43px; }
+
+#eow .ows-text {
+  font-size: 14px;
+  font-family: "Montserrat-Light", sans-serif;
+  line-height: 2;
+  text-align: center; }
+
+#eow .top-info {
+  background: url(../images/eow/bg.png) center center no-repeat;
+  background-size: cover;
+  padding-top: 120px;
+  height: 500px; }
+  #eow .top-info .ows-text {
+    margin: 50px auto; }
+
+#eow .ows-technologies {
+  width: 496px;
+  height: 182px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  margin: -80px auto 40px;
+  padding: 40px 0; }
+  #eow .ows-technologies .ows-title {
+    font-size: 16px;
+    margin-bottom: 15px; }
+
+#eow .ows-about .ows-content-block .ows-title:nth-child(3), #eow .ows-about .ows-content-block .ows-title:nth-child(5) {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.333;
+  text-transform: none;
+  margin-bottom: 20px;
+  text-align: left; }
+
+#eow .ows-content-block {
+  padding-left: 10%; }
+  #eow .ows-content-block .ows-text, #eow .ows-content-block .ows-title {
+    text-align: left; }
+
+#eow .ows-float-right {
+  overflow: hidden; }
+
+#eow #yellow-bg {
+  padding-top: 130px;
+  background: url(../images/eow/yellow-bg.png) center center no-repeat;
+  background-size: 100% 100%; }
+  #eow #yellow-bg .ows-text {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto; }
+
+#eow .ows-maps {
+  height: 165px;
+  margin-bottom: 300px; }
+
+#eow .ows-list {
+  width: 850px;
+  margin: 10px auto 70px; }
+
+#eow .ows-line {
+  color: #ffdf1b;
+  font-weight: 100;
+  font-size: 30px;
+  margin-right: 10px;
+  vertical-align: sub; }
+
+#eow .ows-list-item {
+  margin-top: 5px;
+  font-weight: bold; }
+
+#eow #yellow-bg2 {
+  background: url(../images/eow/yellow-bg2.png) center center no-repeat;
+  background-size: 100% 100%;
+  padding-top: 40px;
+  margin-bottom: 100px; }
+  #eow #yellow-bg2 .text-column {
+    margin-top: 60px;
+    padding-right: 70px; }
+  #eow #yellow-bg2 .ows-text {
+    text-align: right;
+    margin-bottom: 20px; }
+
+#eow .ows-features .ows-text {
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto; }
+
+#eow .ows-features .ows-text:nth-last-child(1) {
+  max-width: 700px;
+  margin: 0 auto; }
 
 .opex-about-bg {
   background: linear-gradient(45deg, #206d87 0%, #39a7d1 59%); }
@@ -8267,6 +8378,10 @@ div.cs-skin-border {
     width: 100%; } }
 
 @media (min-width: 992px) {
+  .els-items {
+    width: 980px; }
+  #els .els-quote {
+    width: 780px; }
   .partner-wrap:not(:last-of-type) {
     margin-right: 55px; }
   .service-title {
@@ -8307,7 +8422,13 @@ div.cs-skin-border {
     text-align: center;
     padding-top: 20px; }
   #rn .top-info {
-    height: 540px; } }
+    height: 540px; }
+  #els .els-quote {
+    width: 90%; }
+    #els .els-quote .els-title {
+      font-size: 24px; }
+  #els .els-block-content {
+    max-width: 100%; } }
 
 @media (max-width: 767px) {
   #slider {
@@ -8324,14 +8445,18 @@ div.cs-skin-border {
     padding: 5px 30px; }
   .screen {
     text-align: center;
-    padding-bottom: 0px; } }
+    padding-bottom: 0px; }
+  #info-graphic {
+    display: none; } }
 
 @media (min-width: 768px) {
   #exigen .brief-project-info {
     width: 230px;
     padding-left: 40px; }
   .small-title {
-    margin-top: 50px; } }
+    margin-top: 50px; }
+  #info-graphic-sm {
+    display: none; } }
 
 @media (min-width: 600px) {
   .palka {

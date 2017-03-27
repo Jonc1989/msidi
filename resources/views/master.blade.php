@@ -4,6 +4,8 @@
         <title>MS-IDI</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+        <link href="http://allfont.net/allfont.css?fonts=montserrat" rel="stylesheet" type="text/css" />
+        <link href="http://allfont.net/allfont.css?fonts=montserrat-bold" rel="stylesheet" type="text/css" />
         <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">-->
         <link rel="stylesheet" href="<?=  url('/') ?>/css/jquery.bxslider.css">
         <link rel="stylesheet" href="<?=  url('/') ?>/css/app.css">

@@ -64,16 +64,16 @@
 
         </div>
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h1 class="els-title about center">PAR UZŅĒMUMU “ECOLINES”</h1>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 about">
+            <h1 class="els-title  center">PAR UZŅĒMUMU “ECOLINES”</h1>
 
-            <p class="els-text">
+            <p class="els-text light-black">
                 “ECOLINES” ir lielākais un pieredzējušākais starptautisko autobusu operators Baltijā,
                 kas ik dienas ļauj pasažieriem komfortabli ceļot starp 21 valsti un 205 pilsētām.
                 Uzņēmums pozicionē sevi kā uzticamu, pieredzes bagātu, mūsdienīgu, komfortablu un
                 kvalitatīvu pakalpojumu sniedzēju pasažieru pārvadājumu tirgū.
             </p>
-            <p class="els-text">
+            <p class="els-text light-black">
                 “ECOLINES” starptautisko autobusu pārvadājumu tirgū darbojas jau 20 gadus.
                 Ieguldot nopietnu darbu un nepārtraukti attīstoties, tas šobrīd piedāvā visplašāko
                 maršrutu tīklu kā Baltijā, tā ceļojumos uz Rietumeiropu un Austrumeiropu. Savas
@@ -84,14 +84,14 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 yellow clear-pads">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-white clear-pads"></div>
 
-            <div id="road" class="col-lg-4 col-md-4 col-sm-12 col-xs-12 clear-pads">
+            <div id="road" class="col-lg-4 col-md-4 col-sm-5 col-xs-12 clear-pads">
                 <img class="els-road-bus" src="http://localhost/ms-idi/wp-content/uploads/2017/01/Bus.png">
                 <img class="els-road-car" src="http://localhost/ms-idi/wp-content/uploads/2017/01/red_car.png">
                 <img class="els-road-clouds" src="http://localhost/ms-idi/wp-content/uploads/2017/01/clouds.png">
             </div>
-            <div class="col-lg-5 col-md-6 col-sm-8 col-xs-12 animation-block-text">
-                <h1 class="els-title">“ECOLINES” LOJALITĀTES SISTĒMA</h1>
-                <h4 class="els-question">Kādēļ bija nepieciešama sistēma?</h4>
+            <div class="col-lg-6 col-md-6 col-sm-7 col-xs-12 animation-block-text">
+                <h1 class="els-title">“ECOLINES” LOJALITĀTES SISTĒMA (ELS)</h1>
+                <h4 class="els-text bold">Kādēļ bija nepieciešama sistēma?</h4>
                 <ul >
                     <li>Nepārskatāma un decentralizēta klientu pārvaldība.</li>
                     <li>Manuāla piedāvājumu izstrāde neļāva sniegt tik daudzveidīgus braucienu atlaižu piedāvājumus individuālajām personām un grupām.</li>
@@ -104,7 +104,7 @@
                     un daudzveidīgu pasažieru pārvadājumu piedāvājumu sistēmu, kas uzlabotu “Ecolines”
                     funkcionalitāti un attiecības ar privātajiem un korporatīvajiem klientiem.
                 </p>
-                <p class="els-text bold">
+                <p class="els-question bold">
                     “MS-IDI” SNIEDZA INFORMĀCIJAS TEHNOLOĢIJU RISINĀJUMU, KĀ IR IESPĒJAMS STRĀDĀT AR PIEDĀVĀJUMU SISTĒMU OPERATĪVI UN PĀRSKATĀMI.
                 </p>
 
@@ -119,7 +119,7 @@
                 </p>
 
                 <h4 class="els-question">LOJALITĀTES INFORMĀCIJAS SISTĒMAS LIETOŠANAS IEGUVUMI</h4>
-                <ul>
+                <ul class="els-benefits">
                     <li>Operatīva un automātiska klientu apkalpošana;</li>
                     <li>Tirdzniecības procesu veidošana;</li>
                     <li>Biļešu pirkšana procesa aprēķināšana un atlaižu veidošana;</li>
@@ -131,7 +131,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bottom-white clear-pads"></div>
         </div>
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center clear-pads">
+        <div id="infrastructure" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center clear-pads">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h1 class="els-title">INFRASTRUKTŪRA</h1>
 
@@ -145,7 +145,7 @@
             <div id="yellow-shape" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
                 <img src="<?= env( 'ROOT_PATH' );?>/images/els/workspace.png">
             </div>
-            <p  class="els-text">
+            <p  class="els-text centred">
                 Informācijas sistēmas infrastruktūra tika izstrādāta, izmantojot atvērtā pirmkoda programmatūru,
                 un pielāgota specifisku uzdevumu risināšanai. Šāda izvēle ļāva efektīvāk realizēt klientu uzdevumus,
                 jo tie pieprasīja daudzveidīgas variācijas un konfigurācijas ar datiem.
@@ -153,7 +153,7 @@
 
             <div id="yellow-shape2" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
                 <img src="<?= env( 'ROOT_PATH' );?>/images/els/MacBook-Air.png">
-                <p  class="els-text">
+                <p  class="els-text centred">
                     Mūsdienīgs un piemērots dizains, kas piešķir uzņēmumam vienotu un viegli uztveramu stilu,
                     kas ir funkcionāls un atbilstošs piedāvājumu pozicionēšanai, klienta profilam un administratīvās daļas risinājumiem un iespējām.
                 </p>
@@ -190,11 +190,12 @@
                 </div>
             </div>
 
-            <h3 class="els-text">ELS galvenais pamatprincips ir vienotā datu telpa, kurā mijiedarbojas klients,
+            <h3 class="els-text centred">ELS galvenais pamatprincips ir vienotā datu telpa, kurā mijiedarbojas klients,
                 jau esošā Ecolines Booking System (EBS) un Ecolines Loyalty System.
             </h3>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads center">
-                <img src="<?= env( 'ROOT_PATH' );?>/images/els/infographics.png">
+                <img id="info-graphic" src="<?= env( 'ROOT_PATH' );?>/images/els/infographics.png">
+                <img id="info-graphic-sm" class="els-info-graphics-img" src="http://ms-idi.eu/wp-content/uploads/2017/01/Path.png">
             </div>
         </div>
 
@@ -202,7 +203,7 @@
             <h1 class="els-title center">Lojalitātes sistēmas dalībnieku
                 mijiedarbības process
             </h1>
-            <p class="els-text">Izstrādātā sistēma nodrošina savienojamību un datu integrāciju ar EBS sistēmu,
+            <p class="els-text centred">Izstrādātā sistēma nodrošina savienojamību un datu integrāciju ar EBS sistēmu,
                 līdz ar to notiek operatīvas biļešu iegādes, piedāvājumu izvēles un biļešu apstiprināšanas un atcelšanas funkcijas.
             </p>
             <h4 class="els-subtitle center">Klienta un administratīvās daļas iespējas</h4>
@@ -245,7 +246,7 @@
         </div>
 
         <div class="col-xs-12">
-            <p class="els-text">Operatoriem ir piešķirtas trīs veidu lietotāju tiesības. </p>
+            <p class="els-text center">Operatoriem ir piešķirtas trīs veidu lietotāju tiesības. </p>
             <div class="container els-items clear-pads">
                 <div class="col-sm-4 col-xs-6 clear-pads">
                     <img class="els-item-image" src="http://ms-idi.eu/wp-content/uploads/2017/01/11.png">
@@ -275,24 +276,24 @@
         </div>
 
         <div id="yellow-bg2" class="col-xs-12">
-            <div class="container">
-                <div class="col-sm-6 col-xs-12">
+
+                <div class="col-md-7 col-sm-6 col-xs-12">
                     <img class="els-block-image" src="http://ms-idi.eu/wp-content/uploads/2017/01/iPad-2-White.png">
                 </div>
-                <div class="col-sm-6 col-xs-12 els-block-content">
+                <div class="col-md-5 col-sm-6 col-xs-12 els-block-content">
                     <h1 class="els-block-title">ELS specifika un priekšrocības</h1>
                     <p class="els-block-text">• Krietni samazināts patērētais laiks piedāvājuma izstrādei; <br><br>
                         • Pārskatāma klientu datu bāze;<br><br>
                         • Daudzveidīgas piedāvājumu izveides un rediģēšanas iespējas;<br><br>
                         • Iespēja izmantot kā tehnisko pamatu citiem projektiem.</p>
                 </div>
-            </div>
+
         </div>
 
         <div id="els-footer" class="col-xs-12">
             <div class="container">
                 <h1 class="els-title center">ELS funkcijas</h1>
-                <p class="els-text">• Sistēma ir pielāgota darbībai starptautiskajā līmenī, jo tā ir pieejama visās Eiropas valstīs, un&nbsp;klients var piekļūt     	  informācijai par pasažiera pārvadātāja piedāvājumiem jebkurā vietā un laikā. <br>
+                <p class="els-text centred">• Sistēma ir pielāgota darbībai starptautiskajā līmenī, jo tā ir pieejama visās Eiropas valstīs, un&nbsp;klients var piekļūt     	  informācijai par pasažiera pārvadātāja piedāvājumiem jebkurā vietā un laikā. <br>
                     <br>
                     • Sistēma ir paredzēta darbībai lielas slodzes apstākļos – tā vienlaicīgi spēj apstrādāt lielu skaitu klientu un operatoru          	  darbību ar datiem. Šis faktors ir ļoti nozīmīgs klienta darbā, tā kā uzņēmums “Ecolines” pārvalda apjomīgu klientu datu bāzi. <br>
                     <br>

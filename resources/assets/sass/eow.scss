@@ -1,0 +1,110 @@
+#eow{
+  .ows-title {
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.333;
+    text-align: center;
+    margin-bottom: 43px;
+  }
+  .ows-text {
+    font-size: 14px;
+    font-family: "Montserrat-Light", sans-serif;
+    line-height: 2;
+    text-align: center;
+  }
+  .top-info {
+    background: url(../images/eow/bg.png) center center no-repeat;
+    background-size: cover;
+    padding-top: 120px;
+    height: 500px;
+    .ows-text{
+      margin: 50px auto;
+    }
+  }
+  .ows-technologies{
+    width: 496px;
+    height: 182px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    margin: -80px auto 40px;
+    padding: 40px 0;
+    .ows-title {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+  .ows-about .ows-content-block .ows-title:nth-child(3), .ows-about .ows-content-block .ows-title:nth-child(5) {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.333;
+    text-transform: none;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .ows-content-block{
+    padding-left: 10%;
+    .ows-text, .ows-title{
+      text-align: left;
+    }
+  }
+  .ows-float-right{
+    overflow: hidden;
+  }
+  #yellow-bg{
+    padding-top: 130px;
+    background: url(../images/eow/yellow-bg.png) center center no-repeat;
+    background-size: 100% 100%;
+    .ows-text {
+      max-width: 600px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  .ows-maps{
+    height: 165px;
+    margin-bottom: 300px;
+  }
+  .ows-list {
+    width: 850px;
+    margin: 10px auto 70px;
+  }
+
+  .ows-line {
+    color: rgb(255, 223, 27);
+    font-weight: 100;
+    font-size: 30px;
+    margin-right: 10px;
+    vertical-align: sub;
+  }
+  .ows-list-item{
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  #yellow-bg2{
+    background: url(../images/eow/yellow-bg2.png) center center no-repeat;
+    background-size: 100% 100%;
+    padding-top: 40px;
+    margin-bottom: 100px;
+    .text-column{
+      margin-top: 60px;
+      padding-right: 70px;
+    }
+    .ows-text{
+      text-align: right;
+      margin-bottom: 20px;
+    }
+  }
+  .ows-features .ows-text {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .ows-features .ows-text:nth-last-child(1){
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
