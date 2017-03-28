@@ -1,4 +1,7 @@
 #ept{
+  img{
+    max-width: 100%;
+  }
   .ept-title {
     font-size: 30px;
     font-family: "Open Sans", sans-serif;
@@ -25,18 +28,18 @@
   #yellow-city{
     background: url(../images/ept/yellow-city.png) center center no-repeat;
     background-size: 100% 100%;
-    padding: 210px 0 120px;
+    padding: 210px 15px 120px;
     margin-top: -180px;
   }
   .ept-project {
     text-align: center;
-    width: 950px;
+    //width: 950px;
     margin: 0 auto;
   }
   #yellow-shape{
     background: url(../images/ept/yellow-shape.png) center center no-repeat;
     background-size: 100% 100%;
-    padding: 210px 0 120px;
+    padding: 210px 15px 120px;
     .ept-item {
       font-size: 16px;
       font-family: "Montserrat", sans-serif;
@@ -94,8 +97,7 @@
         margin-right: 2px;
         width: 50%;
         padding: 25px 0 20px;
-        border-bottom-right-radius: 10px;
-        border-top-right-radius: 10px;
+
         .ept-title {
           font-size: 14px;
           font-family: "Montserrat", sans-serif;
@@ -114,6 +116,10 @@
           text-align: center;
           margin-bottom: 0;
         }
+      }
+      .ept-block:nth-last-child(1) {
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
       }
       .ept-block:first-of-type {
         border-bottom-left-radius: 10px;

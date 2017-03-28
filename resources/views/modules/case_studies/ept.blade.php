@@ -15,7 +15,7 @@
 
         </div>
 
-        <div id="yellow-city" class="col-xs-12 clear-pads">
+        <div id="yellow-city" class="col-xs-12">
             <h1 class="ept-title">Par klientu</h1>
             <p class="ept-text">“ECOLINES” ir pasažieru pārvadājumu sniedzējs, kas piedāvā plašu braucienu maršrutu tīklu pa&nbsp;Baltiju, Eiropu, Krieviju un bijušajām NVS valstīm. Kopumā autobusu kustība tiek nodrošināta uz&nbsp;205 pilsētām.&nbsp;"ECOLINES" lepojas ar
                 20 gadu pieredzi autobusu kustības jomā, tādēļ šobrīd ir kļuvis par vadošo&nbsp;autobusu operatoru Latvijā un Baltijā.
@@ -24,7 +24,7 @@
             </p>
         </div>
 
-        <div class="ept-project">
+        <div class="container ept-project">
             <div class="col-sm-4 col-xs-12">
                 <img class="ept-image" src="http://ms-idi.eu/wp-content/uploads/2017/02/11.png">
                 <h2 class="ept-title">Problēma</h2>
@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <div class="col-xs-12 clear-pads" id="yellow-shape">
+        <div class="col-xs-12" id="yellow-shape">
             <img class="side-image hidden-sm hidden-xs v1" src="<?= env('ROOT_PATH')?>/images/ept/v1.png">
             <h1 class="ept-title">Projekta izstrāde - neordināru risinājumu process</h1>
             <p class="ept-item"><span class="ept-item-number-1">1</span><span class="ept-item-text">
@@ -69,13 +69,13 @@
             <img class="side-image hidden-sm hidden-xs v3" src="<?= env('ROOT_PATH')?>/images/ept/v3.png">
         </div>
 
-        <div class="ept-team col-xs-12 clear-pads">
+        <div class="ept-team col-xs-12">
             <h1 class="ept-title">Projekta izpilde</h1>
             <p class="ept-text">Izmantojot Agile metodoloģiju, nodrošināta projekta pārredzamība, nepārtraukta attīstība un efektivitātes novērtējums. </p>
             <p class="ept-text">Iesaistītas 3 personas: projekta koordinators, mobilo aplikāciju izstrādātājs un “Ecolines” pārstāvis IT jomā. Nelielais projektā iesaistīto darbinieku skaits&nbsp;paildzināja tā norisi, taču produkta izstrādes laikā bija iespējams izmēģināt un ieviest sākotnēji neieplānoto funkcionalitāti un novērtēt programmatūras darbības efektivitāti, kā arī vairāk laika bija veltīts produkta testēšanai.</p>
         </div>
 
-        <div class="col-xs-12 clear-pads" id="yellow-shape2">
+        <div class="col-xs-12" id="yellow-shape2">
             <h1 class="ept-title">PASSENGER TABLE LAUNCHER – DAUDZVEIDĪGA MEDIJU SATURA KOMPLEKTS</h1>
             <p class="ept-text">Elektroniskās ierīces ir&nbsp;paredzētas katram sēdētājam individuāli, pamatojoties
                 uz viņa biļetes/sēdvietas numuru, lai nodrošinātu&nbsp;daudzveidīgas pasažieru laika
@@ -98,7 +98,7 @@
             </div>
         </div>
 
-        <div class="ept-evolution col-xs-12 clear-pads">
+        <div class="ept-evolution col-xs-12">
             <h1 class="ept-title">Līdzdalība "ECOLINES"&nbsp;informācijas tehnoloģiju attīstības jomā</h1>
             <p class="ept-text">Ir izveidota pamata aplikācijas paka, ko var izmantot kā bāzi "ECOLINES" sadarbības partneriem citās valstīs; konkrētais pasažieru pārvadātājs aplikācijā var veikt sev nepieciešamās izmaiņas, kas tiek automātiski
                 saglabātas; procesā netiek izmainīta ierīces funkcionalitāte;</p>

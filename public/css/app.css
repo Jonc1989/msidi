@@ -8033,6 +8033,9 @@ div.cs-skin-border {
 #els .els-block-image {
   float: right; }
 
+#ept img {
+  max-width: 100%; }
+
 #ept .ept-title {
   font-size: 30px;
   font-family: "Open Sans", sans-serif;
@@ -8055,18 +8058,17 @@ div.cs-skin-border {
 #ept #yellow-city {
   background: url(../images/ept/yellow-city.png) center center no-repeat;
   background-size: 100% 100%;
-  padding: 210px 0 120px;
+  padding: 210px 15px 120px;
   margin-top: -180px; }
 
 #ept .ept-project {
   text-align: center;
-  width: 950px;
   margin: 0 auto; }
 
 #ept #yellow-shape {
   background: url(../images/ept/yellow-shape.png) center center no-repeat;
   background-size: 100% 100%;
-  padding: 210px 0 120px; }
+  padding: 210px 15px 120px; }
   #ept #yellow-shape .ept-item {
     font-size: 16px;
     font-family: "Montserrat", sans-serif;
@@ -8119,9 +8121,7 @@ div.cs-skin-border {
       box-shadow: 0 5px 5px 1px rgba(255, 185, 36, 0.8);
       margin-right: 2px;
       width: 50%;
-      padding: 25px 0 20px;
-      border-bottom-right-radius: 10px;
-      border-top-right-radius: 10px; }
+      padding: 25px 0 20px; }
       #ept #yellow-shape2 .els-table .ept-block .ept-title {
         font-size: 14px;
         font-family: "Montserrat", sans-serif;
@@ -8138,6 +8138,9 @@ div.cs-skin-border {
         line-height: 2;
         text-align: center;
         margin-bottom: 0; }
+    #ept #yellow-shape2 .els-table .ept-block:nth-last-child(1) {
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px; }
     #ept #yellow-shape2 .els-table .ept-block:first-of-type {
       border-bottom-left-radius: 10px;
       border-top-left-radius: 10px; }
@@ -8199,7 +8202,7 @@ div.cs-skin-border {
   background-size: 100% 100%;
   background-position: center;
   margin: -80px auto 40px;
-  padding: 40px 0; }
+  padding: 40px 15px; }
   #eow .ows-technologies .ows-title {
     font-size: 16px;
     margin-bottom: 15px; }
@@ -8212,10 +8215,8 @@ div.cs-skin-border {
   margin-bottom: 20px;
   text-align: left; }
 
-#eow .ows-content-block {
-  padding-left: 10%; }
-  #eow .ows-content-block .ows-text, #eow .ows-content-block .ows-title {
-    text-align: left; }
+#eow .ows-content-block .ows-text, #eow .ows-content-block .ows-title {
+  text-align: left; }
 
 #eow .ows-float-right {
   overflow: hidden; }
@@ -8498,7 +8499,9 @@ div.cs-skin-border {
     width: 100%; }
   .industries {
     padding-left: 0px;
-    padding-right: 0px; } }
+    padding-right: 0px; }
+  #ept .ept-project {
+    width: 950px; } }
 
 @media (min-width: 992px) {
   .els-question {
@@ -8571,6 +8574,28 @@ div.cs-skin-border {
     padding-bottom: 50px; } }
 
 @media (max-width: 767px) {
+  #rn .palka .module {
+    display: block; }
+  #rn .palka .slide-in-left .module {
+    float: none; }
+  #rn #system_parts img {
+    padding-right: 15px;
+    padding-bottom: 15px; }
+  .green-lime {
+    height: 150px; }
+  .bx-wrapper .bx-controls-direction a {
+    width: 67px;
+    height: 67px; }
+  .team {
+    margin-bottom: 15px; }
+  .short-text {
+    max-width: 80%; }
+  #opal-bop .title {
+    text-align: center; }
+  #els .yellow {
+    background: #ffe014; }
+  #els .animation-block-text {
+    margin-top: 0px; }
   #els #yellow-bg2 {
     margin-top: 20px; }
   #els .els-block-content {
@@ -8653,7 +8678,30 @@ div.cs-skin-border {
   #els #yellow-bg {
     padding-bottom: 90px; }
   #els .els-quote .els-title {
-    font-size: 20px; } }
+    font-size: 20px; }
+  #eow img {
+    max-width: 100%; }
+  #eow .ows-title {
+    font-size: 26px;
+    margin-bottom: 10px; }
+  #eow .top-info {
+    padding-top: 20px;
+    height: 420px; }
+    #eow .top-info .ows-text {
+      margin: 25px auto; }
+  #eow .ows-technologies {
+    width: 90%; }
+  #eow #yellow-bg2 {
+    background: #ffe014; }
+  #eow .ows-list {
+    width: 100%; }
+  #ept .ept-title {
+    font-size: 26px; }
+  #ept #yellow-shape2 .els-table {
+    width: 100%; }
+    #ept #yellow-shape2 .els-table .ept-block {
+      display: block;
+      width: initial; } }
 
 @media (min-width: 768px) {
   .els-items:not(:first-of-type) {
@@ -8665,7 +8713,9 @@ div.cs-skin-border {
   .small-title {
     margin-top: 50px; }
   #info-graphic-sm {
-    display: none; } }
+    display: none; }
+  #eow .ows-content-block {
+    padding-left: 10%; } }
 
 @media (min-width: 600px) {
   .palka {
@@ -8698,30 +8748,6 @@ div.cs-skin-border {
   .service-type {
     margin-left: 25%;
     width: 50%; } }
-
-@media (max-width: 767px) {
-  #rn .palka .module {
-    display: block; }
-  #rn .palka .slide-in-left .module {
-    float: none; }
-  #rn #system_parts img {
-    padding-right: 15px;
-    padding-bottom: 15px; }
-  .green-lime {
-    height: 150px; }
-  .bx-wrapper .bx-controls-direction a {
-    width: 67px;
-    height: 67px; }
-  .team {
-    margin-bottom: 15px; }
-  .short-text {
-    max-width: 80%; }
-  #opal-bop .title {
-    text-align: center; }
-  #els .yellow {
-    background: #ffe014; }
-  #els .animation-block-text {
-    margin-top: 0px; } }
 
 @media (min-width: 681px) {
   #els .table-cell:nth-last-child(1) {
@@ -8779,6 +8805,10 @@ div.cs-skin-border {
     border-bottom: 1px solid #e1e1e1; } }
 
 @media (max-width: 480px) {
+  #eow .ows-title {
+    font-size: 22px; }
+  #eow .ows-maps {
+    margin-bottom: 100px; }
   .monitor, .light-bulb, .magnifier, .lifebelt {
     width: 60px;
     height: 60px; }
