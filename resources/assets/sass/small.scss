@@ -1,4 +1,7 @@
 @media (min-width: 992px){
+  .els-question {
+    margin-left: 3%;
+  }
   .els-items {
     width: 980px;
   }
@@ -194,15 +197,47 @@
     .els-title {
       font-size: 26px;
     }
-    .top-info .els-text {
-      margin: 20px auto;
+    .top-info{
+      padding-top: 40px;
+      padding-bottom: 100px;
+      .els-text {
+        margin: 20px auto;
+      }
+      .els-ticket{
+        background: transparent;
+      }
     }
     .yellow .els-title{
       margin-bottom: 10px;
     }
+    #yellow-shape {
+      margin-top: 0px;
+    }
+    .centred{
+      padding: 0px 20px;
+    }
+    .about{
+      padding-top: 40px;
+    }
+    .animation-block-text{
+      padding-left: 30px;
+    }
+    #yellow-bg{
+      padding-bottom: 90px;
+    }
+    .els-quote{
+
+      .els-title {
+        font-size: 20px;
+      }
+    }
   }
 }
 @media (min-width: 768px){
+  .els-items:not(:first-of-type) {
+    width: 700px;
+    margin: 0 auto 80px;
+  }
   #exigen{
     .brief-project-info{
       width: 230px;
@@ -292,9 +327,27 @@
       background: #ffe014;
     }
     .animation-block-text {
-      padding-left: 90px;
       margin-top: 0px;
     }
+
+  }
+}
+@media (min-width: 681px){
+  #els{
+    .table-cell:nth-last-child(1) {
+      border-left: 2px solid rgb(255, 223, 27);
+    }
+  }
+}
+@media (max-width: 680px){
+  #els .els-border {
+    width: initial;
+    .table-cell{
+      display: block;
+    }
+  }
+  .table-cell:nth-last-child(1) {
+    border-top: 2px solid rgb(255, 223, 27);
   }
 }
 @media (max-width: 600px){
@@ -427,5 +480,10 @@
   .valery, .nicolay, .edgar {
     width: 271px;
     height: 271px;
+  }
+  #els {
+    .els-title {
+      font-size: 22px;
+    }
   }
 }

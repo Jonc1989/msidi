@@ -865,7 +865,7 @@
       margin-bottom: 25px;
       max-width: 520px;
       text-align: center;
-      margin-left: 3%;
+      //margin-left: 3%;
       font-size: 14px;
       font-weight: bold;
     }
@@ -961,10 +961,7 @@
     }
 
   }
-  .els-items:not(:first-of-type) {
-    width: 700px;
-    margin: 0 auto 80px;
-  }
+
   #els-footer{
     background: url(../images/els/footer.png) center bottom no-repeat;
     background-size: contain;
@@ -988,9 +985,7 @@
         margin: 0px;
       }
     }
-    .table-cell:nth-last-child(1) {
-      border-left: 2px solid rgb(255, 223, 27);
-    }
+
 
   }
   .els-block-content{

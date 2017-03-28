@@ -5,7 +5,7 @@
     <div id="els" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-info">
 
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 white center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 white clear-pads center">
                 <h1 class="els-title center">"ECOLINES" LOYALTY SYSTEM</h1>
 
                 <p class="els-text" >
@@ -19,7 +19,7 @@
                     kas paredzēta klientiem, un administratīvā daļa, kuru pārvalda "Ecolines" operatori.
                 </p>
             </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-xs">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 els-ticket">
                     <div class="col-sm-6">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
@@ -63,6 +63,58 @@
             </div>
 
         </div>
+
+
+
+
+
+
+
+
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 visible-xs">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 els-ticket">
+                <div class="col-sm-6">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
+                        <p>
+                            Project Manager:
+                            <span class="bold">Edgar Rukmanis</span>
+                        </p>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
+                        <p>
+                            Project start date:
+                            <span class="bold">Aug 2015</span>
+                        </p>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
+                        <p>
+                            Project end date:
+                            <span class="bold">March 2016</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
+                        <p>
+                            Platform:
+                            <span class="bold">PHP</span>
+                        </p>
+                    </div>
+
+
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
+                        <p>
+                            Basic technologies:
+                            <span class="bold">PHP, Laravel, AngularJS, PostgreSQL, HTML, CSS, MySQL, Git, node.js.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 about">
             <h1 class="els-title  center">PAR UZŅĒMUMU “ECOLINES”</h1>
@@ -142,7 +194,7 @@
                     “MS-IDI” izstrādātā sistēma tika izmantota par pamatu vēl vienam “Ecolines” pasūtījumam – OWS (Ecolines Operator`s Workspace).
                 </p>
             </div>
-            <div id="yellow-shape" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
+            <div id="yellow-shape" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <img src="<?= env( 'ROOT_PATH' );?>/images/els/workspace.png">
             </div>
             <p  class="els-text centred">
@@ -151,7 +203,7 @@
                 jo tie pieprasīja daudzveidīgas variācijas un konfigurācijas ar datiem.
             </p>
 
-            <div id="yellow-shape2" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
+            <div id="yellow-shape2" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <img src="<?= env( 'ROOT_PATH' );?>/images/els/MacBook-Air.png">
                 <p  class="els-text centred">
                     Mūsdienīgs un piemērots dizains, kas piešķir uzņēmumam vienotu un viegli uztveramu stilu,
@@ -161,7 +213,7 @@
 
         </div>
 
-        <div class="els-project-team col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
+        <div class="els-project-team col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h1 class="els-title center">Projekta komanda</h1>
             <h3 class="els-subtitle">Kopumā projekta realizācijā piedalījās 10 “MS-IDI” darbinieki</h3>
             <p class="els-text">
@@ -264,7 +316,7 @@
         </div>
         <div class="col-xs-12">
             <div class="container">
-                <div class="els-quote clear-pads">
+                <div class="els-quote">
                     <h1 class="els-title">Nozīmīgākais administratīvās daļas ieguvums ir piedāvājumu sadaļas</h1>
                     <p class="els-text">
                         To klāsts ir ļoti daudzveidīgs – speciālie piedāvājumi, papildus atlaides, kuponu veidošana,

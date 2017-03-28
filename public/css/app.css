@@ -7901,7 +7901,6 @@ div.cs-skin-border {
     margin-bottom: 25px;
     max-width: 520px;
     text-align: center;
-    margin-left: 3%;
     font-size: 14px;
     font-weight: bold; }
   #els .yellow ul:last-child {
@@ -7989,10 +7988,6 @@ div.cs-skin-border {
   #els .els-items p {
     margin-top: 15px; }
 
-#els .els-items:not(:first-of-type) {
-  width: 700px;
-  margin: 0 auto 80px; }
-
 #els #els-footer {
   background: url(../images/els/footer.png) center bottom no-repeat;
   background-size: contain;
@@ -8011,8 +8006,6 @@ div.cs-skin-border {
       font-size: 14px; }
     #els .els-border .table-cell .els-text {
       margin: 0px; }
-  #els .els-border .table-cell:nth-last-child(1) {
-    border-left: 2px solid #ffdf1b; }
 
 #els .els-block-content {
   max-width: 350px;
@@ -8492,7 +8485,9 @@ div.cs-skin-border {
     font-size: 40px; }
   .holder {
     max-width: 180px;
-    top: 125px; } }
+    top: 125px; }
+  #eow #yellow-bg2 img {
+    max-width: 100%; } }
 
 @media (max-width: 1370px) {
   #slider .title {
@@ -8506,6 +8501,8 @@ div.cs-skin-border {
     padding-right: 0px; } }
 
 @media (min-width: 992px) {
+  .els-question {
+    margin-left: 3%; }
   .els-items {
     width: 980px; }
   #els .els-quote {
@@ -8636,12 +8633,32 @@ div.cs-skin-border {
     top: 10px; }
   #els .els-title {
     font-size: 26px; }
-  #els .top-info .els-text {
-    margin: 20px auto; }
+  #els .top-info {
+    padding-top: 40px;
+    padding-bottom: 100px; }
+    #els .top-info .els-text {
+      margin: 20px auto; }
+    #els .top-info .els-ticket {
+      background: transparent; }
   #els .yellow .els-title {
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  #els #yellow-shape {
+    margin-top: 0px; }
+  #els .centred {
+    padding: 0px 20px; }
+  #els .about {
+    padding-top: 40px; }
+  #els .animation-block-text {
+    padding-left: 30px; }
+  #els #yellow-bg {
+    padding-bottom: 90px; }
+  #els .els-quote .els-title {
+    font-size: 20px; } }
 
 @media (min-width: 768px) {
+  .els-items:not(:first-of-type) {
+    width: 700px;
+    margin: 0 auto 80px; }
   #exigen .brief-project-info {
     width: 230px;
     padding-left: 40px; }
@@ -8704,8 +8721,19 @@ div.cs-skin-border {
   #els .yellow {
     background: #ffe014; }
   #els .animation-block-text {
-    padding-left: 90px;
     margin-top: 0px; } }
+
+@media (min-width: 681px) {
+  #els .table-cell:nth-last-child(1) {
+    border-left: 2px solid #ffdf1b; } }
+
+@media (max-width: 680px) {
+  #els .els-border {
+    width: initial; }
+    #els .els-border .table-cell {
+      display: block; }
+  .table-cell:nth-last-child(1) {
+    border-top: 2px solid #ffdf1b; } }
 
 @media (max-width: 600px) {
   #clients div.bx-wrapper {
@@ -8799,6 +8827,8 @@ div.cs-skin-border {
     height: 327px; }
   .valery, .nicolay, .edgar {
     width: 271px;
-    height: 271px; } }
+    height: 271px; }
+  #els .els-title {
+    font-size: 22px; } }
 
 /*# sourceMappingURL=app.css.map */
