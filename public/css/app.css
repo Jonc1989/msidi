@@ -6247,11 +6247,13 @@ button.close {
 
 #clients .bx-wrapper .bx-prev {
   left: -31px;
-  background: url(../images/arrow-left.png) center center no-repeat; }
+  background: url(../images/arrow-left.png) center center no-repeat;
+  background-size: contain; }
 
 #clients .bx-wrapper .bx-next {
   right: -31px;
-  background: url(../images/arrow-right.png) center center no-repeat; }
+  background: url(../images/arrow-right.png) center center no-repeat;
+  background-size: contain; }
 
 .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
   bottom: 70px; }
@@ -6372,6 +6374,10 @@ img {
   font-weight: bold;
   font-family: 'Montserrat Bold', arial; }
 
+.container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse {
+  margin-right: 0px;
+  margin-left: 0px; }
+
 .white {
   color: white; }
 
@@ -6423,7 +6429,6 @@ img {
     width: 100%; } }
 
 .service-type {
-  padding-left: 0px;
   margin-bottom: 20px; }
 
 .short-text {
@@ -6484,16 +6489,20 @@ img {
   height: 70px; }
 
 .monitor {
-  background: url(../images/monitor.png) center center no-repeat; }
+  background: url(../images/monitor.png) center center no-repeat;
+  background-size: contain; }
 
 .light-bulb {
-  background: url(../images/light.png) center center no-repeat; }
+  background: url(../images/light.png) center center no-repeat;
+  background-size: contain; }
 
 .magnifier {
-  background: url(../images/magnifier.png) center center no-repeat; }
+  background: url(../images/magnifier.png) center center no-repeat;
+  background-size: contain; }
 
 .lifebelt {
-  background: url(../images/lifebuoy.png) center center no-repeat; }
+  background: url(../images/lifebuoy.png) center center no-repeat;
+  background-size: contain; }
 
 .title-divider {
   width: 40px;
@@ -6529,12 +6538,7 @@ img {
   margin-bottom: 50px; }
 
 .industries {
-  height: 295px;
-  padding-left: 0px;
-  padding-right: 0px; }
-
-.industries:not(:last-of-type) {
-  margin-right: 20px; }
+  height: 295px; }
 
 .industries-wrap {
   width: 100%;
@@ -6564,9 +6568,6 @@ img {
 
 .icon-outsorce {
   background: url(../images/icon4.png) center center no-repeat; }
-
-.industries-items {
-  margin-bottom: 45px; }
 
 .industries-wrap .icon {
   width: 73px;
@@ -6602,15 +6603,18 @@ img {
 
 #vacansy-form .more-btn-pressed, #contact-form .more-btn-pressed {
   background: url(../images/more-pressed.png);
+  background-size: contain;
   background-repeat: no-repeat;
   background-position-x: 2px;
   background-position-y: 2px; }
 
 #vacansy-form .more-btn-hover, #contact-form .more-btn-hover {
-  background: url(../images/more-hover.png) center center no-repeat; }
+  background: url(../images/more-hover.png) center center no-repeat;
+  background-size: contain; }
 
 #vacansy-form .more-btn, #contact-form .more-btn {
   background: url(../images/more.png) center center no-repeat;
+  background-size: contain;
   vertical-align: middle;
   display: table-cell; }
 
@@ -6627,6 +6631,7 @@ img {
   display: table-cell; }
 
 .more {
+  margin-top: 45px;
   display: inline-block; }
   .more .more-btn-pressed, .more .more-btn-hover {
     display: none; }
@@ -6636,9 +6641,11 @@ img {
     background-position-x: 2px;
     background-position-y: 2px; }
   .more .more-btn-hover {
-    background: url(../images/more-hover.png) center center no-repeat; }
+    background: url(../images/more-hover.png) center center no-repeat;
+    background-size: 100% 100%; }
   .more .more-btn {
     background: url(../images/more.png) center center no-repeat;
+    background-size: 100% 100%;
     vertical-align: middle;
     display: table-cell; }
   .more a:hover .more-btn {
@@ -6672,7 +6679,7 @@ img {
 
 .technology-wrap {
   margin-top: 20px;
-  margin-bottom: 100px; }
+  margin-bottom: 55px; }
 
 .technology {
   height: 140px;
@@ -6883,7 +6890,7 @@ img {
     margin-top: 100px; }
 
 .case-studies-wrap {
-  margin-bottom: 75px;
+  margin-bottom: 30px;
   text-align: center; }
 
 .case-studies {
@@ -8417,10 +8424,12 @@ div.cs-skin-border {
   .green-lime {
     height: 377px; } }
 
-@media (max-width: 1399px) {
+@media (min-width: 991px) and (max-width: 1399px) {
   .industries:not(:last-of-type) {
     margin-right: 0px;
-    padding-right: 10px; }
+    padding-right: 10px; } }
+
+@media (max-width: 1399px) {
   .industries {
     height: 280px; }
   .industries-wrap .icon {
@@ -8491,7 +8500,10 @@ div.cs-skin-border {
 
 @media (min-width: 992px) {
   .partner-wrap, .partner-col .opal, .partner-col .ecolines, .partner-col .rn, .partner-col .rta {
-    width: 100%; } }
+    width: 100%; }
+  .industries {
+    padding-left: 0px;
+    padding-right: 0px; } }
 
 @media (min-width: 992px) {
   .els-items {
@@ -8544,7 +8556,15 @@ div.cs-skin-border {
     #els .els-quote .els-title {
       font-size: 24px; }
   #els .els-block-content {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .industries {
+    margin-bottom: 50px; }
+  #clients div.bx-wrapper {
+    max-width: 700px !important; }
+  #clients .client-slide {
+    width: 700px; }
+  .border-bottom-blue {
+    padding-bottom: 0px; } }
 
 @media (max-width: 767px) {
   #slider {
@@ -8563,7 +8583,30 @@ div.cs-skin-border {
     text-align: center;
     padding-bottom: 0px; }
   #info-graphic {
-    display: none; } }
+    display: none; }
+  .industries {
+    margin: 0px auto 50px;
+    float: none; }
+  #clients div.bx-wrapper {
+    max-width: 500px !important; }
+  #clients .client-slide {
+    width: 500px; }
+  #clients .client-slide.active .client-slide-wrap {
+    padding-top: 60px;
+    padding-right: 40px;
+    padding-left: 40px; }
+  .circle {
+    width: 50px;
+    height: 50px; }
+  .more .more-btn-pressed {
+    background-size: contain;
+    background-position-x: 0px;
+    background-position-y: 0px; }
+  #vacansy-form .more-btn-pressed, #contact-form .more-btn-pressed {
+    background-position-x: 0px;
+    background-position-y: 0px; }
+  .brochure-icon {
+    padding-top: 12px; } }
 
 @media (min-width: 768px) {
   #exigen .brief-project-info {
@@ -8615,7 +8658,26 @@ div.cs-skin-border {
     padding-right: 15px;
     padding-bottom: 15px; }
   .green-lime {
-    height: 150px; } }
+    height: 150px; }
+  .bx-wrapper .bx-controls-direction a {
+    width: 67px;
+    height: 67px; }
+  .team {
+    margin-bottom: 15px; }
+  .short-text {
+    max-width: 80%; } }
+
+@media (max-width: 600px) {
+  #clients div.bx-wrapper {
+    max-width: 400px !important; }
+    #clients div.bx-wrapper .bx-controls-direction a {
+      width: 50px;
+      height: 50px; }
+  #clients .client-slide {
+    width: 400px;
+    height: 350px; }
+  #clients .client-slide.active {
+    height: 400px; } }
 
 @media (min-width: 500px) {
   #rn .palka .slide-in-right, #rn .palka .slide-in-left {
@@ -8632,6 +8694,67 @@ div.cs-skin-border {
     padding-right: 15px;
     padding-left: 15px;
     margin-bottom: 50px;
-    text-align: center; } }
+    text-align: center; }
+  .technology {
+    padding-top: 20px;
+    width: 60%;
+    margin: 0 auto;
+    float: none; }
+    .technology .icon {
+      margin-bottom: 15px; }
+  .technology:not(:last-of-type) {
+    border-right: none;
+    border-bottom: 1px solid #e1e1e1; } }
+
+@media (max-width: 480px) {
+  .monitor, .light-bulb, .magnifier, .lifebelt {
+    width: 60px;
+    height: 60px; }
+  .service-type {
+    padding-left: 0px;
+    padding-right: 0px; }
+  #clients div.bx-wrapper {
+    max-width: 350px !important; }
+  #clients .client-slide {
+    width: 350px;
+    height: 350px; }
+  #clients .client-slide.active {
+    height: 400px; } }
+
+@media (max-width: 400px) {
+  body, .short-text {
+    font-size: 12px; }
+  .title {
+    font-size: 26px;
+    margin-bottom: 15px; }
+  .short-text {
+    margin-bottom: 40px; }
+  .monitor, .light-bulb, .magnifier, .lifebelt {
+    width: 50px;
+    height: 50px; }
+  .service-title {
+    font-size: 16px; }
+  .title-divider {
+    margin-top: 15px;
+    margin-bottom: 15px; }
+  .border-bottom-blue {
+    padding-bottom: 0px; }
+  .industries-wrap {
+    padding-top: 40px; }
+  .industries {
+    height: 225px; }
+  .more-txt {
+    font-size: 22px;
+    padding: 0px 10px; }
+  .more {
+    margin-top: 0px; }
+  .border-bottom-gray {
+    padding-bottom: 50px; }
+  .team {
+    width: 327px;
+    height: 327px; }
+  .valery, .nicolay, .edgar {
+    width: 271px;
+    height: 271px; } }
 
 /*# sourceMappingURL=app.css.map */

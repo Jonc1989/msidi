@@ -1,7 +1,7 @@
 <div id="clients" class="col-md-12 col-sm-12 col-xs-12 clear-pads " ng-controller="ClientsController">
     <div class="col-md-12 col-sm-12 col-xs-12 clear-pads green">
 
-        <div class="col-md-12 col-sm-12 col-xs-12 clear-pads holder">
+        <div class="col-md-12 col-sm-12 col-xs-12 clear-pads holder hidden-sm hidden-xs">
             <div class="shadow"></div>
             <div class="pen_holder">
                 <img  src="/public/images/pen_holder.png" alt="">

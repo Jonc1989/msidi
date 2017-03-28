@@ -74,6 +74,20 @@
   #els .els-block-content{
     max-width: 100%;
   }
+  .industries{
+    margin-bottom: 50px;
+  }
+  #clients{
+    div.bx-wrapper{
+      max-width: 700px !important;
+    }
+    .client-slide{
+      width: 700px;
+    }
+  }
+  .border-bottom-blue {
+    padding-bottom: 0px;
+  }
 }
 @media (max-width: 767px){
   #slider{
@@ -100,7 +114,41 @@
   #info-graphic{
     display: none;
   }
-
+  .industries{
+    margin: 0px auto 50px;
+    float: none;
+  }
+  #clients{
+    div.bx-wrapper{
+      max-width: 500px !important;
+    }
+    .client-slide{
+      width: 500px;
+    }
+    .client-slide.active .client-slide-wrap{
+      padding-top: 60px;
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+  }
+  .circle {
+    width: 50px;
+    height: 50px;
+  }
+  .more {
+    .more-btn-pressed {
+      background-size: contain;
+      background-position-x: 0px;
+      background-position-y: 0px;
+    }
+  }
+  #vacansy-form .more-btn-pressed, #contact-form .more-btn-pressed {
+    background-position-x: 0px;
+    background-position-y: 0px;
+  }
+  .brochure-icon {
+    padding-top: 12px;
+  }
 }
 @media (min-width: 768px){
   #exigen{
@@ -114,6 +162,9 @@
   }
   #info-graphic-sm{
     display: none;
+  }
+  .industries:not(:last-of-type) /*, .technology:not(:last-of-type)*/{
+    //margin-right: 20px;
   }
 }
 @media (min-width: 600px){
@@ -168,6 +219,36 @@
   .green-lime {
     height: 150px;
   }
+  .bx-wrapper .bx-controls-direction a {
+
+    width: 67px;
+    height: 67px;
+  }
+  .team{
+    margin-bottom: 15px;
+  }
+  .short-text {
+    max-width: 80%;
+  }
+}
+@media (max-width: 600px){
+  #clients{
+    div.bx-wrapper {
+      max-width: 400px !important;
+      .bx-controls-direction a {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    .client-slide {
+      width: 400px;
+      height: 350px;
+    }
+    .client-slide.active {
+      height: 400px;
+    }
+  }
+
 }
 @media (min-width: 500px){
   #rn .palka .slide-in-right, #rn .palka .slide-in-left {
@@ -187,5 +268,91 @@
     padding-left: 15px;
     margin-bottom: 50px;
     text-align: center;
+  }
+  .technology {
+    padding-top: 20px;
+    width: 60%;
+    margin: 0 auto;
+    float: none;
+    .icon {
+      margin-bottom: 15px;
+    }
+  }
+  .technology:not(:last-of-type) {
+    border-right: none;
+    border-bottom: 1px solid #e1e1e1;
+  }
+
+}
+@media (max-width: 480px){
+  .monitor, .light-bulb, .magnifier, .lifebelt {
+    width: 60px;
+    height: 60px;
+  }
+  .service-type {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #clients{
+    div.bx-wrapper {
+      max-width: 350px !important;
+    }
+    .client-slide {
+      width: 350px;
+      height: 350px;
+    }
+    .client-slide.active {
+      height: 400px;
+    }
+  }
+}
+@media (max-width: 400px){
+  body, .short-text {
+    font-size: 12px;
+  }
+  .title {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  .short-text {
+    margin-bottom: 40px;
+  }
+  .monitor, .light-bulb, .magnifier, .lifebelt{
+    width: 50px;
+    height: 50px;
+  }
+  .service-title {
+    font-size: 16px;
+  }
+  .title-divider {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .border-bottom-blue {
+    padding-bottom: 0px;
+  }
+  .industries-wrap {
+    padding-top: 40px;
+  }
+  .industries {
+    height: 225px;
+  }
+  .more-txt {
+    font-size: 22px;
+    padding: 0px 10px;
+  }
+  .more {
+    margin-top: 0px;
+  }
+  .border-bottom-gray {
+    padding-bottom: 50px;
+  }
+  .team {
+    width: 327px;
+    height: 327px;
+  }
+  .valery, .nicolay, .edgar {
+    width: 271px;
+    height: 271px;
   }
 }

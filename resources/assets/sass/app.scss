@@ -104,6 +104,10 @@ img{border:0}
   font-weight: bold;
   font-family: 'Montserrat Bold', arial;
 }
+.container > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-header, .container-fluid > .navbar-collapse {
+  margin-right: 0px;
+  margin-left: 0px;
+}
 .white{
   color: white;
 }
@@ -154,7 +158,7 @@ img{border:0}
   }
 }
 .service-type{
-  padding-left: 0px;
+  //padding-left: 0px;
   margin-bottom: 20px;
 }
 .short-text{
@@ -223,18 +227,19 @@ img{border:0}
 .monitor, .light-bulb, .magnifier, .lifebelt{
   width: 70px;
   height: 70px;
+
 }
 .monitor{
-  background: url(../images/monitor.png) center center no-repeat;
+  background: url(../images/monitor.png) center center no-repeat;  background-size: contain;
 }
 .light-bulb{
-  background: url(../images/light.png) center center no-repeat;
+  background: url(../images/light.png) center center no-repeat;  background-size: contain;
 }
 .magnifier{
-  background: url(../images/magnifier.png) center center no-repeat;
+  background: url(../images/magnifier.png) center center no-repeat;  background-size: contain;
 }
 .lifebelt{
-  background: url(../images/lifebuoy.png) center center no-repeat;
+  background: url(../images/lifebuoy.png) center center no-repeat;  background-size: contain;
 }
 .title-divider{
   //content: '';
@@ -276,12 +281,10 @@ img{border:0}
  }
 .industries{
   height: 295px;
-  padding-left: 0px;
-  padding-right: 0px;
+  //padding-left: 0px;
+  //padding-right: 0px;
 }
-.industries:not(:last-of-type) /*, .technology:not(:last-of-type)*/{
-  margin-right: 20px;
-}
+
 .industries-wrap{
   width: 100%;
   height: 100%;
@@ -318,7 +321,7 @@ img{border:0}
   background: url(../images/icon4.png) center center no-repeat;
 }
 .industries-items{
-  margin-bottom: 45px;
+  //margin-bottom: 45px;
 }
 .industries-wrap .icon{
   width: 73px;
@@ -358,15 +361,18 @@ img{border:0}
   }
   .more-btn-pressed{
     background: url(../images/more-pressed.png);
+    background-size: contain;
     background-repeat: no-repeat;
     background-position-x: 2px;
     background-position-y: 2px;
   }
   .more-btn-hover{
     background: url(../images/more-hover.png) center center no-repeat;
+    background-size: contain;
   }
   .more-btn {
     background: url(../images/more.png) center center no-repeat;
+    background-size: contain;
     vertical-align: middle;
     display: table-cell;
   }
@@ -402,21 +408,25 @@ img{border:0}
 
 
 .more {
+  margin-top: 45px;
   display: inline-block;
   .more-btn-pressed, .more-btn-hover{
     display: none;
   }
   .more-btn-pressed{
     background: url(../images/more-pressed.png);
+    //background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position-x: 2px;
     background-position-y: 2px;
   }
   .more-btn-hover{
     background: url(../images/more-hover.png) center center no-repeat;
+    background-size: 100% 100%;
   }
   .more-btn {
     background: url(../images/more.png) center center no-repeat;
+    background-size: 100% 100%;
     vertical-align: middle;
     display: table-cell;
   }
@@ -462,7 +472,7 @@ img{border:0}
 }
 .technology-wrap{
   margin-top: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 55px;
 }
 .technology{
   height: 140px;
@@ -691,7 +701,7 @@ img{border:0}
   }
 }
 .case-studies-wrap{
-  margin-bottom: 75px;
+  margin-bottom: 30px;
   text-align: center;
 }
 .case-studies{

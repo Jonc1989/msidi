@@ -68,7 +68,7 @@
 
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 service-type">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-xs-3 clear-pads ">
-                                        <div class="lifebelt col-sm-3 clear-pads"></div>
+                                        <div class="lifebelt col-sm-3 col-xs-3 clear-pads"></div>
                                         <div class="service-title col-sm-9 col-xs-9">Software maintenance <br>and support</div>
                                 </div>
                                 <div class="title-divider col-xs-12"></div>
@@ -103,8 +103,8 @@
 
 <div class="col-md-12 col-sm-12 col-xs-12 clear-pads blue-bg-shape">
         <div class="container clear-pads border-bottom-gray">
-                <div class="col-md-12 clear-pads industries-items">
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 industries">
+                <div class="col-xs-12 clear-pads industries-items">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 industries">
                                 <div class="industries-wrap">
                                         <div class="count circle">
                                                 <div class="num">3</div>
@@ -114,7 +114,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 industries">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 industries">
                                 <div class="industries-wrap">
                                         <div class="count circle">
                                                 <div class="num">3</div>
@@ -124,7 +124,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 industries">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 industries">
                                 <div class="industries-wrap">
                                         <div class="count circle">
                                                 <div class="num">3</div>
@@ -134,7 +134,7 @@
                                 </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 industries">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 industries">
                                 <div class="industries-wrap">
                                         <div class="count circle">
                                                 <div class="num">3</div>
@@ -145,7 +145,7 @@
                         </div>
                 </div>
 
-                <div class="col-md-12 center">
+                <div class="col-xs-12 center">
 
                                 <div class="more">
                                         <a href="">

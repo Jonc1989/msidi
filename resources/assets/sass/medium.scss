@@ -9,11 +9,14 @@
     height: 377px;
   }
 }
+@media (min-width: 991px) and (max-width: 1399px) {
+  .industries:not(:last-of-type){
+    margin-right: 0px;
+    padding-right: 10px;
+  }
+}
 @media (max-width: 1399px) {
-    .industries:not(:last-of-type){
-      margin-right: 0px;
-      padding-right: 10px;
-    }
+
   .industries{
     height: 280px;
   }
@@ -121,5 +124,10 @@
 @media (min-width: 992px) {
   .partner-wrap, .partner-col .opal, .partner-col .ecolines, .partner-col .rn, .partner-col .rta {
     width: 100%;
+  }
+  .industries{
+
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }

@@ -1,5 +1,5 @@
 <div id="company" class="col-md-12 col-sm-12 col-xs-12 clear-pads" ng-controller="CompanyController">
-        <div class="col-md-12 col-sm-12 col-xs-12 clear-pads coffee-holder">
+        <div class="col-md-12 col-sm-12 col-xs-12 clear-pads coffee-holder hidden-sm hidden-xs">
                 <div class="shadow2"></div>
                 <div class="shadow3"></div>
                 <div class="cofe">
