@@ -88,8 +88,35 @@
   .border-bottom-blue {
     padding-bottom: 0px;
   }
+  .top-info{
+    .title {
+      font-size: 32px;
+    }
+  }
+  #els .top-info .els-ticket {
+    width: 650px;
+    padding-left: 70px;
+  }
+  #els #yellow-bg2 {
+    padding-bottom: 50px;
+  }
 }
 @media (max-width: 767px){
+  #els #yellow-bg2 {
+    margin-top: 20px;
+  }
+  #els .els-block-content {
+    margin-top: 0px;
+  }
+  .ipad-wrap{
+    text-align: center;
+    img{
+      float: none;
+    }
+  }
+  #els .top-info .els-ticket {
+    height: 320px;
+  }
   #slider{
     display: none;
   }
@@ -148,6 +175,31 @@
   }
   .brochure-icon {
     padding-top: 12px;
+  }
+  .top-info .title {
+    font-size: 28px;
+  }
+  .opex-info-pic{
+    position: absolute;
+  }
+  .center-xs{
+    text-align: center;
+  }
+  #opal-bop .excerpt-text{
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+  }
+  #els {
+    .els-title {
+      font-size: 26px;
+    }
+    .top-info .els-text {
+      margin: 20px auto;
+    }
+    .yellow .els-title{
+      margin-bottom: 10px;
+    }
   }
 }
 @media (min-width: 768px){
@@ -230,6 +282,20 @@
   .short-text {
     max-width: 80%;
   }
+  #opal-bop{
+    .title{
+      text-align: center;
+    }
+  }
+  #els {
+    .yellow{
+      background: #ffe014;
+    }
+    .animation-block-text {
+      padding-left: 90px;
+      margin-top: 0px;
+    }
+  }
 }
 @media (max-width: 600px){
   #clients{
@@ -248,7 +314,14 @@
       height: 400px;
     }
   }
-
+  #opal-bop {
+    .excerpt-text {
+      font-size: 13px;
+    }
+    .quote {
+      padding-left: 25px;
+    }
+  }
 }
 @media (min-width: 500px){
   #rn .palka .slide-in-right, #rn .palka .slide-in-left {

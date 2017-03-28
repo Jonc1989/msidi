@@ -8564,9 +8564,26 @@ div.cs-skin-border {
   #clients .client-slide {
     width: 700px; }
   .border-bottom-blue {
-    padding-bottom: 0px; } }
+    padding-bottom: 0px; }
+  .top-info .title {
+    font-size: 32px; }
+  #els .top-info .els-ticket {
+    width: 650px;
+    padding-left: 70px; }
+  #els #yellow-bg2 {
+    padding-bottom: 50px; } }
 
 @media (max-width: 767px) {
+  #els #yellow-bg2 {
+    margin-top: 20px; }
+  #els .els-block-content {
+    margin-top: 0px; }
+  .ipad-wrap {
+    text-align: center; }
+    .ipad-wrap img {
+      float: none; }
+  #els .top-info .els-ticket {
+    height: 320px; }
   #slider {
     display: none; }
   .navbar-default {
@@ -8606,7 +8623,23 @@ div.cs-skin-border {
     background-position-x: 0px;
     background-position-y: 0px; }
   .brochure-icon {
-    padding-top: 12px; } }
+    padding-top: 12px; }
+  .top-info .title {
+    font-size: 28px; }
+  .opex-info-pic {
+    position: absolute; }
+  .center-xs {
+    text-align: center; }
+  #opal-bop .excerpt-text {
+    font-size: 16px;
+    position: absolute;
+    top: 10px; }
+  #els .els-title {
+    font-size: 26px; }
+  #els .top-info .els-text {
+    margin: 20px auto; }
+  #els .yellow .els-title {
+    margin-bottom: 10px; } }
 
 @media (min-width: 768px) {
   #exigen .brief-project-info {
@@ -8665,7 +8698,14 @@ div.cs-skin-border {
   .team {
     margin-bottom: 15px; }
   .short-text {
-    max-width: 80%; } }
+    max-width: 80%; }
+  #opal-bop .title {
+    text-align: center; }
+  #els .yellow {
+    background: #ffe014; }
+  #els .animation-block-text {
+    padding-left: 90px;
+    margin-top: 0px; } }
 
 @media (max-width: 600px) {
   #clients div.bx-wrapper {
@@ -8677,7 +8717,11 @@ div.cs-skin-border {
     width: 400px;
     height: 350px; }
   #clients .client-slide.active {
-    height: 400px; } }
+    height: 400px; }
+  #opal-bop .excerpt-text {
+    font-size: 13px; }
+  #opal-bop .quote {
+    padding-left: 25px; } }
 
 @media (min-width: 500px) {
   #rn .palka .slide-in-right, #rn .palka .slide-in-left {

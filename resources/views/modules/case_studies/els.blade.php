@@ -21,7 +21,7 @@
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 els-ticket">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                    <div class="col-sm-6">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
                             <p>
                                 Project Manager:
@@ -42,7 +42,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                    <div class="col-sm-6">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
                             <p>
                                 Platform:
@@ -82,12 +82,12 @@
         </div>
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 yellow clear-pads">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-white clear-pads"></div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-white hidden-xs clear-pads"></div>
 
-            <div id="road" class="col-lg-4 col-md-4 col-sm-5 col-xs-12 clear-pads">
-                <img class="els-road-bus" src="http://localhost/ms-idi/wp-content/uploads/2017/01/Bus.png">
-                <img class="els-road-car" src="http://localhost/ms-idi/wp-content/uploads/2017/01/red_car.png">
-                <img class="els-road-clouds" src="http://localhost/ms-idi/wp-content/uploads/2017/01/clouds.png">
+            <div id="road" class="col-lg-4 col-md-4 col-sm-5 col-xs-12 hidden-xs clear-pads">
+                <img class="els-road-bus" src="<?= env('ROOT_PATH')?>/images/els/Bus.png">
+                <img class="els-road-car" src="<?= env('ROOT_PATH')?>/images/els/red_car.png">
+                <img class="els-road-clouds" src="<?= env('ROOT_PATH')?>/images/els/clouds.png">
             </div>
             <div class="col-lg-6 col-md-6 col-sm-7 col-xs-12 animation-block-text">
                 <h1 class="els-title">“ECOLINES” LOJALITĀTES SISTĒMA (ELS)</h1>
@@ -128,7 +128,7 @@
                     <li>Iespēja integrēt ELS esošajā “ECOLINES” pārdošanas sistēma.</li>
                 </ul>
             </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bottom-white clear-pads"></div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bottom-white hidden-xs clear-pads"></div>
         </div>
 
         <div id="infrastructure" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center clear-pads">
@@ -277,7 +277,7 @@
 
         <div id="yellow-bg2" class="col-xs-12">
 
-                <div class="col-md-7 col-sm-6 col-xs-12">
+                <div class="col-md-7 col-sm-6 col-xs-12 ipad-wrap">
                     <img class="els-block-image" src="http://ms-idi.eu/wp-content/uploads/2017/01/iPad-2-White.png">
                 </div>
                 <div class="col-md-5 col-sm-6 col-xs-12 els-block-content">

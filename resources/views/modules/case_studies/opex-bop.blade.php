@@ -15,8 +15,8 @@
                 solution with a possible high load level.
             </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 top-img clear-pads">
-            <img src="http://ms-idi.eu/wp-content/uploads/2014/10/mac.png">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 top-img clear-pads hidden-xs">
+            <img src="<?= env('ROOT_PATH')?>/images/opal/mac.png">
         </div>
 
     </div>
@@ -27,16 +27,16 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
             <div class="col-lg-offset-2 col-lg-10 col-md-offset-3 col-md-9 col-sm-12 col-xs-12 sprockets">
-                <img class="opex-info-pic" src="/public/images/opal/sprockets.png">
+                <img class="opex-info-pic" src="<?= env('ROOT_PATH') ?>/images/opal/sprockets.png">
             </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 brief-project-info">
-            <div class="col-lg-5 col-md-6 col-sm-6"> Project Manager:     </div> <div class="bold col-lg-6 col-md-6 col-sm-6">Edgars Rukmanis</div>
-            <div class="col-lg-5 col-md-6 col-sm-6"> Team size:          </div> <div class="bold col-lg-6 col-md-6 col-sm-6">24</div>
-            <div class="col-lg-5 col-md-6 col-sm-6"> Project start date:  </div> <div class="bold col-lg-6 col-md-6 col-sm-6">Jan 2013</div>
-            <div class="col-lg-5 col-md-6 col-sm-6"> Project Duration:    </div> <div class="bold col-lg-6 col-md-6 col-sm-6">1 year</div>
-            <div class="col-lg-5 col-md-6 col-sm-6"> Platform:            </div> <div class="bold col-lg-6 col-md-6 col-sm-6">.NET</div>
-            <div class="col-lg-5 col-md-6 col-sm-6"> Basic technologies:  </div> <div class="bold col-lg-6 col-md-6 col-sm-6">.NET Asp.net jQuery</div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 brief-project-info">
+            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6"> Project Manager:     </div> <div class="bold col-lg-6 col-md-6 col-sm-6 col-xs-6">Edgars Rukmanis</div>
+            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6"> Team size:          </div> <div class="bold col-lg-6 col-md-6 col-sm-6 col-xs-6">24</div>
+            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6"> Project start date:  </div> <div class="bold col-lg-6 col-md-6 col-sm-6 col-xs-6">Jan 2013</div>
+            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6"> Project Duration:    </div> <div class="bold col-lg-6 col-md-6 col-sm-6 col-xs-6">1 year</div>
+            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6"> Platform:            </div> <div class="bold col-lg-6 col-md-6 col-sm-6 col-xs-6">.NET</div>
+            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6"> Basic technologies:  </div> <div class="bold col-lg-6 col-md-6 col-sm-6 col-xs-6">.NET Asp.net jQuery</div>
 
         </div>
     </div>
@@ -125,13 +125,13 @@
         </div>
 
         <div class="container light-blue-bg">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 As the volume of the Opal: COM functional was significantly less than in Opal: BOP, the
                 number of developers for this project was reduced: on a permanent basis in the project
                 were working 7 developers and management personnel.
                 Besides, in various sprints were also involved designer, testers (both on the part of the contractor and the customer).
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
                 <div class="pic">
                     <img class="opex-corner-pic" src="http://ms-idi.eu/wp-content/uploads/2014/10/7-workin.png">
@@ -203,7 +203,7 @@
         </div>
 
         <div class="container light-blue-bg">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 As a separate paragraph should be mentioned the data migration from the old system to the new, which
                 also helped to reduce the startup time of the project. During the old system performance have been
                 transferred all the data, which in the transfer process was adapted to the new database structure and
@@ -214,7 +214,7 @@
                 corrections / editing manually. Our company has also successfully coped with
                 this task: in the first couple months of the project came just a few requests to modify the migration data.
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
                 <div class="pic">
                     <img src="http://ms-idi.eu/wp-content/uploads/2014/10/Vector-Smart-Object.png">

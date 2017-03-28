@@ -14,7 +14,7 @@
                 viewing the status of the transfers and their subsequent generation in PDF. The system is characterized by extremely simple and convenient interface.
             </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 top-img ">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 top-img hidden-xs">
             <img class="" src="http://ms-idi.eu/wp-content/uploads/2014/10/Layer-48.png">
         </div>
 
@@ -26,16 +26,16 @@
        </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
             <div class="col-lg-offset-2 col-lg-10 col-md-offset-3 col-md-9 col-sm-12 col-xs-12 sprockets">
-                <img class="opex-info-pic" src="/public/images/opal/sprockets.png">
+                <img class="opex-info-pic" src="<?= env('ROOT_PATH') ?>/images/opal/sprockets.png">
             </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 brief-project-info">
-            <div class="col-lg-5 col-md-6 col-sm-6"> Project Manager:     </div> <div class="bold col-lg-6 col-md-6 col-sm-6">Edgars Rukmanis			</div>
-            <div class="col-lg-5 col-md-6 col-sm-6"> Team size:          </div> <div class="bold col-lg-6 col-md-6 col-sm-6">7		</div>
-            <div class="col-lg-5 col-md-6 col-sm-6"> Project start date:  </div> <div class="bold col-lg-6 col-md-6 col-sm-6">Jul 2013 </div>
-            <div class="col-lg-5 col-md-6 col-sm-6"> Project Duration:    </div> <div class="bold col-lg-6 col-md-6 col-sm-6">7 months			</div>
-            <div class="col-lg-5 col-md-6 col-sm-6"> Platform:            </div> <div class="bold col-lg-6 col-md-6 col-sm-6">.NET			</div>
-            <div class="col-lg-5 col-md-6 col-sm-6"> Basic technologies:  </div> <div class="bold col-lg-6 col-md-6 col-sm-6">.NET Asp.net jQuery		</div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 brief-project-info">
+            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6"> Project Manager:     </div> <div class="bold col-lg-6 col-md-6 col-sm-6 col-xs-6">Edgars Rukmanis			</div>
+            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6"> Team size:          </div> <div class="bold col-lg-6 col-md-6 col-sm-6 col-xs-6">7		</div>
+            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6"> Project start date:  </div> <div class="bold col-lg-6 col-md-6 col-sm-6 col-xs-6">Jul 2013 </div>
+            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6"> Project Duration:    </div> <div class="bold col-lg-6 col-md-6 col-sm-6 col-xs-6">7 months			</div>
+            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6"> Platform:            </div> <div class="bold col-lg-6 col-md-6 col-sm-6 col-xs-6">.NET			</div>
+            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6"> Basic technologies:  </div> <div class="bold col-lg-6 col-md-6 col-sm-6 col-xs-6">.NET Asp.net jQuery		</div>
 
         </div>
     </div>
@@ -43,7 +43,7 @@
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 opex-about-bg">
 
             <div class="container clear-pads wrap">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 clear-pads white">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clear-pads white">
                     The money transfer company "OPAL Transfer" works in London (UK) since 2003.
                         The company's activity is aimed primarily at providing quality and affordable services to private and corporate clients.
                         Money transfers are carried out in CIS countries (Russia, Ukraine, Belarus, Georgia, Uzbekistan, Moldova, Kyrgyzstan, Azerbaijan,
@@ -52,7 +52,7 @@
                         transaction (up to 1 day), low cost (1% of the amount for the CIS countries and £3 for the Baltic and the Eastern Europe countries),
                         service 7 days a week, and ease of completion of the transfer.
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 clear-pads">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 center">
                     <img class="opex-about-pic resp" src="http://ms-idi.eu/wp-content/uploads/2014/10/shilluete1.png">
                 </div>
             </div>
@@ -106,7 +106,7 @@
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="container light-blue-bg">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 column">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 column">
                 The business logic and access to the database of both Opal: BOP
                 and and Opal: COM implemented as a web service (Microsoft WCF),
                 which is used by the current web applications of the system, and in the
@@ -115,7 +115,7 @@
                 of the business logic function
                 call and access to resources, as well as facilitates the operations and system errors logging development.
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 column">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 column">
                 <div class="pic dot-net">
                     <img src="http://ms-idi.eu/wp-content/uploads/2014/10/WCF-icon.png">
                 </div>
@@ -132,13 +132,13 @@
                 In addition to its own development, in this web-based
                 solution has also been integrated third-party services:
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right center-xs">
                 <div class="logo-wrap">
                     <img src="http://ms-idi.eu/wp-content/uploads/2014/10/Layer-43.png">
                 </div>
 
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 center-xs">
                 <div class="logo-wrap">
                     <img src="http://ms-idi.eu/wp-content/uploads/2014/10/Layer-44.png">
                 </div>
@@ -157,13 +157,13 @@
         </div>
 
         <div class="container light-blue-bg">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 As the volume of the Opal: COM functional was significantly less than in Opal: BOP, the
                 number of developers for this project was reduced: on a permanent basis in the project
                 were working 7 developers and management personnel.
                 Besides, in various sprints were also involved designer, testers (both on the part of the contractor and the customer).
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
                 <div class="pic">
                     <img class="opex-corner-pic" src="http://ms-idi.eu/wp-content/uploads/2014/10/7-workin.png">
@@ -176,12 +176,12 @@
         </div>
 
         <div class="container light-blue-bg">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 Project development of the Opal: COM was conducted on Agile methodology. The speed of development
                 of this system allowed to establish the length of the sprint, equals one week. At the end of the next sprint on the pre-production
                 server was installed bild for the client to test, and also sent a detailed report on the content generated by means of the Atlassian JIRA.
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="pic">
                     <img src="http://ms-idi.eu/wp-content/uploads/2014/10/Jira-icon.png">
                 </div>
@@ -220,12 +220,12 @@
 
         <div class="container">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 clear-pads white">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="pic">
                         <img src="http://ms-idi.eu/wp-content/uploads/2014/10/Group-10-copy-2.png">
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 clear-pads">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clear-pads">
                     After putting the project into operation the companies' executives held talks about another phase
                     of cooperation in the framework of the project on the funds transfer. As a result began the development
                     of mobile application for the Opal Money Transfer clients.
