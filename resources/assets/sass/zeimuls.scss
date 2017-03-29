@@ -1,0 +1,28 @@
+#zeimuls{
+  .top-info{
+    background: url(../images/zeimuls/top-bg.png) center center no-repeat;
+    background-size: 100% 100%;
+    padding-top: 80px;
+  }
+  #site_structure{
+    background: url(../images/zeimuls/background.png) center center no-repeat;
+    background-size: 100% 100%;
+  }
+  .info-item-wrap{
+    //-webkit-column-count: 5;
+    //-webkit-column-gap: 10px;
+    //-webkit-column-fill: auto;
+    //-moz-column-count: 5;
+    //-moz-column-gap: 10px;
+    //-moz-column-fill: auto;
+    //column-count: 5;
+    //column-gap: 15px;
+    //column-fill: auto;
+    text-align: center;
+  }
+  .zeimuls-structure-item{
+    display: inline-block;
+    width: 230px;
+    margin: 0px auto;
+  }
+}

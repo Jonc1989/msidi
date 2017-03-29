@@ -7766,6 +7766,23 @@ div.cs-skin-border {
 .border-bottom {
   border-bottom: 1px solid #efefef; }
 
+#zeimuls .top-info {
+  background: url(../images/zeimuls/top-bg.png) center center no-repeat;
+  background-size: 100% 100%;
+  padding-top: 80px; }
+
+#zeimuls #site_structure {
+  background: url(../images/zeimuls/background.png) center center no-repeat;
+  background-size: 100% 100%; }
+
+#zeimuls .info-item-wrap {
+  text-align: center; }
+
+#zeimuls .zeimuls-structure-item {
+  display: inline-block;
+  width: 230px;
+  margin: 0px auto; }
+
 #els {
   padding: 0;
   margin: 0;

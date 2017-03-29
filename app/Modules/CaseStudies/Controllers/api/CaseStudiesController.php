@@ -27,7 +27,7 @@ class CaseStudiesController extends Controller
      */
     public function index()
     {
-        Input::get( 'count' ) !== null ? $count = Input::get( 'count' ) : $count = 9;
+        Input::get( 'count' ) !== null ? $count = Input::get( 'count' ) : $count = 20;
         
         return $this->posts->with('categories')->get()->take( $count );
     }
