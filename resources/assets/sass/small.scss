@@ -205,12 +205,13 @@
   }
   .more {
     .more-btn-pressed {
-      background-size: contain;
+      background-size: 100% 100%;
       background-position-x: 0px;
       background-position-y: 0px;
     }
   }
   #vacansy-form .more-btn-pressed, #contact-form .more-btn-pressed {
+    background-size: contain;
     background-position-x: 0px;
     background-position-y: 0px;
   }

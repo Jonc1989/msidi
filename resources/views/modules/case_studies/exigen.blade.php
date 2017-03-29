@@ -12,10 +12,10 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads">
             <div class="orange-shit">
                 <div class="handshake">
-                    <img src="http://ms-idi.eu/wp-content//themes/serio/images/exigen.png">
+                    <img src="<?= env( 'ROOT_PATH' )?>/images/opal/exigen.png">
                 </div>
                 <div class="">
-                    <img src="http://ms-idi.eu/wp-content/uploads/2015/05/exigen_services_logo_white.png">
+                    <img src="<?= env( 'ROOT_PATH' )?>/images/exigen/exigen_services_logo_white.png">
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
         </div>
 
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 exigen-img1">
-            <img src="http://ms-idi.eu/wp-content/uploads/2014/10/computer.png">
+            <img src="<?= env( 'ROOT_PATH' )?>/images/exigen/computer.png">
         </div>
 
     </div>
@@ -61,7 +61,7 @@
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads orange-bg">
         <div class="col-lg-6 col-md-6 col-sm-6 hidden-sm hidden-xs clear-pads">
-            <img  src="http://ms-idi.eu/wp-content/uploads/2014/10/pattern.png">
+            <img  src="<?= env( 'ROOT_PATH' )?>/images/exigen/pattern.png">
         </div>
 
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 white">
@@ -91,14 +91,14 @@
             </div>
         </div>
         <div class="col-lg-6 col-md-6 hidden-sm hidden-xs  clear-pads">
-            <img class="pull-right" src="http://ms-idi.eu/wp-content/uploads/2014/10/MAP.png">
+            <img class="pull-right" src="<?= env( 'ROOT_PATH' )?>/images/exigen/MAP.png">
         </div>
     </div>
 
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads orange-bg">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right screen">
-            <img src="http://ms-idi.eu/wp-content/uploads/2014/10/computer1.png">
+            <img src="<?= env( 'ROOT_PATH' )?>/images/exigen/computer1.png">
         </div>
 
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -118,7 +118,7 @@
             of people involved in the projects.
         </div>
 
-        <img style=" margin-bottom: 5%;" srcset="http://ms-idi.eu/wp-content/uploads/2014/10/Continue.png, http://ms-idi.eu/wp-content/uploads/2014/10/Continue@2x.png 2x">
+        <img style=" margin-bottom: 5%;" srcset="<?= env( 'ROOT_PATH' )?>/images/exigen/Continue.png, <?= env( 'ROOT_PATH' )?>/images/exigen/Continue@2x.png 2x">
     </div>
 </div>
 

@@ -5,7 +5,7 @@
   .ept-title {
     font-size: 30px;
     font-family: "Open Sans", sans-serif;
-
+    margin-top: 50px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 25px;
@@ -153,5 +153,8 @@
   .v3{
     left: 0;
     bottom: 0;
+  }
+  .ept-footer{
+    width: 100%;
   }
 }

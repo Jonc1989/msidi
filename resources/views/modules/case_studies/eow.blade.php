@@ -37,7 +37,7 @@
             </div>
             <div class="col-sm-5 clear-pads">
                 <div class="ows-float-right">
-                    <img class="ows-map" src="http://ms-idi.eu/wp-content/uploads/2017/02/1.png">
+                    <img class="ows-map" src="<?= env('ROOT_PATH')?>/images/eow/1.png">
                 </div>
             </div>
         </div>
@@ -85,7 +85,13 @@
         <div class="ows-benefits col-xs-12 clear-pads">
             <h1 class="ows-title">ECOLINES operatoru darba efektivitātes uzlabojums</h1>
             <div class="ows-list row">
-                <div class="ows-list-item col-sm-4 col-xs-12"><span class="ows-line">|</span>Ērts lietotnes dizains</div><div class="ows-list-item col-sm-4 col-xs-12"><span class="ows-line">|</span>Datu pārskatamība</div><div class="ows-list-item col-sm-4 col-xs-12"><span class="ows-line">|</span>Filtrācija</div><div class="ows-list-item col-sm-4 col-xs-12"><span class="ows-line">|</span>Logrīku daudzveidība interaktīvajā kartē</div><div class="ows-list-item col-sm-4 col-xs-12"><span class="ows-line">|</span>Pārvietošanās atainojums reālajā laikā</div><div class="ows-list-item col-sm-4 col-xs-12"><span class="ows-line">|</span>Sistēmas darbības ātrums</div>        </div>
+                <div class="ows-list-item col-sm-4 col-xs-12"><span class="ows-line">|</span>Ērts lietotnes dizains</div>
+                <div class="ows-list-item col-sm-4 col-xs-12"><span class="ows-line">|</span>Datu pārskatamība</div>
+                <div class="ows-list-item col-sm-4 col-xs-12"><span class="ows-line">|</span>Filtrācija</div>
+                <div class="ows-list-item col-sm-4 col-xs-12"><span class="ows-line">|</span>Logrīku daudzveidība interaktīvajā kartē</div>
+                <div class="ows-list-item col-sm-4 col-xs-12"><span class="ows-line">|</span>Pārvietošanās atainojums reālajā laikā</div>
+                <div class="ows-list-item col-sm-4 col-xs-12"><span class="ows-line">|</span>Sistēmas darbības ātrums</div>
+            </div>
 
             <div class="center">
                 <img class="ows-quality hidden-xs" src="<?= env('ROOT_PATH')?>/images/eow/scheme.png">

@@ -361,18 +361,18 @@ img{border:0}
   }
   .more-btn-pressed{
     background: url(../images/more-pressed.png);
-    background-size: contain;
+
     background-repeat: no-repeat;
     background-position-x: 2px;
     background-position-y: 2px;
   }
   .more-btn-hover{
     background: url(../images/more-hover.png) center center no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
   }
   .more-btn {
     background: url(../images/more.png) center center no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
     vertical-align: middle;
     display: table-cell;
   }

@@ -26,17 +26,17 @@
 
         <div class="container ept-project">
             <div class="col-sm-4 col-xs-12">
-                <img class="ept-image" src="http://ms-idi.eu/wp-content/uploads/2017/02/11.png">
+                <img class="ept-image" src="<?= env('ROOT_PATH')?>/images/ept/11.png">
                 <h2 class="ept-title">Problēma</h2>
                 <p class="ept-text">Brauciens parasti ilgst vairākas stundas – nogurdinošs process</p>
             </div>
             <div class="col-sm-4 col-xs-12">
-                <img class="ept-image" src="http://ms-idi.eu/wp-content/uploads/2017/02/21.png">
+                <img class="ept-image" src="<?= env('ROOT_PATH')?>/images/ept/21.png">
                 <h2 class="ept-title">ECOLINES risinājums</h2>
                 <p class="ept-text">“ECOLINES” katram pasažierim autobusā nodrošina planšetdatoru</p>
             </div>
             <div class="col-sm-4 col-xs-12">
-                <img class="ept-image" src="http://ms-idi.eu/wp-content/uploads/2017/02/3.png">
+                <img class="ept-image" src="<?= env('ROOT_PATH')?>/images/ept/3.png">
                 <h2 class="ept-title">MS-IDI risinājums</h2>
                 <p class="ept-text">"MS-IDI" izstrādāja programmatūras paku
                     "Passenger Table Launcher" (EPL), kuru veido šādi moduļi: saskarnes valoda, kino, mūzika,
@@ -71,8 +71,12 @@
 
         <div class="ept-team col-xs-12">
             <h1 class="ept-title">Projekta izpilde</h1>
-            <p class="ept-text">Izmantojot Agile metodoloģiju, nodrošināta projekta pārredzamība, nepārtraukta attīstība un efektivitātes novērtējums. </p>
-            <p class="ept-text">Iesaistītas 3 personas: projekta koordinators, mobilo aplikāciju izstrādātājs un “Ecolines” pārstāvis IT jomā. Nelielais projektā iesaistīto darbinieku skaits&nbsp;paildzināja tā norisi, taču produkta izstrādes laikā bija iespējams izmēģināt un ieviest sākotnēji neieplānoto funkcionalitāti un novērtēt programmatūras darbības efektivitāti, kā arī vairāk laika bija veltīts produkta testēšanai.</p>
+            <p class="ept-text">Izmantojot Agile metodoloģiju, nodrošināta projekta pārredzamība, nepārtraukta attīstība
+                un efektivitātes novērtējums. </p>
+            <p class="ept-text">Iesaistītas 3 personas: projekta koordinators, mobilo aplikāciju izstrādātājs un
+                “Ecolines” pārstāvis IT jomā. Nelielais projektā iesaistīto darbinieku skaits&nbsp;paildzināja tā
+                norisi, taču produkta izstrādes laikā bija iespējams izmēģināt un ieviest sākotnēji neieplānoto
+                funkcionalitāti un novērtēt programmatūras darbības efektivitāti, kā arī vairāk laika bija veltīts produkta testēšanai.</p>
         </div>
 
         <div class="col-xs-12" id="yellow-shape2">
@@ -107,8 +111,8 @@
             <h5 class="ept-sub-title">Uzlabota pasažieru apkalpošanas kvalitāte – pamats dinamiskai uzņēmuma attīstībai.</h5>
         </div>
 
-        <div class="col-xs-12 clear-pads">
-            <img src=>
+        <div class="col-xs-12 clear-pads ">
+            <img class="ept-footer" src="<?= env('ROOT_PATH')?>/images/ept/footer.png">
         </div>
 
     </div>

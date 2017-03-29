@@ -247,7 +247,7 @@
             </h3>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads center">
                 <img id="info-graphic" src="<?= env( 'ROOT_PATH' );?>/images/els/infographics.png">
-                <img id="info-graphic-sm" class="els-info-graphics-img" src="http://ms-idi.eu/wp-content/uploads/2017/01/Path.png">
+                <img id="info-graphic-sm" class="els-info-graphics-img" src="<?= env('ROOT_PATH')?>/images/els/Path.png">
             </div>
         </div>
 
@@ -263,33 +263,33 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="container els-items clear-pads">
                     <div class="col-sm-3">
-                        <img class="els-item-image" src="http://ms-idi.eu/wp-content/uploads/2017/01/1.png">
+                        <img class="els-item-image" src="<?= env('ROOT_PATH')?>/images/els/1.png">
                         <p class="els-item-text">Aplūkot savu biļešu iegādes vēsturi</p>
                     </div>
                     <div class="col-sm-3">
-                        <img class="els-item-image" src="http://ms-idi.eu/wp-content/uploads/2017/01/2.png">
+                        <img class="els-item-image" src="<?= env('ROOT_PATH')?>/images/els/2.png">
                         <p class="els-item-text">Veikt autentifikāciju</p>
                     </div>
                     <div class="col-sm-3">
-                        <img class="els-item-image" src="http://ms-idi.eu/wp-content/uploads/2017/01/3.png">
+                        <img class="els-item-image" src="<?= env('ROOT_PATH')?>/images/els/3.png">
                         <p class="els-item-text">Rediģēt profila uzstādījumus</p>
                     </div>
                     <div class="col-sm-3">
-                        <img class="els-item-image" src="http://ms-idi.eu/wp-content/uploads/2017/01/4.png">
+                        <img class="els-item-image" src="<?= env('ROOT_PATH')?>/images/els/4.png">
                         <p class="els-item-text">Sazināties ar uzņēmumu</p>
                     </div>
                 </div>
                 <div class="container els-items clear-pads">
                     <div class="col-sm-4">
-                        <img class="els-item-image" src="http://ms-idi.eu/wp-content/uploads/2017/01/5.png">
+                        <img class="els-item-image" src="<?= env('ROOT_PATH')?>/images/els/5.png">
                         <p class="els-item-text">Klientu datu apstrāde un uzskaite</p>
                     </div>
                     <div class="col-sm-4">
-                        <img class="els-item-image" src="http://ms-idi.eu/wp-content/uploads/2017/01/6.png">
+                        <img class="els-item-image" src="<?= env('ROOT_PATH')?>/images/els/6.png">
                         <p class="els-item-text">ELS sistēmas operatoru autentifikācija</p>
                     </div>
                     <div class="col-sm-4">
-                        <img class="els-item-image" src="http://ms-idi.eu/wp-content/uploads/2017/01/7.png">
+                        <img class="els-item-image" src="<?= env('ROOT_PATH')?>/images/els/7.png">
                         <p class="els-item-text">Piedāvājumu veidošanu un rediģēšana</p>
                     </div>
 
@@ -301,15 +301,15 @@
             <p class="els-text center">Operatoriem ir piešķirtas trīs veidu lietotāju tiesības. </p>
             <div class="container els-items clear-pads">
                 <div class="col-sm-4 col-xs-6 clear-pads">
-                    <img class="els-item-image" src="http://ms-idi.eu/wp-content/uploads/2017/01/11.png">
+                    <img class="els-item-image" src="<?= env('ROOT_PATH')?>/images/els/11.png">
                     <h4 class="els-item-text">ELS Viewer</h4>
                 </div>
                 <div class="col-sm-4 col-xs-6 clear-pads">
-                    <img class="els-item-image" src="http://ms-idi.eu/wp-content/uploads/2017/01/21.png">
+                    <img class="els-item-image" src="<?= env('ROOT_PATH')?>/images/els/21.png">
                     <h4 class="els-item-text">ELS Admin</h4>
                 </div>
                 <div class="col-sm-4 clear-pads">
-                    <img class="els-item-image" src="http://ms-idi.eu/wp-content/uploads/2017/01/31.png">
+                    <img class="els-item-image" src="<?= env('ROOT_PATH')?>/images/els/31.png">
                     <h4 class="els-item-text">ELS Superadmin</h4>
                 </div>
             </div>
@@ -330,7 +330,7 @@
         <div id="yellow-bg2" class="col-xs-12">
 
                 <div class="col-md-7 col-sm-6 col-xs-12 ipad-wrap">
-                    <img class="els-block-image" src="http://ms-idi.eu/wp-content/uploads/2017/01/iPad-2-White.png">
+                    <img class="els-block-image" src="<?= env('ROOT_PATH')?>/images/els/iPad-2-White.png">
                 </div>
                 <div class="col-md-5 col-sm-6 col-xs-12 els-block-content">
                     <h1 class="els-block-title">ELS specifika un priekšrocības</h1>

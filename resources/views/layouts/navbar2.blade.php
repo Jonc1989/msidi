@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="<?=  url('/') ?>" class="navbar-brand"><img src="/images/logo.png"></a>
+                <a href="<?=  url('/') ?>" class="navbar-brand"><img src="<?= env( 'ROOT_PATH' );?>/images/logo.png"></a>
 
             </div>
 

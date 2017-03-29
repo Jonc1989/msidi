@@ -43,7 +43,7 @@
 
     <div class="container">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
-            <img class="map" src="http://ms-idi.eu/wp-content/uploads/2014/10/Map1.png">
+            <img class="map" src="<?= env( 'ROOT_PATH' )?>/images/opal/Map1.png">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads spacer">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -67,12 +67,12 @@
         <div class="container white">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 quote-wrap">
                 <div class="quote-row lighter-blue-bg">
-                    <div class="quote"><img src="http://ms-idi.eu/wp-content/themes/serio/images/symbol.png"></div>
+                    <div class="quote"><img src="<?= env( 'ROOT_PATH' )?>/images/opal/symbol.png"></div>
                     <p class="excerpt-text">Product that provides a qualitatively new level of work </p>
                 </div>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
-                <img class="resp" src="http://ms-idi.eu/wp-content/uploads/2014/10/mac1.png">
+                <img class="resp" src="<?= env( 'ROOT_PATH' )?>/images/opal/mac1.png">
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear-pads spacer">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -105,7 +105,7 @@
             </div>
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
-                <img src="http://ms-idi.eu/wp-content/uploads/2014/10/diagamm.png">
+                <img src="<?= env( 'ROOT_PATH' )?>/images/opal/diagamm.png">
             </div>
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -118,7 +118,7 @@
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 quote-wrap">
                 <div class="quote-row white-bg">
-                    <div class="quote"><img src="http://ms-idi.eu/wp-content/themes/serio/images/symbol.png"></div>
+                    <div class="quote"><img src="<?= env( 'ROOT_PATH' )?>/images/opal/symbol.png"></div>
                     <p class="excerpt-text">24 people involved in the project</p>
                 </div>
             </div>
@@ -134,7 +134,7 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
                 <div class="pic">
-                    <img class="opex-corner-pic" src="http://ms-idi.eu/wp-content/uploads/2014/10/7-workin.png">
+                    <img class="opex-corner-pic" src="<?= env( 'ROOT_PATH' )?>/images/opal/7-workin.png">
                 </div>
             </div>
         </div>
@@ -142,7 +142,7 @@
         <div class="container">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 quote-wrap">
                 <div class="quote-row white-bg">
-                    <div class="quote"><img src="http://ms-idi.eu/wp-content/themes/serio/images/symbol.png"></div>
+                    <div class="quote"><img src="<?= env( 'ROOT_PATH' )?>/images/opal/symbol.png"></div>
                     <p class="excerpt-text">Category "complex"</p>
                 </div>
             </div>
@@ -168,7 +168,7 @@
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 quote-wrap">
                 <div class="quote-row white-bg">
-                    <div class="quote"><img src="http://ms-idi.eu/wp-content/themes/serio/images/symbol.png"></div>
+                    <div class="quote"><img src="<?= env( 'ROOT_PATH' )?>/images/opal/symbol.png"></div>
                     <p class="excerpt-text">The redirection of savings on the further development of information solution</p>
                 </div>
             </div>
@@ -196,7 +196,7 @@
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 quote-wrap">
                 <div class="quote-row white-bg">
-                    <div class="quote"><img src="http://ms-idi.eu/wp-content/themes/serio/images/symbol.png"></div>
+                    <div class="quote"><img src="<?= env( 'ROOT_PATH' )?>/images/opal/symbol.png"></div>
                     <p class="excerpt-text">Mini-project within the project</p>
                 </div>
             </div>
@@ -217,7 +217,7 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
                 <div class="pic">
-                    <img src="http://ms-idi.eu/wp-content/uploads/2014/10/Vector-Smart-Object.png">
+                    <img src="<?= env( 'ROOT_PATH' )?>/images/opal/Vector-Smart-Object.png">
                 </div>
             </div>
 
@@ -227,7 +227,7 @@
         <div class="container">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 quote-wrap">
                 <div class="quote-row white-bg">
-                    <div class="quote"><img src="http://ms-idi.eu/wp-content/themes/serio/images/symbol.png"></div>
+                    <div class="quote"><img src="<?= env( 'ROOT_PATH' )?>/images/opal/symbol.png"></div>
                     <p class="excerpt-text">Green light was given to the next project</p>
                 </div>
             </div>

@@ -1,4 +1,7 @@
 @media (min-width: 1400px) {
+  .industries:not(:last-of-type) {
+    margin-right: 20px;
+  }
   .industries {
     width: 295px;
   }

@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 top-img hidden-xs">
-            <img class="" src="http://ms-idi.eu/wp-content/uploads/2014/10/Layer-48.png">
+            <img class="" src="<?= env('ROOT_PATH')?>/images/opal/Layer-48.png">
         </div>
 
     </div>
@@ -52,8 +52,8 @@
                         transaction (up to 1 day), low cost (1% of the amount for the CIS countries and £3 for the Baltic and the Eastern Europe countries),
                         service 7 days a week, and ease of completion of the transfer.
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 center">
-                    <img class="opex-about-pic resp" src="http://ms-idi.eu/wp-content/uploads/2014/10/shilluete1.png">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <img class="opex-about-pic resp" src="<?= env('ROOT_PATH')?>/images/opal/shilluete1.png">
                 </div>
             </div>
 
@@ -73,7 +73,7 @@
             </div>
 
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <img class="opex-beta-pic resp" src="http://ms-idi.eu/wp-content/uploads/2014/10/Layer-35-copy-2.png">
+                <img class="opex-beta-pic resp" src="<?= env('ROOT_PATH')?>/images/opal/Layer-35-copy-2.png">
             </div>
 
         </div>
@@ -117,7 +117,7 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 column">
                 <div class="pic dot-net">
-                    <img src="http://ms-idi.eu/wp-content/uploads/2014/10/WCF-icon.png">
+                    <img src="<?= env('ROOT_PATH')?>/images/opal/WCF-icon.png">
                 </div>
 
             </div>
@@ -134,13 +134,13 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right center-xs">
                 <div class="logo-wrap">
-                    <img src="http://ms-idi.eu/wp-content/uploads/2014/10/Layer-43.png">
+                    <img src="<?= env('ROOT_PATH')?>/images/opal/Layer-43.png">
                 </div>
 
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 center-xs">
                 <div class="logo-wrap">
-                    <img src="http://ms-idi.eu/wp-content/uploads/2014/10/Layer-44.png">
+                    <img src="<?= env('ROOT_PATH')?>/images/opal/Layer-44.png">
                 </div>
             </div>
 
@@ -166,7 +166,7 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
                 <div class="pic">
-                    <img class="opex-corner-pic" src="http://ms-idi.eu/wp-content/uploads/2014/10/7-workin.png">
+                    <img class="opex-corner-pic" src="<?= env('ROOT_PATH')?>/images/opal/7-workin.png">
                 </div>
             </div>
         </div>
@@ -183,7 +183,7 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="pic">
-                    <img src="http://ms-idi.eu/wp-content/uploads/2014/10/Jira-icon.png">
+                    <img src="<?= env('ROOT_PATH')?>/images/opal/Jira-icon.png">
                 </div>
             </div>
         </div>
@@ -222,7 +222,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="pic">
-                        <img src="http://ms-idi.eu/wp-content/uploads/2014/10/Group-10-copy-2.png">
+                        <img src="<?= env('ROOT_PATH')?>/images/opal/Group-10-copy-2.png">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clear-pads">
