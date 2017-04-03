@@ -16,14 +16,14 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
     $scope.makeInActive = function (e) {
         $scope.interval = setTimeout(function () {
             $(e).find('.inner-bg').addClass('leaving')
-        }, 3000);
+        }, 9000);
     };
 
     $scope.makeInActiveFirstSlide = function (e) {
         $scope.secondInterval = setTimeout(function () {
             $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('leaving');
             $( '.amber-bg' ).removeClass('first-slide');
-        },3000);
+        },9000);
     };
 
     $scope.initSlider = function () {
@@ -38,7 +38,7 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
                 easing: 'ease-out',
                 speed: 0,
                 pager: !0,
-                pause: 4000,
+                pause: 10000,
                 infiniteLoop: true,
                 autoControls: false,
                 controls: false,
@@ -74,12 +74,13 @@ slider.controller( 'IndexController', [ '$scope', function ( $scope ){
             //     $scope.slider.startAuto(true);
             // });
             //
-            // $('.bx-pager-link').click( function (e) {
-            //     clearTimeout( $scope.interval );
-            //     clearTimeout( $scope.secondInterval );
-            //     $scope.slider.startAuto();
-            //     //$('.bx-start').click();
-            // });
+            $('.bx-pager-link').click( function (e) {
+                clearTimeout( $scope.interval );
+                clearTimeout( $scope.secondInterval );
+                $scope.slider.stopAuto();
+                $scope.slider.startAuto();
+                //$('.bx-start').click();
+            });
 
             $scope.slider.getCurrentSlideElement().find('.inner-bg').addClass('active');
             $scope.makeInActiveFirstSlide();

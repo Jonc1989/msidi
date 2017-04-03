@@ -98,6 +98,9 @@
     max-height: 410px;
     transform: translateX(120px);
   }
+  .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    bottom: 90px;
+  }
 }
 
 @media (min-width: 1200px){

@@ -8483,7 +8483,9 @@ div.cs-skin-border {
   .design-container .text-from-left {
     margin-top: 140px;
     max-height: 410px;
-    transform: translateX(120px); } }
+    transform: translateX(120px); }
+  .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    bottom: 90px; } }
 
 @media (min-width: 1200px) {
   .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
