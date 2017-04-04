@@ -16,7 +16,7 @@
                         <div class="title center">Here <span class="bold"> we are</span></div>
                         <div class="center short-text">
                                 MS-IDI has combined experience in software development
-                                and IT support since 2009
+                                and IT support since 2010
                         </div>
 
                         <div class="col-md-12 clear-pads">
@@ -44,16 +44,16 @@
 
 
         <div class="container">
-                <div class="title center">Let's get in touch</div>
+                <div class="title center">Let's <span class="bold">get in touch</span></div>
                 <div class="col-md-offset-2 col-md-8 contact-info">
                         <div class="col-md-6 col-sm-6 right">
-                                <div class="pin">SIA MS-IDI Maskavas iela 22,</div>
-                                <div class="pin2">Rēzekne, LV-4604, Latvija</div>
+                                <div class="pin">SIA MS-IDI Maskavas St 22,</div>
+                                <div class="pin2">Rezekne, LV-4604, Latvia</div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                                 <div class="email">Email: info@ms-idi.eu</div>
-                                <div class="phone">Telephone: +371 278257 77</div>
-                                <div class="fax">Fax: +371 64605888</div>
+                                <div class="phone">Telephone: (+371) 278 257 77</div>
+                                <!--<div class="fax">Fax: +371 64605888</div>-->
                         </div>
                 </div>
 

@@ -261,7 +261,7 @@ img{border:0}
   width: 52px;
   background: url(../images/base.png) center center no-repeat;
   font-size: 60px;
-  line-height: 1.3;
+  line-height: 1.2;
   color: #506df9;
 }
 .project-text{
@@ -281,6 +281,7 @@ img{border:0}
  }
 .industries{
   height: 295px;
+  margin-bottom: 45px;
   //padding-left: 0px;
   //padding-right: 0px;
 }
@@ -857,7 +858,7 @@ img{border:0}
 .email:before{
   content: '';
   position: absolute;
-  top: 0px;
+  top: 5px;
   left: 0px;
   background: url( ../images/email.png) center center no-repeat;
   height: 12px;
@@ -1003,6 +1004,7 @@ img{border:0}
   -o-transition: all .4s;
   transition: all  .4s;
 }
+
 .custom-software-bg, .amber-bg, .design-bg, .ecolines-bg, .mac, .city{
   transition: all .4s;
 }
@@ -1488,6 +1490,9 @@ div.cs-skin-border {
 .cs-skin-border li.cs-focus span {
   background: #f5f3ec;
 }
+
+
+
 @import "rn";
 @import "zeimuls";
 @import "els";

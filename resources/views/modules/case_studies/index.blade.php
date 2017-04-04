@@ -4,7 +4,7 @@
                 <div class="title center title">Case <span class="bold">studies</span></div>
                 <div class="center short-text">
                     We have realized and introduced a number of
-                    unique and innovative projects that we are proud of and happy to share with you.
+                    unique and innovative projects that we are proud of and happy to share with you
                 </div>
 
                 <div class="col-md-12 brochure-wrap center">
@@ -15,12 +15,12 @@
                         </a>
                     </div>
 
-                    <div class="brochure">
+                    <!--<div class="brochure">
                         <a target="_blank" href="/brochure/de">
                             <div class="brochure-txt">PDF brochure (De)</div>
                             <div class="brochure-icon circle"><div class="icon"></div></div>
                         </a>
-                    </div>
+                    </div>-->
                 </div>
 
             </div>

@@ -19,9 +19,9 @@
     </div>
 
     <div class="footer-info">
-        <div class="">info@ms-idi.eu +371 278 257 77</div>
-        <div class="">Latvia, Rezekne, Maskavas 22</div>
-        <div class="">SIA MS-IDI © 2009-<?php echo date("Y"); ?></div>
+        <div class="">info@ms-idi.eu (+371) 278 257 77</div>
+        <div class="">Latvia, Rezekne, Maskavas St 22</div>
+        <div class="">SIA MS-IDI © 2010-<?php echo date("Y"); ?></div>
     </div>
 
 </div>

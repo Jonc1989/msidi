@@ -38,7 +38,7 @@
         <script src="<?= env( 'ROOT_PATH' );?>/js/vendor/classie.js"></script>
         <script src="<?= env( 'ROOT_PATH' );?>/js/vendor/selectFx.js"></script>
         <script src='//maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyC65qTskUjsL4_7f9gWsNfkGbUJ5p5bXv0'></script>
-        <script src="<?= env( 'ROOT_PATH' );?>/js/vendor/countUp.js"></script>
+        <!--<script src="<?= env( 'ROOT_PATH' );?>/js/vendor/countUp.js"></script>-->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 
         <script src="<?= env( 'ROOT_PATH' );?>/js/vendor/jquery.bxslider.min.js"></script>

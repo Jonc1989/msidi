@@ -1,6 +1,6 @@
 <div class="col-md-12 col-sm-12 col-xs-12" id="career" ng-controller="CareerController">
         <div class="container">
-                <div class="title center">Start your career with us</div>
+                <div class="title center">Start your <span class="bold"> career with us</span></div>
 
 
                 <div class="col-md-12 clear-pads">
@@ -169,7 +169,7 @@
                                                   placeholder="Message"></textarea>
                                 </div>
                                 <button class="form-control send" type="submit" value="">
-                                        <div class="more-txt">Send message</div>
+                                        <div class="more-txt">Apply for position</div>
                                         <div class="more-btn circle"></div>
                                         <div class="more-btn-pressed circle"></div>
                                         <div class="more-btn-hover circle"></div>

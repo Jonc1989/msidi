@@ -1,4 +1,4 @@
-<div id="services" class="col-md-12 col-sm-12 col-xs-12 clear-pads blue-bg services white" ng-controller="ServiceController">
+<div id="services" class="col-md-12 col-sm-12 col-xs-12 clear-pads blue-bg services white">
         <div class="container clear-pads">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="title center title">Explore <span class="bold">variety</span> of our services</div>
@@ -8,7 +8,7 @@
                                 sectors by bringing new areas of
                                 business to life and providing each
                                 client with fully customized and
-                                personalized product development.
+                                personalized product development
                         </div>
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12 clear-pads border-bottom-blue">
@@ -87,7 +87,7 @@
 
                 <div id="industries-top" class="col-md-12 col-sm-12 col-xs-12 center">
                         <div class="project-count-wrap">
-                                <div class="project-count" id="project-count"></div>
+                                <div class="project-count" id="project-count">8</div>
                                 <div class="project-text">
 
                                         <div class="">Projects</div>
@@ -141,6 +141,46 @@
                                         </div>
                                         <div class="icon icon-outsorce"></div>
                                         <div class="name">IT Outsorcing</div>
+                                </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 industries">
+                                <div class="industries-wrap">
+                                        <div class="count circle">
+                                                <div class="num">3</div>
+                                        </div>
+                                        <div class="icon icon-erp"></div>
+                                        <div class="name">Consulting</div>
+                                </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 industries">
+                                <div class="industries-wrap">
+                                        <div class="count circle">
+                                                <div class="num">3</div>
+                                        </div>
+                                        <div class="icon icon-finances"></div>
+                                        <div class="name">Prototyping</div>
+                                </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 industries">
+                                <div class="industries-wrap">
+                                        <div class="count circle">
+                                                <div class="num">3</div>
+                                        </div>
+                                        <div class="icon icon-logistics"></div>
+                                        <div class="name">Product design</div>
+                                </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 industries">
+                                <div class="industries-wrap">
+                                        <div class="count circle">
+                                                <div class="num">3</div>
+                                        </div>
+                                        <div class="icon icon-outsorce"></div>
+                                        <div class="name">Device firmware engineering</div>
                                 </div>
                         </div>
                 </div>
