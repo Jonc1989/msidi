@@ -7165,6 +7165,10 @@ img {
 .case-studies .image, .category {
   transition: all  .4s; }
 
+.sticky {
+  background: #506df9;
+  border-bottom: gray solid 1px; }
+
 .custom-software-bg, .amber-bg, .design-bg, .ecolines-bg, .mac, .city {
   transition: all .4s; }
 
