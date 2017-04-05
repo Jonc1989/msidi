@@ -1,5 +1,5 @@
 <div id="case-studies" class="col-md-12 col-sm-12 col-xs-12">
-    <div class="container clear-pads" ng-controller="CaseStudiesController" ng-init="setCount(6)">
+    <div class="container clear-pads" ng-controller="CaseStudiesController" ng-init="setCount(9)">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="title center title">Case <span class="bold">studies</span></div>
                 <div class="center short-text">
@@ -31,7 +31,7 @@
                     <div class="studie">
                         <a href="{{ item.url }}">
                             <div class="cover">
-                                <div class="image" ng-style="{'background':'url({{ item.image }}) center center no-repeat'}">
+                                <div class="image" ng-style="{'background':'url({{ item.image }}) center center no-repeat'}" ng-class="{'minified': $index < 3}">
 
                                 </div>
 
