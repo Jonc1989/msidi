@@ -306,6 +306,15 @@ caseStudies.controller( 'ClientsController', [ '$scope', function ( $scope ){
             slider.getCurrentSlideElement().find('.client-slide').addClass('active');
        // },500);
 
+        $('#clients .bx-prev').click( function () {
+            slider.stopAuto();
+            slider.startAuto(true);
+        });
+        $('#clients .bx-next').click( function () {
+            slider.stopAuto();
+            slider.startAuto(true);
+        });
+
         $( '.holder' ).show();
     };
 
