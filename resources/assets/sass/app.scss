@@ -149,8 +149,13 @@ img{border:0}
 .line{
   margin-top: 60px; margin-bottom: 60px; border-bottom: 1px solid #efefef; width: 100%;
 }
+.left{
+  float: left;
+}
+
 .service-title{
   font-size: 21px;
+  min-height: 60px;
 }
 @media (min-width: 1400px){
   .service-title{
@@ -706,7 +711,7 @@ img{border:0}
   text-align: center;
 }
 .case-studies{
-  height: 285px;
+  height: 310px;
   text-align: center;
   //float: none;
   display: inline-block;
@@ -805,6 +810,7 @@ img{border:0}
 
 .portfolio-title{
   font-weight: bold;
+  font-size: 18px;
 }
 .opal-transfer-image{
   background: url(../images/case-studies/opal-transfer.png) center center no-repeat;

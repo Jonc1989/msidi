@@ -15,17 +15,15 @@
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 service-type">
                                 <div class="col-md-12 col-sm-12 col-xs-12 clear-pads ">
                                         <div class="monitor col-sm-3 col-xs-3 clear-pads"></div>
-                                        <div class="service-title col-sm-9 col-xs-9">Custom software development</div>
+                                        <div class="service-title col-md-12 col-sm-9 col-xs-9">Custom software development</div>
                                 </div>
                                 <div class="title-divider col-xs-12"></div>
                                 <div class="services-list col-xs-12 clear-pads">
                                         <ul>
                                                 <li>Architecture design</li>
                                                 <li>Software development</li>
+                                                <li>Systems integration</li>
                                                 <li>Mobile application development</li>
-                                                <li>Cross-platform development</li>
-                                                <li>Performance engineering</li>
-                                                <li>Testing</li>
                                         </ul>
                                 </div>
                         </div>
@@ -33,17 +31,15 @@
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 service-type">
                                 <div class="col-md-12 col-sm-12 col-xs-12 clear-pads ">
                                         <div class="light-bulb col-sm-3 col-xs-3 clear-pads"></div>
-                                        <div class="service-title col-sm-9 col-xs-9">User Experience <br>design</div>
+                                        <div class="service-title col-md-12 col-sm-9 col-xs-9">Consulting & <br>UX Design</div>
                                 </div>
                                 <div class="title-divider col-xs-12"></div>
                                 <div class="services-list col-xs-12 clear-pads">
                                         <ul>
-                                                <li>Use cases and scenarios</li>
-                                                <li>Customer Journey Maps</li>
-                                                <li>Screens Workflow</li>
-                                                <li>Prototypes</li>
-                                                <li>Visual Design</li>
-                                                <li>Usability Testing</li>
+                                                <li>IT Consulting</li>
+                                                <li>Technical Specifications</li>
+                                                <li>Prototyping</li>
+                                                <li>User Experience Design</li>
                                         </ul>
                                 </div>
                         </div>
@@ -51,17 +47,15 @@
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 service-type">
                                 <div class="col-md-12 col-sm-12 col-xs-12 clear-pads ">
                                         <div class="magnifier col-sm-3 col-xs-3 clear-pads"></div>
-                                        <div class="service-title col-sm-9 col-xs-9">Re-engineering <br>and software testing</div>
+                                        <div class="service-title col-md-12 col-sm-9 col-xs-9">Re-engineering <br>and software testing</div>
                                 </div>
                                 <div class="title-divider col-xs-12"></div>
                                 <div class="services-list col-xs-12 clear-pads">
                                         <ul>
-                                                <li>Service enabling</li>
-                                                <li>Platform migration</li>
-                                                <li>Database migration</li>
-                                                <li>Automated Testing</li>
-                                                <li>Usability Testing</li>
-                                                <li>Security Testing</li>
+                                                <li>Data & Platform migration</li>
+                                                <li>Automated testing</li>
+                                                <li>Performance & security testing</li>
+                                                <li>Quality Assurance</li>
                                         </ul>
                                 </div>
                         </div>
@@ -69,17 +63,15 @@
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 service-type">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-xs-3 clear-pads ">
                                         <div class="lifebelt col-sm-3 col-xs-3 clear-pads"></div>
-                                        <div class="service-title col-sm-9 col-xs-9">Software maintenance <br>and support</div>
+                                        <div class="service-title col-md-12 col-sm-9 col-xs-9">Software support</div>
                                 </div>
                                 <div class="title-divider col-xs-12"></div>
                                 <div class="services-list col-xs-12 clear-pads">
                                         <ul>
-                                                <li>Continious integration</li>
-                                                <li>Testing</li>
-                                                <li>Quality Assurence</li>
+                                                <li>Cloud Hosting</li>
+                                                <li>Continuous development</li>
                                                 <li>Technical support</li>
                                                 <li>System performance check-ups</li>
-                                                <li>Software marketing</li>
                                         </ul>
                                 </div>
                         </div>

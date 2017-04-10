@@ -2,7 +2,7 @@
 
     <div class="inner-bg amber-bg first-slide">
         <div class="city"></div>
-        <div class="col-lg-3 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 text-from-right white">
+        <div class="col-lg-3 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 text-from-right white clear-pads">
             <div class="title col-lg-12 clear-margs clear-pads" >Amber</div>
             <div class="title col-lg-12 clear-pads">Housing</div>
             <div class="description col-lg-12 clear-pads">
